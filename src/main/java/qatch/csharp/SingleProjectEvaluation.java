@@ -31,6 +31,10 @@ public class SingleProjectEvaluation {
         System.out.println();
 
         // Initialize
+        if (args == null || args.length < 2) {
+            throw new RuntimeException("Incorrect input parameters given. Be sure to include \n\t(1) Path to root directory of "
+                    + "project to analyze, \n\t(2) Path to directory to place analysis results.");
+        }
         HashMap<String, File> initializePaths = initialize(args);
         final File projectDir = initializePaths.get("projectLoc");
         final File resultsDir = initializePaths.get("resultsLoc");
@@ -89,16 +93,8 @@ public class SingleProjectEvaluation {
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
         IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
-        metricsAnalyzer.analyze(
-                projectDir,
-                resultsDir,
-                qualityModel.getProperties()
-        );
-        findingsAnalyzer.analyze(
-                projectDir,
-                resultsDir,
-                qualityModel.getProperties()
-        );
+        metricsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
+        findingsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
 
         //Print some messages to the user
         System.out.println("* The analysis is finished");
@@ -133,6 +129,9 @@ public class SingleProjectEvaluation {
      * @return HashMap containing paths of analysis project and results folder
      */
     static HashMap<String, File> initialize(String[] inputArgs) {
+
+
+
         String projectLoc = inputArgs[0];
         String resultsLoc = inputArgs[1];
         String resultsDirName = "qa-results";

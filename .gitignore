@@ -190,3 +190,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/git,java,macos,maven,windows,intellij
+
+### Project Specific ###
+/src/test/output/

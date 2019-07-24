@@ -7,6 +7,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class gathers metrics on a single project by invoking the
+ * LOCMetrics.exe tool.
+ *
+ * Due to being only runnable on Windows, these methods should only
+ * be used on C# projects
+ */
 public class LOCMetricsAnalyzer implements IAnalyzer {
 
     static final String RESULT_FILE_NAME = "LocMetricsFolders.csv";
