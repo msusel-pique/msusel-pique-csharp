@@ -3,9 +3,12 @@ package qatch.csharp;
 import qatch.analysis.IResultsImporter;
 import qatch.model.IssueSet;
 
+import java.io.File;
+
 public class FxcopResultsImporter implements IResultsImporter {
+
     @Override
-    public IssueSet parseIssues(String s) {
+    public IssueSet parse(File file) {
         // TODO: not yet implemented
         throw new RuntimeException("Not yet implemented");
     }
