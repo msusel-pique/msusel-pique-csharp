@@ -7,12 +7,15 @@ import qatch.model.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.HashMap;
 
 public class SingleProjectEvaluation {
 
     // parameter constants
-    private static final String QM_LOCATION = "src/main/resources/models/qualityModel_csharp.xml";
+    public static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
+    public static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_csharp.xml");
+    public static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
 
     /**
      * Main method for running quality evaluation on a single C# project.
@@ -42,7 +45,7 @@ public class SingleProjectEvaluation {
         System.out.println("* Please wait...");
         System.out.println("*");
 
-        QualityModelLoader qmImporter = new QualityModelLoader(new File(QM_LOCATION).getPath());
+        QualityModelLoader qmImporter = new QualityModelLoader(QM_LOCATION.getPath());
         QualityModel qualityModel = qmImporter.importQualityModel();
 
         System.out.println("* Quality Model successfully loaded..!");
@@ -87,13 +90,13 @@ public class SingleProjectEvaluation {
         IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
         metricsAnalyzer.analyze(
-                projectDir.getAbsolutePath(),
-                resultsDir.getAbsolutePath(),
+                projectDir,
+                resultsDir,
                 qualityModel.getProperties()
         );
         findingsAnalyzer.analyze(
-                projectDir.getAbsolutePath(),
-                resultsDir.getAbsolutePath(),
+                projectDir,
+                resultsDir,
                 qualityModel.getProperties()
         );
 
