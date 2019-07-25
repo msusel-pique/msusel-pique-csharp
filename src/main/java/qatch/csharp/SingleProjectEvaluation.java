@@ -1,11 +1,14 @@
 package qatch.csharp;
 
 import org.apache.commons.io.FileUtils;
+import org.xml.sax.SAXException;
 import qatch.analysis.IAnalyzer;
-import qatch.analysis.IResultsImporter;
+import qatch.analysis.IFindingsResultsImporter;
+import qatch.analysis.IMetricsResultsImporter;
 import qatch.evaluation.Project;
 import qatch.model.*;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -26,7 +29,7 @@ public class SingleProjectEvaluation {
      *             1: path to folder to place results
      *    These arg paths can be relative or full path
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
 
         System.out.println("******************************  Project Evaluator *******************************");
         System.out.println();
@@ -110,25 +113,25 @@ public class SingleProjectEvaluation {
         System.out.println("*");
 
         //Create Result Importers for each tool used
-        IResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-        IResultsImporter findingsImporter = new FxcopResultsImporter();
+        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
+        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
 
         //Get the directory with the results of the analysis
         File[] results = resultsDir.listFiles();
 
         //For each result file found in the directory do...
         if (results == null) throw new RuntimeException("Scanner results directory [" + resultsDir.toString() + "] has no files");
-//        for(File resultFile : results){
-//
-//            //Check if it is a LOCMetrics result file
-//            if(!resultFile.getName().contains("LocMetrics")) {
-//                //Parse the issues and add them to the IssueSet Vector of the Project object
-//                project.addIssueSet(findingsImporter.parse(resultFile.getAbsolutePath()));
-//            }else{
-//                //Parse the metrics of the project and add them to the MetricSet field of the Project object
-//                project.setMetrics(metricsImporter.parse(resultFile.getAbsolutePath()));
-//            }
-//        }
+        for(File resultFile : results){
+
+            //Check if it is a LOCMetrics result file
+            if(!resultFile.getName().contains("LocMetrics")) {
+                //Parse the issues and add them to the IssueSet Vector of the Project object
+                project.addIssueSet(findingsImporter.parse(resultFile.getAbsolutePath()));
+            }else{
+                //Parse the metrics of the project and add them to the MetricSet field of the Project object
+                project.setMetrics(metricsImporter.parse(resultFile.getAbsolutePath()));
+            }
+        }
 
         // Print some informative messages to the console
         System.out.println("*");
