@@ -56,8 +56,6 @@ public class FxcopAnalyzerTests {
         // XML file has expected number of bytes
         Assert.assertEquals(2844, result01.length(), 500);
         Assert.assertEquals(result01.length(), result02.length(), 500);
-
-        clean();
     }
 
     private void clean() throws IOException {

@@ -36,8 +36,6 @@ public class LOCMetricsAnalyzerTests {
         // A better way to test this would be to parse the XML output for expected entries, but
         // that approach adds substantial run time to the unit test.
         Assert.assertTrue("Is there a compiled C# project located at " + src.toString() + "?", results.length() > 102);
-
-        clean();
     }
 
     private void clean() throws IOException {
