@@ -21,9 +21,9 @@ import java.util.HashMap;
 public class SingleProjectEvaluation {
 
     // parameter constants
-    public static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
-    public static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_csharp.xml");
-    public static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
+    private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
+    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_csharp.xml");
+    static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
 
     /**
      * Main method for running quality evaluation on a single C# project.
@@ -35,6 +35,7 @@ public class SingleProjectEvaluation {
      */
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, CloneNotSupportedException {
 
+        // TODO: use logger instead of println
         System.out.println("******************************  Project Evaluator *******************************");
         System.out.println();
 
@@ -72,7 +73,6 @@ public class SingleProjectEvaluation {
         System.out.println("* Please wait...");
         System.out.println("*");
 
-
         //Create a Project object to store the results of the static analysis and the evaluation of this project...
         Project project = new Project();
 
@@ -89,13 +89,13 @@ public class SingleProjectEvaluation {
         /*
          * Step 2: Analyze the desired project against the selected properties
          */
-        checkCreateClearDirectory(resultsDir);
-
         System.out.println("\n**************** STEP 2: Project Analyzer ****************************");
         System.out.println("*");
         System.out.println("* Analyzing the desired project");
         System.out.println("* Please wait...");
         System.out.println("*");
+
+        checkCreateClearDirectory(resultsDir);
 
         //Instantiate the available single project analyzers of the system ...
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
@@ -124,10 +124,11 @@ public class SingleProjectEvaluation {
         File[] results = resultsDir.listFiles();
 
         //For each result file found in the directory do...
+        // TODO: this functionality will eventually be moved to a qatch-min generic ResultsImporter class
         if (results == null) throw new RuntimeException("Scanner results directory [" + resultsDir.toString() + "] has no files");
         for(File resultFile : results){
 
-            //Check if it is a LOCMetrics result file
+            //Check if it is not a LOCMetrics result file
             if(!resultFile.getName().contains("LocMetrics")) {
                 //Parse the issues and add them to the IssueSet Vector of the Project object
                 project.addIssueSet(findingsImporter.parse(resultFile.getAbsolutePath()));
@@ -262,8 +263,6 @@ public class SingleProjectEvaluation {
         System.out.println("* Results successfully exported..!");
         System.out.println("* You can find the results at : " + resultsDir.toString());
 
-
-        System.out.println("...");
     }
 
     /**
