@@ -55,22 +55,24 @@ public class FxcopAnalyzer implements IAnalyzer {
      * @param fileName
      *      The name of the XML file containing scan results.
      */
-    public void analyzeSubroutine(File src, File dest, String rulesetPath, String fileName) {
+    private void analyzeSubroutine(File src, File dest, String rulesetPath, String fileName) {
         String sep = File.separator;
         ProcessBuilder pb;
         String destFile = dest + sep + fileName;
-        Set<String> assemblyDirs = FileUtility.findAssemblyDirectories(src, ".exe", ".dll");
-//        Set<String> assemblyDirs = FileUtility.findAssemblyDirectories(src, ".exe");
-        Set<String> removeDirs = new HashSet<>();
+
+        Set<String> projectNames = FileUtility.findFileNamesFromExtension(src.toPath(), ".csproj");
+        Set<Path> assemblyDirs = new HashSet<>();
+        projectNames.forEach(p -> assemblyDirs.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
+        Set<Path> removeDirs = new HashSet<>();
         if (assemblyDirs.isEmpty()) {
             throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
                     + src + ". Has the project been built?");
         }
 
-        for (String s : assemblyDirs) {
-            for (String directory : s.split("\\\\")) {
+        for (Path p : assemblyDirs) {
+            for (String directory : p.toString().split("\\\\")) {
                 if (directory.trim().equals("obj")) {
-                    removeDirs.add(s);
+                    removeDirs.add(p);
                 }
             }
         }
@@ -78,7 +80,7 @@ public class FxcopAnalyzer implements IAnalyzer {
         assemblyDirs.removeAll(removeDirs);
 
         StringBuilder sb = new StringBuilder("\"");
-        assemblyDirs.forEach(dir -> sb.append("/f:").append(dir).append(" "));
+        assemblyDirs.forEach(dir -> sb.append("/f:").append(dir.toString()).append(" "));
         sb.append("\"");
 
         // Attach FxCopExe option flags
