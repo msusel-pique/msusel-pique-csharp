@@ -19,7 +19,7 @@ public class IntegrationTests {
 
         String projectName = "FxcopFindings";
         String projectPath = "../../MSUSEL/sample-analysis-projects/csharp/" + projectName;
-        String resultPath = "C:/Users/davidrice3/Desktop/results";
+        String resultPath = "./src/test/output";
 
         clean(new File(resultPath));
         SingleProjectEvaluation.main(new String[]{projectPath, resultPath});
