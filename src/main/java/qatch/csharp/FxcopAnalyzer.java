@@ -59,28 +59,30 @@ public class FxcopAnalyzer implements IAnalyzer {
         String sep = File.separator;
         ProcessBuilder pb;
         String destFile = dest + sep + fileName;
+        Set<Path> assemblyPaths = new HashSet<>();
+        Set<Path> removePaths = new HashSet<>();
 
+        // only look for file names that match with .csproj file names. This causes external dependencies to be ignored
         Set<String> projectNames = FileUtility.findFileNamesFromExtension(src.toPath(), ".csproj");
-        Set<Path> assemblyDirs = new HashSet<>();
-        projectNames.forEach(p -> assemblyDirs.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
-        Set<Path> removeDirs = new HashSet<>();
-        if (assemblyDirs.isEmpty()) {
+        projectNames.forEach(p -> assemblyPaths.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
+        if (assemblyPaths.isEmpty()) {
             throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
                     + src + ". Has the project been built?");
         }
 
-        for (Path p : assemblyDirs) {
+        // ignore found files that were in the obj folder or are tests
+        // TODO: refactor into functional form
+        for (Path p : assemblyPaths) {
             for (String directory : p.toString().split("\\\\")) {
                 if (directory.trim().equals("obj") || directory.toLowerCase().contains("test")) {
-                    removeDirs.add(p);
+                    removePaths.add(p);
                 }
             }
         }
-
-        assemblyDirs.removeAll(removeDirs);
+        assemblyPaths.removeAll(removePaths);
 
         StringBuilder sb = new StringBuilder("\"");
-        assemblyDirs.forEach(dir -> sb.append("/f:").append(dir.toString()).append(" "));
+        assemblyPaths.forEach(dir -> sb.append("/f:").append(dir.toString()).append(" "));
         sb.append("\"");
 
         // Attach FxCopExe option flags
