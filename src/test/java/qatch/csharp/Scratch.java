@@ -1,7 +1,5 @@
 package qatch.csharp;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
 import java.io.File;
@@ -10,9 +8,10 @@ import java.io.IOException;
 public class Scratch {
 
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void scratch() {
+        String s = "abcdTESTijkl";
+        boolean b = s.toLowerCase().contains("test");
+        System.out.println(b);
     }
 
     @Test

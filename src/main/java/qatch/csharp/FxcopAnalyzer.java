@@ -71,7 +71,7 @@ public class FxcopAnalyzer implements IAnalyzer {
 
         for (Path p : assemblyDirs) {
             for (String directory : p.toString().split("\\\\")) {
-                if (directory.trim().equals("obj")) {
+                if (directory.trim().equals("obj") || directory.toLowerCase().contains("test")) {
                     removeDirs.add(p);
                 }
             }
@@ -94,7 +94,8 @@ public class FxcopAnalyzer implements IAnalyzer {
                 SingleProjectEvaluation.TOOLS_LOCATION + sep + "FxCop" + sep + "FxCopCmd.exe",
                 srcExt,
                 destExt,
-                rulesetExt
+                rulesetExt,
+                "/fo"
             );
         } else {
             throw new RuntimeException("FxCop C# analysis not supported on non-Windows machines. FxCopCmd.exe tool only supported on Windows.");
