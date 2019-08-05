@@ -1,5 +1,6 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.model.Property;
 import qatch.model.PropertySet;
@@ -20,6 +21,9 @@ public class FxcopAnalyzer implements IAnalyzer {
 
     @Override
     public void analyze(File src, File dest, PropertySet properties) {
+
+        Path assemblies = setup(src);
+
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
         Property p;
@@ -33,7 +37,7 @@ public class FxcopAnalyzer implements IAnalyzer {
             //Check if it is an FxCop Property
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
-                analyzeSubroutine(src, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
+                analyzeSubroutine(assemblies, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
             }
         }
     }
@@ -42,23 +46,61 @@ public class FxcopAnalyzer implements IAnalyzer {
      * Analyze a single project against a certain ruleset (property) by calling the FxCop tool
      * through the command line with the appropriate configuration.
      *
-     * ATTENTION:
-     *  - The appropriate fxcop_build.xml ant file should be placed inside the resources directory.
-     *
      * @param src
      *      The path of the folder that contains the sources of the project. The folder must contain
-     *      at least one .dll or .exe item.
+     *      at least one .dll or .exe item (at any depth, a recursive search is performed).
      * @param dest
-     *      The path where the XML files with the results will be placed.
+     *      The path where the tool results will be placed.
      * @param rulesetPath
      *      The  rules against which the project will be analyzed.
      * @param fileName
      *      The name of the XML file containing scan results.
      */
-    private void analyzeSubroutine(File src, File dest, String rulesetPath, String fileName) {
+    private void analyzeSubroutine(Path src, File dest, String rulesetPath, String fileName) {
         String sep = File.separator;
         ProcessBuilder pb;
         String destFile = dest + sep + fileName;
+
+        // begin building the strings to run the FxCop CLT
+        String fxcop = SingleProjectEvaluation.TOOLS_LOCATION + sep + "FxCop" + sep + "FxCopCmd.exe";
+        String assemblyDir = "/f:" + src.toAbsolutePath().toString();
+        String destExt = "/out:" + destFile;
+        String rulesetExt = "/r:" + rulesetPath;
+        String fo = "/fo";
+
+        if(System.getProperty("os.name").contains("Windows")){
+            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt, fo);
+        } else {
+            throw new RuntimeException("FxCop C# analysis not supported on non-Windows machines. FxCopCmd.exe tool only supported on Windows.");
+        }
+
+        pb.redirectErrorStream(true);
+        Process p = null;
+
+        // run the tool
+        try {
+            p = pb.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            assert p != null;
+            p.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * Fills a temporary directory will all propritary assemblies of a project
+     * located at src
+     *
+     * @param src the root directory to search for assemblies
+     * @return the path to the temporary directory holding the assemblies
+     */
+    private Path setup(File src) {
+
         Set<Path> assemblyPaths = new HashSet<>();
         Set<Path> removePaths = new HashSet<>();
 
@@ -81,52 +123,26 @@ public class FxcopAnalyzer implements IAnalyzer {
         }
         assemblyPaths.removeAll(removePaths);
 
-        StringBuilder sb = new StringBuilder("\"");
-        assemblyPaths.forEach(dir -> sb.append("/f:").append(dir.toString()).append(" "));
-        sb.append("\"");
+        // copy all binaries to be scanned into 1 temporary folder
+        Path tempDir = new File( "temp_bin_dir").toPath();
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            try {
+                FileUtils.deleteDirectory(tempDir.toFile());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }));
+        assemblyPaths.forEach(p -> {
+            try {
+                FileUtils.copyFileToDirectory(p.toFile(), tempDir.toFile());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
-        // Attach FxCopExe option flags
-        String srcExt = sb.toString();
-        String destExt = "/out:" + destFile;
-        String rulesetExt = "/r:" + rulesetPath;
+        // return the temporary folder containing only necessary files for analysis
+        return tempDir;
 
-        if(System.getProperty("os.name").contains("Windows")){
-            pb = new ProcessBuilder(
-                "cmd.exe", "/c",
-                SingleProjectEvaluation.TOOLS_LOCATION + sep + "FxCop" + sep + "FxCopCmd.exe",
-                srcExt,
-                destExt,
-                rulesetExt,
-                "/fo"
-            );
-        } else {
-            throw new RuntimeException("FxCop C# analysis not supported on non-Windows machines. FxCopCmd.exe tool only supported on Windows.");
-        }
-
-        pb.redirectErrorStream(true);
-        Process p = null;
-        try {
-            p = pb.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            assert p != null;
-            p.waitFor();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        Set<Path> findings = new HashSet<>();
-        try {
-            Files.list(Paths.get(dest.toString()))
-                    .filter(f -> f.toString().endsWith(".xml"))
-                    .forEach(findings::add);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-//        if (findings.isEmpty()) throw new RuntimeException("No findings XML files were generated by FxCop analysis");
     }
 
 }
