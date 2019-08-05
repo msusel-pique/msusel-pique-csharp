@@ -1,6 +1,5 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.model.Property;
 import qatch.model.PropertySet;
@@ -8,9 +7,7 @@ import qatch.utility.FileUtility;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -22,7 +19,7 @@ public class FxcopAnalyzer implements IAnalyzer {
     @Override
     public void analyze(File src, File dest, PropertySet properties) {
 
-        Path assemblies = setup(src);
+        Path assembly = setup(src);
 
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
@@ -37,14 +34,15 @@ public class FxcopAnalyzer implements IAnalyzer {
             //Check if it is an FxCop Property
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
-                analyzeSubroutine(assemblies, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
+                analyzeSubroutine(assembly, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
             }
         }
     }
 
     /**
      * Analyze a single project against a certain ruleset (property) by calling the FxCop tool
-     * through the command line with the appropriate configuration.
+     * through the command line with the appropriate configuration. Note that a project is the module a
+     * .csproj file refers to. A C# solution (.sln) is a collection of multiple projects.
      *
      * @param src
      *      The path of the folder that contains the sources of the project. The folder must contain
@@ -93,11 +91,10 @@ public class FxcopAnalyzer implements IAnalyzer {
     }
 
     /**
-     * Fills a temporary directory will all propritary assemblies of a project
-     * located at src
+     * Finds the correct assembly for FxCop to analyze
      *
-     * @param src the root directory to search for assemblies
-     * @return the path to the temporary directory holding the assemblies
+     * @param src the root directory to search for assemblies. A .csproj file should be in this directory
+     * @return the path to the assembly to analyze
      */
     private Path setup(File src) {
 
@@ -107,10 +104,11 @@ public class FxcopAnalyzer implements IAnalyzer {
         // only look for file names that match with .csproj file names. This causes external dependencies to be ignored
         Set<String> projectNames = FileUtility.findFileNamesFromExtension(src.toPath(), ".csproj");
         projectNames.forEach(p -> assemblyPaths.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
+
         if (assemblyPaths.isEmpty()) {
-            throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
-                    + src + ". Has the project been built?");
-        }
+        throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
+                + src + ". Has the project been built?");
+         }
 
         // ignore found files that were in the obj folder or are tests
         // TODO: refactor into functional form
@@ -123,25 +121,13 @@ public class FxcopAnalyzer implements IAnalyzer {
         }
         assemblyPaths.removeAll(removePaths);
 
-        // copy all binaries to be scanned into 1 temporary folder
-        Path tempDir = new File( "temp_bin_dir").toPath();
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            try {
-                FileUtils.deleteDirectory(tempDir.toFile());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }));
-        assemblyPaths.forEach(p -> {
-            try {
-                FileUtils.copyFileToDirectory(p.toFile(), tempDir.toFile());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        // .NET standard will have only one .dll or .exe for any given .csproj
+        if (assemblyPaths.size() > 1) {
+            throw new RuntimeException("More than one assembly was found for the given .csproj." +
+                    "is there a single .csproj file in the parameter 'src' directory?");
+        }
 
-        // return the temporary folder containing only necessary files for analysis
-        return tempDir;
+        return assemblyPaths.iterator().next();
 
     }
 
