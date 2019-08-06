@@ -111,7 +111,7 @@ public class FxcopAnalyzer implements IAnalyzer {
          }
 
         // ignore found files that were in the obj folder or are tests
-        // TODO: refactor into functional form
+        // TODO: refactor into functional form, can merge this check into initial assemblyPaths addAll function
         for (Path p : assemblyPaths) {
             for (String directory : p.toString().split("\\\\")) {
                 if (directory.trim().equals("obj") || directory.toLowerCase().contains("test")) {
@@ -121,12 +121,11 @@ public class FxcopAnalyzer implements IAnalyzer {
         }
         assemblyPaths.removeAll(removePaths);
 
-        // .NET standard will have only one .dll or .exe for any given .csproj
-        if (assemblyPaths.size() > 1) {
-            throw new RuntimeException("More than one assembly was found for the given .csproj." +
-                    "is there a single .csproj file in the parameter 'src' directory?");
-        }
-
+        /*
+         * TODO: assemblyPaths can have multiple items if the same built assembly exists in Debug, Release, etc, folders.
+         *  .NET does this automatically if there are multiple configurations set up and run in the build environment.
+         *  Need to find a way to know which build folder to prioritize. This currently just picks the first one in the set
+         */
         return assemblyPaths.iterator().next();
 
     }
