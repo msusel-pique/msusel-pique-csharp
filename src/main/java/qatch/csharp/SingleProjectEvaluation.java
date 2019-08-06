@@ -288,7 +288,7 @@ public class SingleProjectEvaluation {
      * @param inputArgs project and results location as described in main method
      * @return HashMap containing paths of analysis project and results folder
      */
-    static HashMap<String, File> initialize(String[] inputArgs) {
+    private static HashMap<String, File> initialize(String[] inputArgs) {
 
         String projectLoc = inputArgs[0];
         String resultsLoc = inputArgs[1];
