@@ -9,6 +9,8 @@ import qatch.model.QualityModel;
 import qatch.model.Tqi;
 
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 
 public class QualityModelGenerator {
@@ -25,10 +27,8 @@ public class QualityModelGenerator {
 
         // constants
         final boolean BENCHMARK_CALIBRATION;
-        final File BENCH_REPO_PATH;
-        final File OUTPUT = new File("./out");
-
-
+        final Path BENCH_REPO_PATH;
+        final Path OUTPUT = new File("./out").toPath();
 
         System.out.println("\n\n******************************  Model Generator *******************************");
         System.out.println("*");
@@ -41,12 +41,13 @@ public class QualityModelGenerator {
         HashMap<String, String> config = initialize(args);
 
         BENCHMARK_CALIBRATION = Boolean.parseBoolean(config.get("benchmarkCalibration"));
-        BENCH_REPO_PATH = new File(config.get("benchRepoPath"));
-        OUTPUT.mkdirs();
+        BENCH_REPO_PATH = Paths.get(config.get("benchRepoPath"));
+        OUTPUT.toFile().mkdirs();
 
         System.out.println("* Starting Analysis...");
         System.out.println("* Loading Quality Model...");
 
+        // Set the properties and the characteristics
         QualityModel qualityModel = new QualityModel();
         PropertySet properties = qualityModel.getProperties();
         CharacteristicSet characteristics = qualityModel.getCharacteristics();
@@ -71,6 +72,14 @@ public class QualityModelGenerator {
 
             //Instantiate the serial benchmark analyzer
             BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
+
+            //Set the repository and the desired properties to the benchmark analyzer
+            benchmarkAnal.setBenchRepoPath(BENCH_REPO_PATH);
+            benchmarkAnal.setProperties(properties);
+
+            //Start the analysis of the benchmark repository
+            benchmarkAnal.analyzeBenchmarkRepo();
+
         }
 
     }

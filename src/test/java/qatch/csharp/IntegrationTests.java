@@ -19,7 +19,7 @@ public class IntegrationTests {
     @Test
     public void testSingleProjectEvaluation() throws SAXException, ParserConfigurationException, CloneNotSupportedException, IOException {
 
-        Path projectPath = Paths.get("C:\\Users\\davidrice3\\Desktop\\temp\\Eleflex\\src\\Versioning Module\\Eleflex.Versioning");
+        Path projectPath = Paths.get("C:\\Users\\davidrice3\\Desktop\\temp\\Eleflex\\src\\Applications\\Eleflex.WebClient");
         String resultPath = "./src/test/output";
 
         clean(new File(resultPath));
