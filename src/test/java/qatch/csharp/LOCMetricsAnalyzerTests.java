@@ -23,7 +23,7 @@ public class LOCMetricsAnalyzerTests {
         clean();
 
         LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer();
-        analyzer.analyze(src, dest, null);
+        analyzer.analyze(src.toPath(), dest.toPath(), null);
 
         File results = new File(this.dest + File.separator + LOCMetricsAnalyzer.RESULT_FILE_NAME);
 

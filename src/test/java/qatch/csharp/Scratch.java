@@ -10,12 +10,19 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Scratch {
 
     @Test
-    public void scratch() { }
+    public void scratch() throws IOException {
+        Path p = Paths.get("C:\\Users\\davidrice3\\Repository\\msusel-qatch\\benchmark-repository-csharp\\Eleflex\\src\\Lookups Module\\Eleflex.Lookups");
+        String s = p.getFileName().toString();
+
+        System.out.println("testing...");
+    }
 
     @Test
     public void tempDirectoryDelete() {

@@ -193,3 +193,4 @@ $RECYCLE.BIN/
 
 ### Project Specific ###
 /src/test/output/
+doc/reference.txt

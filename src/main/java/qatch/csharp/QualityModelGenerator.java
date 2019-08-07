@@ -1,5 +1,6 @@
 package qatch.csharp;
 
+import qatch.analysis.IAnalyzer;
 import qatch.calibration.BenchmarkAnalysisExporter;
 import qatch.calibration.BenchmarkAnalyzer;
 import qatch.calibration.BenchmarkProjects;
@@ -29,6 +30,7 @@ public class QualityModelGenerator {
         final boolean BENCHMARK_CALIBRATION;
         final Path BENCH_REPO_PATH;
         final Path OUTPUT = new File("./out").toPath();
+        final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project roots in the repo (at any depth)
 
         System.out.println("\n\n******************************  Model Generator *******************************");
         System.out.println("*");
@@ -70,18 +72,16 @@ public class QualityModelGenerator {
             System.out.println("* Please wait...");
             System.out.println("*");
 
-            //Instantiate the serial benchmark analyzer
-            BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
+            //Instantiate the benchmark analyzer
+            BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer(properties, BENCH_REPO_PATH, OUTPUT);
 
-            //Set the repository and the desired properties to the benchmark analyzer
-            benchmarkAnal.setBenchRepoPath(BENCH_REPO_PATH);
-            benchmarkAnal.setProperties(properties);
+            // actualize language-specific analyzers
+            IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
+            IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
             //Start the analysis of the benchmark repository
-            benchmarkAnal.analyzeBenchmarkRepo();
-
+            benchmarkAnal.analyzeBenchmarkRepo(metricsAnalyzer, findingsAnalyzer, PROJ_ROOT_FLAG);
         }
-
     }
 
     /**

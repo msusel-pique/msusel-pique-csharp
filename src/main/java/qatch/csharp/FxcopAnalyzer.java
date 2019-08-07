@@ -4,8 +4,10 @@ import qatch.analysis.IAnalyzer;
 import qatch.model.Property;
 import qatch.model.PropertySet;
 import qatch.utility.FileUtility;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashSet;
@@ -17,9 +19,9 @@ public class FxcopAnalyzer implements IAnalyzer {
     static final String TOOL_NAME = "FxCop";
 
     @Override
-    public void analyze(File src, File dest, PropertySet properties) {
+    public void analyze(Path src, Path dest, PropertySet properties) {
 
-        Path assembly = setup(src);
+        Path assembly = setup(src.toFile());
 
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
@@ -34,9 +36,14 @@ public class FxcopAnalyzer implements IAnalyzer {
             //Check if it is an FxCop Property
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
-                analyzeSubroutine(assembly, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
+                analyzeSubroutine(assembly, dest.toFile(), p.getMeasure().getRulesetPath(), p.getName()+".xml");
             }
         }
+    }
+
+    @Override
+    public Path targetSrcDirectory(Path path) {
+        return path;
     }
 
     /**
@@ -100,6 +107,17 @@ public class FxcopAnalyzer implements IAnalyzer {
 
         Set<Path> assemblyPaths = new HashSet<>();
         Set<Path> removePaths = new HashSet<>();
+
+        // enforce a .csproj file being at the top level of the src directory
+        File[] csprojFiles = src.listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.toLowerCase().endsWith(".csproj");
+            }
+        });
+        if (csprojFiles == null || csprojFiles.length == 0) {
+            throw new RuntimeException("'src' directory for FxCop analysis needs a root level .csproj file.");
+        }
 
         // only look for file names that match with .csproj file names. This causes external dependencies to be ignored
         Set<String> projectNames = FileUtility.findFileNamesFromExtension(src.toPath(), ".csproj");

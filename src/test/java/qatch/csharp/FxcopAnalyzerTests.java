@@ -40,7 +40,7 @@ public class FxcopAnalyzerTests {
         ps.addProperty(property02);
 
         FxcopAnalyzer analyzer = new FxcopAnalyzer();
-        analyzer.analyze(this.src, this.dest, ps);
+        analyzer.analyze(this.src.toPath(), this.dest.toPath(), ps);
 
         File result01 = new File(dest + File.separator + property01.getName() + ".xml");
         File result02 = new File(dest + File.separator + property02.getName() + ".xml");
