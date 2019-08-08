@@ -40,11 +40,6 @@ public class FxcopAnalyzer implements IAnalyzer {
         }
     }
 
-    @Override
-    public Path targetSrcDirectory(Path path) {
-        return path;
-    }
-
     /**
      * Analyze a single project against a certain ruleset (property) by calling the FxCop tool
      * through the command line with the appropriate configuration. Note that a project is the module a

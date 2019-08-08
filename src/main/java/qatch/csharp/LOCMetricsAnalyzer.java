@@ -28,13 +28,21 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
         ProcessBuilder pb;
 
         if(System.getProperty("os.name").contains("Windows")){
+//            pb = new ProcessBuilder(
+//                    "cmd.exe", "/c",
+//                    "\"" + SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe" + "\"",
+//                    "-i",
+//                    "\"" + src.toAbsolutePath().toString() + "\"",
+//                    "-o",
+//                    "\"" + dest.toAbsolutePath().toString() + "\""
+//            );
             pb = new ProcessBuilder(
-                "cmd.exe", "/c",
-                "\"" + SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe" + "\"",
-                "-i",
-                "\"" + src.toAbsolutePath().toString() + "\"",
-                "-o",
-                "\"" + dest.toAbsolutePath().toString() + "\""
+                    "cmd.exe", "/c",
+                    SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe",
+                    "-i",
+                    src.toAbsolutePath().toString(),
+                    "-o",
+                    dest.toAbsolutePath().toString()
             );
         }
         else throw new RuntimeException("LOCMetrics tool only supported on Windows operating systems.");
@@ -54,11 +62,6 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
         }
 
         cleanAllButOne(dest, RESULT_FILE_NAME, src.getFileName().toString());
-    }
-
-    @Override
-    public Path targetSrcDirectory(Path path) {
-        return path;
     }
 
     /**
