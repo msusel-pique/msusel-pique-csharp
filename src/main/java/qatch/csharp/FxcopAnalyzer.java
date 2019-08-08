@@ -6,7 +6,6 @@ import qatch.model.PropertySet;
 import qatch.utility.FileUtility;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashSet;
@@ -21,6 +20,12 @@ public class FxcopAnalyzer implements IAnalyzer {
     public void analyze(Path src, Path dest, PropertySet properties) {
 
         Path assembly = setup(src.toFile());
+        // TODO: bad approach for handling skipping analysis if errors arise. fix in future.
+        if (assembly == null) { return; }
+
+        // create folder to hold project-specific results
+        File destProj = new File(dest.toFile(), src.getFileName().toString());
+        destProj.mkdirs();
 
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
@@ -35,7 +40,11 @@ public class FxcopAnalyzer implements IAnalyzer {
             //Check if it is an FxCop Property
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
-                analyzeSubroutine(assembly, dest.toFile(), p.getMeasure().getRulesetPath(), p.getName()+".xml");
+                analyzeSubroutine(assembly,
+                        destProj,
+                        p.getMeasure().getRulesetPath(),
+                        src.getFileName().toString() + "_" + p.getName()+".xml"
+                );
             }
         }
     }
@@ -113,8 +122,10 @@ public class FxcopAnalyzer implements IAnalyzer {
         projectNames.forEach(p -> assemblyPaths.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
 
         if (assemblyPaths.isEmpty()) {
-        throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
-                + src + ". Has the project been built?");
+            // TODO: output warning using logger class
+            System.out.println("[Warning] No directories containing .exe or .dll file(s) named " +
+                    projectNames.toString() + " were found in\n\t" + src + "\n\tHas the project been built?");
+            return null;
          }
 
         // ignore found files that were in the obj folder or are tests

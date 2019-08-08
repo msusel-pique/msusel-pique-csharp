@@ -25,7 +25,7 @@ public class LOCMetricsAnalyzerTests {
         LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer();
         analyzer.analyze(src.toPath(), dest.toPath(), null);
 
-        File results = new File(this.dest + File.separator + LOCMetricsAnalyzer.RESULT_FILE_NAME);
+        File results = new File(this.dest + File.separator + LOCMetricsAnalyzer.TOOL_RESULT_FILE_NAME);
 
         // XML file exists in expected location with correct name
         Assert.assertTrue(results.exists());

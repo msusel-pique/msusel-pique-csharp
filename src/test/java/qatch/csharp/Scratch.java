@@ -2,6 +2,7 @@ package qatch.csharp;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
+import qatch.analysis.IAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +19,6 @@ public class Scratch {
 
     @Test
     public void scratch() throws IOException {
-        Path p = Paths.get("C:\\Users\\davidrice3\\Repository\\msusel-qatch\\benchmark-repository-csharp\\Eleflex\\src\\Lookups Module\\Eleflex.Lookups");
-        String s = p.getFileName().toString();
 
         System.out.println("testing...");
     }
