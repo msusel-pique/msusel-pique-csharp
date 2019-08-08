@@ -4,7 +4,6 @@ import qatch.analysis.IAnalyzer;
 import qatch.model.Property;
 import qatch.model.PropertySet;
 import qatch.utility.FileUtility;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -109,12 +108,7 @@ public class FxcopAnalyzer implements IAnalyzer {
         Set<Path> removePaths = new HashSet<>();
 
         // enforce a .csproj file being at the top level of the src directory
-        File[] csprojFiles = src.listFiles(new FilenameFilter() {
-            @Override
-            public boolean accept(File dir, String name) {
-                return name.toLowerCase().endsWith(".csproj");
-            }
-        });
+        File[] csprojFiles = src.listFiles((dir, name) -> name.toLowerCase().endsWith(".csproj"));
         if (csprojFiles == null || csprojFiles.length == 0) {
             throw new RuntimeException("'src' directory for FxCop analysis needs a root level .csproj file.");
         }

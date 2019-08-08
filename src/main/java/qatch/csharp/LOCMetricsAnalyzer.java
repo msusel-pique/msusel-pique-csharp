@@ -58,7 +58,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
     @Override
     public Path targetSrcDirectory(Path path) {
-        return path.getParent();
+        return path;
     }
 
     /**
@@ -80,7 +80,6 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
                     .filter(p -> p.getFileName().toString().contains("LocMetrics"))
                     .filter(p -> !p.getFileName().toString().equalsIgnoreCase(toKeep))
                     .forEach(toDelete::add);
-            ;
         } catch (IOException e) { e.printStackTrace(); }
 
         // delete unwanted files
@@ -90,6 +89,6 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
         // rename remaining file to project-specific name
         File metrics = new File(directory.toFile(), toKeep);
-        metrics.renameTo(new File(directory.toFile(), toRename));
+        metrics.renameTo(new File(directory.toFile(), toRename + "_" + metrics.getName()));
     }
 }

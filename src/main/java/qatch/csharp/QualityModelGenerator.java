@@ -29,8 +29,8 @@ public class QualityModelGenerator {
         // constants
         final boolean BENCHMARK_CALIBRATION;
         final Path BENCH_REPO_PATH;
-        final Path OUTPUT = new File("./out").toPath();
-        final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project roots in the repo (at any depth)
+        final Path OUTPUT = new File("C:\\Users\\davidrice3\\Desktop\\results\\testing").toPath();
+        final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
         System.out.println("\n\n******************************  Model Generator *******************************");
         System.out.println("*");
@@ -46,6 +46,9 @@ public class QualityModelGenerator {
         BENCH_REPO_PATH = Paths.get(config.get("benchRepoPath"));
         OUTPUT.toFile().mkdirs();
 
+        System.out.println("Benchmark Repository: " + BENCH_REPO_PATH.toString());
+        System.out.println("Output Directory: " + OUTPUT.toString());
+        System.out.println("\n");
         System.out.println("* Starting Analysis...");
         System.out.println("* Loading Quality Model...");
 
