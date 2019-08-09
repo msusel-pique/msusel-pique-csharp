@@ -132,10 +132,10 @@ public class SingleProjectEvaluation {
             //Check if it is not a LOCMetrics result file
             if(!resultFile.getName().contains("LocMetrics")) {
                 //Parse the issues and add them to the IssueSet Vector of the Project object
-                project.addIssueSet(findingsImporter.parse(resultFile.getAbsolutePath()));
+                project.addIssueSet(findingsImporter.parse(resultFile.toPath()));
             }else{
                 //Parse the metrics of the project and add them to the MetricSet field of the Project object
-                project.setMetrics(metricsImporter.parse(resultFile.getAbsolutePath()));
+                project.setMetrics(metricsImporter.parse(resultFile.toPath()));
             }
         }
 
