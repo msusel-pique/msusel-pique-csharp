@@ -2,10 +2,7 @@ package qatch.csharp;
 
 import org.apache.commons.io.FileUtils;
 import org.xml.sax.SAXException;
-import qatch.analysis.IAggregator;
-import qatch.analysis.IAnalyzer;
-import qatch.analysis.IFindingsResultsImporter;
-import qatch.analysis.IMetricsResultsImporter;
+import qatch.analysis.*;
 import qatch.evaluation.EvaluationResultsExporter;
 import qatch.evaluation.Project;
 import qatch.evaluation.ProjectCharacteristicsEvaluator;
@@ -163,8 +160,8 @@ public class SingleProjectEvaluation {
             project.addProperty(p);
         }
 
-        IAggregator metricsAggregator = new LOCMetricsAggregator();
-        IAggregator findingsAggregator = new FxcopAggregator();
+        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
+        IFindingsAggregator findingsAggregator = new FxcopAggregator();
 
         //Aggregate all the analysis results
         metricsAggregator.aggregate(project);

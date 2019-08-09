@@ -1,6 +1,6 @@
 package qatch.csharp;
 
-import qatch.analysis.IAggregator;
+import qatch.analysis.IMetricsAggregator;
 import qatch.evaluation.Project;
 import qatch.model.Measure;
 import qatch.model.MetricSet;
@@ -12,7 +12,10 @@ import qatch.model.Property;
 /**
  * This class wasn't my code please don't judge me
  */
-public class LOCMetricsAggregator implements IAggregator {
+public class LOCMetricsAggregator implements IMetricsAggregator {
+
+    static String TOOL_NAME = "LOCMetrics";
+
     @Override
     public void aggregate(Project project) {
         //Get the MetricSet of the project
@@ -68,7 +71,7 @@ public class LOCMetricsAggregator implements IAggregator {
 
             //Check if this property is quantified by the CKJM tool
             //(TODO) generify to all metrics tools
-            if (property.getMeasure().getTool().equalsIgnoreCase("ckjm")) {
+            if (property.getMeasure().getTool().equalsIgnoreCase(TOOL_NAME)) {
                 Measure measure = property.getMeasure();
 
                 //Get the index of the metr array that corresponds to this metric

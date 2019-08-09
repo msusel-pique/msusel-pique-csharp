@@ -26,42 +26,6 @@ public class Scratch {
     @Test
     public void scratch() throws IOException {
 
-        BenchmarkProjects projects = new BenchmarkProjects();
-        IMetricsResultsImporter mri = new LOCMetricsResultsImporter();
-        IFindingsResultsImporter fri = new FxcopResultsImporter();
-
-        Files.list(Paths.get("C:\\Users\\davidrice3\\Repository\\msusel-qatch\\msusel-qatch-csharp\\out\\benchmark_results"))
-            .forEach(p -> {
-                Project project = new Project(p.getFileName().toString());
-                project.setPath(p.toAbsolutePath().toString());
-                // parse and set metrics and issues found by the tools
-                Path metricsFolder = Paths.get(p.toString(), "metrics");
-                Path findingsFolder = Paths.get(p.toString(), "findings");
-
-                try {
-                    Files.list(metricsFolder)
-                            .filter(Files::isRegularFile)
-                            .forEach(f -> {
-                                try { project.setMetrics(mri.parse(f));}
-                                catch (IOException e) {	e.printStackTrace(); }
-                            });
-                } catch (IOException e) {e.printStackTrace(); }
-
-                try {
-                    Files.list(findingsFolder)
-                            .filter(Files::isRegularFile)
-                            .forEach(f -> {
-                                try { project.addIssueSet(fri.parse(f)); }
-                                catch (IOException | ParserConfigurationException | SAXException e) {
-                                    e.printStackTrace();
-                                }
-                            });
-                } catch (IOException e) { e.printStackTrace(); }
-
-                projects.addProject(project);
-            });
-
-
         System.out.println("testing...");
     }
 

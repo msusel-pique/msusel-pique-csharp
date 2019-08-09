@@ -1,10 +1,7 @@
 package qatch.csharp;
 
 import qatch.analysis.IAnalyzer;
-import qatch.calibration.BenchmarkAnalysisExporter;
-import qatch.calibration.BenchmarkAnalyzer;
-import qatch.calibration.BenchmarkProjects;
-import qatch.calibration.BenchmarkResultImporter;
+import qatch.calibration.*;
 import qatch.model.*;
 
 import java.io.File;
@@ -120,6 +117,43 @@ public class QualityModelGenerator {
             System.out.println("*");
             System.out.println("* The results are successfully imported..! ");
             System.out.println("******************************");
+
+
+            /*
+             * Step 3 : Aggregate the results of each project
+             */
+            System.out.println("\n**************** STEP 3: Aggregation Process *************************");
+            System.out.println("*");
+            System.out.println("* Aggregating the results of each project...");
+            System.out.println("* I.e. Calculating the normalized values of their properties...");
+            System.out.println("* Please wait...");
+            System.out.println("*");
+
+            // Create an empty BenchmarkAggregator and aggregate the metrics of the project
+            BenchmarkAggregator benchAggregator = new BenchmarkAggregator();
+            try {
+                benchAggregator.aggregateProjects(projects, properties, new LOCMetricsAggregator(), new FxcopAggregator());
+            }
+            catch (CloneNotSupportedException e) { e.printStackTrace(); }
+
+            System.out.println("*");
+            System.out.println("* Aggregation process finished..!");
+            System.out.println("******************************");
+
+            /*
+             * Step 4 : Export the benchmark analysis results for the R - Analysis
+             */
+
+            System.out.println("\n**************** STEP 4: Properties exportation for R analysis *******");
+            System.out.println("*");
+
+            // Create an analysis exporter and export the Properties in a xls form
+            exporter = new BenchmarkAnalysisExporter();
+            exporter.exportToXls(projects);
+
+            System.out.println("*");
+            System.out.println("* The xls file with the properties is successfully exported \n and placed into R's working directory!");
+
         }
     }
 
@@ -146,7 +180,6 @@ public class QualityModelGenerator {
         else throw new RuntimeException("inputArgs[1] did not match 'true' or 'false'");
 
         config.put("benchRepoPath", inputArgs[2]);
-
         return config;
     }
 
