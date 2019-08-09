@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 /**
@@ -22,13 +23,13 @@ import java.util.List;
 public class LOCMetricsResultsImporter implements IMetricsResultsImporter {
 
     @Override
-    public MetricSet parse(String path) throws IOException {
+    public MetricSet parse(Path path) throws IOException {
 
-        // This will change later. Currently using MetricSet to mirror the by-class approach used in CKJM
+        // This will change later. Currently using MetricSet to mirror the by-class approach used in original CKJM class
         MetricSet metricSet = new MetricSet();
         Metrics metrics = new Metrics();
 
-        File file = new File(path);
+        File file = new File(path.toString());
         List<String> lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
         String[] headerRow = lines.get(0).split(",", -1);
         String[] totalsRow = lines.get(1).split(",", -1);

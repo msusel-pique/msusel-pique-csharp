@@ -29,10 +29,6 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
 
-        // create folder to hold project-specific results
-        File destProj = new File(dest.toFile(), src.getFileName().toString());
-        destProj.mkdirs();
-
         ProcessBuilder pb;
         if(System.getProperty("os.name").contains("Windows")){
             pb = new ProcessBuilder(
@@ -41,7 +37,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
                     "-i",
                     src.toAbsolutePath().toString(),
                     "-o",
-                    destProj.toPath().toAbsolutePath().toString()
+                    dest.toAbsolutePath().toString()
             );
         }
         else throw new RuntimeException("LOCMetrics tool only supported on Windows operating systems.");
@@ -60,7 +56,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
             e.printStackTrace();
         }
 
-        cleanAllButOne(destProj.toPath(), src.getFileName());
+        cleanAllButOne(dest, src.getFileName());
     }
 
     /**

@@ -16,6 +16,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
 /**
  * This class is responsible for importing the issues found by FxCop 15.0
@@ -33,15 +34,15 @@ public class FxcopResultsImporter implements IFindingsResultsImporter {
      *      object representing all found violations of the current property
      */
     @Override
-    public IssueSet parse(String path) throws ParserConfigurationException, IOException, SAXException {
+    public IssueSet parse(Path path) throws ParserConfigurationException, IOException, SAXException {
 
-        File scanResults = new File(path);
+        File scanResults = new File(path.toString());
         String propertyName = scanResults.getName().substring(0, scanResults.getName().length()-4);
         IssueSet issues = new IssueSet(propertyName);
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder loader = factory.newDocumentBuilder();
-        Document document = loader.parse(path);
+        Document document = loader.parse(path.toString());
         DocumentTraversal trav = (DocumentTraversal) document;
 
         NodeIterator it = trav.createNodeIterator(document.getDocumentElement(), NodeFilter.SHOW_ALL, null, true);
@@ -71,8 +72,6 @@ public class FxcopResultsImporter implements IFindingsResultsImporter {
                 issues.addIssue(issue);
             }
         }
-
         return issues;
-
     }
 }

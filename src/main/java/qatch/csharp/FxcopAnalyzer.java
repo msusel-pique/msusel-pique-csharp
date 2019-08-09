@@ -23,10 +23,6 @@ public class FxcopAnalyzer implements IAnalyzer {
         // TODO: bad approach for handling skipping analysis if errors arise. fix in future.
         if (assembly == null) { return; }
 
-        // create folder to hold project-specific results
-        File destProj = new File(dest.toFile(), src.getFileName().toString());
-        destProj.mkdirs();
-
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
         Property p;
@@ -41,7 +37,7 @@ public class FxcopAnalyzer implements IAnalyzer {
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
                 analyzeSubroutine(assembly,
-                        destProj,
+                        dest.toFile(),
                         p.getMeasure().getRulesetPath(),
                         src.getFileName().toString() + "_" + p.getName()+".xml"
                 );
