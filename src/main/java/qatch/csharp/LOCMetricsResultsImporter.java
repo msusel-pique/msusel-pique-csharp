@@ -1,5 +1,7 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 import qatch.analysis.IMetricsResultsImporter;
 import qatch.model.MetricSet;
 import qatch.model.Metrics;
@@ -9,6 +11,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,12 +28,21 @@ public class LOCMetricsResultsImporter implements IMetricsResultsImporter {
     @Override
     public MetricSet parse(Path path) throws IOException {
 
+        List<String> lines = new ArrayList<>();
+
+        try {
+            Path metricsFile = Files.find(path, 1, (p, attr) -> p.toString().endsWith(".csv"))
+                    .findFirst()
+                    .orElseThrow(NotFound::new);
+            lines = Files.readAllLines(metricsFile, StandardCharsets.UTF_8);
+        } catch (NotFound notFound) {
+            notFound.printStackTrace();
+        }
+
         // This will change later. Currently using MetricSet to mirror the by-class approach used in original CKJM class
         MetricSet metricSet = new MetricSet();
         Metrics metrics = new Metrics();
 
-        File file = new File(path.toString());
-        List<String> lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
         String[] headerRow = lines.get(0).split(",", -1);
         String[] totalsRow = lines.get(1).split(",", -1);
 

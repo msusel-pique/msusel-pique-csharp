@@ -1,6 +1,5 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.calibration.BenchmarkAnalysisExporter;
 import qatch.calibration.BenchmarkAnalyzer;
@@ -9,7 +8,6 @@ import qatch.calibration.BenchmarkResultImporter;
 import qatch.model.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -55,7 +53,7 @@ public class QualityModelGenerator {
 
         System.out.println("* Benchmark Repository: " + BENCH_REPO_PATH.toString());
         System.out.println("* Output Directory: " + OUTPUT.toString());
-        System.out.println("*\n");
+        System.out.println("*");
         System.out.println("* Starting Analysis...");
         System.out.println("* Loading Quality Model...");
 
@@ -66,10 +64,11 @@ public class QualityModelGenerator {
         Tqi tqi = qualityModel.getTqi();
 
         System.out.println("* Empty Quality Model successfully loaded...!");
-        System.out.println("***");
+        System.out.println("******************************");
 
         BenchmarkProjects projects = null;
         BenchmarkAnalysisExporter exporter = null;
+        BenchmarkAnalyzer benchAnalyzer = new BenchmarkAnalyzer(properties, BENCH_REPO_PATH, OUTPUT);
 
         // Check if the user wants to execute a benchmark calibration
         if (BENCHMARK_CALIBRATION) {
@@ -84,25 +83,22 @@ public class QualityModelGenerator {
                 System.out.println("* Please wait...");
                 System.out.println("*");
 
-                //Instantiate the benchmark analyzer
-                BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer(properties, BENCH_REPO_PATH, OUTPUT);
-
                 // actualize language-specific analyzers
                 IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
                 IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
                 //Start the analysis of the benchmark repository
-                benchmarkAnal.analyzeBenchmarkRepo(metricsAnalyzer, findingsAnalyzer, PROJ_ROOT_FLAG);
+                benchAnalyzer.analyzeBenchmarkRepo(metricsAnalyzer, findingsAnalyzer, PROJ_ROOT_FLAG);
 
-                System.out.println("* You can find the results at : " + benchmarkAnal.getBENCH_RESULTS_PATH().toString());
-                System.out.println("***");
+                System.out.println("* You can find the results at : " + benchAnalyzer.getBENCH_RESULTS_PATH().toString());
+                System.out.println("******************************");
                 System.out.println();
             }
             else {
                 System.out.println("\n**************** STEP 1 : Benchmark Analyzer *************************");
                 System.out.println("*");
                 System.out.println("* Skipping tool static analysis. Assuming results already exist.");
-                System.out.println("*");
+                System.out.println("******************************");
             }
 
             /*
@@ -118,12 +114,12 @@ public class QualityModelGenerator {
             BenchmarkResultImporter benchmarkImporter = new BenchmarkResultImporter();
 
             // Start importing the project results
-//            projects = benchmarkImporter.importResults(BenchmarkAnalyzer.BENCH_RESULT_PATH);
+            projects = benchmarkImporter.importResults(benchAnalyzer, new LOCMetricsResultsImporter(), new FxcopResultsImporter());
 
             // Print some informative messages to the console
             System.out.println("*");
             System.out.println("* The results are successfully imported..! ");
-            System.out.println("***");
+            System.out.println("******************************");
         }
     }
 
