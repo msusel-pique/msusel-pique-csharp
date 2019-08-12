@@ -143,7 +143,6 @@ public class QualityModelGenerator {
             /*
              * Step 4 : Export the benchmark analysis results for the R - Analysis
              */
-
             System.out.println("\n**************** STEP 4: Properties exportation for R analysis *******");
             System.out.println("*");
 
@@ -154,6 +153,19 @@ public class QualityModelGenerator {
             System.out.println("*");
             System.out.println("* The xls file with the properties is successfully exported \n and placed into R's working directory!");
 
+            /*
+             * Step 5 : Invoke R analysis for the threshold calculation
+             */
+            System.out.println("\n**************** STEP 5: Threshold extraction ************************");
+            System.out.println("*");
+            System.out.println("* Calling R for threshold extraction...");
+            System.out.println("* This will take a while...");
+            System.out.println("*");
+
+            // Create an Empty R Invoker and execute the threshold extraction script
+            RInvoker rInvoker = new RInvoker();
+            try { rInvoker.executeRScriptForThresholds(); }
+            catch (InterruptedException e) { e.printStackTrace(); }
         }
     }
 
