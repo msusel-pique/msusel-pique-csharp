@@ -1,13 +1,11 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.calibration.*;
 import qatch.model.*;
 import qatch.utility.FileUtility;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -26,17 +24,16 @@ public class QualityModelGenerator {
     public static void main(String[] args) {
 
         // constants
-        final boolean BENCHMARK_CALIBRATION;
+        final boolean RECALIBRATE;
         final boolean RERUN_TOOLS;
         final Path BENCH_REPO_PATH;
-        final Path OUTPUT = new File("./out").toPath();
-        final Path QM_DESCRIPTION_PATH = Paths.get("C:\\Users\\davidrice3\\Repository\\msusel-qatch\\msusel-qatch-csharp\\src\\main\\resources\\models\\qualityModel_csharp_description.xml");
         final Path ROOT = Paths.get(System.getProperty("user.dir"));
+        final Path OUTPUT = Paths.get(ROOT.toString(), "out");
+        final Path QM_DESCRIPTION_PATH = Paths.get(ROOT.toString(), "src/main/resources/models/qualityModel_csharp_description.xml");
         final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
 
         System.out.println("\n\n******************************  Model Generator *******************************");
-        System.out.println("*");
 
         // Initialize
         if (args == null || args.length < 2) {
@@ -47,7 +44,7 @@ public class QualityModelGenerator {
         }
         HashMap<String, String> config = initialize(args);
 
-        BENCHMARK_CALIBRATION = Boolean.parseBoolean(config.get("benchmarkCalibration"));
+        RECALIBRATE = Boolean.parseBoolean(config.get("recalibrate"));
         RERUN_TOOLS = Boolean.parseBoolean(config.get("rerunTools"));
         BENCH_REPO_PATH = Paths.get(config.get("benchRepoPath"));
         OUTPUT.toFile().mkdirs();
@@ -72,7 +69,7 @@ public class QualityModelGenerator {
         BenchmarkAnalyzer benchAnalyzer = new BenchmarkAnalyzer(properties, BENCH_REPO_PATH, OUTPUT);
 
         // Check if the user wants to execute a benchmark calibration
-        if (BENCHMARK_CALIBRATION) {
+        if (RECALIBRATE) {
 
             /*
              * Step 1 : Analyze the projects found in the desired Benchmark Repository
@@ -175,6 +172,65 @@ public class QualityModelGenerator {
             // Create an Empty R Invoker and execute the threshold extraction script
             RInvoker rInvoker = new RInvoker();
             rInvoker.executeRScript(RInvoker.R_BIN_PATH, tempThreshScript.toPath(), rWorkingDir.toString());
+
+            System.out.println("*");
+            System.out.println("* R analysis finished..!");
+            System.out.println("* Thresholds exported in a JSON file..!");
+
+            /*
+             * Step 6 : Import the thresholds and assign them to each property of the Quality Model
+             */
+            System.out.println("\n**************** STEP 6: Importing the thresholds ********************");
+            System.out.println("*");
+            System.out.println("* Importing the thresholds from the JSON file into JVM...");
+            System.out.println("* This will take a while...");
+            System.out.println("*");
+
+            // Create an empty Threshold importer and import the thresholds from the json file exported by R
+            // The file is placed into the R working directory (fixed)
+            ThresholdImporter thresholdImp = new ThresholdImporter();
+            thresholdImp.importThresholdsFromJSON(properties);
+
+            System.out.println("* Thresholds successfully imported..!");
+
+            /*
+             * Step 7 : Copy the thresholds to each projects' properties
+             */
+            System.out.println("\n**************** STEP 7: Loading thresholds to Projects  *************");
+            System.out.println("*");
+            System.out.println("* Seting the thresholds to the properties of the existing projects...");
+            System.out.println("* This will take a while...");
+            System.out.println("*");
+
+            // TODO: move this functionality to Qatch framework
+            // TODO: use functional approach, use dictionary mapping instead of by index
+            for(int i = 0; i < projects.size(); i++){
+                PropertySet prop = projects.getProject(i).getProperties();
+                for(int j = 0; j < prop.size(); j++){
+                    prop.get(j).setThresholds(properties.get(j).getThresholds().clone());
+                }
+            }
+
+            System.out.println("*");
+            System.out.println("* Thresholds successfully loaded to the projects' properties..!");
+
+            System.out.println("\n*********************************** Weight Elicitation *************************************");
+            System.out.println("*");
+            System.out.println("*");
+
+            // Call R script for weight elicitation
+            // TODO: find way to have all non-language specific procedure occur in qatch framework module
+            // get r threshold script from framework
+            File tempWeightsScript = FileUtility.tempFileCopyFromJar(RInvoker.getRScriptResource(RInvoker.Script.AHP), rWorkingDir.toPath());
+
+            // execute the weight elicitation script
+            rInvoker.executeRScript(RInvoker.R_BIN_PATH, tempThreshScript.toPath(), rWorkingDir.toString());
+//            invoker.executeRScriptForWeightsElicitation();
+
+            // Import the weights from the json file
+            WeightsImporter weightImporter = new WeightsImporter();
+            weightImporter.importWeights(tqi, characteristics);
+
         }
     }
 
@@ -191,7 +247,7 @@ public class QualityModelGenerator {
         HashMap<String, String> config = new HashMap<>();
 
         if (inputArgs[0].equalsIgnoreCase("true") || inputArgs[0].equalsIgnoreCase("false")) {
-            config.put("benchmarkCalibration", inputArgs[0]);
+            config.put("recalibrate", inputArgs[0]);
         }
         else throw new RuntimeException("inputArgs[0] did not match 'true' or 'false'");
 
