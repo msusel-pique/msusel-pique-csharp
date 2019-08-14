@@ -1,10 +1,13 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.calibration.*;
 import qatch.model.*;
+import qatch.utility.FileUtility;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -28,6 +31,7 @@ public class QualityModelGenerator {
         final Path BENCH_REPO_PATH;
         final Path OUTPUT = new File("./out").toPath();
         final Path QM_DESCRIPTION_PATH = Paths.get("C:\\Users\\davidrice3\\Repository\\msusel-qatch\\msusel-qatch-csharp\\src\\main\\resources\\models\\qualityModel_csharp_description.xml");
+        final Path ROOT = Paths.get(System.getProperty("user.dir"));
         final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
 
@@ -162,9 +166,20 @@ public class QualityModelGenerator {
             System.out.println("* This will take a while...");
             System.out.println("*");
 
+            // TODO: find way to have all non-language specific procedure occur in qatch framework module
+            // get r threshold script from framework
+            File rWorkingDir = new File(ROOT.toFile(), "r_working_directory");
+            rWorkingDir.mkdirs();
+            File tempThreshScript = FileUtility.tempFileCopyFromJar(RInvoker.getRScriptResource(RInvoker.Script.THRESHOLD), rWorkingDir.toPath());
+
             // Create an Empty R Invoker and execute the threshold extraction script
             RInvoker rInvoker = new RInvoker();
-            try { rInvoker.executeRScriptForThresholds(); }
+            try {
+                rInvoker.executeRScriptForThresholds(
+                        RInvoker.R_BIN_PATH,
+                        tempThreshScript.toPath(),
+                        rWorkingDir.toString());
+            }
             catch (InterruptedException e) { e.printStackTrace(); }
         }
     }
