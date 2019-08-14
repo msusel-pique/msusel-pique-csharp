@@ -174,13 +174,7 @@ public class QualityModelGenerator {
 
             // Create an Empty R Invoker and execute the threshold extraction script
             RInvoker rInvoker = new RInvoker();
-            try {
-                rInvoker.executeRScriptForThresholds(
-                        RInvoker.R_BIN_PATH,
-                        tempThreshScript.toPath(),
-                        rWorkingDir.toString());
-            }
-            catch (InterruptedException e) { e.printStackTrace(); }
+            rInvoker.executeRScript(RInvoker.R_BIN_PATH, tempThreshScript.toPath(), rWorkingDir.toString());
         }
     }
 

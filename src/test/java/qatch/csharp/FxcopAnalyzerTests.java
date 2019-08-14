@@ -13,7 +13,7 @@ import java.io.IOException;
 public class FxcopAnalyzerTests {
 
     // FxCop analysis needs a compiled CSharp project located at 'src' in order to work
-    private final File src = new File("../../MSUSEL/sample-analysis-projects/csharp/SimpleCSharp");
+    private final File src = new File("src/test/resources/compiled_projects/SimpleCSharp");
     private final File dest = new File("src/test/output");
     private final File rulesDir = new File(SingleProjectEvaluation.TOOLS_LOCATION + File.separator +
             "FxCop"+ File.separator + "Rules");
@@ -42,16 +42,16 @@ public class FxcopAnalyzerTests {
         FxcopAnalyzer analyzer = new FxcopAnalyzer();
         analyzer.analyze(this.src.toPath(), this.dest.toPath(), ps);
 
-        File result01 = new File(dest + File.separator + property01.getName() + ".xml");
-        File result02 = new File(dest + File.separator + property02.getName() + ".xml");
+        File result01 = new File(dest + File.separator + src.getName() + "_" + property01.getName() + ".xml");
+        File result02 = new File(dest + File.separator + src.getName() + "_" + property02.getName() + ".xml");
 
         // XML file exists in expected location with correct name
         Assert.assertTrue(result01.exists());
         Assert.assertTrue(result02.exists());
         Assert.assertTrue(result01.isFile());
         Assert.assertTrue(result02.isFile());
-        Assert.assertEquals("propertyName01.xml", result01.getName());
-        Assert.assertEquals("propertyName02.xml", result02.getName());
+        Assert.assertEquals("SimpleCSharp_propertyName01.xml", result01.getName());
+        Assert.assertEquals("SimpleCSharp_propertyName02.xml", result02.getName());
 
         // XML file has expected number of bytes
         Assert.assertEquals(2844, result01.length(), 500);

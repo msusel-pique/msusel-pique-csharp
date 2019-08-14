@@ -128,7 +128,7 @@ public class FxcopAnalyzer implements IAnalyzer {
         // TODO: refactor into functional form, can merge this check into initial assemblyPaths addAll function
         for (Path p : assemblyPaths) {
             for (String directory : p.toString().split("\\\\")) {
-                if (directory.trim().equals("obj") || directory.toLowerCase().contains("test")) {
+                if (directory.trim().equals("obj")) {   // TODO: also filter assemblies found in test directories?
                     removePaths.add(p);
                 }
             }

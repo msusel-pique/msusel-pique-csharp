@@ -10,7 +10,7 @@ import java.io.IOException;
 public class LOCMetricsAnalyzerTests {
 
     // LOCMetrics analysis needs a compiled CSharp project located at 'src' in order to work
-    private final File src = new File("../../MSUSEL/sample-analysis-projects/csharp/SimpleCSharp");
+    private final File src = new File("src/test/resources/compiled_projects/SimpleCSharp");
     private final File dest = new File("src/test/output");
 
     /**
@@ -25,12 +25,12 @@ public class LOCMetricsAnalyzerTests {
         LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer();
         analyzer.analyze(src.toPath(), dest.toPath(), null);
 
-        File results = new File(this.dest + File.separator + LOCMetricsAnalyzer.TOOL_RESULT_FILE_NAME);
+        File results = new File(this.dest + File.separator + src.getName() + "_" + LOCMetricsAnalyzer.TOOL_RESULT_FILE_NAME);
 
         // XML file exists in expected location with correct name
         Assert.assertTrue(results.exists());
         Assert.assertTrue(results.isFile());
-        Assert.assertEquals("LocMetricsFolders.csv", results.getName());
+        Assert.assertEquals("SimpleCSharp_LocMetricsFolders.csv", results.getName());
 
         // XML file has approximate expected number of bytes. If LOCMetrics returns all 0's, the byte size is 101.0
         // A better way to test this would be to parse the XML output for expected entries, but
