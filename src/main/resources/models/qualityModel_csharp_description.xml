@@ -2,12 +2,9 @@
   <characteristics>
     <characteristic name="Maintainability" standard="ISO/IEC 25010" description="The maintainability of the project" />
     <characteristic name="Reliability" standard="ISO/IEC 25010" description="The reliability of the project" />
-    <characteristic name="Security" standard="ISO/IEC 25010" description="The security of the project" />
   </characteristics>
   <properties>
     <property name="DesignRules" type="1" description="Design warnings support adherence to the .NET Framework Design Guidelines" positive_impact="false" metricName="" ruleset="DesignRules.dll" tool="FxCop" />
     <property name="MaintainabilityRules" type="1" description="Maintainability warnings support library and application maintenance" positive_impact="false" metricName="" ruleset="MaintainabilityRules.dll" tool="FxCop" />
-    <property name="ReliabilityRules" type="1" description="Reliability warnings support library and application reliability, such as correct memory and thread usage" positive_impact="false" metricName="" ruleset="ReliabilityRules.dll" tool="FxCop" />
-    <property name="SecurityRules" type="1" description="Security warnings support safer libraries and applications. These warnings help prevent security flaws in your program. If you disable any of these warnings, you should clearly mark the reason in code and also inform the designated security officer for your development project" positive_impact="false" metricName="" ruleset="SecurityRules.dll" tool="FxCop" />
   </properties>
 </quality_model>

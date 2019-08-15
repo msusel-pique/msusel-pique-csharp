@@ -1,13 +1,13 @@
 package qatch.csharp;
 
-import qatch.analysis.IAggregator;
+import qatch.analysis.IFindingsAggregator;
 import qatch.evaluation.Project;
 import qatch.model.IssueSet;
 import qatch.model.Property;
 
 import java.util.Iterator;
 
-public class FxcopAggregator implements IAggregator {
+public class FxcopAggregator implements IFindingsAggregator {
 
     //The weights representing the relative importance of each FxCop rule category
     private static final int[] WEIGHT = {1, 1, 1, 1, 1};
@@ -64,7 +64,7 @@ public class FxcopAggregator implements IAggregator {
             //Find the property and set its value and its profile ...
             for(int i = 0; i < project.getProperties().size(); i++){
                 Property property = project.getProperties().get(i);
-                if(issueSet.getPropertyName().equals(property.getName())){
+                if(issueSet.getPropertyName().endsWith(property.getName())){
                     property.getMeasure().setValue(value);
                     property.setProfile(num.clone());
                     break;

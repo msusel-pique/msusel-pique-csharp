@@ -17,9 +17,11 @@ public class FxcopAnalyzer implements IAnalyzer {
     static final String TOOL_NAME = "FxCop";
 
     @Override
-    public void analyze(File src, File dest, PropertySet properties) {
+    public void analyze(Path src, Path dest, PropertySet properties) {
 
-        Path assembly = setup(src);
+        Path assembly = setup(src.toFile());
+        // TODO: bad approach for handling skipping analysis if errors arise. fix in future.
+        if (assembly == null) { return; }
 
         //Create an Iterator in order to iterate through the properties of the desired PropertySet object
         Iterator<Property> iterator = properties.iterator();
@@ -34,7 +36,11 @@ public class FxcopAnalyzer implements IAnalyzer {
             //Check if it is an FxCop Property
             if (p.getMeasure().getTool().equals(FxcopAnalyzer.TOOL_NAME)) {
                 //Analyze the project against this property
-                analyzeSubroutine(assembly, dest, p.getMeasure().getRulesetPath(), p.getName()+".xml");
+                analyzeSubroutine(assembly,
+                        dest.toFile(),
+                        p.getMeasure().getRulesetPath(),
+                        src.getFileName().toString() + "_" + p.getName()+".xml"
+                );
             }
         }
     }
@@ -101,20 +107,28 @@ public class FxcopAnalyzer implements IAnalyzer {
         Set<Path> assemblyPaths = new HashSet<>();
         Set<Path> removePaths = new HashSet<>();
 
+        // enforce a .csproj file being at the top level of the src directory
+        File[] csprojFiles = src.listFiles((dir, name) -> name.toLowerCase().endsWith(".csproj"));
+        if (csprojFiles == null || csprojFiles.length == 0) {
+            throw new RuntimeException("'src' directory for FxCop analysis needs a root level .csproj file.");
+        }
+
         // only look for file names that match with .csproj file names. This causes external dependencies to be ignored
         Set<String> projectNames = FileUtility.findFileNamesFromExtension(src.toPath(), ".csproj");
         projectNames.forEach(p -> assemblyPaths.addAll(FileUtility.findAssemblies(src, p, ".exe", ".dll")));
 
         if (assemblyPaths.isEmpty()) {
-        throw new RuntimeException("[ERROR] No directories containing .exe or .dll file(s) were found in project root "
-                + src + ". Has the project been built?");
+            // TODO: output warning using logger class
+            System.out.println("[Warning] No directories containing .exe or .dll file(s) named " +
+                    projectNames.toString() + " were found in\n\t" + src + "\n\tHas the project been built?");
+            return null;
          }
 
         // ignore found files that were in the obj folder or are tests
         // TODO: refactor into functional form, can merge this check into initial assemblyPaths addAll function
         for (Path p : assemblyPaths) {
             for (String directory : p.toString().split("\\\\")) {
-                if (directory.trim().equals("obj") || directory.toLowerCase().contains("test")) {
+                if (directory.trim().equals("obj")) {   // TODO: also filter assemblies found in test directories?
                     removePaths.add(p);
                 }
             }

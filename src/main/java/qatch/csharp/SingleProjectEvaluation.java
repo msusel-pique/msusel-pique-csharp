@@ -2,10 +2,7 @@ package qatch.csharp;
 
 import org.apache.commons.io.FileUtils;
 import org.xml.sax.SAXException;
-import qatch.analysis.IAggregator;
-import qatch.analysis.IAnalyzer;
-import qatch.analysis.IFindingsResultsImporter;
-import qatch.analysis.IMetricsResultsImporter;
+import qatch.analysis.*;
 import qatch.evaluation.EvaluationResultsExporter;
 import qatch.evaluation.Project;
 import qatch.evaluation.ProjectCharacteristicsEvaluator;
@@ -16,6 +13,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.HashMap;
 
 public class SingleProjectEvaluation {
@@ -44,9 +42,9 @@ public class SingleProjectEvaluation {
             throw new RuntimeException("Incorrect input parameters given. Be sure to include \n\t(1) Path to root directory of "
                     + "project to analyze, \n\t(2) Path to directory to place analysis results.");
         }
-        HashMap<String, File> initializePaths = initialize(args);
-        final File projectDir = initializePaths.get("projectLoc");
-        final File resultsDir = initializePaths.get("resultsLoc");
+        HashMap<String, Path> initializePaths = initialize(args);
+        final Path projectDir = initializePaths.get("projectLoc");
+        final Path resultsDir = initializePaths.get("resultsLoc");
 
 
         /*
@@ -77,8 +75,8 @@ public class SingleProjectEvaluation {
         Project project = new Project();
 
         //Set the absolute path and the name of the project
-        project.setPath(projectDir.toString());
-        project.setName(projectDir.getName());
+        project.setPath(projectDir.toAbsolutePath().toString());
+        project.setName(projectDir.getFileName().toString());
 
         System.out.println("* Project Name : " + project.getName());
         System.out.println("* Project Path : " + project.getPath());
@@ -95,7 +93,7 @@ public class SingleProjectEvaluation {
         System.out.println("* Please wait...");
         System.out.println("*");
 
-        checkCreateClearDirectory(resultsDir);
+        checkCreateClearDirectory(resultsDir.toFile());
 
         //Instantiate the available single project analyzers of the system ...
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
@@ -106,7 +104,7 @@ public class SingleProjectEvaluation {
 
         //Print some messages to the user
         System.out.println("* The analysis is finished");
-        System.out.println("* You can find the results at : " + resultsDir.getAbsolutePath());
+        System.out.println("* You can find the results at : " + resultsDir.toAbsolutePath().toString());
         System.out.println();
 
 
@@ -121,7 +119,7 @@ public class SingleProjectEvaluation {
         IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
 
         //Get the directory with the results of the analysis
-        File[] results = resultsDir.listFiles();
+        File[] results = resultsDir.toFile().listFiles();
 
         //For each result file found in the directory do...
         // TODO: this functionality will eventually be moved to a qatch-min generic ResultsImporter class
@@ -131,10 +129,10 @@ public class SingleProjectEvaluation {
             //Check if it is not a LOCMetrics result file
             if(!resultFile.getName().contains("LocMetrics")) {
                 //Parse the issues and add them to the IssueSet Vector of the Project object
-                project.addIssueSet(findingsImporter.parse(resultFile.getAbsolutePath()));
+                project.addIssueSet(findingsImporter.parse(resultFile.toPath()));
             }else{
                 //Parse the metrics of the project and add them to the MetricSet field of the Project object
-                project.setMetrics(metricsImporter.parse(resultFile.getAbsolutePath()));
+                project.setMetrics(metricsImporter.parse(resultFile.toPath()));
             }
         }
 
@@ -162,8 +160,8 @@ public class SingleProjectEvaluation {
             project.addProperty(p);
         }
 
-        IAggregator metricsAggregator = new LOCMetricsAggregator();
-        IAggregator findingsAggregator = new FxcopAggregator();
+        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
+        IFindingsAggregator findingsAggregator = new FxcopAggregator();
 
         //Aggregate all the analysis results
         metricsAggregator.aggregate(project);
@@ -269,7 +267,7 @@ public class SingleProjectEvaluation {
      * Cleans directory. Creates if it does not exist.
      * @param dir File object of directory to create or clear
      */
-    static void checkCreateClearDirectory(File dir){
+    private static void checkCreateClearDirectory(File dir){
 
         //Check if the directory exists
         if(!dir.isDirectory() || !dir.exists()) dir.mkdirs();
@@ -288,17 +286,17 @@ public class SingleProjectEvaluation {
      * @param inputArgs project and results location as described in main method
      * @return HashMap containing paths of analysis project and results folder
      */
-    private static HashMap<String, File> initialize(String[] inputArgs) {
+    private static HashMap<String, Path> initialize(String[] inputArgs) {
 
         String projectLoc = inputArgs[0];
         String resultsLoc = inputArgs[1];
         String resultsDirName = "qa-results";
 
-        File projectDir = new File(projectLoc);
-        File qaDir = new File(resultsLoc, resultsDirName);
-        qaDir.mkdirs();
+        Path projectDir = new File(projectLoc).toPath();
+        Path qaDir = new File(resultsLoc, resultsDirName).toPath();
+        qaDir.toFile().mkdirs();
 
-        HashMap<String, File> paths = new HashMap<>();
+        HashMap<String, Path> paths = new HashMap<>();
         paths.put("projectLoc", projectDir);
         paths.put("resultsLoc", qaDir);
 

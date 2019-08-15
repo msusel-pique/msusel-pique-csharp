@@ -5,7 +5,10 @@ import qatch.model.PropertySet;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This class gathers metrics on a single project by invoking the
@@ -16,17 +19,25 @@ import java.util.Objects;
  */
 public class LOCMetricsAnalyzer implements IAnalyzer {
 
-    static final String RESULT_FILE_NAME = "LocMetricsFolders.csv";
+    final static String TOOL_RESULT_FILE_NAME = "LocMetricsFolders.csv";
+    private Set<String> toKeep = new HashSet<>();
+
+    LOCMetricsAnalyzer() {
+        toKeep.add(TOOL_RESULT_FILE_NAME);
+    }
 
     @Override
-    public void analyze(File src, File dest, PropertySet properties) {
+    public void analyze(Path src, Path dest, PropertySet properties) {
 
         ProcessBuilder pb;
-
         if(System.getProperty("os.name").contains("Windows")){
             pb = new ProcessBuilder(
-                "cmd.exe", "/c",
-                SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe", "-i", src.getAbsolutePath(), "-o", dest.getAbsolutePath()
+                    "cmd.exe", "/c",
+                    SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe",
+                    "-i",
+                    src.toAbsolutePath().toString(),
+                    "-o",
+                    dest.toAbsolutePath().toString()
             );
         }
         else throw new RuntimeException("LOCMetrics tool only supported on Windows operating systems.");
@@ -45,15 +56,38 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
             e.printStackTrace();
         }
 
-        cleanAllButOne(new File(dest.getAbsolutePath()), RESULT_FILE_NAME);
+        cleanAllButOne(dest, src.getFileName());
     }
 
-    private void cleanAllButOne(File directory, String toKeep) {
-        for (File f : Objects.requireNonNull(directory.listFiles())) {
-            if (!f.getName().equals(toKeep)) {
-                f.delete();
-            }
-        }
-    }
+    /**
+     * Filekeeping method. Removes unwanted files from LocMetrics run and renames the results file to a
+     * project-specific name
+     *  @param directory
+     *      Directory containing the LocMetrics results
+     * @param newName
+     *      Prefix of new name for metrics result file
+     */
+    private void cleanAllButOne(Path directory, Path newName) {
+        Set<Path> toDelete = new HashSet<>();
 
+        try {
+            Files.walk(directory, 1)
+                    .filter(p -> p.getFileName().toString().contains("LocMetrics"))
+                    .filter(p -> !toKeep.contains(p.getFileName().toString()))
+                    .forEach(toDelete::add);
+        } catch (IOException e) { e.printStackTrace(); }
+
+        // delete unwanted files
+        toDelete.forEach(p -> {
+            try { Files.deleteIfExists(p); }
+            catch (IOException e) { e.printStackTrace(); } });
+
+        // rename remaining file to project-specific name
+        File metrics = new File(directory.toFile(), LOCMetricsAnalyzer.TOOL_RESULT_FILE_NAME);
+        File renamedMetrics = new File(directory.toFile(), newName.toString() + "_" + metrics.getName());
+        metrics.renameTo(renamedMetrics);
+
+        // add to list of files to keep each analysis
+        toKeep.add(renamedMetrics.getName());
+    }
 }
