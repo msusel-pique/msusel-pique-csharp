@@ -1,5 +1,6 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.calibration.*;
 import qatch.model.*;
@@ -70,6 +71,14 @@ public class QualityModelGenerator {
 
         // Check if the user wants to execute a benchmark calibration
         if (RECALIBRATE) {
+
+            // pre-run file system checks
+            File r_dir = new File(RInvoker.R_WORK_DIR.toFile(), "Comparison_Matrices");
+            File compMatrix = new File(r_dir, "TQI.xls");
+            if (!r_dir.isDirectory() || !compMatrix.isFile()) {
+                throw new RuntimeException("There must exist the hand-entered .xls comparison matrices in directory " +
+                        r_dir.toString() + ". See ComparisonMatricesCreator class for more information.");
+            }
 
             /*
              * Step 1 : Analyze the projects found in the desired Benchmark Repository
@@ -224,8 +233,7 @@ public class QualityModelGenerator {
             File tempWeightsScript = FileUtility.tempFileCopyFromJar(RInvoker.getRScriptResource(RInvoker.Script.AHP), rWorkingDir.toPath());
 
             // execute the weight elicitation script
-            rInvoker.executeRScript(RInvoker.R_BIN_PATH, tempThreshScript.toPath(), rWorkingDir.toString());
-//            invoker.executeRScriptForWeightsElicitation();
+            rInvoker.executeRScript(RInvoker.R_BIN_PATH, tempWeightsScript.toPath(), rWorkingDir.toString());
 
             // Import the weights from the json file
             WeightsImporter weightImporter = new WeightsImporter();
