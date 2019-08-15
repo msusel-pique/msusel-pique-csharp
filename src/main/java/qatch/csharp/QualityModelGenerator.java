@@ -240,6 +240,20 @@ public class QualityModelGenerator {
             weightImporter.importWeights(tqi, characteristics);
 
         }
+
+        /*
+         * STEP 8 : Export the properties in an XML (or JSON) File
+         */
+        System.out.println("\n**************** STEP 8: Exporting Results ***********************");
+        System.out.println("*");
+        System.out.println("* Exporting the results to XML, JSON files and JDOM Element object...");
+        System.out.println("* This will take a while...");
+        System.out.println("*");
+
+        QualityModelExporter qmExp = new QualityModelExporter();
+        qmExp.exportQualityModelToXML(qualityModel, Paths.get(OUTPUT.toString(), "qm_output"));
+
+        System.out.println("...");
     }
 
     /**
