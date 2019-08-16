@@ -77,7 +77,7 @@ public class QualityModelGenerator {
             File compMatrix = new File(r_dir, "TQI.xls");
             if (!r_dir.isDirectory() || !compMatrix.isFile()) {
                 throw new RuntimeException("There must exist the hand-entered .xls comparison matrices in directory " +
-                        r_dir.toString() + ". See ComparisonMatricesCreator class for more information.");
+                        r_dir.toString() + ".\nSee ComparisonMatricesCreator class for more information.");
             }
 
             /*
