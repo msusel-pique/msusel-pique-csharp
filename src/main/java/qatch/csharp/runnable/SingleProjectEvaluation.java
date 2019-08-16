@@ -22,7 +22,7 @@ public class SingleProjectEvaluation {
     // parameter constants
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_iso25k_csharp.xml");
-    public static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
+    private static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
 
     /**
      * Main method for running quality evaluation on a single C# project.
@@ -99,7 +99,7 @@ public class SingleProjectEvaluation {
 
         //Instantiate the available single project analyzers of the system ...
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(TOOLS_LOCATION.toPath());
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(TOOLS_LOCATION.toPath());
 
         metricsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
         findingsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());

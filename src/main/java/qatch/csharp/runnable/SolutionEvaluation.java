@@ -25,11 +25,11 @@ import java.util.jar.JarFile;
 
 /**
  * This executable class is responsible for producing quality analysis reports on all modules contained within
- * a C# solution.  The driver supports deployed JAR functionality when packaged with dependencies.
+ * a C# solution (.sln).  This driver supports deployed JAR functionality when packaged with dependencies.
  */
 public class SolutionEvaluation {
 
-    final static Path ROOT = Paths.get(System.getProperty("user.dir"));
+    private final static Path ROOT = Paths.get(System.getProperty("user.dir"));
     /**
      * Run single project evaluations on a .NET Framework solution in batch mode to produce analysis results
      * for every .csproj project.  Assumes a derived c# quality model already exists.
@@ -59,7 +59,7 @@ public class SolutionEvaluation {
                     "\n\t(1) path to folder to place analysis results.");
         }
         SOLUTION = Paths.get(args[0]);
-        OUTPUT = Paths.get(args[1]);
+        OUTPUT = Paths.get(args[1], "qa_out");
         ANALYSIS = new File(OUTPUT.toFile(), "analysis_results").toPath();
 
         OUTPUT.toFile().mkdirs();
@@ -194,7 +194,7 @@ public class SolutionEvaluation {
 
     private static void runTools(Path projectDir, Path resultsDir, QualityModel qualityModel, Path toolsLocation) {
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(toolsLocation);
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(toolsLocation);
 
         File projFolder = new File(resultsDir.toFile(), projectDir.getFileName().toString());
         File findings = new File(projFolder, "findings");

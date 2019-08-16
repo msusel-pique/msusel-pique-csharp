@@ -16,8 +16,8 @@ public class FxcopAnalyzerTests {
     // FxCop analysis needs a compiled CSharp project located at 'src' in order to work
     private final File src = new File("src/test/resources/compiled_projects/SimpleCSharp");
     private final File dest = new File("src/test/output");
-    private final File rulesDir = new File(SingleProjectEvaluation.TOOLS_LOCATION + File.separator +
-            "FxCop"+ File.separator + "Rules");
+    private final File toolsDir = new File("src/main/resources/tools");
+    private final File rulesDir = new File(toolsDir, "FxCop/Rules");
 
     @Test
     public void testAnalyze() throws IOException {
@@ -40,7 +40,7 @@ public class FxcopAnalyzerTests {
         ps.addProperty(property01);
         ps.addProperty(property02);
 
-        FxcopAnalyzer analyzer = new FxcopAnalyzer();
+        FxcopAnalyzer analyzer = new FxcopAnalyzer(toolsDir.toPath());
         analyzer.analyze(this.src.toPath(), this.dest.toPath(), ps);
 
         File result01 = new File(dest + File.separator + src.getName() + "_" + property01.getName() + ".xml");

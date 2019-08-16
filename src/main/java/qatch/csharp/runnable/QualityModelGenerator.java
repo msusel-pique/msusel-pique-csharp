@@ -92,7 +92,7 @@ public class QualityModelGenerator {
 
                 // actualize language-specific analyzers
                 IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(Paths.get(ROOT.toString() + "/src/main/resources/models/tools"));
-                IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
+                IAnalyzer findingsAnalyzer = new FxcopAnalyzer(Paths.get("src/main/resources/tools"));
 
                 //Start the analysis of the benchmark repository
                 benchAnalyzer.analyzeBenchmarkRepo(metricsAnalyzer, findingsAnalyzer, PROJ_ROOT_FLAG);
