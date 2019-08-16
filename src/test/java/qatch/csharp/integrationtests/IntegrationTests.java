@@ -1,11 +1,12 @@
-package qatch.csharp;
+package qatch.csharp.integrationtests;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.xml.sax.SAXException;
+import qatch.csharp.runnable.SingleProjectEvaluation;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+@Category(IntegrationTest.class)
 public class IntegrationTests {
 
 //    @Test

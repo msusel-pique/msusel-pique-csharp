@@ -3,6 +3,7 @@ package qatch.csharp;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.Measure;
 import qatch.model.Property;
 import qatch.model.PropertySet;

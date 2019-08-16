@@ -1,6 +1,7 @@
 package qatch.csharp;
 
 import qatch.analysis.IAnalyzer;
+import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.PropertySet;
 
 import java.io.File;
@@ -22,7 +23,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
     final static String TOOL_RESULT_FILE_NAME = "LocMetricsFolders.csv";
     private Set<String> toKeep = new HashSet<>();
 
-    LOCMetricsAnalyzer() {
+    public LOCMetricsAnalyzer() {
         toKeep.add(TOOL_RESULT_FILE_NAME);
     }
 

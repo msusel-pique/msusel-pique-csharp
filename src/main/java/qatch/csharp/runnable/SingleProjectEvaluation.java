@@ -1,8 +1,9 @@
-package qatch.csharp;
+package qatch.csharp.runnable;
 
 import org.apache.commons.io.FileUtils;
 import org.xml.sax.SAXException;
 import qatch.analysis.*;
+import qatch.csharp.*;
 import qatch.evaluation.EvaluationResultsExporter;
 import qatch.evaluation.Project;
 import qatch.evaluation.ProjectCharacteristicsEvaluator;
@@ -20,8 +21,8 @@ public class SingleProjectEvaluation {
 
     // parameter constants
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
-    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_testing.xml");
-    static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
+    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_iso25k_csharp.xml");
+    public static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
 
     /**
      * Main method for running quality evaluation on a single C# project.
@@ -50,6 +51,7 @@ public class SingleProjectEvaluation {
         /*
          * Step 0 : Load the desired Quality Model
          */
+        // TODO: eventually move all main runnable steps into qatch framework to be called in language agnostic ways
         System.out.println("**************** STEP 0: Quality Model Loader ************************");
         System.out.println("*");
         System.out.println("* Loading the desired Quality Model...");

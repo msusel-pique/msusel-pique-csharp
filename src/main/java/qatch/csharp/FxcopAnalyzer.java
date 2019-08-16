@@ -1,6 +1,7 @@
 package qatch.csharp;
 
 import qatch.analysis.IAnalyzer;
+import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.Property;
 import qatch.model.PropertySet;
 import qatch.utility.FileUtility;
