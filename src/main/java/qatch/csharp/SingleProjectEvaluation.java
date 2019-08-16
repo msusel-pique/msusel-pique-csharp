@@ -20,7 +20,7 @@ public class SingleProjectEvaluation {
 
     // parameter constants
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
-    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_csharp.xml");
+    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_testing.xml");
     static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
 
     /**
@@ -39,8 +39,8 @@ public class SingleProjectEvaluation {
 
         // Initialize
         if (args == null || args.length < 2) {
-            throw new RuntimeException("Incorrect input parameters given. Be sure to include \n\t(1) Path to root directory of "
-                    + "project to analyze, \n\t(2) Path to directory to place analysis results.");
+            throw new RuntimeException("Incorrect input parameters given. Be sure to include \n\t(0) Path to root directory of "
+                    + "project to analyze, \n\t(1) Path to directory to place analysis results.");
         }
         HashMap<String, Path> initializePaths = initialize(args);
         final Path projectDir = initializePaths.get("projectLoc");
@@ -290,9 +290,10 @@ public class SingleProjectEvaluation {
 
         String projectLoc = inputArgs[0];
         String resultsLoc = inputArgs[1];
-        String resultsDirName = "qa-results";
 
         Path projectDir = new File(projectLoc).toPath();
+
+        String resultsDirName = projectDir.getFileName().toString();
         Path qaDir = new File(resultsLoc, resultsDirName).toPath();
         qaDir.toFile().mkdirs();
 
