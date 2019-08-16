@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security\bin\Debug\Eleflex.Security.dll">
+   <Modules>
+    <Module Name="eleflex.security.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Security">
+       <Types>
+        <Type Name="AESCryptoService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Decrypt(System.Byte[],System.Byte[],System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">Object 'Local5' can be disposed more than once in method 'AESCryptoService.Decrypt(byte[], byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AESCryptoService.Decrypt(byte[], byte[], byte[])', validate parameter 'data' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Decrypt(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AESCryptoService.Decrypt(string, string)', validate parameter 'password' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DecryptStringFromBytes_Aes(System.Byte[],System.Byte[],System.Byte[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">Object 'Local6' can be disposed more than once in method 'AESCryptoService.DecryptStringFromBytes_Aes(byte[], byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+             <Issue Certainty="75" Level="Warning">Object 'Local7' can be disposed more than once in method 'AESCryptoService.DecryptStringFromBytes_Aes(byte[], byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Encrypt(System.Byte[],System.Byte[],System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">Object 'Local5' can be disposed more than once in method 'AESCryptoService.Encrypt(byte[], byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AESCryptoService.Encrypt(byte[], byte[], byte[])', validate parameter 'data' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Encrypt(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AESCryptoService.Encrypt(string, string)', validate parameter 'password' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncryptStringToBytes_Aes(System.String,System.Byte[],System.Byte[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">Object 'Local6' can be disposed more than once in method 'AESCryptoService.EncryptStringToBytes_Aes(string, byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+             <Issue Certainty="75" Level="Warning">Object 'Local7' can be disposed more than once in method 'AESCryptoService.EncryptStringToBytes_Aes(string, byte[], byte[])'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IdentityUserStore`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStore&lt;TUser&gt;.AddClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStore&lt;TUser&gt;.AddLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindAsync(Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStore&lt;TUser&gt;.FindAsync(UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStore&lt;TUser&gt;.RemoveClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStore&lt;TUser&gt;.RemoveLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0068" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>Debug information could not be found for target assembly 'Eleflex.Security.dll'. For best analysis results, include the .pdb file with debug information for 'Eleflex.Security.dll' in the same directory as the target assembly.</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

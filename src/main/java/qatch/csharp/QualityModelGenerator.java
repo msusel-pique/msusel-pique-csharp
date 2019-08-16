@@ -1,6 +1,5 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FileUtils;
 import qatch.analysis.IAnalyzer;
 import qatch.calibration.*;
 import qatch.model.*;
@@ -30,7 +29,7 @@ public class QualityModelGenerator {
         final Path BENCH_REPO_PATH;
         final Path ROOT = Paths.get(System.getProperty("user.dir"));
         final Path OUTPUT = Paths.get(ROOT.toString(), "out");
-        final Path QM_DESCRIPTION_PATH = Paths.get(ROOT.toString(), "src/main/resources/models/qualityModel_csharp_description.xml");
+        final Path QM_DESCRIPTION_PATH = Paths.get(ROOT.toString(), "src/main/resources/models/qualityModel_iso25k_csharp_description.xml");
         final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
 

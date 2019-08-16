@@ -193,5 +193,5 @@ $RECYCLE.BIN/
 
 ### Project Specific ###
 /src/test/output/
-#/r_working_directory
+/r_working_directory
 #doc/reference.txt

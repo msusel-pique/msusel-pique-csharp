@@ -73,7 +73,8 @@ public class FxcopAnalyzer implements IAnalyzer {
         String fo = "/fo";
 
         if(System.getProperty("os.name").contains("Windows")){
-            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt, fo);
+//            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt, fo);
+            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt);
         } else {
             throw new RuntimeException("FxCop C# analysis not supported on non-Windows machines. FxCopCmd.exe tool only supported on Windows.");
         }

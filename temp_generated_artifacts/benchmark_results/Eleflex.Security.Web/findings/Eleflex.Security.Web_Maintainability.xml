@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+   <Modules>
+    <Module Name="eleflex.security.web.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Security.Web.Account">
+       <Types>
+        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning">'AccountController.&lt;Register&gt;d__16.MoveNext()' is coupled with 31 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Account.Manage">
+       <Types>
+        <Type Name="ManageController+&lt;ManageLogins&gt;d__22" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning">'ManageController.&lt;ManageLogins&gt;d__22.MoveNext()' is coupled with 32 different types from 13 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Security.Roles">
+       <Types>
+        <Type Name="RolesController+&lt;Edit&gt;d__18" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning">'RolesController.&lt;Edit&gt;d__18.MoveNext()' has a cyclomatic complexity of 27. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Security.Users">
+       <Types>
+        <Type Name="UsersController+&lt;Edit&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' is coupled with 34 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a cyclomatic complexity of 41. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
+             <Issue Name="Method" Certainty="75" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a maintainability index of 20. Rewrite or refactor the method to increase its maintainability index (MI). An MI below 10 indicates poor maintainability, an MI between 10 and 20 indicates moderate maintainability, and an MI above 20 indicates good maintainability.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Avoid excessive class coupling</Name>
+   <Description>Types and methods with a high degree of class coupling can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} is coupled with {1} different types from {2} different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above {3} indicates poor maintainability, a class coupling between {3} and {4} indicates moderate maintainability, and a class coupling below {4} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505">
+   <Name>Avoid unmaintainable code</Name>
+   <Description>Types and methods with a high degree of class coupling, cyclomatic complexity and/or program length can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} has a maintainability index of {1}. Rewrite or refactor the method to increase its maintainability index (MI). An MI below {2} indicates poor maintainability, an MI between {2} and {3} indicates moderate maintainability, and an MI above {3} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386043.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

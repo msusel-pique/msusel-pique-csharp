@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+   <Modules>
+    <Module Name="eleflex.security.web.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Security.Web">
+       <Types>
+        <Type Name="AutoMapperConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateMap(AutoMapper.IProfileExpression)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Account">
+       <Types>
+        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'AccountController.&lt;Register&gt;d__16.MoveNext()', call System.IDisposable.Dispose on object 'Local6' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccountController+ChallengeResult" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#ExecuteResult(System.Web.Mvc.ControllerContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'AccountController.ChallengeResult.ExecuteResult(ControllerContext)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Security.Permissions">
+       <Types>
+        <Type Name="ListViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionsController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#List(Eleflex.Security.Web.Security.Permissions.ListViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'PermissionsController.List(ListViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Security.Roles">
+       <Types>
+        <Type Name="EditPermissionViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditPermissionViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditPermissionViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditRoleViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditRoleViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditRoleViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ListViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolesController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EditPermission(Eleflex.Security.Web.Security.Roles.EditPermissionViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'RolesController.EditPermission(EditPermissionViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EditRole(Eleflex.Security.Web.Security.Roles.EditRoleViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'RolesController.EditRole(EditRoleViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#List(Eleflex.Security.Web.Security.Roles.ListViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'RolesController.List(ListViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Web.Security.Users">
+       <Types>
+        <Type Name="EditClaimViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditClaimViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditClaimViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditPermissionViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditPermissionViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditPermissionViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditRoleViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditRoleViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditRoleViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'EditViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ListViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_InactiveSelectItems()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.Web.Mvc.SelectListItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Active".</Issue>
+               <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'ListViewModel.InactiveSelectItems.get()' passes a literal string as parameter 'value' of a call to 'SelectListItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Inactive".</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsersController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EditClaim(Eleflex.Security.Web.Security.Users.EditClaimViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'UsersController.EditClaim(EditClaimViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EditPermission(Eleflex.Security.Web.Security.Users.EditPermissionViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'UsersController.EditPermission(EditPermissionViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EditRole(Eleflex.Security.Web.Security.Users.EditRoleViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'UsersController.EditRole(EditRoleViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#List(Eleflex.Security.Web.Security.Users.ListViewModel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning">In externally visible method 'UsersController.List(ListViewModel)', validate parameter 'model' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LockoutUser(System.Guid,System.Nullable`1&lt;System.DateTimeOffset&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Eleflex.Web.AjaxResult.Error(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'UsersController.LockoutUser(Guid, DateTimeOffset?)' passes a literal string as parameter 'message' of a call to 'AjaxResult.Error(string)'. Retrieve the following string(s) from a resource table instead: "Service error.".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'UsersController.LockoutUser(Guid, DateTimeOffset?)' passes a literal string as parameter 'message' of a call to 'AjaxResult.Error(string)'. Retrieve the following string(s) from a resource table instead: "Service error.".</Issue>
+            </Message>
+            <Message Id="Eleflex.Web.AjaxResult.Success(System.String,System.Object)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-08-16 07:18:28Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning">Method 'UsersController.LockoutUser(Guid, DateTimeOffset?)' passes a literal string as parameter 'message' of a call to 'AjaxResult.Success(string, object)'. Retrieve the following string(s) from a resource table instead: "Lockout date changed.".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0068" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>Debug information could not be found for target assembly 'Eleflex.Security.Web.dll'. For best analysis results, include the .pdb file with debug information for 'Eleflex.Security.Web.dll' in the same directory as the target assembly.</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>
