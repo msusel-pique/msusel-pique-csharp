@@ -4,21 +4,21 @@
  <Namespaces>
   <Namespace Name="Eleflex.Security.Service">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 07:18:52Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 09:21:42Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Eleflex.Security.Service' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Service\bin\Release\Eleflex.Security.Service.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Service\bin\Debug\Eleflex.Security.Service.dll">
    <Modules>
     <Module Name="eleflex.security.service.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 07:18:52Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 09:21:42Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Eleflex.Security.Service.dll' with a strong name key.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 07:18:52Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 09:21:42Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Eleflex.Security.Service.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>

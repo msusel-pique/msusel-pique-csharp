@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Storage Module\Eleflex.Storage.Database.SqlClient\bin\Debug\Eleflex.Storage.Database.SqlClient.dll">
+   <Modules>
+    <Module Name="eleflex.storage.database.sqlclient.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Eleflex.Storage.Database.SqlClient.dll' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'Eleflex.Storage.Database.SqlClient.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Eleflex.Storage.Database.SqlClient">
+       <Types>
+        <Type Name="SQLServerDatabaseCatalogGenerator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'SQLServerDatabaseCatalogGenerator' because it creates members of the following IDisposable types: 'SQLServerProvider'. If 'SQLServerDatabaseCatalogGenerator' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#_databaseProvider" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'SQLServerDatabaseCatalogGenerator._databaseProvider' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadColumn(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEDOProperty&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="356">Change 'List&lt;IEDOProperty&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadColumn(IDataReader, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadConstraints(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEleflexDatabaseObject&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="707">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadConstraints(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="707">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadConstraints(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadDataTypes(System.Data.IDataReader)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="241">Change 'List&lt;IEDOProperty&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadDataTypes(IDataReader)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadExtendedAttributes(System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEleflexDatabaseObject&gt;,System.Collections.Generic.Dictionary`2&lt;System.String,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseConstraint&gt;&gt;,System.Collections.Generic.Dictionary`2&lt;System.String,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseIndex&gt;&gt;,System.Collections.Generic.Dictionary`2&lt;System.String,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseForeignKey&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="734">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadExtendedAttributes(List&lt;IEleflexDatabaseObject&gt;, Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="734">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadExtendedAttributes(List&lt;IEleflexDatabaseObject&gt;, Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;'.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="734">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadExtendedAttributes(List&lt;IEleflexDatabaseObject&gt;, Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;'.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="734">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadExtendedAttributes(List&lt;IEleflexDatabaseObject&gt;, Dictionary&lt;string, List&lt;IDatabaseConstraint&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;, Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadForeignKeys(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEleflexDatabaseObject&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="577">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadForeignKeys(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="577">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadForeignKeys(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseForeignKey&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadIndexes(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEleflexDatabaseObject&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="475">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadIndexes(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="475">Consider a design where 'SQLServerDatabaseCatalogGenerator.LoadIndexes(IDataReader, List&lt;IEleflexDatabaseObject&gt;)' doesn't nest generic type 'Dictionary&lt;string, List&lt;IDatabaseIndex&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadProcedures(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseSchema&gt;,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEDOProperty&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="786">Change 'List&lt;IDatabaseSchema&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadProcedures(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="786">Change 'List&lt;IEDOProperty&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadProcedures(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="786">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadProcedures(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadSchemas(System.Data.IDataReader)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="206">Change 'List&lt;IDatabaseSchema&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadSchemas(IDataReader)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadTables(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseSchema&gt;,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEDOProperty&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="313">Change 'List&lt;IDatabaseSchema&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadTables(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="313">Change 'List&lt;IEDOProperty&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadTables(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="313">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadTables(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadViews(System.Data.IDataReader,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseSchema&gt;,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEDOProperty&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="412">Change 'List&lt;IDatabaseSchema&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadViews(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="412">Change 'List&lt;IEDOProperty&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadViews(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="412">Change 'List&lt;IEleflexDatabaseObject&gt;' in 'SQLServerDatabaseCatalogGenerator.LoadViews(IDataReader, List&lt;IDatabaseSchema&gt;, List&lt;IEDOProperty&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SQLServerProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="65">Modify 'SQLServerProvider.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+             <Issue Name="DisposeSignature" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="65">Ensure that 'SQLServerProvider.Dispose()' is declared as public and sealed.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ValidateData(Eleflex.Storage.Database.IEleflexDataType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:24:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="375">Modify 'SQLServerProvider.ValidateData(IEleflexDataType)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Do not declare visible instance fields</Name>
+   <Description>Instance fields that are visible outside of the type that declares them, limit your ability to change the implementation details for those data items. Use properties instead. They do not compromise usability or performance and they do provide flexibility in that they conceal the implementation details of the underlying data.</Description>
+   <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+   <Name>Do not nest generic types in member signatures</Name>
+   <Description>Avoid API that require users to instantiate a generic type with another generic type as type argument. The syntax gets too complex.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182144.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+   <Resolution Name="DisposeSignature">Ensure that {0} is declared as public and sealed.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

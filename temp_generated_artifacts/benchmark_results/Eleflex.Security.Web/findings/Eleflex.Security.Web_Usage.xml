@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
    <Modules>
     <Module Name="eleflex.security.web.dll">
      <Namespaces>
@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#Providers" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'SendCodeViewModel.Providers' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="SendCodeViewModel.cs" Line="29">Change 'SendCodeViewModel.Providers' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -27,8 +27,8 @@
          <Members>
           <Member Name="#Providers" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ConfigureTwoFactorViewModel.Providers' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ConfigureTwoFactorViewModel.cs" Line="29">Change 'ConfigureTwoFactorViewModel.Providers' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -38,8 +38,8 @@
          <Members>
           <Member Name="#Logins" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'IndexViewModel.Logins' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="IndexViewModel.cs" Line="30">Change 'IndexViewModel.Logins' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -49,15 +49,15 @@
          <Members>
           <Member Name="#CurrentLogins" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ManageLoginsViewModel.CurrentLogins' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageLoginsViewModel.cs" Line="31">Change 'ManageLoginsViewModel.CurrentLogins' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#OtherLogins" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ManageLoginsViewModel.OtherLogins' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageLoginsViewModel.cs" Line="32">Change 'ManageLoginsViewModel.OtherLogins' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -71,8 +71,8 @@
          <Members>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Permissions" File="ListViewModel.cs" Line="55">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -86,8 +86,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'EditRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="EditRoleViewModel.cs" Line="31">Change 'EditRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -97,8 +97,8 @@
          <Members>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="ListViewModel.cs" Line="55">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -108,8 +108,8 @@
          <Members>
           <Member Name="#RolePermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'PermissionsViewModel.RolePermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="PermissionsViewModel.cs" Line="36">Change 'PermissionsViewModel.RolePermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -119,8 +119,8 @@
          <Members>
           <Member Name="#Edit(System.Guid)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Name="TooGeneric" Certainty="95" Level="Error">'RolesController.Edit(Guid)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesController.cs" Line="193">'RolesController.Edit(Guid)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -130,8 +130,8 @@
          <Members>
           <Member Name="#RoleRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'RolesViewModel.RoleRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesViewModel.cs" Line="36">Change 'RolesViewModel.RoleRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -141,8 +141,8 @@
          <Members>
           <Member Name="#SearchPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'SelectPermissionViewModel.SearchPermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="SelectPermissionViewModel.cs" Line="35">Change 'SelectPermissionViewModel.SearchPermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -152,8 +152,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'SelectRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="SelectRoleViewModel.cs" Line="35">Change 'SelectRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -167,8 +167,8 @@
          <Members>
           <Member Name="#UserClaims" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ClaimsViewModel.UserClaims' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ClaimsViewModel.cs" Line="37">Change 'ClaimsViewModel.UserClaims' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -178,8 +178,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'EditRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditRoleViewModel.cs" Line="32">Change 'EditRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -189,8 +189,8 @@
          <Members>
           <Member Name="#Roles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'EffectiveSecurityViewModel.Roles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EffectiveSecurityViewModel.cs" Line="33">Change 'EffectiveSecurityViewModel.Roles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -200,8 +200,8 @@
          <Members>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ListViewModel.cs" Line="59">Change 'ListViewModel.Items' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -211,8 +211,8 @@
          <Members>
           <Member Name="#UserPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'PermissionsViewModel.UserPermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="PermissionsViewModel.cs" Line="37">Change 'PermissionsViewModel.UserPermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -222,8 +222,8 @@
          <Members>
           <Member Name="#UserRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'RolesViewModel.UserRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="RolesViewModel.cs" Line="37">Change 'RolesViewModel.UserRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -233,8 +233,8 @@
          <Members>
           <Member Name="#SearchPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'SelectPermissionViewModel.SearchPermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="SelectPermissionViewModel.cs" Line="35">Change 'SelectPermissionViewModel.SearchPermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -244,8 +244,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'SelectRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="SelectRoleViewModel.cs" Line="35">Change 'SelectRoleViewModel.SearchRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -255,8 +255,8 @@
          <Members>
           <Member Name="#Edit(System.Guid)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 07:18:48Z" FixCategory="Breaking">
-             <Issue Name="TooGeneric" Certainty="95" Level="Error">'UsersController.Edit(Guid)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:23:22Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="181">'UsersController.Edit(Guid)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
            </Messages>
           </Member>

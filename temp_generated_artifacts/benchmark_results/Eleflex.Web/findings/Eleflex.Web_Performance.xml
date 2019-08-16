@@ -2,18 +2,29 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\bin\Release\Eleflex.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\bin\Debug\Eleflex.Web.dll">
    <Modules>
     <Module Name="eleflex.web.dll">
      <Namespaces>
       <Namespace Name="Eleflex.Web">
        <Types>
+        <Type Name="ApplicationSignInManager+&lt;GenerateUserIdentity&gt;d__2" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#&lt;&gt;4__this" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-08-16 09:22:23Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'ApplicationSignInManager.&lt;GenerateUserIdentity&gt;d__2.&lt;&gt;4__this' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
         <Type Name="CommonLoggingAsyncServiceAdapter" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Members>
           <Member Name="#Stop(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-08-16 07:19:17Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning">The 'this' parameter (or 'Me' in Visual Basic) of 'CommonLoggingAsyncServiceAdapter.Stop(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-08-16 09:22:23Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceAdapter.cs" Line="192">The 'this' parameter (or 'Me' in Visual Basic) of 'CommonLoggingAsyncServiceAdapter.Stop(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -23,9 +34,27 @@
          <Members>
           <Member Name="#WriteInternal(Common.Logging.LogLevel,System.Object,System.Exception)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2019-08-16 07:19:17Z" FixCategory="NonBreaking">
-             <Issue Name="Parameter" Certainty="95" Level="Warning">'message', a parameter, is cast to type '_Exception' multiple times in method 'CommonLoggingAsyncServiceLog.WriteInternal(LogLevel, object, Exception)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning">'message', a parameter, is cast to type '_Exception' multiple times in method 'CommonLoggingAsyncServiceLog.WriteInternal(LogLevel, object, Exception)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2019-08-16 09:22:23Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceLog.cs" Line="185">'message', a parameter, is cast to type '_Exception' multiple times in method 'CommonLoggingAsyncServiceLog.WriteInternal(LogLevel, object, Exception)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceLog.cs" Line="187">'message', a parameter, is cast to type '_Exception' multiple times in method 'CommonLoggingAsyncServiceLog.WriteInternal(LogLevel, object, Exception)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IdentityUserStoreServiceClient`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetLoginsAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="userLogins" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2019-08-16 09:22:23Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="409">'IdentityUserStoreServiceClient&lt;TUser&gt;.GetLoginsAsync(TUser)' declares a variable, 'userLogins', of type 'List&lt;UserLoginInfo&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPermissionEffectiveDateQuery(System.String[])" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="now" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2019-08-16 09:22:23Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="661">'IdentityUserStoreServiceClient&lt;TUser&gt;.GetPermissionEffectiveDateQuery(string[])' declares a variable, 'now', of type 'DateTimeOffset', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -39,6 +68,16 @@
   </Target>
  </Targets>
  <Rules>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>Avoid unused private fields</Name>
+   <Description>Private fields were detected that do not appear to be accessed within the assembly. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
    <Name>Do not cast unnecessarily</Name>
    <Description>Avoid duplicate casts where possible, since there is a cost associated with them.</Description>
@@ -55,6 +94,16 @@
    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
    <Owner />
    <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Warning</MessageLevel>
    <File Name="performancerules.dll" Version="15.0.0.0" />

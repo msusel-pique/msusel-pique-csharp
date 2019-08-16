@@ -4,25 +4,25 @@
  <Namespaces>
   <Namespace Name="Eleflex.Security.Storage.SqlServer">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Storage.SqlServer'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Storage.SqlServer.Model">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Storage.SqlServer.Model'.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Storage.SqlServer\bin\Release\Eleflex.Security.Storage.SqlServer.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Storage.SqlServer\bin\Debug\Eleflex.Security.Storage.SqlServer.dll">
    <Modules>
     <Module Name="eleflex.security.storage.sqlserver.dll">
      <Messages>
-      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Security.Storage.SqlServer.dll'.</Issue>
       </Message>
      </Messages>
@@ -33,13 +33,13 @@
          <Members>
           <Member Name="#MODULE_NAME" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="MODULE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+            <Message Id="MODULE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'MODULE' in member name 'SecurityStorageConstants.MODULE_NAME' by changing it to 'Module'.</Issue>
             </Message>
-            <Message Id="NAME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+            <Message Id="NAME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NAME' in member name 'SecurityStorageConstants.MODULE_NAME' by changing it to 'Name'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'SecurityStorageConstants.MODULE_NAME'.</Issue>
             </Message>
            </Messages>
@@ -48,84 +48,84 @@
         </Type>
         <Type Name="UserLoginRepository" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginRepository' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_0_0" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_0_0'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_10" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_10'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_11" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_11'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_12" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_12'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_13" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_13'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_14" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_14'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_21" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_21'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_26" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_26'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_32" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_32'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_0_33" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_33'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Version_2_1_0" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_1_0'.</Issue>
           </Message>
          </Messages>
@@ -136,14 +136,14 @@
        <Types>
         <Type Name="Permission" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'Permission' so that it does not end in 'Permission'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="RolePermission" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'RolePermission' so that it does not end in 'Permission'.</Issue>
           </Message>
          </Messages>
@@ -152,29 +152,29 @@
          <Members>
           <Member Name="#LastLoginDate" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'User.LastLoginDate' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="36">Replace the term 'Login' in member name 'User.LastLoginDate' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LoginFailedAttempts" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'User.LoginFailedAttempts' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="34">Replace the term 'Login' in member name 'User.LoginFailedAttempts' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#TwoFactorAuth" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Auth" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Auth' in member name 'User.TwoFactorAuth' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="Auth" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="46">Correct the spelling of 'Auth' in member name 'User.TwoFactorAuth' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'User.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="29">The discrete term 'Username' in member name 'User.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -182,22 +182,22 @@
         </Type>
         <Type Name="UserLogin" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLogin' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#LoginProvider" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'UserLogin.LoginProvider' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="UserLogin.cs" Line="19">Replace the term 'Login' in member name 'UserLogin.LoginProvider' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserLoginKey" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'UserLogin.UserLoginKey' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="UserLogin.cs" Line="17">Replace the term 'Login' in member name 'UserLogin.UserLoginKey' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -205,7 +205,7 @@
         </Type>
         <Type Name="UserPermission" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 07:18:20Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 09:22:39Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'UserPermission' so that it does not end in 'Permission'.</Issue>
           </Message>
          </Messages>

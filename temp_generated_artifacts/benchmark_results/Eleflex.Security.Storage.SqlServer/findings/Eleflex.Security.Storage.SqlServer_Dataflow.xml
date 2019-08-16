@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Storage.SqlServer\bin\Release\Eleflex.Security.Storage.SqlServer.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Storage.SqlServer\bin\Debug\Eleflex.Security.Storage.SqlServer.dll">
    <Modules>
     <Module Name="eleflex.security.storage.sqlserver.dll">
      <Namespaces>
@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#CreateMap(AutoMapper.IProfileExpression)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\App_Start" File="AutoMapperConfig.cs" Line="41">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -23,8 +23,8 @@
          <Members>
           <Member Name="#CreateNonManagedSession()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'SecurityStorageProvider.CreateNonManagedSession()', call System.IDisposable.Dispose on object 'new SecurityDB(this.ProviderConnectionString)' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="SecurityStorageProvider.cs" Line="57">In method 'SecurityStorageProvider.CreateNonManagedSession()', call System.IDisposable.Dispose on object 'context' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -34,8 +34,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_0_0.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_0_0.cs" Line="91">In method 'Version_2_0_0_0.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -45,8 +45,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_10.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_10.cs" Line="94">In method 'Version_2_0_10.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -56,8 +56,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_11.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_11.cs" Line="94">In method 'Version_2_0_11.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -67,8 +67,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_12.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_12.cs" Line="94">In method 'Version_2_0_12.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -78,8 +78,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_13.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_13.cs" Line="94">In method 'Version_2_0_13.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -89,8 +89,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_14.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_14.cs" Line="94">In method 'Version_2_0_14.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -100,8 +100,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_21.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_21.cs" Line="94">In method 'Version_2_0_21.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -111,8 +111,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_26.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_26.cs" Line="94">In method 'Version_2_0_26.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -122,8 +122,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_32.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_32.cs" Line="94">In method 'Version_2_0_32.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -133,8 +133,8 @@
          <Members>
           <Member Name="#Update()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 07:18:11Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning">In method 'Version_2_0_33.Update()', call System.IDisposable.Dispose on object 'Local1' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:22:31Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_33.cs" Line="94">In method 'Version_2_0_33.Update()', call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -193,10 +193,4 @@
   <String Key="Warnings">warning(s)</String>
   <String Key="ReportTitle">Code Analysis Report</String>
  </Localized>
- <Exceptions>
-  <Exception Keyword="CA0068" Kind="Engine" TreatAsWarning="True">
-   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>Debug information could not be found for target assembly 'Eleflex.Security.Storage.SqlServer.dll'. For best analysis results, include the .pdb file with debug information for 'Eleflex.Security.Storage.SqlServer.dll' in the same directory as the target assembly.</ExceptionMessage>
-  </Exception>
- </Exceptions>
 </FxCopReport>

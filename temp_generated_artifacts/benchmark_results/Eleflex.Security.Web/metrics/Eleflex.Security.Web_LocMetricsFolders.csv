@@ -1,11 +1,14 @@
 Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
 Total,50,4684,3093,1791,466,451,4,1140,7293,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web,50,4684,3093,1791,466,451,4,1140,7293,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Account,19,1589,1053,550,143,127,0,409,2752,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Account\Manage,9,690,464,239,55,44,0,182,1208,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Admin,29,2967,1977,1198,323,300,4,690,4275,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Admin\Permissions,2,167,94,57,11,16,0,57,304,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Admin\Roles,11,1195,803,481,138,120,2,272,1661,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Admin\Users,15,1558,1060,649,173,160,2,338,2170,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\App_Start,1,92,48,40,0,19,0,25,148,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\Properties,1,36,15,3,0,5,0,16,118,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web,50,4684,3093,1791,466,451,4,1140,7293,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Account,19,1589,1053,550,143,127,0,409,2752,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Account\Manage,9,690,464,239,55,44,0,182,1208,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Admin,29,2967,1977,1198,323,300,4,690,4275,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Admin\Permissions,2,167,94,57,11,16,0,57,304,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Admin\Roles,11,1195,803,481,138,120,2,272,1661,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Admin\Users,15,1558,1060,649,173,160,2,338,2170,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\App_Start,1,92,48,40,0,19,0,25,148,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\Properties,1,36,15,3,0,5,0,16,118,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\obj\Release,0,0,0,0,0,0,0,0,0,0,0

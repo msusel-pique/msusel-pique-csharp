@@ -4,18 +4,18 @@
  <Namespaces>
   <Namespace Name="Eleflex.Web">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Web'.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\bin\Release\Eleflex.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\bin\Debug\Eleflex.Web.dll">
    <Modules>
     <Module Name="eleflex.web.dll">
      <Messages>
-      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Web.dll'.</Issue>
       </Message>
      </Messages>
@@ -26,65 +26,65 @@
          <Members>
           <Member Name="#REDIRECT_RELOAD" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="REDIRECT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="REDIRECT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'REDIRECT' in member name 'AjaxResult.REDIRECT_RELOAD' by changing it to 'Redirect'.</Issue>
             </Message>
-            <Message Id="RELOAD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="RELOAD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RELOAD' in member name 'AjaxResult.REDIRECT_RELOAD' by changing it to 'Reload'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'AjaxResult.REDIRECT_RELOAD'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#STATUS_ERROR" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="ERROR" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="ERROR" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'ERROR' in member name 'AjaxResult.STATUS_ERROR' by changing it to 'Error'.</Issue>
             </Message>
-            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'STATUS' in member name 'AjaxResult.STATUS_ERROR' by changing it to 'Status'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'AjaxResult.STATUS_ERROR'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#STATUS_INFO" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="INFO" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="INFO" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'INFO' in member name 'AjaxResult.STATUS_INFO' by changing it to 'Info'.</Issue>
             </Message>
-            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'STATUS' in member name 'AjaxResult.STATUS_INFO' by changing it to 'Status'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'AjaxResult.STATUS_INFO'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#STATUS_SUCCESS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'STATUS' in member name 'AjaxResult.STATUS_SUCCESS' by changing it to 'Status'.</Issue>
             </Message>
-            <Message Id="SUCCESS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="SUCCESS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SUCCESS' in member name 'AjaxResult.STATUS_SUCCESS' by changing it to 'Success'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'AjaxResult.STATUS_SUCCESS'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#STATUS_WARNING" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="STATUS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'STATUS' in member name 'AjaxResult.STATUS_WARNING' by changing it to 'Status'.</Issue>
             </Message>
-            <Message Id="WARNING" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="WARNING" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WARNING' in member name 'AjaxResult.STATUS_WARNING' by changing it to 'Warning'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'AjaxResult.STATUS_WARNING'.</Issue>
             </Message>
            </Messages>
@@ -95,32 +95,32 @@
          <Members>
           <Member Name="#_lockAdmin" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message Id="lock" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="lock" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'lock' in member name 'CommonLoggingAsyncServiceAdapter._lockAdmin' by changing it to 'Lock'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CommonLoggingAsyncServiceAdapter._lockAdmin'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Default_RunIntervalMilliseconds" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CommonLoggingAsyncServiceAdapter.Default_RunIntervalMilliseconds'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Default_StopTimeoutMilliseconds" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'CommonLoggingAsyncServiceAdapter.Default_StopTimeoutMilliseconds'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetLogger(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">In member 'CommonLoggingAsyncServiceAdapter.GetLogger(string)', change parameter name 'name' to 'key' in order to match the identifier as it has been declared in 'ILoggerFactoryAdapter.GetLogger(string)'.</Issue>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceAdapter.cs" Line="121">In member 'CommonLoggingAsyncServiceAdapter.GetLogger(string)', change parameter name 'name' to 'key' in order to match the identifier as it has been declared in 'ILoggerFactoryAdapter.GetLogger(string)'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -130,15 +130,15 @@
          <Members>
           <Member Name="#IsInRoleAsync(!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">In member 'IdentityUserStoreServiceClient&lt;TUser&gt;.IsInRoleAsync(TUser, string)', change parameter name 'role' to 'roleName' in order to match the identifier as it has been declared in 'IUserRoleStore&lt;TUser, string&gt;.IsInRoleAsync(TUser, string)'.</Issue>
+            <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="676">In member 'IdentityUserStoreServiceClient&lt;TUser&gt;.IsInRoleAsync(TUser, string)', change parameter name 'role' to 'roleName' in order to match the identifier as it has been declared in 'IUserRoleStore&lt;TUser, string&gt;.IsInRoleAsync(TUser, string)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveFromRoleAsync(!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">In member 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveFromRoleAsync(TUser, string)', change parameter name 'role' to 'roleName' in order to match the identifier as it has been declared in 'IUserRoleStore&lt;TUser, string&gt;.RemoveFromRoleAsync(TUser, string)'.</Issue>
+            <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="688">In member 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveFromRoleAsync(TUser, string)', change parameter name 'role' to 'roleName' in order to match the identifier as it has been declared in 'IUserRoleStore&lt;TUser, string&gt;.RemoveFromRoleAsync(TUser, string)'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -148,35 +148,35 @@
          <Members>
           <Member Name="#KEY_IMPERSONATE_SYSTEM" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'IMPERSONATE' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM' by changing it to 'Impersonate'.</Issue>
             </Message>
-            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'KEY' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM' by changing it to 'Key'.</Issue>
             </Message>
-            <Message Id="SYSTEM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="SYSTEM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SYSTEM' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM' by changing it to 'System'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#KEY_IMPERSONATE_SYSTEM_TOKEN" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'IMPERSONATE' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM_TOKEN' by changing it to 'Impersonate'.</Issue>
             </Message>
-            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'KEY' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM_TOKEN' by changing it to 'Key'.</Issue>
             </Message>
-            <Message Id="SYSTEM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="SYSTEM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SYSTEM' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM_TOKEN' by changing it to 'System'.</Issue>
             </Message>
-            <Message Id="TOKEN" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="TOKEN" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TOKEN' in member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM_TOKEN' by changing it to 'Token'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ImpersonateSystem.KEY_IMPERSONATE_SYSTEM_TOKEN'.</Issue>
             </Message>
            </Messages>
@@ -187,55 +187,55 @@
          <Members>
           <Member Name="#.ctor(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error">In member 'ImpersonateUser.ImpersonateUser(string, string)', the discrete term 'username' in parameter name 'username' should be expressed as a compound word, 'userName'.</Issue>
+            <Message Id="username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="ImpersonateUser.cs" Line="61">In member 'ImpersonateUser.ImpersonateUser(string, string)', the discrete term 'username' in parameter name 'username' should be expressed as a compound word, 'userName'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetUsername" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'ImpersonateUser.GetUsername' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="ImpersonateUser.cs" Line="139">The discrete term 'Username' in member name 'ImpersonateUser.GetUsername' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#KEY_IMPERSONATE_USER_PASSWORD" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'IMPERSONATE' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_PASSWORD' by changing it to 'Impersonate'.</Issue>
             </Message>
-            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'KEY' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_PASSWORD' by changing it to 'Key'.</Issue>
             </Message>
-            <Message Id="PASSWORD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="PASSWORD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'PASSWORD' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_PASSWORD' by changing it to 'Password'.</Issue>
             </Message>
-            <Message Id="USER" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="USER" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'USER' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_PASSWORD' by changing it to 'User'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ImpersonateUser.KEY_IMPERSONATE_USER_PASSWORD'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#KEY_IMPERSONATE_USER_USERNAME" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="USERNAME" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="USERNAME" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'USERNAME' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
-            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="IMPERSONATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'IMPERSONATE' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME' by changing it to 'Impersonate'.</Issue>
             </Message>
-            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="KEY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'KEY' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME' by changing it to 'Key'.</Issue>
             </Message>
-            <Message Id="USER" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="USER" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'USER' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME' by changing it to 'User'.</Issue>
             </Message>
-            <Message Id="USERNAME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message Id="USERNAME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'USERNAME' in member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME' by changing it to 'Username'.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 07:19:16Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:22:21Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ImpersonateUser.KEY_IMPERSONATE_USER_USERNAME'.</Issue>
             </Message>
            </Messages>

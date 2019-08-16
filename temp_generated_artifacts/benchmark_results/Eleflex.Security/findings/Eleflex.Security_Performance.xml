@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security\bin\Debug\Eleflex.Security.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security\bin\Debug\Eleflex.Security.dll">
    <Modules>
     <Module Name="eleflex.security.dll">
      <Namespaces>
@@ -12,15 +12,33 @@
          <Members>
           <Member Name="#IV" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-08-16 07:19:34Z" FixCategory="Breaking">
-             <Issue Certainty="50" Level="Warning">Change 'CryptoKey.IV' to return a collection or make it a method.</Issue>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-08-16 09:22:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="CryptoKey.cs" Line="28">Change 'CryptoKey.IV' to return a collection or make it a method.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Key" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-08-16 07:19:34Z" FixCategory="Breaking">
-             <Issue Certainty="50" Level="Warning">Change 'CryptoKey.Key' to return a collection or make it a method.</Issue>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-08-16 09:22:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="CryptoKey.cs" Line="26">Change 'CryptoKey.Key' to return a collection or make it a method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IdentityUserStore`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetLoginsAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="userLogins" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2019-08-16 09:22:05Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="418">'IdentityUserStore&lt;TUser&gt;.GetLoginsAsync(TUser)' declares a variable, 'userLogins', of type 'List&lt;UserLoginInfo&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPermissionEffectiveDateQuery(System.String[])" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="now" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2019-08-16 09:22:05Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="676">'IdentityUserStore&lt;TUser&gt;.GetPermissionEffectiveDateQuery(string[])' declares a variable, 'now', of type 'DateTimeOffset', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -28,7 +46,7 @@
         </Type>
         <Type Name="SecurityService" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2019-08-16 07:19:34Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2019-08-16 09:22:05Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'SecurityService' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -59,6 +77,16 @@
    <Url>http://msdn.microsoft.com/library/0fss9skc.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
    <File Name="performancerules.dll" Version="15.0.0.0" />
   </Rule>
  </Rules>

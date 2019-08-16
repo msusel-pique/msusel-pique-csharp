@@ -1,7 +1,11 @@
 Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
-Total,15,2753,1749,925,205,269,1,735,3591,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web,15,2753,1749,925,205,269,1,735,3591,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\App_Start,1,72,37,29,0,12,0,23,146,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\Logging,2,528,283,168,30,51,1,194,777,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\Mvc,3,259,165,101,26,23,0,71,451,0,0
-C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\Security,9,1894,1264,627,149,183,0,447,2217,0,0
+Total,16,2790,1764,928,205,274,1,752,3711,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web,16,2790,1764,928,205,274,1,752,3711,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\App_Start,1,72,37,29,0,12,0,23,146,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\Logging,2,528,283,168,30,51,1,194,777,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\Mvc,3,259,165,101,26,23,0,71,451,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\Properties,1,37,15,3,0,5,0,17,120,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\Security,9,1894,1264,627,149,183,0,447,2217,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\obj\Release,0,0,0,0,0,0,0,0,0,0,0

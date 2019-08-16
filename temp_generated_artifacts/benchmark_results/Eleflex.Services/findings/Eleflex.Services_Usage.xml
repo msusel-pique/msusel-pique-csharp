@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Services Module\Eleflex.Services\bin\Debug\Eleflex.Services.dll">
+   <Modules>
+    <Module Name="eleflex.services.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Services">
+       <Types>
+        <Type Name="IServiceCommandRequestItems`1" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Change 'IServiceCommandRequestItems&lt;T&gt;.Items' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IServiceCommandResponseItems`1" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Change 'IServiceCommandResponseItems&lt;T&gt;.Items' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandKnownTypeProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetKnownTypes(System.Reflection.ICustomAttributeProvider)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="provider" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandKnownTypeProvider.cs" Line="51">Parameter 'provider' of 'ServiceCommandKnownTypeProvider.GetKnownTypes(ICustomAttributeProvider)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandRequestItems`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandRequestItems.cs" Line="36">Change 'ServiceCommandRequestItems&lt;T&gt;.Items' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandRequestQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Filters" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandRequestQuery.cs" Line="45">Change 'ServiceCommandRequestQuery.Filters' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandResponse" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandResponse.cs" Line="31">'ServiceCommandResponse.ServiceCommandResponse()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ServiceCommandResponse..ctor()&#xD;&#xA;ServiceCommandResponse.set_ResponseStatus(ServiceCommandResponseStatus):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandResponseItems`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandResponseItems.cs" Line="33">Change 'ServiceCommandResponseItems&lt;T&gt;.Items' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceCommandResponseStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandResponseStatus.cs" Line="32">'ServiceCommandResponseStatus.ServiceCommandResponseStatus()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ServiceCommandResponseStatus..ctor()&#xD;&#xA;ServiceCommandResponseStatus.set_Messages(List&lt;EleflexValidationMessage&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Messages" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:25:50Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Services Module\Eleflex.Services\Model" File="ServiceCommandResponseStatus.cs" Line="58">Change 'ServiceCommandResponseStatus.Messages' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Do not call overridable methods in constructors</Name>
+   <Description>Virtual methods defined on the class should not be called from constructors. If a derived class has overridden the method, the derived class version will be called (before the derived class constructor is called).</Description>
+   <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

@@ -4,60 +4,60 @@
  <Namespaces>
   <Namespace Name="Eleflex.Security.Web">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Account">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Account'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Account.Manage">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Account.Manage'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Security">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Security'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Security.Permissions">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Security.Permissions'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Security.Roles">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Security.Roles'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Security.Users">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Web.Security.Users'.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
    <Modules>
     <Module Name="eleflex.security.web.dll">
      <Messages>
-      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Security.Web.dll'.</Issue>
       </Message>
      </Messages>
@@ -68,36 +68,36 @@
          <Members>
           <Member Name="#ExternalLogin(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'AccountController.ExternalLogin(string, string)' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="376">Replace the term 'Login' in member name 'AccountController.ExternalLogin(string, string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExternalLoginCallback(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'AccountController.ExternalLoginCallback(string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExternalLoginConfirmation(Eleflex.Security.Web.Account.ExternalLoginConfirmationViewModel,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'AccountController.ExternalLoginConfirmation(ExternalLoginConfirmationViewModel, string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Login(Eleflex.Security.Web.Account.LoginViewModel,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'AccountController.Login(LoginViewModel, string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Login(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'AccountController.Login(string)' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="89">Replace the term 'Login' in member name 'AccountController.Login(string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -105,21 +105,21 @@
         </Type>
         <Type Name="ExternalLoginConfirmationViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'ExternalLoginConfirmationViewModel' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="ExternalLoginListViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'ExternalLoginListViewModel' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="LoginViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'LoginViewModel' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
@@ -132,24 +132,24 @@
          <Members>
           <Member Name="#LinkLogin(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'ManageController.LinkLogin(string)' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="321">Replace the term 'Login' in member name 'ManageController.LinkLogin(string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LinkLoginCallback()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'ManageController.LinkLoginCallback()' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveLogin(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'ManageController.RemoveLogin(string, string)' with the preferred alternate 'LogOn'.</Issue>
             </Message>
-            <Message Id="login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'ManageController.RemoveLogin(string, string)', replace the term 'login' in parameter name 'loginProvider' with the preferred alternate 'logOn'.</Issue>
             </Message>
            </Messages>
@@ -160,7 +160,7 @@
          <Members>
           <Member Name="#RemoveLoginSuccess" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'ManageController.ManageMessageId.RemoveLoginSuccess' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
@@ -175,8 +175,8 @@
          <Members>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'ClaimsViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ClaimsViewModel.cs" Line="35">The discrete term 'Username' in member name 'ClaimsViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -186,29 +186,29 @@
          <Members>
           <Member Name="#LastLoginDate" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'EditViewModel.LastLoginDate' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditViewModel.cs" Line="55">Replace the term 'Login' in member name 'EditViewModel.LastLoginDate' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LoginFailedAttempts" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Login' in member name 'EditViewModel.LoginFailedAttempts' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditViewModel.cs" Line="53">Replace the term 'Login' in member name 'EditViewModel.LoginFailedAttempts' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#TwoFactorAuth" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Auth" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Auth' in member name 'EditViewModel.TwoFactorAuth' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="Auth" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditViewModel.cs" Line="82">Correct the spelling of 'Auth' in member name 'EditViewModel.TwoFactorAuth' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'EditViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditViewModel.cs" Line="42">The discrete term 'Username' in member name 'EditViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -218,8 +218,8 @@
          <Members>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'ListViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ListViewModel.cs" Line="36">The discrete term 'Username' in member name 'ListViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -229,8 +229,8 @@
          <Members>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'PermissionsViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="PermissionsViewModel.cs" Line="35">The discrete term 'Username' in member name 'PermissionsViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -240,8 +240,8 @@
          <Members>
           <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 07:18:40Z" FixCategory="Breaking">
-             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error">The discrete term 'Username' in member name 'RolesViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-08-16 09:23:14Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="RolesViewModel.cs" Line="35">The discrete term 'Username' in member name 'RolesViewModel.Username' should be expressed as a compound word, 'UserName'.</Issue>
             </Message>
            </Messages>
           </Member>

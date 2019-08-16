@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\bin\Release\Eleflex.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\bin\Debug\Eleflex.Web.dll">
    <Modules>
     <Module Name="eleflex.web.dll">
      <Namespaces>
@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#GetInheritedRoles(!0)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:19:13Z" FixCategory="Breaking">
-             <Issue Name="Method" Certainty="75" Level="Warning">'IdentityUserStoreServiceClient&lt;TUser&gt;.GetInheritedRoles(TUser)' is coupled with 31 different types from 11 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 09:22:18Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="535">'IdentityUserStoreServiceClient&lt;TUser&gt;.GetInheritedRoles(TUser)' is coupled with 31 different types from 11 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
             </Message>
            </Messages>
           </Member>

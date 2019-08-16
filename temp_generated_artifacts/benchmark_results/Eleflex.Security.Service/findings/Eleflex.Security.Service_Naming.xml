@@ -4,84 +4,84 @@
  <Namespaces>
   <Namespace Name="Eleflex.Security.Service">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.PermissionCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.PermissionCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.RoleCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.RoleCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.RolePermissionCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.RolePermissionCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.RoleRoleCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.RoleRoleCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.UserClaimCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.UserClaimCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.UserCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.UserCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.UserLoginCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.UserLoginCommand'.</Issue>
     </Message>
-    <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="95" Level="Error">Replace the term 'Login' in namespace name 'Eleflex.Security.Service.UserLoginCommand' with the preferred alternate 'LogOn'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.UserPermissionCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.UserPermissionCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Service.UserRoleCommand">
    <Messages>
-    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Security.Service.UserRoleCommand'.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Service\bin\Release\Eleflex.Security.Service.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Service\bin\Debug\Eleflex.Security.Service.dll">
    <Modules>
     <Module Name="eleflex.security.service.dll">
      <Messages>
-      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Security.Service.dll'.</Issue>
       </Message>
      </Messages>
@@ -90,15 +90,15 @@
        <Types>
         <Type Name="UserLoginCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginCreate' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginCreate.UserLoginCreate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginCreate.cs" Line="42">In member 'UserLoginCreate.UserLoginCreate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -106,15 +106,15 @@
         </Type>
         <Type Name="UserLoginDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginDelete' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginDelete.UserLoginDelete(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginDelete.cs" Line="42">In member 'UserLoginDelete.UserLoginDelete(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -122,15 +122,15 @@
         </Type>
         <Type Name="UserLoginGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginGet' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginGet.UserLoginGet(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginGet.cs" Line="42">In member 'UserLoginGet.UserLoginGet(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -138,15 +138,15 @@
         </Type>
         <Type Name="UserLoginQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginQuery' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginQuery.UserLoginQuery(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginQuery.cs" Line="43">In member 'UserLoginQuery.UserLoginQuery(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -154,15 +154,15 @@
         </Type>
         <Type Name="UserLoginQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginQueryAggregate' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginQueryAggregate.UserLoginQueryAggregate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginQueryAggregate.cs" Line="43">In member 'UserLoginQueryAggregate.UserLoginQueryAggregate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -170,15 +170,15 @@
         </Type>
         <Type Name="UserLoginUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
+          <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Replace the term 'Login' in type name 'UserLoginUpdate' with the preferred alternate 'LogOn'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(Eleflex.Security.IUserLoginRepository)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 07:18:59Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="95" Level="Error">In member 'UserLoginUpdate.UserLoginUpdate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-08-16 09:21:47Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginUpdate.cs" Line="42">In member 'UserLoginUpdate.UserLoginUpdate(IUserLoginRepository)', replace the term 'Login' in parameter name 'userLoginRepository' with the preferred alternate 'LogOn'.</Issue>
             </Message>
            </Messages>
           </Member>

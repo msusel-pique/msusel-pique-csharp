@@ -2,18 +2,18 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
    <Modules>
     <Module Name="eleflex.security.web.dll">
      <Namespaces>
       <Namespace Name="Eleflex.Security.Web.Account">
        <Types>
-        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
-             <Issue Name="Method" Certainty="75" Level="Warning">'AccountController.&lt;Register&gt;d__16.MoveNext()' is coupled with 31 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="163">'AccountController.&lt;Register&gt;d__16.MoveNext()' is coupled with 31 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -23,12 +23,12 @@
       </Namespace>
       <Namespace Name="Eleflex.Security.Web.Account.Manage">
        <Types>
-        <Type Name="ManageController+&lt;ManageLogins&gt;d__22" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;ManageLogins&gt;d__22" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
-             <Issue Name="Method" Certainty="75" Level="Warning">'ManageController.&lt;ManageLogins&gt;d__22.MoveNext()' is coupled with 32 different types from 13 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="296">'ManageController.&lt;ManageLogins&gt;d__22.MoveNext()' is coupled with 32 different types from 13 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -38,12 +38,12 @@
       </Namespace>
       <Namespace Name="Eleflex.Security.Web.Security.Roles">
        <Types>
-        <Type Name="RolesController+&lt;Edit&gt;d__18" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="RolesController+&lt;Edit&gt;d__18" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
-             <Issue Certainty="90" Level="Warning">'RolesController.&lt;Edit&gt;d__18.MoveNext()' has a cyclomatic complexity of 27. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesController.cs" Line="206">'RolesController.&lt;Edit&gt;d__18.MoveNext()' has a cyclomatic complexity of 27. Rewrite or refactor the method to reduce complexity to 25.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -53,18 +53,18 @@
       </Namespace>
       <Namespace Name="Eleflex.Security.Web.Security.Users">
        <Types>
-        <Type Name="UsersController+&lt;Edit&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="UsersController+&lt;Edit&gt;d__16" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="Breaking">
-             <Issue Name="Method" Certainty="75" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' is coupled with 34 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="194">'UsersController.&lt;Edit&gt;d__16.MoveNext()' is coupled with 34 different types from 15 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
             </Message>
-            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
-             <Issue Certainty="90" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a cyclomatic complexity of 41. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="194">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a cyclomatic complexity of 41. Rewrite or refactor the method to reduce complexity to 25.</Issue>
             </Message>
-            <Message TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505" Status="Active" Created="2019-08-16 07:18:36Z" FixCategory="NonBreaking">
-             <Issue Name="Method" Certainty="75" Level="Warning">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a maintainability index of 20. Rewrite or refactor the method to increase its maintainability index (MI). An MI below 10 indicates poor maintainability, an MI between 10 and 20 indicates moderate maintainability, and an MI above 20 indicates good maintainability.</Issue>
+            <Message TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505" Status="Active" Created="2019-08-16 09:23:11Z" FixCategory="NonBreaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="194">'UsersController.&lt;Edit&gt;d__16.MoveNext()' has a maintainability index of 18. Rewrite or refactor the method to increase its maintainability index (MI). An MI below 10 indicates poor maintainability, an MI between 10 and 20 indicates moderate maintainability, and an MI above 20 indicates good maintainability.</Issue>
             </Message>
            </Messages>
           </Member>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Namespaces>
+  <Namespace Name="Eleflex.Services.Server">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:55Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Services.Server'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Eleflex.Services.Server.HealthCommand">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:55Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Services.Server.HealthCommand'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Services Module\Eleflex.Services.Server\bin\Debug\Eleflex.Services.Server.dll">
+   <Modules>
+    <Module Name="eleflex.services.server.dll">
+     <Messages>
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:22:55Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Services.Server.dll'.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Eleflex.Services.Server">
+       <Types>
+        <Type Name="IServiceCommandHandlerProvider" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Get(System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2019-08-16 09:22:55Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IServiceCommandHandlerProvider.Get(Type)' so that it no longer conflicts with the reserved language keyword 'Get'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+   <Name>Identifiers should not match keywords</Name>
+   <Description>Identifiers which conflict with reserved language keywords should be avoided. Using a reserved keyword as an identifier makes it harder for consumers in other languages to use your API.</Description>
+   <Resolution Name="Member">Rename virtual/interface member {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182248.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

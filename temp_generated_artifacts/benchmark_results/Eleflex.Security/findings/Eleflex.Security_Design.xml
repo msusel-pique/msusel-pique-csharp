@@ -2,14 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security\bin\Debug\Eleflex.Security.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security\bin\Debug\Eleflex.Security.dll">
    <Modules>
     <Module Name="eleflex.security.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Eleflex.Security.dll' with a strong name key.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Eleflex.Security.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -20,29 +20,29 @@
          <Members>
           <Member Name="#Decrypt(System.Byte[],System.Byte[],System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AESCryptoService.Decrypt(byte[], byte[], byte[])' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="AESCryptoService.cs" Line="175">Modify 'AESCryptoService.Decrypt(byte[], byte[], byte[])' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Decrypt(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AESCryptoService.Decrypt(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="AESCryptoService.cs" Line="133">Modify 'AESCryptoService.Decrypt(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Encrypt(System.Byte[],System.Byte[],System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AESCryptoService.Encrypt(byte[], byte[], byte[])' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="AESCryptoService.cs" Line="109">Modify 'AESCryptoService.Encrypt(byte[], byte[], byte[])' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Encrypt(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AESCryptoService.Encrypt(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="AESCryptoService.cs" Line="67">Modify 'AESCryptoService.Encrypt(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -50,43 +50,43 @@
         </Type>
         <Type Name="IdentityRoleStore`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
            <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'IdentityRoleStore&lt;TRole&gt;' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CreateAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.CreateAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="89">Modify 'IdentityRoleStore&lt;TRole&gt;.CreateAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DeleteAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.DeleteAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="117">Modify 'IdentityRoleStore&lt;TRole&gt;.DeleteAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Name="DisposeImplementation" Certainty="95" Level="Error">Modify 'IdentityRoleStore&lt;TRole&gt;.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="47">Modify 'IdentityRoleStore&lt;TRole&gt;.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindByIdAsync(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.FindByIdAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="139">Modify 'IdentityRoleStore&lt;TRole&gt;.FindByIdAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindByNameAsync(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.FindByNameAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="180">Modify 'IdentityRoleStore&lt;TRole&gt;.FindByNameAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -94,8 +94,8 @@
            <Accessors>
             <Accessor Name="#get_Roles()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-               <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.Roles.get()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+              <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="72">Modify 'IdentityRoleStore&lt;TRole&gt;.Roles.get()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -103,8 +103,8 @@
           </Member>
           <Member Name="#UpdateAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityRoleStore&lt;TRole&gt;.UpdateAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityRoleStore.cs" Line="197">Modify 'IdentityRoleStore&lt;TRole&gt;.UpdateAsync(TRole)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -112,127 +112,127 @@
         </Type>
         <Type Name="IdentityUserStore`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
            <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'IdentityUserStore&lt;TUser&gt;' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#AddClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.AddClaimAsync(TUser, Claim)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="218">Modify 'IdentityUserStore&lt;TUser&gt;.AddClaimAsync(TUser, Claim)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#AddLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.AddLoginAsync(TUser, UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="342">Modify 'IdentityUserStore&lt;TUser&gt;.AddLoginAsync(TUser, UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#AddToRoleAsync(!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.AddToRoleAsync(TUser, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="527">Modify 'IdentityUserStore&lt;TUser&gt;.AddToRoleAsync(TUser, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.CreateAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="108">Modify 'IdentityUserStore&lt;TUser&gt;.CreateAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DeleteAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.DeleteAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="782">Modify 'IdentityUserStore&lt;TUser&gt;.DeleteAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Name="DisposeImplementation" Certainty="95" Level="Error">Modify 'IdentityUserStore&lt;TUser&gt;.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="57">Modify 'IdentityUserStore&lt;TUser&gt;.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindAsync(Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.FindAsync(UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="397">Modify 'IdentityUserStore&lt;TUser&gt;.FindAsync(UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindByEmailAsync(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.FindByEmailAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="915">Modify 'IdentityUserStore&lt;TUser&gt;.FindByEmailAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindByIdAsync(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.FindByIdAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="136">Modify 'IdentityUserStore&lt;TUser&gt;.FindByIdAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindByNameAsync(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.FindByNameAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="166">Modify 'IdentityUserStore&lt;TUser&gt;.FindByNameAsync(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetClaimsAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.GetClaimsAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="273">Modify 'IdentityUserStore&lt;TUser&gt;.GetClaimsAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetInheritedRoles(!0)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.GetInheritedRoles(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="617">Modify 'IdentityUserStore&lt;TUser&gt;.GetInheritedRoles(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetLoginsAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.GetLoginsAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="431">Modify 'IdentityUserStore&lt;TUser&gt;.GetLoginsAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveClaimAsync(TUser, Claim)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="312">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveClaimAsync(TUser, Claim)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveFromRoleAsync(!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveFromRoleAsync(TUser, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="751">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveFromRoleAsync(TUser, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveLoginAsync(TUser, UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="470">Modify 'IdentityUserStore&lt;TUser&gt;.RemoveLoginAsync(TUser, UserLoginInfo)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UpdateAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.UpdateAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="188">Modify 'IdentityUserStore&lt;TUser&gt;.UpdateAsync(TUser)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -240,8 +240,8 @@
            <Accessors>
             <Accessor Name="#get_Users()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="NonBreaking">
-               <Issue Certainty="95" Level="CriticalError">Modify 'IdentityUserStore&lt;TUser&gt;.Users.get()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+              <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="IdentityUserStore.cs" Line="85">Modify 'IdentityUserStore&lt;TUser&gt;.Users.get()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -253,7 +253,7 @@
          <Members>
           <Member Name="#GetUserDetail()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning">Change 'IUserContextService.GetUserDetail()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
@@ -264,8 +264,8 @@
          <Members>
           <Member Name="#Permissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Permission&gt;' in 'RoleDetail.Permissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="RoleDetail.cs" Line="43">Change 'List&lt;Permission&gt;' in 'RoleDetail.Permissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -273,8 +273,8 @@
         </Type>
         <Type Name="SecurityConstants" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-           <Issue Certainty="90" Level="Error">Because type 'SecurityConstants' contains only 'static' ('Shared' in Visual Basic) members, add a default private constructor to prevent the compiler from adding a default public constructor.</Issue>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+           <Issue Name="CSharp2_0" Certainty="90" Level="Error">Because type 'SecurityConstants' contains only 'static' members, mark it as 'static' to prevent the compiler from adding a default public constructor.</Issue>
           </Message>
          </Messages>
         </Type>
@@ -282,22 +282,22 @@
          <Members>
           <Member Name="#Roles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'UserDetail.Roles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="UserDetail.cs" Line="44">Change 'List&lt;Role&gt;' in 'UserDetail.Roles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserClaims" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;UserClaim&gt;' in 'UserDetail.UserClaims' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="UserDetail.cs" Line="53">Change 'List&lt;UserClaim&gt;' in 'UserDetail.UserClaims' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Permission&gt;' in 'UserDetail.UserPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\Model" File="UserDetail.cs" Line="48">Change 'List&lt;Permission&gt;' in 'UserDetail.UserPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -307,15 +307,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_26.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_26.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_0_26.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_26.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_26.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_0_26.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -325,15 +325,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_28.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_28.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_0_28.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_28.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_28.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_0_28.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -343,15 +343,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_32.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_32.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_0_32.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_32.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_32.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_0_32.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -361,15 +361,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_33.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_33.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_0_33.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_33.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_33.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_0_33.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -379,15 +379,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_35.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_35.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_0_35.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_35.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_0_35.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_0_35.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -397,15 +397,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_1_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_1_0.cs" Line="49">Change 'List&lt;Guid&gt;' in 'Version_2_1_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:19:27Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_1_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:21:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security\VersionPatch" File="Version_2_1_0.cs" Line="74">Change 'List&lt;Version&gt;' in 'Version_2_1_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -473,7 +473,7 @@
   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
    <Name>Static holder types should not have constructors</Name>
    <Description>Instances of types that define only static members do not need to be created. Many compilers will automatically add a public default constructor if no constructor is specified. To prevent this, adding an empty private constructor may be required.</Description>
-   <Resolution Name="Default">Because type {0} contains only 'static' ('Shared' in Visual Basic) members, add a default private constructor to prevent the compiler from adding a default public constructor.</Resolution>
+   <Resolution Name="CSharp2_0">Because type {0} contains only 'static' members, mark it as 'static' to prevent the compiler from adding a default public constructor.</Resolution>
    <Owner />
    <Url>http://msdn.microsoft.com/library/ms182169.aspx</Url>
    <Email>[none]</Email>

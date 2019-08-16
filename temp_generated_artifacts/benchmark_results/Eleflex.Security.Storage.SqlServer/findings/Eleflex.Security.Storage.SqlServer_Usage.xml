@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Storage.SqlServer\bin\Release\Eleflex.Security.Storage.SqlServer.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Storage.SqlServer\bin\Debug\Eleflex.Security.Storage.SqlServer.dll">
    <Modules>
     <Module Name="eleflex.security.storage.sqlserver.dll">
      <Namespaces>
@@ -12,23 +12,23 @@
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalWarning">'Permission.Permission()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permission..ctor()&#xD;&#xA;Permission.set_RolePermissions(ICollection&lt;RolePermission&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'Permission.Permission()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permission..ctor()&#xD;&#xA;Permission.set_UserPermissions(ICollection&lt;UserPermission&gt;):Void</Issue>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Permission.cs" Line="17">'Permission.Permission()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permission..ctor()&#xD;&#xA;Permission.set_RolePermissions(ICollection&lt;RolePermission&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Permission.cs" Line="17">'Permission.Permission()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permission..ctor()&#xD;&#xA;Permission.set_UserPermissions(ICollection&lt;UserPermission&gt;):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RolePermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Permission.RolePermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Permission.cs" Line="30">Change 'Permission.RolePermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Permission.UserPermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Permission.cs" Line="31">Change 'Permission.UserPermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -38,39 +38,39 @@
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalWarning">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RolePermissions(ICollection&lt;RolePermission&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RoleRoles(ICollection&lt;RoleRole&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RoleRoles1(ICollection&lt;RoleRole&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_UserRoles(ICollection&lt;UserRole&gt;):Void</Issue>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="17">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RolePermissions(ICollection&lt;RolePermission&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="17">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RoleRoles(ICollection&lt;RoleRole&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="17">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_RoleRoles1(ICollection&lt;RoleRole&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="17">'Role.Role()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_UserRoles(ICollection&lt;UserRole&gt;):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RolePermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Role.RolePermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="34">Change 'Role.RolePermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RoleRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Role.RoleRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="35">Change 'Role.RoleRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RoleRoles1" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Role.RoleRoles1' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="36">Change 'Role.RoleRoles1' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'Role.UserRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="Role.cs" Line="37">Change 'Role.UserRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -80,39 +80,39 @@
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalWarning">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserClaims(ICollection&lt;UserClaim&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserLogins(ICollection&lt;UserLogin&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserPermissions(ICollection&lt;UserPermission&gt;):Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserRoles(ICollection&lt;UserRole&gt;):Void</Issue>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="17">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserClaims(ICollection&lt;UserClaim&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="17">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserLogins(ICollection&lt;UserLogin&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="17">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserPermissions(ICollection&lt;UserPermission&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="17">'User.User()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_UserRoles(ICollection&lt;UserRole&gt;):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserClaims" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'User.UserClaims' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="48">Change 'User.UserClaims' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserLogins" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'User.UserLogins' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="49">Change 'User.UserLogins' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'User.UserPermissions' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="50">Change 'User.UserPermissions' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 07:18:26Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning">Change 'User.UserRoles' to be read-only by removing the property setter.</Issue>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:22:45Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\Model" File="User.cs" Line="51">Change 'User.UserRoles' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>

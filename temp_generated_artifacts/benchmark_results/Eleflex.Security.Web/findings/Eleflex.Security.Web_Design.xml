@@ -4,28 +4,28 @@
  <Namespaces>
   <Namespace Name="Eleflex.Security.Web">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Eleflex.Security.Web' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Eleflex.Security.Web.Security">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Eleflex.Security.Web.Security' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Web\bin\Eleflex.Security.Web.dll">
    <Modules>
     <Module Name="eleflex.security.web.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Eleflex.Security.Web.dll' with a strong name key.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Eleflex.Security.Web.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -36,167 +36,172 @@
          <Members>
           <Member Name="#_signInManager" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'AccountController._signInManager' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userManager" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'AccountController._userManager' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExternalLogin(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.ExternalLogin(string, string)' from string to System.Uri, or provide an overload of 'AccountController.ExternalLogin(string, string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
+            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="376">Change the type of parameter 'returnUrl' of method 'AccountController.ExternalLogin(string, string)' from string to System.Uri, or provide an overload of 'AccountController.ExternalLogin(string, string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExternalLoginCallback(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.ExternalLoginCallback(string)' from string to System.Uri, or provide an overload of 'AccountController.ExternalLoginCallback(string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExternalLoginConfirmation(Eleflex.Security.Web.Account.ExternalLoginConfirmationViewModel,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.ExternalLoginConfirmation(ExternalLoginConfirmationViewModel, string)' from string to System.Uri, or provide an overload of 'AccountController.ExternalLoginConfirmation(ExternalLoginConfirmationViewModel, string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Login(Eleflex.Security.Web.Account.LoginViewModel,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message Id="1#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.Login(LoginViewModel, string)' from string to System.Uri, or provide an overload of 'AccountController.Login(LoginViewModel, string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Login(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.Login(string)' from string to System.Uri, or provide an overload of 'AccountController.Login(string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="89">Change the type of parameter 'returnUrl' of method 'AccountController.Login(string)' from string to System.Uri, or provide an overload of 'AccountController.Login(string)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SendCode(System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="60" Level="Error">Change the type of parameter 'returnUrl' of method 'AccountController.SendCode(string, bool)' from string to System.Uri, or provide an overload of 'AccountController.SendCode(string, bool)', that allows 'returnUrl' to be passed as a System.Uri object.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;ConfirmEmail&gt;d__19" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;ConfirmEmail&gt;d__19" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;ConfirmEmail&gt;d__19.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="274">Modify 'AccountController.&lt;ConfirmEmail&gt;d__19.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;ExternalLoginCallback&gt;d__29" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;ExternalLoginCallback&gt;d__29" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;ExternalLoginCallback&gt;d__29.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="442">Modify 'AccountController.&lt;ExternalLoginCallback&gt;d__29.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;ExternalLoginConfirmation&gt;d__30" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;ExternalLoginConfirmation&gt;d__30" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;ExternalLoginConfirmation&gt;d__30.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="481">Modify 'AccountController.&lt;ExternalLoginConfirmation&gt;d__30.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;ForgotPassword&gt;d__21" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;ForgotPassword&gt;d__21" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;ForgotPassword&gt;d__21.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="310">Modify 'AccountController.&lt;ForgotPassword&gt;d__21.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;Login&gt;d__12" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;Login&gt;d__12" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;Login&gt;d__12.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="136">Modify 'AccountController.&lt;Login&gt;d__12.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;Register&gt;d__16" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'AccountController.&lt;Register&gt;d__16' because it creates members of the following IDisposable types: 'ImpersonateSystem'.</Issue>
+          </Message>
+         </Messages>
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;Register&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="230">Modify 'AccountController.&lt;Register&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;RegisterResend&gt;d__18" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;RegisterResend&gt;d__18" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;RegisterResend&gt;d__18.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="260">Modify 'AccountController.&lt;RegisterResend&gt;d__18.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;ResetPassword&gt;d__24" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;ResetPassword&gt;d__24" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;ResetPassword&gt;d__24.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="359">Modify 'AccountController.&lt;ResetPassword&gt;d__24.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;SendCode&gt;d__27" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;SendCode&gt;d__27" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;SendCode&gt;d__27.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="393">Modify 'AccountController.&lt;SendCode&gt;d__27.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="AccountController+&lt;SendCode&gt;d__28" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="AccountController+&lt;SendCode&gt;d__28" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'AccountController.&lt;SendCode&gt;d__28.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="AccountController.cs" Line="413">Modify 'AccountController.&lt;SendCode&gt;d__28.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -206,8 +211,8 @@
          <Members>
           <Member Name="#ReturnUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Change the type of property 'ExternalLoginListViewModel.ReturnUrl' from string to System.Uri.</Issue>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="ExternalLoginListViewModel.cs" Line="28">Change the type of property 'ExternalLoginListViewModel.ReturnUrl' from string to System.Uri.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -217,8 +222,8 @@
          <Members>
           <Member Name="#ReturnUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Change the type of property 'SendCodeViewModel.ReturnUrl' from string to System.Uri.</Issue>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="SendCodeViewModel.cs" Line="30">Change the type of property 'SendCodeViewModel.ReturnUrl' from string to System.Uri.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -228,8 +233,8 @@
          <Members>
           <Member Name="#ReturnUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Change the type of property 'VerifyCodeViewModel.ReturnUrl' from string to System.Uri.</Issue>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account" File="VerifyCodeViewModel.cs" Line="35">Change the type of property 'VerifyCodeViewModel.ReturnUrl' from string to System.Uri.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -239,133 +244,133 @@
       </Namespace>
       <Namespace Name="Eleflex.Security.Web.Account.Manage">
        <Types>
-        <Type Name="ManageController+&lt;AddPhoneNumber&gt;d__12" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;AddPhoneNumber&gt;d__12" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;AddPhoneNumber&gt;d__12.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="144">Modify 'ManageController.&lt;AddPhoneNumber&gt;d__12.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;ChangePassword&gt;d__19" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;ChangePassword&gt;d__19" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;ChangePassword&gt;d__19.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="258">Modify 'ManageController.&lt;ChangePassword&gt;d__19.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;DisableTwoFactorAuthentication&gt;d__14" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;DisableTwoFactorAuthentication&gt;d__14" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;DisableTwoFactorAuthentication&gt;d__14.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="174">Modify 'ManageController.&lt;DisableTwoFactorAuthentication&gt;d__14.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;EnableTwoFactorAuthentication&gt;d__13" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;EnableTwoFactorAuthentication&gt;d__13" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;EnableTwoFactorAuthentication&gt;d__13.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="159">Modify 'ManageController.&lt;EnableTwoFactorAuthentication&gt;d__13.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;Index&gt;d__9" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;Index&gt;d__9" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;Index&gt;d__9.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="89">Modify 'ManageController.&lt;Index&gt;d__9.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;LinkLoginCallback&gt;d__24" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;LinkLoginCallback&gt;d__24" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;LinkLoginCallback&gt;d__24.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="336">Modify 'ManageController.&lt;LinkLoginCallback&gt;d__24.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;ManageLogins&gt;d__22" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;ManageLogins&gt;d__22" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;ManageLogins&gt;d__22.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="309">Modify 'ManageController.&lt;ManageLogins&gt;d__22.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;RemoveLogin&gt;d__10" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;RemoveLogin&gt;d__10" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;RemoveLogin&gt;d__10.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="113">Modify 'ManageController.&lt;RemoveLogin&gt;d__10.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;RemovePhoneNumber&gt;d__17" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;RemovePhoneNumber&gt;d__17" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;RemovePhoneNumber&gt;d__17.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="225">Modify 'ManageController.&lt;RemovePhoneNumber&gt;d__17.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;SetPassword&gt;d__21" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;SetPassword&gt;d__21" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;SetPassword&gt;d__21.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="290">Modify 'ManageController.&lt;SetPassword&gt;d__21.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;VerifyPhoneNumber&gt;d__15" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;VerifyPhoneNumber&gt;d__15" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;VerifyPhoneNumber&gt;d__15.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="183">Modify 'ManageController.&lt;VerifyPhoneNumber&gt;d__15.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="ManageController+&lt;VerifyPhoneNumber&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="ManageController+&lt;VerifyPhoneNumber&gt;d__16" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'ManageController.&lt;VerifyPhoneNumber&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Account\Manage" File="ManageController.cs" Line="208">Modify 'ManageController.&lt;VerifyPhoneNumber&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -379,15 +384,15 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Permissions" File="ListViewModel.cs" Line="45">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Permission&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Permissions" File="ListViewModel.cs" Line="55">Change 'List&lt;Permission&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -401,8 +406,8 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditPermissionViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="EditPermissionViewModel.cs" Line="93">Change 'List&lt;SelectListItem&gt;' in 'EditPermissionViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -412,15 +417,15 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditRoleViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="EditRoleViewModel.cs" Line="94">Change 'List&lt;SelectListItem&gt;' in 'EditRoleViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'EditRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="EditRoleViewModel.cs" Line="31">Change 'List&lt;Role&gt;' in 'EditRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -430,8 +435,8 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="EditViewModel.cs" Line="92">Change 'List&lt;SelectListItem&gt;' in 'EditViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -441,15 +446,15 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="ListViewModel.cs" Line="45">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="ListViewModel.cs" Line="55">Change 'List&lt;Role&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -459,8 +464,8 @@
          <Members>
           <Member Name="#RolePermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;RolePermissionViewModel&gt;' in 'PermissionsViewModel.RolePermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="PermissionsViewModel.cs" Line="36">Change 'List&lt;RolePermissionViewModel&gt;' in 'PermissionsViewModel.RolePermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -470,68 +475,68 @@
          <Members>
           <Member Name="#_permissionServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._permissionServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_roleManager" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._roleManager' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_rolePermissionServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._rolePermissionServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_roleRoleServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._roleRoleServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_roleServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._roleServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userManager" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'RolesController._userManager' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditPermission(System.Guid,System.Nullable`1&lt;System.Int64&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Replace method 'RolesController.EditPermission(Guid, long?)' with an overload that supplies all default arguments.</Issue>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesController.cs" Line="490">Replace method 'RolesController.EditPermission(Guid, long?)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditRole(System.Guid,System.Nullable`1&lt;System.Int64&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Replace method 'RolesController.EditRole(Guid, long?)' with an overload that supplies all default arguments.</Issue>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesController.cs" Line="350">Replace method 'RolesController.EditRole(Guid, long?)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="RolesController+&lt;Edit&gt;d__18" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="RolesController+&lt;Edit&gt;d__18" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'RolesController.&lt;Edit&gt;d__18.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesController.cs" Line="301">Modify 'RolesController.&lt;Edit&gt;d__18.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -541,8 +546,8 @@
          <Members>
           <Member Name="#RoleRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;RoleRoleViewModel&gt;' in 'RolesViewModel.RoleRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="RolesViewModel.cs" Line="36">Change 'List&lt;RoleRoleViewModel&gt;' in 'RolesViewModel.RoleRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -552,8 +557,8 @@
          <Members>
           <Member Name="#SearchPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Permission&gt;' in 'SelectPermissionViewModel.SearchPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="SelectPermissionViewModel.cs" Line="35">Change 'List&lt;Permission&gt;' in 'SelectPermissionViewModel.SearchPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -563,8 +568,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'SelectRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Roles" File="SelectRoleViewModel.cs" Line="35">Change 'List&lt;Role&gt;' in 'SelectRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -578,8 +583,8 @@
          <Members>
           <Member Name="#UserClaims" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;UserClaimViewModel&gt;' in 'ClaimsViewModel.UserClaims' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ClaimsViewModel.cs" Line="37">Change 'List&lt;UserClaimViewModel&gt;' in 'ClaimsViewModel.UserClaims' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -589,8 +594,8 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditClaimViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditClaimViewModel.cs" Line="103">Change 'List&lt;SelectListItem&gt;' in 'EditClaimViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -600,8 +605,8 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditPermissionViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditPermissionViewModel.cs" Line="93">Change 'List&lt;SelectListItem&gt;' in 'EditPermissionViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -611,15 +616,15 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditRoleViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditRoleViewModel.cs" Line="94">Change 'List&lt;SelectListItem&gt;' in 'EditRoleViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'EditRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditRoleViewModel.cs" Line="32">Change 'List&lt;Role&gt;' in 'EditRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -629,8 +634,8 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'EditViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EditViewModel.cs" Line="93">Change 'List&lt;SelectListItem&gt;' in 'EditViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -640,8 +645,8 @@
          <Members>
           <Member Name="#Roles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;string&gt;' in 'EffectiveSecurityViewModel.Roles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="EffectiveSecurityViewModel.cs" Line="33">Change 'List&lt;string&gt;' in 'EffectiveSecurityViewModel.Roles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -651,15 +656,15 @@
          <Members>
           <Member Name="#InactiveSelectItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ListViewModel.cs" Line="49">Change 'List&lt;SelectListItem&gt;' in 'ListViewModel.InactiveSelectItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;User&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="ListViewModel.cs" Line="59">Change 'List&lt;User&gt;' in 'ListViewModel.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -669,8 +674,8 @@
          <Members>
           <Member Name="#UserPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;UserPermissionViewModel&gt;' in 'PermissionsViewModel.UserPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="PermissionsViewModel.cs" Line="37">Change 'List&lt;UserPermissionViewModel&gt;' in 'PermissionsViewModel.UserPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -680,8 +685,8 @@
          <Members>
           <Member Name="#UserRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;UserRoleViewModel&gt;' in 'RolesViewModel.UserRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="RolesViewModel.cs" Line="37">Change 'List&lt;UserRoleViewModel&gt;' in 'RolesViewModel.UserRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -691,8 +696,8 @@
          <Members>
           <Member Name="#SearchPermissions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Permission&gt;' in 'SelectPermissionViewModel.SearchPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="SelectPermissionViewModel.cs" Line="35">Change 'List&lt;Permission&gt;' in 'SelectPermissionViewModel.SearchPermissions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -702,8 +707,8 @@
          <Members>
           <Member Name="#SearchRoles" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Role&gt;' in 'SelectRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="SelectRoleViewModel.cs" Line="35">Change 'List&lt;Role&gt;' in 'SelectRoleViewModel.SearchRoles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -713,82 +718,82 @@
          <Members>
           <Member Name="#_permissionServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._permissionServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_roleServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._roleServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userClaimServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._userClaimServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userManager" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._userManager' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userPermissionServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._userPermissionServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userRoleServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._userRoleServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_userServiceClient" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">Because field 'UsersController._userServiceClient' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditClaim(System.Guid,System.Nullable`1&lt;System.Int64&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Replace method 'UsersController.EditClaim(Guid, long?)' with an overload that supplies all default arguments.</Issue>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="661">Replace method 'UsersController.EditClaim(Guid, long?)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditPermission(System.Guid,System.Nullable`1&lt;System.Int64&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Replace method 'UsersController.EditPermission(Guid, long?)' with an overload that supplies all default arguments.</Issue>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="532">Replace method 'UsersController.EditPermission(Guid, long?)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditRole(System.Guid,System.Nullable`1&lt;System.Int64&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error">Replace method 'UsersController.EditRole(Guid, long?)' with an overload that supplies all default arguments.</Issue>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="393">Replace method 'UsersController.EditRole(Guid, long?)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="UsersController+&lt;Edit&gt;d__16" Kind="Struct" Accessibility="Private" ExternallyVisible="False">
+        <Type Name="UsersController+&lt;Edit&gt;d__16" Kind="Class" Accessibility="Private" ExternallyVisible="False">
          <Members>
           <Member Name="#MoveNext()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 07:18:32Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError">Modify 'UsersController.&lt;Edit&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-08-16 09:23:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Web\Admin\Users" File="UsersController.cs" Line="323">Modify 'UsersController.&lt;Edit&gt;d__16.MoveNext()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -870,6 +875,16 @@
    <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
    <File Name="designrules.dll" Version="15.0.0.0" />
   </Rule>
   <Rule TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054">

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\bin\Release\Eleflex.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\bin\Debug\Eleflex.Web.dll">
    <Modules>
     <Module Name="eleflex.web.dll">
      <Namespaces>
@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#CreateMap(AutoMapper.IProfileExpression)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\App_Start" File="AutoMapperConfig.cs" Line="40">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -23,8 +23,8 @@
          <Members>
           <Member Name="#.ctor(System.Collections.Specialized.NameValueCollection,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'CommonLoggingAsyncServiceLog.CommonLoggingAsyncServiceLog(NameValueCollection, string)', validate parameter 'properties' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceLog.cs" Line="91">In externally visible method 'CommonLoggingAsyncServiceLog.CommonLoggingAsyncServiceLog(NameValueCollection, string)', validate parameter 'properties' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -34,8 +34,8 @@
          <Members>
           <Member Name="#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'CookieSecurityClientBehaviorExtension.ApplyClientBehavior(ServiceEndpoint, ClientRuntime)', validate parameter 'clientRuntime' before using it.</Issue>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="CookieSecurityClientBehaviorExtension.cs" Line="53">In externally visible method 'CookieSecurityClientBehaviorExtension.ApplyClientBehavior(ServiceEndpoint, ClientRuntime)', validate parameter 'clientRuntime' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -45,8 +45,8 @@
          <Members>
           <Member Name="#BeforeSendRequest(System.ServiceModel.Channels.Message&amp;,System.ServiceModel.IClientChannel)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Name="Reassigned" Certainty="75" Level="Warning">In externally visible method 'CookieSecurityClientMessageInspector.BeforeSendRequest(ref Message, IClientChannel)', validate local variable ''(*request)'', which was reassigned from parameter 'request', before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Name="Reassigned" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="CookieSecurityClientMessageInspector.cs" Line="91">In externally visible method 'CookieSecurityClientMessageInspector.BeforeSendRequest(ref Message, IClientChannel)', validate local variable ''(*request)'', which was reassigned from parameter 'request', before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -56,36 +56,36 @@
          <Members>
           <Member Name="#AddClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.AddClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="205">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.AddClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#AddLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.AddLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="326">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.AddLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FindAsync(Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.FindAsync(UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="355">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.FindAsync(UserLoginInfo)', validate parameter 'login' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveClaimAsync(!0,System.Security.Claims.Claim)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="287">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveClaimAsync(TUser, Claim)', validate parameter 'claim' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveLoginAsync(!0,Microsoft.AspNet.Identity.UserLoginInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="443">In externally visible method 'IdentityUserStoreServiceClient&lt;TUser&gt;.RemoveLoginAsync(TUser, UserLoginInfo)', validate parameter 'login' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -95,8 +95,8 @@
          <Members>
           <Member Name="#IsServiceError(System.Web.Mvc.ModelStateDictionary,Eleflex.Services.IServiceCommandResponse)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 07:19:06Z" FixCategory="DependsOnFix">
-             <Issue Name="Reassigned" Certainty="75" Level="Warning">In externally visible method 'ModelStateDictionaryWebExtensions.IsServiceError(this ModelStateDictionary, IServiceCommandResponse)', validate local variable ''...'', which was reassigned from parameter 'modelStateDictionary', before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:22:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Mvc" File="ModelStateDictionaryWebExtensions.cs" Line="36">In externally visible method 'ModelStateDictionaryWebExtensions.IsServiceError(this ModelStateDictionary, IServiceCommandResponse)', validate parameter 'modelStateDictionary' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -146,10 +146,4 @@
   <String Key="Warnings">warning(s)</String>
   <String Key="ReportTitle">Code Analysis Report</String>
  </Localized>
- <Exceptions>
-  <Exception Keyword="CA0068" Kind="Engine" TreatAsWarning="True">
-   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
-   <ExceptionMessage>Debug information could not be found for target assembly 'Eleflex.Web.dll'. For best analysis results, include the .pdb file with debug information for 'Eleflex.Web.dll' in the same directory as the target assembly.</ExceptionMessage>
-  </Exception>
- </Exceptions>
 </FxCopReport>

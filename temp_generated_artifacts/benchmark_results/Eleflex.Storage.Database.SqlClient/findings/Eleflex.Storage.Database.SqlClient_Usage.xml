@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Storage Module\Eleflex.Storage.Database.SqlClient\bin\Debug\Eleflex.Storage.Database.SqlClient.dll">
+   <Modules>
+    <Module Name="eleflex.storage.database.sqlclient.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Storage.Database.SqlClient">
+       <Types>
+        <Type Name="SQLServerDatabaseCatalogGenerator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDatabaseCatalog()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerDatabaseCatalogGenerator.cs" Line="177">'SQLServerDatabaseCatalogGenerator.GetDatabaseCatalog()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SQLServerProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddParameter(System.Data.Common.DbCommand,Eleflex.Storage.Database.IDatabaseCommandParameter,System.Data.ParameterDirection)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="477">'SQLServerProvider.AddParameter(DbCommand, IDatabaseCommandParameter, ParameterDirection)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteDataSet(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="244">'SQLServerProvider.ExecuteDataSet(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="253">'SQLServerProvider.ExecuteDataSet(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteNonQuery(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="302">'SQLServerProvider.ExecuteNonQuery(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="311">'SQLServerProvider.ExecuteNonQuery(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteReader(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="139">'SQLServerProvider.ExecuteReader(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="148">'SQLServerProvider.ExecuteReader(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteScaler(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-08-16 09:25:03Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="194">'SQLServerProvider.ExecuteScaler(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database.SqlClient\Model" File="SQLServerProvider.cs" Line="203">'SQLServerProvider.ExecuteScaler(DatabaseCommand, DatabaseTransaction)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Do not raise reserved exception types</Name>
+   <Description>User code should not create and raise exceptions of certain types that are reserved by the runtime or which are of a too general exception type. Exception types that are too general include Exception, SystemException, and ApplicationException. Exception types that are reserved by the runtime include ThreadAbortException, OutOfMemoryException, ExecutionEngineException, and IndexOutOfRangeException.</Description>
+   <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

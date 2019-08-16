@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Framework Module\Eleflex\bin\Debug\Eleflex.dll">
+   <Modules>
+    <Module Name="eleflex.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex">
+       <Types>
+        <Type Name="EleflexException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2019-08-16 09:17:44Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'EleflexException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#ValidationMessages" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:17:44Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Framework Module\Eleflex\Model" File="EleflexException.cs" Line="72">Change 'EleflexException.ValidationMessages' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IBusinessRuleContext" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#State" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:17:44Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Change 'IBusinessRuleContext.State' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IEleflexException" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ValidationMessages" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2019-08-16 09:17:44Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Change 'IEleflexException.ValidationMessages' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>Mark ISerializable types with SerializableAttribute</Name>
+   <Description>The System.Runtime.Serialization.ISerializable interface allows the type to customize its serialization, while the Serializable attribute enables the runtime to recognize the type as being serializable.</Description>
+   <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

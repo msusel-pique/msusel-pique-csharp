@@ -2,14 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Security.Storage.SqlServer\bin\Release\Eleflex.Security.Storage.SqlServer.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Storage.SqlServer\bin\Debug\Eleflex.Security.Storage.SqlServer.dll">
    <Modules>
     <Module Name="eleflex.security.storage.sqlserver.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Eleflex.Security.Storage.SqlServer.dll' with a strong name key.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Eleflex.Security.Storage.SqlServer.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -18,14 +18,14 @@
        <Types>
         <Type Name="SecurityStorageConstants" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-           <Issue Certainty="90" Level="Error">Because type 'SecurityStorageConstants' contains only 'static' ('Shared' in Visual Basic) members, add a default private constructor to prevent the compiler from adding a default public constructor.</Issue>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+           <Issue Name="CSharp2_0" Certainty="90" Level="Error">Because type 'SecurityStorageConstants' contains only 'static' members, mark it as 'static' to prevent the compiler from adding a default public constructor.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="SecurityStorageProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
            <Issue Name="IDisposableReimplementation" Certainty="95" Level="Error">Remove IDisposable from the list of interfaces implemented by 'SecurityStorageProvider' and override the base class Dispose implementation instead.</Issue>
           </Message>
          </Messages>
@@ -34,15 +34,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_0_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_0_0.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_0_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_0_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_0_0.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_0_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -52,15 +52,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_10.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_10.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_10.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_10.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_10.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_10.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -70,15 +70,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_11.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_11.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_11.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_11.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_11.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_11.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -88,15 +88,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_12.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_12.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_12.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_12.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_12.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_12.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -106,15 +106,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_13.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_13.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_13.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_13.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_13.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_13.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -124,15 +124,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_14.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_14.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_14.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_14.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_14.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_14.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -142,15 +142,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_21.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_21.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_21.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_21.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_21.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_21.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -160,15 +160,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_26.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_26.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_26.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_26.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_26.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_26.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -178,15 +178,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_32.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_32.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_32.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_32.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_32.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_32.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -196,15 +196,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_0_33.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_33.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_0_33.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_0_33.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_0_33.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_0_33.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -214,15 +214,15 @@
          <Members>
           <Member Name="#DependentModules" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Guid&gt;' in 'Version_2_1_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_1_0.cs" Line="53">Change 'List&lt;Guid&gt;' in 'Version_2_1_0.DependentModules' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PriorVersions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 07:18:14Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error">Change 'List&lt;Version&gt;' in 'Version_2_1_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-08-16 09:22:34Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Storage.SqlServer\VersionPatch" File="Version_2_1_0.cs" Line="75">Change 'List&lt;Version&gt;' in 'Version_2_1_0.PriorVersions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
@@ -279,7 +279,7 @@
   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
    <Name>Static holder types should not have constructors</Name>
    <Description>Instances of types that define only static members do not need to be created. Many compilers will automatically add a public default constructor if no constructor is specified. To prevent this, adding an empty private constructor may be required.</Description>
-   <Resolution Name="Default">Because type {0} contains only 'static' ('Shared' in Visual Basic) members, add a default private constructor to prevent the compiler from adding a default public constructor.</Resolution>
+   <Resolution Name="CSharp2_0">Because type {0} contains only 'static' members, mark it as 'static' to prevent the compiler from adding a default public constructor.</Resolution>
    <Owner />
    <Url>http://msdn.microsoft.com/library/ms182169.aspx</Url>
    <Email>[none]</Email>

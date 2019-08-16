@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="C:\Users\David\Repository\msusel-qatch\temp-temp-respository\Eleflex.Web\bin\Release\Eleflex.Web.dll">
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Web Module\Eleflex.Web\bin\Debug\Eleflex.Web.dll">
    <Modules>
     <Module Name="eleflex.web.dll">
      <Namespaces>
@@ -12,43 +12,43 @@
          <Members>
           <Member Name="#.ctor(System.Collections.Specialized.NameValueCollection)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalWarning">'CommonLoggingAsyncServiceAdapter.CommonLoggingAsyncServiceAdapter(NameValueCollection)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CommonLoggingAsyncServiceAdapter..ctor(NameValueCollection)&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start():Void</Issue>
-             <Issue Certainty="95" Level="CriticalWarning">'CommonLoggingAsyncServiceAdapter.CommonLoggingAsyncServiceAdapter(NameValueCollection)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CommonLoggingAsyncServiceAdapter..ctor(NameValueCollection)&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start():Void&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start(Int32):Void</Issue>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceAdapter.cs" Line="96">'CommonLoggingAsyncServiceAdapter.CommonLoggingAsyncServiceAdapter(NameValueCollection)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CommonLoggingAsyncServiceAdapter..ctor(NameValueCollection)&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start():Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Logging" File="CommonLoggingAsyncServiceAdapter.cs" Line="96">'CommonLoggingAsyncServiceAdapter.CommonLoggingAsyncServiceAdapter(NameValueCollection)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CommonLoggingAsyncServiceAdapter..ctor(NameValueCollection)&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start():Void&#xD;&#xA;CommonLoggingAsyncServiceAdapter.Start(Int32):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_adminThread" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="Breaking">
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Warning">Consider making 'CommonLoggingAsyncServiceAdapter._adminThread' non-public or a constant.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_isRunning" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="Breaking">
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Warning">Consider making 'CommonLoggingAsyncServiceAdapter._isRunning' non-public or a constant.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_queue" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="Breaking">
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Warning">Consider making 'CommonLoggingAsyncServiceAdapter._queue' non-public or a constant.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_runIntervalMilliseconds" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="Breaking">
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Warning">Consider making 'CommonLoggingAsyncServiceAdapter._runIntervalMilliseconds' non-public or a constant.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Instance" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="Breaking">
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Warning">Consider making 'CommonLoggingAsyncServiceAdapter.Instance' non-public or a constant.</Issue>
             </Message>
            </Messages>
@@ -59,8 +59,8 @@
          <Members>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning">Change 'IdentityRoleStoreServiceClient&lt;TRole&gt;.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityRoleStoreServiceClient.cs" Line="48">Change 'IdentityRoleStoreServiceClient&lt;TRole&gt;.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -70,15 +70,8 @@
          <Members>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning">Change 'IdentityUserStoreServiceClient&lt;TUser&gt;.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-          <Member Name="#GetLoginsAsync(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message Id="System.Collections.Generic.List`1&lt;Microsoft.AspNet.Identity.UserLoginInfo&gt;" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Name="ObjectCreation" Certainty="95" Level="Warning">'IdentityUserStoreServiceClient&lt;TUser&gt;.GetLoginsAsync(TUser)' creates a new instance of 'List&lt;UserLoginInfo&gt;' which is never used. Pass the instance as an argument to another method, assign the instance to a variable, or remove the object creation if it is unnecessary.</Issue>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="IdentityUserStoreServiceClient.cs" Line="59">Change 'IdentityUserStoreServiceClient&lt;TUser&gt;.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -88,8 +81,8 @@
          <Members>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning">Change 'ImpersonateSystem.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="ImpersonateSystem.cs" Line="97">Change 'ImpersonateSystem.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -99,8 +92,8 @@
          <Members>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 07:19:23Z" FixCategory="NonBreaking">
-             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning">Change 'ImpersonateUser.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-08-16 09:22:29Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Web Module\Eleflex.Web\Security" File="ImpersonateUser.cs" Line="93">Change 'ImpersonateUser.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -132,16 +125,6 @@
    <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
-   <File Name="usagerules.dll" Version="15.0.0.0" />
-  </Rule>
-  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
-   <Name>Do not ignore method results</Name>
-   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
-   <Resolution Name="ObjectCreation">{0} creates a new instance of {1} which is never used. Pass the instance as an argument to another method, assign the instance to a variable, or remove the object creation if it is unnecessary.</Resolution>
-   <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
-   <Email>[none]</Email>
-   <MessageLevel Certainty="95">Warning</MessageLevel>
    <File Name="usagerules.dll" Version="15.0.0.0" />
   </Rule>
   <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">

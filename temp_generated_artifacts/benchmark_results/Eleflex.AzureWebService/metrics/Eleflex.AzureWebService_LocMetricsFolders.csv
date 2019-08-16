@@ -1,0 +1,13 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,24,1549,783,397,11,140,0,626,3734,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService,24,1549,783,397,11,140,0,626,3734,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\App_Start,20,1369,688,350,7,109,0,572,3443,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\App_Start\Eleflex_Start,20,1369,688,350,7,109,0,572,3443,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\App_Start\Eleflex_Start\Modules,4,244,118,62,0,20,0,106,641,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\App_Start\Eleflex_Start\Routes,7,410,210,97,0,23,0,177,1074,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\Controllers,1,73,32,18,4,6,0,35,166,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\Models,1,14,11,7,0,3,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\Properties,1,36,15,3,0,5,0,16,118,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.AzureWebService\obj\Release,0,0,0,0,0,0,0,0,0,0,0

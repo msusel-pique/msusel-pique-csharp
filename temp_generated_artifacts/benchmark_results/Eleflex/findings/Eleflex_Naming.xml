@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Namespaces>
+  <Namespace Name="Eleflex">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Framework Module\Eleflex\bin\Debug\Eleflex.dll">
+   <Modules>
+    <Module Name="eleflex.dll">
+     <Messages>
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.dll'.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Eleflex">
+       <Types>
+        <Type Name="EleflexException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in type name 'EleflexException'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="EleflexValidationMessage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in type name 'EleflexValidationMessage'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="IEleflexException" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in type name 'IEleflexException'.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-08-16 09:17:40Z" FixCategory="Breaking">
+           <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'IEleflexException' so that it does not end in 'Exception'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+   <Name>Identifiers should not have incorrect suffix</Name>
+   <Description>Types that do not extend certain base types should not use reserved name suffixes. Types and members should not use 'Ex' or 'New' to distinguish them from an earlier version of the same API, instead, use a numeric suffix such as '2' or provide a more meaningful suffix. Concrete type implementations and members should not end 'Impl'. Members instead, should either consider using the suggested alternate 'Core' in replacement of 'Impl' or avoid any suffix at all.</Description>
+   <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182247.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

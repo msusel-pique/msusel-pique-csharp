@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Namespaces>
+  <Namespace Name="Eleflex.Versioning.Storage.Azure">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Versioning.Storage.Azure'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Eleflex.Versioning.Storage.Azure.Model">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Versioning.Storage.Azure.Model'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Eleflex.Versioning.Storage.SqlServer">
+   <Messages>
+    <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in namespace name 'Eleflex.Versioning.Storage.SqlServer'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\bin\Debug\Eleflex.Versioning.Storage.Azure.dll">
+   <Modules>
+    <Module Name="eleflex.versioning.storage.azure.dll">
+     <Messages>
+      <Message Id="Eleflex" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Eleflex' in assembly name 'Eleflex.Versioning.Storage.Azure.dll'.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Eleflex.Versioning.Storage.Azure">
+       <Types>
+        <Type Name="ModuleVersionRepository" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Get(System.Guid)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Versioning Module\Eleflex.Versioning.Storage.Azure\Model" File="ModuleVersionRepository.cs" Line="90">In member 'ModuleVersionRepository.Get(Guid)', change parameter name 'key' to 'id' in order to match the identifier as it has been declared in 'SqlStorageRepository&lt;ModuleVersion, IVersioningStorageProvider, Guid&gt;.Get(Guid)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SCRIPT_TABLE_EXISTS" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="EXISTS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'EXISTS' in member name 'ModuleVersionRepository.SCRIPT_TABLE_EXISTS' by changing it to 'Exists'.</Issue>
+            </Message>
+            <Message Id="SCRIPT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SCRIPT' in member name 'ModuleVersionRepository.SCRIPT_TABLE_EXISTS' by changing it to 'Script'.</Issue>
+            </Message>
+            <Message Id="TABLE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TABLE' in member name 'ModuleVersionRepository.SCRIPT_TABLE_EXISTS' by changing it to 'Table'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ModuleVersionRepository.SCRIPT_TABLE_EXISTS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Version_2_0_26" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_0_26'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#SCRIPT_CREATE" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CREATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'CREATE' in member name 'Version_2_0_26.SCRIPT_CREATE' by changing it to 'Create'.</Issue>
+            </Message>
+            <Message Id="SCRIPT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SCRIPT' in member name 'Version_2_0_26.SCRIPT_CREATE' by changing it to 'Script'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Version_2_0_26.SCRIPT_CREATE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Version_2_1_0" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Remove the underscores from type name 'Version_2_1_0'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#SCRIPT_CREATE" Kind="Field" Static="True" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CREATE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'CREATE' in member name 'Version_2_1_0.SCRIPT_CREATE' by changing it to 'Create'.</Issue>
+            </Message>
+            <Message Id="SCRIPT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'SCRIPT' in member name 'Version_2_1_0.SCRIPT_CREATE' by changing it to 'Script'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Version_2_1_0.SCRIPT_CREATE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="VersioningStorageConstants" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#MODULE_NAME" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="MODULE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'MODULE' in member name 'VersioningStorageConstants.MODULE_NAME' by changing it to 'Module'.</Issue>
+            </Message>
+            <Message Id="NAME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NAME' in member name 'VersioningStorageConstants.MODULE_NAME' by changing it to 'Name'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-08-16 09:19:51Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'VersioningStorageConstants.MODULE_NAME'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Resolution Name="Type">Remove the underscores from type name {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+   <Name>Parameter names should match base declaration</Name>
+   <Description>For usability reasons, parameter names in overridden methods should match those of the base declaration.</Description>
+   <Resolution Name="Default">In member {0}, change parameter name {1} to {2} in order to match the identifier as it has been declared in {3}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182251.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
