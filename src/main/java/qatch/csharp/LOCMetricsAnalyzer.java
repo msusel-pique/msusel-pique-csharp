@@ -1,7 +1,6 @@
 package qatch.csharp;
 
 import qatch.analysis.IAnalyzer;
-import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.PropertySet;
 
 import java.io.File;
@@ -22,10 +21,15 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
     final static String TOOL_RESULT_FILE_NAME = "LocMetricsFolders.csv";
     private Set<String> toKeep = new HashSet<>();
+    private Path toolsDirectory;
 
-    public LOCMetricsAnalyzer() {
+    public LOCMetricsAnalyzer(Path toolsDirectory) {
         toKeep.add(TOOL_RESULT_FILE_NAME);
+        this.toolsDirectory = toolsDirectory;
     }
+
+    public Path getToolLocation() { return toolsDirectory; }
+    public void setToolLocation(Path toolLocation) { this.toolsDirectory = toolLocation; }
 
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
@@ -34,7 +38,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
         if(System.getProperty("os.name").contains("Windows")){
             pb = new ProcessBuilder(
                     "cmd.exe", "/c",
-                    SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe",
+                    toolsDirectory.toString() + File.separator + "LocMetrics.exe",
                     "-i",
                     src.toAbsolutePath().toString(),
                     "-o",

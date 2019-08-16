@@ -42,7 +42,7 @@ public class SolutionEvaluation {
     public static void main(String[] args) {
 
         // useful constants
-        final boolean RERUN_TOOLS = false;  // TODO: remove this once no longer testing
+//        final boolean RERUN_TOOLS = false;  // TODO: remove this once no longer testing
 
         final Path SOLUTION;
         final Path OUTPUT;
@@ -69,16 +69,24 @@ public class SolutionEvaluation {
         RESOURCES = extractResources(OUTPUT);
 
         // run single project evaluation on each project found in the target solution folder
+        System.out.println("[QATCH] *******************************************************");
+        System.out.println("[QATCH] * Beginning Qatch .NET quality analysis.");
+        System.out.println("[QATCH] * C# Solution being analyzed: " + SOLUTION.toString());
+        System.out.println("[QATCH] * Output directory: " + OUTPUT.toString());
+        System.out.println("[QATCH] * Active quality model: " + QM_NAME);
+        System.out.println("[QATCH] *******************************************************");
+
         Set<Path> projectRoots = FileUtility.multiProjectCollector(SOLUTION, projectRootFlag);
-        System.out.println(projectRoots.size() + " projects found for analysis.");
+        System.out.println("[QATCH] * " + projectRoots.size() + " projects found for analysis.");
 
         projectRoots.forEach(p -> {
-            System.out.println("Beginning analysis on " + p.getFileName());
+            System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
 
             // TODO: eventually all these calls will likely be moved to Qatch framework
             QualityModel qualityModel = makeNewQM(Paths.get(RESOURCES.toString() + "/models/" + QM_NAME));
             Project project = makeProject(p);
-            if (RERUN_TOOLS) { runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel); }
+//            if (RERUN_TOOLS) { runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel); }
+            runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel, Paths.get(RESOURCES.toString() + File.separator + "tools"));
             project.setMetrics(getMetricsFromImporter(
                     Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/metrics")));
             project.setIssues(getIssuesFromImporter(
@@ -184,8 +192,8 @@ public class SolutionEvaluation {
     }
 
 
-    private static void runTools(Path projectDir, Path resultsDir, QualityModel qualityModel) {
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
+    private static void runTools(Path projectDir, Path resultsDir, QualityModel qualityModel, Path toolsLocation) {
+        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(toolsLocation);
         IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
         File projFolder = new File(resultsDir.toFile(), projectDir.getFileName().toString());

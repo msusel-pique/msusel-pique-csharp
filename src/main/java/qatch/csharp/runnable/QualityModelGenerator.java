@@ -91,7 +91,7 @@ public class QualityModelGenerator {
                 System.out.println("*");
 
                 // actualize language-specific analyzers
-                IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
+                IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(Paths.get(ROOT.toString() + "/src/main/resources/models/tools"));
                 IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
                 //Start the analysis of the benchmark repository

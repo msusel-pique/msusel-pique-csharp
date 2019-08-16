@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 public class LOCMetricsAnalyzerTests {
 
@@ -22,7 +23,7 @@ public class LOCMetricsAnalyzerTests {
     public void testAnalyzeSubroutine() throws IOException {
         clean();
 
-        LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer();
+        LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer(Paths.get(System.getProperty("user.dir") + "/src/main/resources/tools"));
         analyzer.analyze(src.toPath(), dest.toPath(), null);
 
         File results = new File(this.dest + File.separator + src.getName() + "_" + LOCMetricsAnalyzer.TOOL_RESULT_FILE_NAME);

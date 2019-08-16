@@ -77,7 +77,7 @@ public class SingleProjectEvaluation {
         Project project = new Project();
 
         //Set the absolute path and the name of the project
-        project.setPath(projectDir.toAbsolutePath().toString());
+        project.setPath(projectDir.toString());
         project.setName(projectDir.getFileName().toString());
 
         System.out.println("* Project Name : " + project.getName());
@@ -98,7 +98,7 @@ public class SingleProjectEvaluation {
         checkCreateClearDirectory(resultsDir.toFile());
 
         //Instantiate the available single project analyzers of the system ...
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer();
+        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(TOOLS_LOCATION.toPath());
         IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
 
         metricsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
