@@ -14,6 +14,7 @@ import qatch.utility.FileUtility;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Enumeration;
@@ -211,27 +212,38 @@ public class SolutionEvaluation {
     private static Path extractResources(Path destination)  {
 
         String protocol = SolutionEvaluation.class.getResource("").getProtocol();
-        File resourcesDirectory = new File(destination.toFile(), "resources");
-        resourcesDirectory.mkdirs();
 
-        if (Objects.equals(protocol, "jar")) {
-            try { extractResourcesToTempFolder(resourcesDirectory.toPath()); }
-            catch (IOException | URISyntaxException e) { e.printStackTrace(); }
-        }
+        try {
+            Path resourcesDirectory = Files.createTempDirectory(destination, "resources");
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                try { FileUtils.deleteDirectory(resourcesDirectory.toFile()); }
+                catch (IOException e) { e.printStackTrace(); }
+            }));
 
-        else if (Objects.equals(protocol, "file")) {
-            File models = new File(ROOT + "/src/main/resources/tools");
-            File tools = new File(ROOT + "/src/main/resources/models");
-            try {
-                FileUtils.copyDirectoryToDirectory(models , resourcesDirectory);
-                FileUtils.copyDirectoryToDirectory(tools , resourcesDirectory);
+            if (Objects.equals(protocol, "jar")) {
+                try { extractResourcesToTempFolder(resourcesDirectory); }
+                catch (IOException | URISyntaxException e) { e.printStackTrace(); }
             }
-            catch (IOException e) {  e.printStackTrace(); }
+
+            else if (Objects.equals(protocol, "file")) {
+                File models = new File(ROOT + "/src/main/resources/tools");
+                File tools = new File(ROOT + "/src/main/resources/models");
+                try {
+                    FileUtils.copyDirectoryToDirectory(models , resourcesDirectory.toFile());
+                    FileUtils.copyDirectoryToDirectory(tools , resourcesDirectory.toFile());
+                }
+                catch (IOException e) {  e.printStackTrace(); }
+            }
+
+            else { throw new RuntimeException("Unable to determine if project is running from IDE or JAR"); }
+
+            return resourcesDirectory;
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        else { throw new RuntimeException("Unable to determine if project is running from IDE or JAR"); }
-
-        return resourcesDirectory.toPath();
+        throw new RuntimeException("retrun statement in try block was never reached.");
     }
 
 
