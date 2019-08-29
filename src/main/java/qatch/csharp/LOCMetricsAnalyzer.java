@@ -28,8 +28,15 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
         this.toolsDirectory = toolsDirectory;
     }
 
-    public Path getToolLocation() { return toolsDirectory; }
-    public void setToolLocation(Path toolLocation) { this.toolsDirectory = toolLocation; }
+
+    @Override
+    public Path getToolsDirectory() {
+        return toolsDirectory;
+    }
+
+    public void setToolsDirectory(Path toolsDirectory) { this.toolsDirectory = toolsDirectory; }
+
+
 
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
@@ -63,6 +70,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
         cleanAllButOne(dest, src.getFileName());
     }
+
 
     /**
      * Filekeeping method. Removes unwanted files from LocMetrics run and renames the results file to a

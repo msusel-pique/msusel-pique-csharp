@@ -14,6 +14,7 @@ import qatch.utility.FileUtility;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Enumeration;
@@ -25,11 +26,11 @@ import java.util.jar.JarFile;
 
 /**
  * This executable class is responsible for producing quality analysis reports on all modules contained within
- * a C# solution.  The driver supports deployed JAR functionality when packaged with dependencies.
+ * a C# solution (.sln).  This driver supports deployed JAR functionality when packaged with dependencies.
  */
 public class SolutionEvaluation {
 
-    final static Path ROOT = Paths.get(System.getProperty("user.dir"));
+    private final static Path ROOT = Paths.get(System.getProperty("user.dir"));
     /**
      * Run single project evaluations on a .NET Framework solution in batch mode to produce analysis results
      * for every .csproj project.  Assumes a derived c# quality model already exists.
@@ -59,7 +60,7 @@ public class SolutionEvaluation {
                     "\n\t(1) path to folder to place analysis results.");
         }
         SOLUTION = Paths.get(args[0]);
-        OUTPUT = Paths.get(args[1]);
+        OUTPUT = Paths.get(args[1], "qa_out");
         ANALYSIS = new File(OUTPUT.toFile(), "analysis_results").toPath();
 
         OUTPUT.toFile().mkdirs();
@@ -79,6 +80,7 @@ public class SolutionEvaluation {
         Set<Path> projectRoots = FileUtility.multiProjectCollector(SOLUTION, projectRootFlag);
         System.out.println("[QATCH] * " + projectRoots.size() + " projects found for analysis.");
 
+        // TODO: use Qatch framework single project eval call
         projectRoots.forEach(p -> {
             System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
 
@@ -143,7 +145,7 @@ public class SolutionEvaluation {
     private static void export(Project project, Path parentDir) {
         String name = project.getName();
         File evalResults = new File(parentDir.toFile(), name + File.separator + name + "_evalResults.json");
-        EvaluationResultsExporter.exportProjectToJson(project, evalResults.getAbsolutePath());
+        EvaluationResultsExporter.exportProjectToJson(project, evalResults.toPath());
     }
 
 
@@ -194,7 +196,7 @@ public class SolutionEvaluation {
 
     private static void runTools(Path projectDir, Path resultsDir, QualityModel qualityModel, Path toolsLocation) {
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(toolsLocation);
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(toolsLocation);
 
         File projFolder = new File(resultsDir.toFile(), projectDir.getFileName().toString());
         File findings = new File(projFolder, "findings");
@@ -211,27 +213,38 @@ public class SolutionEvaluation {
     private static Path extractResources(Path destination)  {
 
         String protocol = SolutionEvaluation.class.getResource("").getProtocol();
-        File resourcesDirectory = new File(destination.toFile(), "resources");
-        resourcesDirectory.mkdirs();
 
-        if (Objects.equals(protocol, "jar")) {
-            try { extractResourcesToTempFolder(resourcesDirectory.toPath()); }
-            catch (IOException | URISyntaxException e) { e.printStackTrace(); }
-        }
+        try {
+            Path resourcesDirectory = Files.createTempDirectory(destination, "resources");
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                try { FileUtils.deleteDirectory(resourcesDirectory.toFile()); }
+                catch (IOException e) { e.printStackTrace(); }
+            }));
 
-        else if (Objects.equals(protocol, "file")) {
-            File models = new File(ROOT + "/src/main/resources/tools");
-            File tools = new File(ROOT + "/src/main/resources/models");
-            try {
-                FileUtils.copyDirectoryToDirectory(models , resourcesDirectory);
-                FileUtils.copyDirectoryToDirectory(tools , resourcesDirectory);
+            if (Objects.equals(protocol, "jar")) {
+                try { extractResourcesToTempFolder(resourcesDirectory); }
+                catch (IOException | URISyntaxException e) { e.printStackTrace(); }
             }
-            catch (IOException e) {  e.printStackTrace(); }
+
+            else if (Objects.equals(protocol, "file")) {
+                File models = new File(ROOT + "/src/main/resources/tools");
+                File tools = new File(ROOT + "/src/main/resources/models");
+                try {
+                    FileUtils.copyDirectoryToDirectory(models , resourcesDirectory.toFile());
+                    FileUtils.copyDirectoryToDirectory(tools , resourcesDirectory.toFile());
+                }
+                catch (IOException e) {  e.printStackTrace(); }
+            }
+
+            else { throw new RuntimeException("Unable to determine if project is running from IDE or JAR"); }
+
+            return resourcesDirectory;
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        else { throw new RuntimeException("Unable to determine if project is running from IDE or JAR"); }
-
-        return resourcesDirectory.toPath();
+        throw new RuntimeException("retrun statement in try block was never reached.");
     }
 
 

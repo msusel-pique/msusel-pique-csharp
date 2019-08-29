@@ -1,6 +1,8 @@
 package qatch.csharp.runnable;
 
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 import qatch.analysis.*;
 import qatch.csharp.*;
@@ -9,6 +11,7 @@ import qatch.evaluation.Project;
 import qatch.evaluation.ProjectCharacteristicsEvaluator;
 import qatch.evaluation.ProjectEvaluator;
 import qatch.model.*;
+import qatch.runnable.SingleProjectEvaluator;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
@@ -22,7 +25,50 @@ public class SingleProjectEvaluation {
     // parameter constants
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_iso25k_csharp.xml");
-    public static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
+    private static final File TOOLS_LOCATION = new File(ROOT + "/src/main/resources/tools");
+
+    private static final Logger logger = LoggerFactory.getLogger(SingleProjectEvaluation.class);
+
+
+    public static void main(String[] args) {
+
+        // initialize
+        logger.debug("Beginning initilization phase");
+        if (args == null || args.length < 2) {
+            throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
+                    "\n\t(0) Path to root directory of project to analyze, " +
+                    "\n\t(1) Path to directory to place analysis results.");
+        }
+        HashMap<String, Path> initializePaths = initialize(args);
+        final Path projectDir = initializePaths.get("projectLoc");
+        final Path resultsDir = initializePaths.get("resultsLoc");
+
+
+        // instantiate interface classes
+        logger.debug("Beginning interface instantiations");
+        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(TOOLS_LOCATION.toPath());
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(TOOLS_LOCATION.toPath());
+        logger.trace("Analyzers loaded");
+
+        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
+        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
+        logger.trace("ResultsImporters loaded");
+
+        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
+        IFindingsAggregator findingsAggregator = new FxcopAggregator();
+        logger.trace("Aggregators loaded");
+
+
+        // run evaluation
+        logger.info("* * * * * BEGINNING SINGLE PROJECT EVALUATION * * * * *");
+        logger.info("Analyzing project: {}", projectDir.toString());
+        Path evalResults = new SingleProjectEvaluator().runEvaluator(
+                projectDir, resultsDir, QM_LOCATION.toPath(), metricsAnalyzer,
+                findingsAnalyzer, metricsImporter, findingsImporter,
+                metricsAggregator, findingsAggregator
+        );
+        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
+    }
 
     /**
      * Main method for running quality evaluation on a single C# project.
@@ -32,7 +78,7 @@ public class SingleProjectEvaluation {
      *             1: path to folder to place results
      *    These arg paths can be relative or full path
      */
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, CloneNotSupportedException {
+    public static void main2(String[] args) throws IOException, SAXException, ParserConfigurationException, CloneNotSupportedException {
 
         // TODO: use logger instead of println
         System.out.println("******************************  Project Evaluator *******************************");
@@ -99,7 +145,7 @@ public class SingleProjectEvaluation {
 
         //Instantiate the available single project analyzers of the system ...
         IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(TOOLS_LOCATION.toPath());
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer();
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(TOOLS_LOCATION.toPath());
 
         metricsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
         findingsAnalyzer.analyze(projectDir, resultsDir, qualityModel.getProperties());
@@ -256,8 +302,7 @@ public class SingleProjectEvaluation {
 
         EvaluationResultsExporter.exportProjectToJson(
                 project,
-                new File(resultsDir.toString() + File.separator + project.getName() + "_evalResults.json")
-                        .getAbsolutePath()
+                new File(resultsDir.toString() + File.separator + project.getName() + "_evalResults.json").toPath()
         );
 
         System.out.println("* Results successfully exported..!");
