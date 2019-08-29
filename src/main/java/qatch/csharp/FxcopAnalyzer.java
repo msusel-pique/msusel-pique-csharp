@@ -1,7 +1,6 @@
 package qatch.csharp;
 
 import qatch.analysis.IAnalyzer;
-import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.Property;
 import qatch.model.PropertySet;
 import qatch.utility.FileUtility;
@@ -22,8 +21,13 @@ public class FxcopAnalyzer implements IAnalyzer {
         this.toolsDirectory = toolsDirectory;
     }
 
-    public Path getToolLocation() { return toolsDirectory; }
-    public void setToolLocation(Path toolLocation) { this.toolsDirectory = toolLocation; }
+    @Override
+    public Path getToolsDirectory() {
+        return toolsDirectory;
+    }
+
+    public void setToolsDirectory(Path toolsDirectory) { this.toolsDirectory = toolsDirectory; }
+
 
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
@@ -53,6 +57,7 @@ public class FxcopAnalyzer implements IAnalyzer {
             }
         }
     }
+
 
     /**
      * Analyze a single project against a certain ruleset (property) by calling the FxCop tool

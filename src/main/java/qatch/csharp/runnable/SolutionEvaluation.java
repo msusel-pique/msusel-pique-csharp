@@ -80,6 +80,7 @@ public class SolutionEvaluation {
         Set<Path> projectRoots = FileUtility.multiProjectCollector(SOLUTION, projectRootFlag);
         System.out.println("[QATCH] * " + projectRoots.size() + " projects found for analysis.");
 
+        // TODO: use Qatch framework single project eval call
         projectRoots.forEach(p -> {
             System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
 
@@ -144,7 +145,7 @@ public class SolutionEvaluation {
     private static void export(Project project, Path parentDir) {
         String name = project.getName();
         File evalResults = new File(parentDir.toFile(), name + File.separator + name + "_evalResults.json");
-        EvaluationResultsExporter.exportProjectToJson(project, evalResults.getAbsolutePath());
+        EvaluationResultsExporter.exportProjectToJson(project, evalResults.toPath());
     }
 
 
