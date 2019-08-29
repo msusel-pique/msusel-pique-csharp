@@ -172,7 +172,7 @@
 
   <profiles>
     <profile>
-      <id>UT</id>
+      <id>ut</id>
       <build>
         <plugins>
           <plugin>
@@ -182,23 +182,24 @@
               <includes>
                 <include>**/*.class</include>
               </includes>
-              <excludedGroups>miltos.diploma.integrationtests.IntegrationTest</excludedGroups>
+              <excludedGroups>qatch.csharp.integrationtests.IntegrationTest</excludedGroups>
             </configuration>
           </plugin>
         </plugins>
       </build>
     </profile>
     <profile>
-      <id>IT</id>
+      <id>it</id>
       <build>
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
             <configuration>
-              <includes>
-                <include>miltos.diploma.integrationtests.IntegrationTests</include>
-              </includes>
+              <groups>qatch.csharp.integrationtests.IntegrationTest</groups>
+<!--              <includes>-->
+<!--                <include>qatch.csharp.integrationtests.IntegrationTest</include>-->
+<!--              </includes>-->
             </configuration>
           </plugin>
         </plugins>

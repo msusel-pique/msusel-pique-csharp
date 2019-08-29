@@ -67,3 +67,6 @@ issue = {Issue@1243}
  classPath = "src\edu\montana\msusel\qatch\Main.java"
 
  -- Maven Commands --
+- Run specific test profile
+    mvn test -Put
+    mvn test -Pit
