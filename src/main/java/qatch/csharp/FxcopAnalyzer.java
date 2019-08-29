@@ -15,6 +15,19 @@ import java.util.Set;
 public class FxcopAnalyzer implements IAnalyzer {
 
     static final String TOOL_NAME = "FxCop";
+    private Path toolsDirectory;
+
+    public FxcopAnalyzer(Path toolsDirectory) {
+        this.toolsDirectory = toolsDirectory;
+    }
+
+    @Override
+    public Path getToolsDirectory() {
+        return toolsDirectory;
+    }
+
+    public void setToolsDirectory(Path toolsDirectory) { this.toolsDirectory = toolsDirectory; }
+
 
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
@@ -45,6 +58,7 @@ public class FxcopAnalyzer implements IAnalyzer {
         }
     }
 
+
     /**
      * Analyze a single project against a certain ruleset (property) by calling the FxCop tool
      * through the command line with the appropriate configuration. Note that a project is the module a
@@ -66,14 +80,14 @@ public class FxcopAnalyzer implements IAnalyzer {
         String destFile = dest + sep + fileName;
 
         // begin building the strings to run the FxCop CLT
-        String fxcop = SingleProjectEvaluation.TOOLS_LOCATION + sep + "FxCop" + sep + "FxCopCmd.exe";
+        String fxcop = toolsDirectory.toString() + sep + "FxCop" + sep + "FxCopCmd.exe";
         String assemblyDir = "/f:" + src.toAbsolutePath().toString();
         String destExt = "/out:" + destFile;
         String rulesetExt = "/r:" + rulesetPath;
-        String fo = "/fo";
 
         if(System.getProperty("os.name").contains("Windows")){
-            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt, fo);
+//            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt, fo);
+            pb = new ProcessBuilder("cmd.exe", "/c", fxcop, assemblyDir, destExt, rulesetExt);
         } else {
             throw new RuntimeException("FxCop C# analysis not supported on non-Windows machines. FxCopCmd.exe tool only supported on Windows.");
         }

@@ -21,10 +21,22 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
     final static String TOOL_RESULT_FILE_NAME = "LocMetricsFolders.csv";
     private Set<String> toKeep = new HashSet<>();
+    private Path toolsDirectory;
 
-    LOCMetricsAnalyzer() {
+    public LOCMetricsAnalyzer(Path toolsDirectory) {
         toKeep.add(TOOL_RESULT_FILE_NAME);
+        this.toolsDirectory = toolsDirectory;
     }
+
+
+    @Override
+    public Path getToolsDirectory() {
+        return toolsDirectory;
+    }
+
+    public void setToolsDirectory(Path toolsDirectory) { this.toolsDirectory = toolsDirectory; }
+
+
 
     @Override
     public void analyze(Path src, Path dest, PropertySet properties) {
@@ -33,7 +45,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
         if(System.getProperty("os.name").contains("Windows")){
             pb = new ProcessBuilder(
                     "cmd.exe", "/c",
-                    SingleProjectEvaluation.TOOLS_LOCATION + File.separator + "LocMetrics.exe",
+                    toolsDirectory.toString() + File.separator + "LocMetrics.exe",
                     "-i",
                     src.toAbsolutePath().toString(),
                     "-o",
@@ -58,6 +70,7 @@ public class LOCMetricsAnalyzer implements IAnalyzer {
 
         cleanAllButOne(dest, src.getFileName());
     }
+
 
     /**
      * Filekeeping method. Removes unwanted files from LocMetrics run and renames the results file to a

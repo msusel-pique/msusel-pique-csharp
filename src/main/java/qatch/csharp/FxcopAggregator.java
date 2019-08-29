@@ -62,6 +62,7 @@ public class FxcopAggregator implements IFindingsAggregator {
             }
 
             //Find the property and set its value and its profile ...
+            // TODO: change this to hash loopup instead of just iterating until found using string matching
             for(int i = 0; i < project.getProperties().size(); i++){
                 Property property = project.getProperties().get(i);
                 if(issueSet.getPropertyName().endsWith(property.getName())){

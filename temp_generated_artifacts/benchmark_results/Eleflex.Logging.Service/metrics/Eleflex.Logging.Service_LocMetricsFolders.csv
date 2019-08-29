@@ -1,0 +1,9 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,8,461,222,130,0,31,0,208,1202,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service,8,461,222,130,0,31,0,208,1202,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\App_Start,1,44,19,11,0,2,0,23,146,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\LogCommand,6,380,188,116,0,24,0,168,936,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\Properties,1,37,15,3,0,5,0,17,120,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Logging Module\Eleflex.Logging.Service\obj\Release,0,0,0,0,0,0,0,0,0,0,0

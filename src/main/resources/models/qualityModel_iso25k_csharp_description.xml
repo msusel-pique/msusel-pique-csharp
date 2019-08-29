@@ -1,0 +1,26 @@
+<quality_model name="CSharp Model">
+    <characteristics>
+        <characteristic name="Functional Suitability" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Performance Efficiency" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Compatibility" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Usability" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Reliability" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Security" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Maintainability" standard="ISO/IEC 25010" description="Placeholder description" />
+        <characteristic name="Portability" standard="ISO/IEC 25010" description="Placeholder descriptiont" />
+    </characteristics>
+    <properties>
+        <property name="Dataflow" type="1" description="Placeholder Dataflow description" positive_impact="false" metricName="" ruleset="DataflowRules.dll" tool="FxCop" />
+        <property name="Design" type="1" description="Placeholder Design description" positive_impact="false" metricName="" ruleset="DesignRules.dll" tool="FxCop" />
+        <property name="Globalization" type="1" description="Placeholder Globalization description" positive_impact="false" metricName="" ruleset="GlobalizationRules.dll" tool="FxCop" />
+        <property name="Interoperability" type="1" description="Placeholder Interoperability description" positive_impact="false" metricName="" ruleset="InteroperabilityRules.dll" tool="FxCop" />
+        <property name="Maintainability" type="1" description="Maintainability warnings support library and application maintenance" positive_impact="false" metricName="" ruleset="MaintainabilityRules.dll" tool="FxCop" />
+        <property name="Mobility" type="1" description="Placeholder Mobility description" positive_impact="false" metricName="" ruleset="MobilityRules.dll" tool="FxCop" />
+        <property name="Naming" type="1" description="Placeholder Naming description" positive_impact="false" metricName="" ruleset="NamingRules.dll" tool="FxCop" />
+        <property name="Performance" type="1" description="Placeholder Performance description" positive_impact="false" metricName="" ruleset="PerformanceRules.dll" tool="FxCop" />
+        <property name="Portability" type="1" description="Placeholder Portability description" positive_impact="false" metricName="" ruleset="PortabilityRules.dll" tool="FxCop" />
+        <property name="Reliability" type="1" description="Placeholder Reliability description" positive_impact="false" metricName="" ruleset="ReliabilityRules.dll" tool="FxCop" />
+        <property name="Security" type="1" description="Placeholder Security description" positive_impact="false" metricName="" ruleset="SecurityRules.dll" tool="FxCop" />
+        <property name="Usage" type="1" description="Placeholder Usage description" positive_impact="false" metricName="" ruleset="UsageRules.dll" tool="FxCop" />
+    </properties>
+</quality_model>

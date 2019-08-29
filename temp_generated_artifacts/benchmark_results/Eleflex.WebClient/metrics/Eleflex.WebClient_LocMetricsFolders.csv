@@ -1,0 +1,13 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,24,1538,773,391,11,136,0,629,3750,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient,24,1538,773,391,11,136,0,629,3750,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\App_Start,20,1358,678,344,7,105,0,575,3459,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\App_Start\Eleflex_Start,20,1358,678,344,7,105,0,575,3459,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\App_Start\Eleflex_Start\Modules,4,232,110,58,0,16,0,106,641,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\App_Start\Eleflex_Start\Routes,7,410,210,97,0,23,0,177,1074,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\Controllers,1,73,32,18,4,6,0,35,166,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\Models,1,14,11,7,0,3,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\Properties,1,36,15,3,0,5,0,16,118,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Applications\Eleflex.WebClient\obj\Release,0,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,230 @@
+<quality_model name="CSharp Model">
+  <tqi>
+    <weights>
+      <weight>0.0909</weight>
+      <weight>0.0826</weight>
+      <weight>0.0362</weight>
+      <weight>0.1286</weight>
+      <weight>0.0859</weight>
+      <weight>0.3898</weight>
+      <weight>0.0694</weight>
+      <weight>0.1165</weight>
+    </weights>
+  </tqi>
+  <characteristics>
+    <characteristic name="Functional Suitability" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.0267</weight>
+        <weight>0.0363</weight>
+        <weight>0.0367</weight>
+        <weight>0.0377</weight>
+        <weight>0.0359</weight>
+        <weight>0.0496</weight>
+        <weight>0.0368</weight>
+        <weight>0.1858</weight>
+        <weight>0.2088</weight>
+        <weight>0.1976</weight>
+        <weight>0.0613</weight>
+        <weight>0.0868</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Performance Efficiency" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.2281</weight>
+        <weight>0.0383</weight>
+        <weight>0.0367</weight>
+        <weight>0.0368</weight>
+        <weight>0.037</weight>
+        <weight>0.0384</weight>
+        <weight>0.0383</weight>
+        <weight>0.3593</weight>
+        <weight>0.0614</weight>
+        <weight>0.0376</weight>
+        <weight>0.051</weight>
+        <weight>0.0371</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Compatibility" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.1923</weight>
+        <weight>0.195</weight>
+        <weight>0.0466</weight>
+        <weight>0.0463</weight>
+        <weight>0.0466</weight>
+        <weight>0.1364</weight>
+        <weight>0.0381</weight>
+        <weight>0.0383</weight>
+        <weight>0.1111</weight>
+        <weight>0.0381</weight>
+        <weight>0.0466</weight>
+        <weight>0.0643</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Usability" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.0605</weight>
+        <weight>0.0605</weight>
+        <weight>0.0656</weight>
+        <weight>0.0694</weight>
+        <weight>0.0612</weight>
+        <weight>0.0694</weight>
+        <weight>0.0608</weight>
+        <weight>0.0694</weight>
+        <weight>0.0694</weight>
+        <weight>0.0694</weight>
+        <weight>0.0625</weight>
+        <weight>0.2818</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Reliability" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.0555</weight>
+        <weight>0.056</weight>
+        <weight>0.0567</weight>
+        <weight>0.056</weight>
+        <weight>0.0578</weight>
+        <weight>0.055</weight>
+        <weight>0.0567</weight>
+        <weight>0.056</weight>
+        <weight>0.0555</weight>
+        <weight>0.3729</weight>
+        <weight>0.067</weight>
+        <weight>0.055</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Security" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.0513</weight>
+        <weight>0.0545</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0513</weight>
+        <weight>0.0533</weight>
+        <weight>0.4304</weight>
+        <weight>0.0513</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Maintainability" standard="ISO/IEC 25010" description="Placeholder description">
+      <weights>
+        <weight>0.0399</weight>
+        <weight>0.2632</weight>
+        <weight>0.0398</weight>
+        <weight>0.0405</weight>
+        <weight>0.2951</weight>
+        <weight>0.0402</weight>
+        <weight>0.0402</weight>
+        <weight>0.0395</weight>
+        <weight>0.0405</weight>
+        <weight>0.0419</weight>
+        <weight>0.0785</weight>
+        <weight>0.0406</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Portability" standard="ISO/IEC 25010" description="Placeholder descriptiont">
+      <weights>
+        <weight>0.0557</weight>
+        <weight>0.0551</weight>
+        <weight>0.0557</weight>
+        <weight>0.0564</weight>
+        <weight>0.0547</weight>
+        <weight>0.0557</weight>
+        <weight>0.0551</weight>
+        <weight>0.0557</weight>
+        <weight>0.3823</weight>
+        <weight>0.0547</weight>
+        <weight>0.0617</weight>
+        <weight>0.0575</weight>
+      </weights>
+    </characteristic>
+  </characteristics>
+  <properties>
+    <property name="Dataflow" type="1" description="Placeholder Dataflow description" positive_impact="false" metricName="" ruleset="DataflowRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0042</threshold>
+        <threshold>0.0138</threshold>
+      </thresholds>
+    </property>
+    <property name="Design" type="1" description="Placeholder Design description" positive_impact="false" metricName="" ruleset="DesignRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0137</threshold>
+        <threshold>0.0312</threshold>
+      </thresholds>
+    </property>
+    <property name="Globalization" type="1" description="Placeholder Globalization description" positive_impact="false" metricName="" ruleset="GlobalizationRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Interoperability" type="1" description="Placeholder Interoperability description" positive_impact="false" metricName="" ruleset="InteroperabilityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Maintainability" type="1" description="Maintainability warnings support library and application maintenance" positive_impact="false" metricName="" ruleset="MaintainabilityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Mobility" type="1" description="Placeholder Mobility description" positive_impact="false" metricName="" ruleset="MobilityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Naming" type="1" description="Placeholder Naming description" positive_impact="false" metricName="" ruleset="NamingRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.011</threshold>
+        <threshold>0.0217</threshold>
+      </thresholds>
+    </property>
+    <property name="Performance" type="1" description="Placeholder Performance description" positive_impact="false" metricName="" ruleset="PerformanceRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>5.0E-4</threshold>
+        <threshold>0.0031</threshold>
+      </thresholds>
+    </property>
+    <property name="Portability" type="1" description="Placeholder Portability description" positive_impact="false" metricName="" ruleset="PortabilityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Reliability" type="1" description="Placeholder Reliability description" positive_impact="false" metricName="" ruleset="ReliabilityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Security" type="1" description="Placeholder Security description" positive_impact="false" metricName="" ruleset="SecurityRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+        <threshold>0.0</threshold>
+      </thresholds>
+    </property>
+    <property name="Usage" type="1" description="Placeholder Usage description" positive_impact="false" metricName="" ruleset="UsageRules.dll" tool="FxCop">
+      <thresholds>
+        <threshold>0.0</threshold>
+        <threshold>3.0E-4</threshold>
+        <threshold>0.0095</threshold>
+      </thresholds>
+    </property>
+  </properties>
+</quality_model>

@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Storage Module\Eleflex.Storage.Database\bin\Debug\Eleflex.Storage.Database.dll">
+   <Modules>
+    <Module Name="eleflex.storage.database.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Storage.Database">
+       <Types>
+        <Type Name="DataAccess`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BulkDelete(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="441">In externally visible method 'DataAccess&lt;T&gt;.BulkDelete(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BulkUpdate(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="330">In externally visible method 'DataAccess&lt;T&gt;.BulkUpdate(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Delete(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="425">In externally visible method 'DataAccess&lt;T&gt;.Delete(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAggregate(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="144">In externally visible method 'DataAccess&lt;T&gt;.GetAggregate(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItem(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="194">In externally visible method 'DataAccess&lt;T&gt;.GetItem(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItemsManaged(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="264">In externally visible method 'DataAccess&lt;T&gt;.GetItemsManaged(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="376">In externally visible method 'DataAccess&lt;T&gt;.Insert(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DataAccess.cs" Line="311">In externally visible method 'DataAccess&lt;T&gt;.Update(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DatabaseProviderBase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetFrameworkValue(Eleflex.Storage.Database.IEleflexProperty,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="DatabaseProviderBase" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="982">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="991">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1000">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1009">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1017">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1026">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1035">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1044">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1053">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1062">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1071">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1080">Correct the spelling of the unrecognized token 'DatabaseProviderBase' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+            </Message>
+            <Message Id="Eleflex" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="982">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="991">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1000">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1009">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1017">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1026">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1035">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1044">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1053">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1062">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1071">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1080">Correct the spelling of the unrecognized token 'Eleflex' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+            </Message>
+            <Message Id="EleflexDataTypeConstant" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="979">Correct the spelling of the unrecognized token 'EleflexDataTypeConstant' in the literal '"EleflexDataTypeConstant "'.</Issue>
+            </Message>
+            <Message Id="GetFrameworkValueCannot" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="982">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="991">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1000">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1009">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1017">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1026">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1035">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1044">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1053">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1062">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1071">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1080">Correct the spelling of the unrecognized token 'GetFrameworkValueCannot' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+            </Message>
+            <Message Id="datetime" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="1017">Correct the spelling of the unrecognized token 'datetime' in the literal '"PR.Eleflex.Persistence.Database.DatabaseProviderBase:GetFrameworkValueCannot con..."'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="976">In externally visible method 'DatabaseProviderBase.GetFrameworkValue(IEleflexProperty, object)', validate parameter 'property' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PopulateObjects(Eleflex.Storage.Database.IPersistenceRequest,System.Data.IDataReader)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="865">In externally visible method 'DatabaseProviderBase.PopulateObjects(IPersistenceRequest, IDataReader)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="DatabaseProviderBase.cs" Line="909">In externally visible method 'DatabaseProviderBase.PopulateObjects(IPersistenceRequest, IDataReader)', validate parameter 'reader' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EDOInheritance" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EleflexSetStorage(System.Collections.Generic.Dictionary`2&lt;System.String,System.Tuple`2&lt;Eleflex.Storage.Database.IEleflexDataType,Eleflex.Storage.Database.IEleflexProperty&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="EDOInheritance.cs" Line="197">In externally visible method 'EDOInheritance.EleflexSetStorage(Dictionary&lt;string, Tuple&lt;IEleflexDataType, IEleflexProperty&gt;&gt;)', validate parameter 'storage' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EleflexContext" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddContext(Eleflex.Storage.Database.IEleflexContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="EleflexContext.cs" Line="160">In externally visible method 'EleflexContext.AddContext(IEleflexContext)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EleflexDatabaseObject" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.String,Eleflex.Storage.Database.IDatabaseSchema,System.String,Eleflex.Storage.Database.DatabaseObjectType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="EleflexDatabaseObject.cs" Line="78">In externally visible method 'EleflexDatabaseObject.EleflexDatabaseObject(string, IDatabaseSchema, string, DatabaseObjectType)', validate parameter 'schema' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EleflexPersistenceObject" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EPOUpdateColumn(Eleflex.Storage.Database.IPersistenceRequest,Eleflex.Storage.Database.IEleflexProperty)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="EleflexPersistenceObject.cs" Line="127">In externally visible method 'EleflexPersistenceObject.EPOUpdateColumn(IPersistenceRequest, IEleflexProperty)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="EleflexPersistenceObject.cs" Line="136">In externally visible method 'EleflexPersistenceObject.EPOUpdateColumn(IPersistenceRequest, IEleflexProperty)', validate parameter 'property' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ODBCDatabaseProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddParameter(System.Data.Common.DbCommand,Eleflex.Storage.Database.IDatabaseCommandParameter,System.Data.ParameterDirection)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="488">In externally visible method 'ODBCDatabaseProvider.AddParameter(DbCommand, IDatabaseCommandParameter, ParameterDirection)', validate parameter 'command' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="456">In externally visible method 'ODBCDatabaseProvider.AddParameter(DbCommand, IDatabaseCommandParameter, ParameterDirection)', validate parameter 'parameter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CopyCommandParameterValues(System.Data.Odbc.OdbcCommand,Eleflex.Storage.Database.DatabaseCommand)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="501">In externally visible method 'ODBCDatabaseProvider.CopyCommandParameterValues(OdbcCommand, DatabaseCommand)', validate parameter 'OdbcCommand' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="506">In externally visible method 'ODBCDatabaseProvider.CopyCommandParameterValues(OdbcCommand, DatabaseCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateConnection()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="399">In method 'ODBCDatabaseProvider.CreateConnection()', object 'connection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateDbCommand()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="119">In method 'ODBCDatabaseProvider.CreateDbCommand()', object 'command' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'command' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteDataSet(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="271">In method 'ODBCDatabaseProvider.ExecuteDataSet(DatabaseCommand, DatabaseTransaction)', object 'dataSet' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'dataSet' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="248">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteNonQuery(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="304">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteReader(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="147">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteScaler(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="200">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCommand(Eleflex.Storage.Database.DatabaseCommand)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="414">In method 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)', object 'OdbcCommand' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'OdbcCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="419">In method 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)', object 'OdbcCommand' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'OdbcCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="422">The query string passed to 'OdbcCommand.CommandText.set(string)' in 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="414">The query string passed to 'OdbcCommand.OdbcCommand(string)' in 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="419">The query string passed to 'OdbcCommand.OdbcCommand(string)' in 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="412">In externally visible method 'ODBCDatabaseProvider.GetCommand(DatabaseCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReplaceParameterName(System.Data.Odbc.OdbcCommand)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="554">The query string passed to 'OdbcCommand.CommandText.set(string)' in 'ODBCDatabaseProvider.ReplaceParameterName(OdbcCommand)' could contain the following variables 'command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="551">In externally visible method 'ODBCDatabaseProvider.ReplaceParameterName(OdbcCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ValidateData(Eleflex.Storage.Database.IEleflexDataType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="ODBCDatabaseProvider.cs" Line="353">In externally visible method 'ODBCDatabaseProvider.ValidateData(IEleflexDataType)', validate parameter 'frameworkValue' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OLEDatabaseProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddParameter(System.Data.Common.DbCommand,Eleflex.Storage.Database.IDatabaseCommandParameter,System.Data.ParameterDirection)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="483">In externally visible method 'OLEDatabaseProvider.AddParameter(DbCommand, IDatabaseCommandParameter, ParameterDirection)', validate parameter 'command' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="452">In externally visible method 'OLEDatabaseProvider.AddParameter(DbCommand, IDatabaseCommandParameter, ParameterDirection)', validate parameter 'parameter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CopyCommandParameterValues(System.Data.OleDb.OleDbCommand,Eleflex.Storage.Database.DatabaseCommand)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="496">In externally visible method 'OLEDatabaseProvider.CopyCommandParameterValues(OleDbCommand, DatabaseCommand)', validate parameter 'OleDbCommand' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="501">In externally visible method 'OLEDatabaseProvider.CopyCommandParameterValues(OleDbCommand, DatabaseCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateConnection()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="395">In method 'OLEDatabaseProvider.CreateConnection()', object 'connection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'connection' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateDbCommand()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="117">In method 'OLEDatabaseProvider.CreateDbCommand()', object 'command' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'command' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteDataSet(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="268">In method 'OLEDatabaseProvider.ExecuteDataSet(DatabaseCommand, DatabaseTransaction)', object 'dataSet' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'dataSet' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="245">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteNonQuery(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="301">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteReader(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="144">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteScaler(Eleflex.Storage.Database.DatabaseCommand,Eleflex.Storage.Database.DatabaseTransaction)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="databasecommand" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="197">Correct the spelling of the unrecognized token 'databasecommand' in the literal '"databasecommand object null"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCommand(Eleflex.Storage.Database.DatabaseCommand)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="410">In method 'OLEDatabaseProvider.GetCommand(DatabaseCommand)', object 'OleDbCommand' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'OleDbCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="415">In method 'OLEDatabaseProvider.GetCommand(DatabaseCommand)', object 'OleDbCommand' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'OleDbCommand' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="418">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'OLEDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="410">The query string passed to 'OleDbCommand.OleDbCommand(string)' in 'OLEDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="415">The query string passed to 'OleDbCommand.OleDbCommand(string)' in 'OLEDatabaseProvider.GetCommand(DatabaseCommand)' could contain the following variables 'command.Sql'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="408">In externally visible method 'OLEDatabaseProvider.GetCommand(DatabaseCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReplaceParameterName(System.Data.OleDb.OleDbCommand)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="548">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'OLEDatabaseProvider.ReplaceParameterName(OleDbCommand)' could contain the following variables 'command.CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="545">In externally visible method 'OLEDatabaseProvider.ReplaceParameterName(OleDbCommand)', validate parameter 'command' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ValidateData(Eleflex.Storage.Database.IEleflexDataType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="OLEDatabaseProvider.cs" Line="349">In externally visible method 'OLEDatabaseProvider.ValidateData(IEleflexDataType)', validate parameter 'frameworkValue' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PersistenceProviderBase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddDefaultSelectProperties(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="PersistenceProviderBase.cs" Line="219">In externally visible method 'PersistenceProviderBase.AddDefaultSelectProperties(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddDefaultUpdateProperties(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="PersistenceProviderBase.cs" Line="249">In externally visible method 'PersistenceProviderBase.AddDefaultUpdateProperties(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TSQLDatabaseFilterGenerator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BuildFromFragment(Eleflex.Storage.Database.IPersistenceRequest,System.Boolean,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IPersistenceRelation&gt;&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="725">In externally visible method 'TSQLDatabaseFilterGenerator.BuildFromFragment(IPersistenceRequest, bool, out List&lt;IPersistenceRelation&gt;)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="2" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="Reassigned" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="770">In externally visible method 'TSQLDatabaseFilterGenerator.BuildFromFragment(IPersistenceRequest, bool, out List&lt;IPersistenceRelation&gt;)', validate local variable ''(*relations)'', which was reassigned from parameter 'relations', before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildInsertFragment(Eleflex.Storage.Database.IPersistenceRequest,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseCommandParameter&gt;&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="623">In externally visible method 'TSQLDatabaseFilterGenerator.BuildInsertFragment(IPersistenceRequest, out List&lt;IDatabaseCommandParameter&gt;)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="Reassigned" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="703">In externally visible method 'TSQLDatabaseFilterGenerator.BuildInsertFragment(IPersistenceRequest, out List&lt;IDatabaseCommandParameter&gt;)', validate local variable ''(*parameters)'', which was reassigned from parameter 'parameters', before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildOrderByFragment(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="425">In externally visible method 'TSQLDatabaseFilterGenerator.BuildOrderByFragment(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildSelectFragment(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="209">In externally visible method 'TSQLDatabaseFilterGenerator.BuildSelectFragment(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildUpdateFragment(Eleflex.Storage.Database.IPersistenceRequest,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseCommandParameter&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="484">In externally visible method 'TSQLDatabaseFilterGenerator.BuildUpdateFragment(IPersistenceRequest, List&lt;IDatabaseCommandParameter&gt;)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="566">In externally visible method 'TSQLDatabaseFilterGenerator.BuildUpdateFragment(IPersistenceRequest, List&lt;IDatabaseCommandParameter&gt;)', validate parameter 'parameters' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildWhereFragment(Eleflex.Storage.Database.IPersistenceRequest,System.Boolean,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IPersistenceRelation&gt;,System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IDatabaseCommandParameter&gt;&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="292">In externally visible method 'TSQLDatabaseFilterGenerator.BuildWhereFragment(IPersistenceRequest, bool, List&lt;IPersistenceRelation&gt;, out List&lt;IDatabaseCommandParameter&gt;)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="3" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Name="Reassigned" Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="393">In externally visible method 'TSQLDatabaseFilterGenerator.BuildWhereFragment(IPersistenceRequest, bool, List&lt;IPersistenceRelation&gt;, out List&lt;IDatabaseCommandParameter&gt;)', validate local variable ''(*parameters)'', which was reassigned from parameter 'parameters', before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDatabaseCommandParameter(Eleflex.Storage.Database.IEleflexContext,Eleflex.Storage.Database.IEleflexPersistenceObject,Eleflex.Storage.Database.IEDOProperty,Eleflex.Storage.Database.IEleflexDataType)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="871">In externally visible method 'TSQLDatabaseFilterGenerator.GetDatabaseCommandParameter(IEleflexContext, IEleflexPersistenceObject, IEDOProperty, IEleflexDataType)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDeleteStatement(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="182">In externally visible method 'TSQLDatabaseFilterGenerator.GetDeleteStatement(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFilterReplacementNames(System.Collections.Generic.List`1&lt;Eleflex.Storage.Database.IEleflexProperty&gt;,System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="833">In externally visible method 'TSQLDatabaseFilterGenerator.GetFilterReplacementNames(List&lt;IEleflexProperty&gt;, bool)', validate parameter 'properties' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInsertStatement(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="155">In externally visible method 'TSQLDatabaseFilterGenerator.GetInsertStatement(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSelectStatement(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="86">In externally visible method 'TSQLDatabaseFilterGenerator.GetSelectStatement(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLStorageFilter(Eleflex.Storage.Database.IEleflexContext,Eleflex.Storage.Database.IPersistenceFilter)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="910">In externally visible method 'TSQLDatabaseFilterGenerator.GetSQLStorageFilter(IEleflexContext, IPersistenceFilter)', validate parameter 'context' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="897">In externally visible method 'TSQLDatabaseFilterGenerator.GetSQLStorageFilter(IEleflexContext, IPersistenceFilter)', validate parameter 'dataFilter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUpdateStatement(Eleflex.Storage.Database.IPersistenceRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Model" File="TSQLDatabaseFilterGenerator.cs" Line="122">In externally visible method 'TSQLDatabaseFilterGenerator.GetUpdateStatement(IPersistenceRequest)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Storage.Database.Filters">
+       <Types>
+        <Type Name="Aggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterAggregate)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Aggregate.cs" Line="60">In externally visible method 'Aggregate.Aggregate(FilterAggregate)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Aggregate.cs" Line="80">In externally visible method 'Aggregate.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Between" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterBetween)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Between.cs" Line="51">In externally visible method 'Between.Between(FilterBetween)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Between.cs" Line="81">In externally visible method 'Between.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Compare" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterCompare)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Compare.cs" Line="51">In externally visible method 'Compare.Compare(FilterCompare)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Compare.cs" Line="81">In externally visible method 'Compare.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Distinct" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Distinct.cs" Line="60">In externally visible method 'Distinct.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Expression" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterExpression)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Expression.cs" Line="50">In externally visible method 'Expression.Expression(FilterExpression)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Expression.cs" Line="77">In externally visible method 'Expression.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FilterBuilder" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.IEleflexContext,Eleflex.Storage.Database.IEleflexPersistenceObject)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="69">In externally visible method 'FilterBuilder.FilterBuilder(IEleflexContext, IEleflexPersistenceObject)', validate parameter 'dto' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindRelationship(System.String,Eleflex.Storage.Database.IEleflexPersistenceObject)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="1067">In externally visible method 'FilterBuilder.FindRelationship(string, IEleflexPersistenceObject)', validate parameter 'dto' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Relation(System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="176">In externally visible method 'FilterBuilder.Relation(params string[])', validate parameter 'relationNames' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RelationInverse(Eleflex.Storage.Database.IEleflexPersistenceObject,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="200">In externally visible method 'FilterBuilder.RelationInverse(IEleflexPersistenceObject, string)', validate parameter 'dto' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Select(System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="243">In externally visible method 'FilterBuilder.Select(params string[])', validate parameter 'propertyNames' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterBuilder.cs" Line="274">In externally visible method 'FilterBuilder.Update(params string[])', validate parameter 'propertyNames' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FilterRelation" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.IPersistenceRelation)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="FilterRelation.cs" Line="49">In externally visible method 'FilterRelation.FilterRelation(IPersistenceRelation)', validate parameter 'relation' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Like" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterLike)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Like.cs" Line="51">In externally visible method 'Like.Like(FilterLike)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Like.cs" Line="81">In externally visible method 'Like.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Null" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterNull)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Null.cs" Line="51">In externally visible method 'Null.Null(FilterNull)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Null.cs" Line="80">In externally visible method 'Null.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PropertyCompare" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterPropertyCompare)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="PropertyCompare.cs" Line="51">In externally visible method 'PropertyCompare.PropertyCompare(FilterPropertyCompare)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="PropertyCompare.cs" Line="81">In externally visible method 'PropertyCompare.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Relation" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterRelation)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Relation.cs" Line="59">In externally visible method 'Relation.Relation(FilterRelation)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Relation.cs" Line="79">In externally visible method 'Relation.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Select" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterSelect)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Select.cs" Line="59">In externally visible method 'Select.Select(FilterSelect)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Select.cs" Line="79">In externally visible method 'Select.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Set" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterSet)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Set.cs" Line="51">In externally visible method 'Set.Set(FilterSet)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Set.cs" Line="81">In externally visible method 'Set.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Sort" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterSort)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Sort.cs" Line="51">In externally visible method 'Sort.Sort(FilterSort)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Sort.cs" Line="80">In externally visible method 'Sort.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Update" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(Eleflex.Storage.Database.Filters.FilterUpdate)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Update.cs" Line="59">In externally visible method 'Update.Update(FilterUpdate)', validate parameter 'filter' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSQLString(Eleflex.Storage.Database.IEleflexContext,System.Collections.Generic.List`1&lt;System.String&gt;,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:24:30Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Storage Module\Eleflex.Storage.Database\Filters" File="Update.cs" Line="79">In externally visible method 'Update.GetSQLString(IEleflexContext, List&lt;string&gt;, List&lt;string&gt;)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Resolution Name="Reassigned">In externally visible method {0}, validate local variable '{1}', which was reassigned from parameter '{2}', before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

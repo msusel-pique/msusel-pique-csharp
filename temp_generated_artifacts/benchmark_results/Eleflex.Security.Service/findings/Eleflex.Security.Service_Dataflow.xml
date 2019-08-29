@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\users\david\repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Security Module\Eleflex.Security.Service\bin\Debug\Eleflex.Security.Service.dll">
+   <Modules>
+    <Module Name="eleflex.security.service.dll">
+     <Namespaces>
+      <Namespace Name="Eleflex.Security.Service">
+       <Types>
+        <Type Name="AutoMapperConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateMap(AutoMapper.IProfileExpression)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\App_Start" File="AutoMapperConfig.cs" Line="40">In externally visible method 'AutoMapperConfig.CreateMap(IProfileExpression)', validate parameter 'mapper' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.PermissionCommand">
+       <Types>
+        <Type Name="PermissionCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionCreateRequest,Eleflex.Security.Message.PermissionCommand.PermissionCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionCreate.cs" Line="56">In externally visible method 'PermissionCreate.Execute(PermissionCreateRequest, PermissionCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionCreate.cs" Line="62">In externally visible method 'PermissionCreate.Execute(PermissionCreateRequest, PermissionCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionDeleteRequest,Eleflex.Security.Message.PermissionCommand.PermissionDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionDelete.cs" Line="55">In externally visible method 'PermissionDelete.Execute(PermissionDeleteRequest, PermissionDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionGetRequest,Eleflex.Security.Message.PermissionCommand.PermissionGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionGet.cs" Line="55">In externally visible method 'PermissionGet.Execute(PermissionGetRequest, PermissionGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionGet.cs" Line="56">In externally visible method 'PermissionGet.Execute(PermissionGetRequest, PermissionGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionQueryRequest,Eleflex.Security.Message.PermissionCommand.PermissionQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionQuery.cs" Line="57">In externally visible method 'PermissionQuery.Execute(PermissionQueryRequest, PermissionQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionQueryAggregateRequest,Eleflex.Security.Message.PermissionCommand.PermissionQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionQueryAggregate.cs" Line="56">In externally visible method 'PermissionQueryAggregate.Execute(PermissionQueryAggregateRequest, PermissionQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermissionUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.PermissionCommand.PermissionUpdateRequest,Eleflex.Security.Message.PermissionCommand.PermissionUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionUpdate.cs" Line="55">In externally visible method 'PermissionUpdate.Execute(PermissionUpdateRequest, PermissionUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\PermissionCommand" File="PermissionUpdate.cs" Line="62">In externally visible method 'PermissionUpdate.Execute(PermissionUpdateRequest, PermissionUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.RoleCommand">
+       <Types>
+        <Type Name="RoleCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleCreateRequest,Eleflex.Security.Message.RoleCommand.RoleCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleCreate.cs" Line="56">In externally visible method 'RoleCreate.Execute(RoleCreateRequest, RoleCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleCreate.cs" Line="65">In externally visible method 'RoleCreate.Execute(RoleCreateRequest, RoleCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleDeleteRequest,Eleflex.Security.Message.RoleCommand.RoleDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleDelete.cs" Line="55">In externally visible method 'RoleDelete.Execute(RoleDeleteRequest, RoleDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleGetRequest,Eleflex.Security.Message.RoleCommand.RoleGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleGet.cs" Line="55">In externally visible method 'RoleGet.Execute(RoleGetRequest, RoleGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleGet.cs" Line="56">In externally visible method 'RoleGet.Execute(RoleGetRequest, RoleGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleQueryRequest,Eleflex.Security.Message.RoleCommand.RoleQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleQuery.cs" Line="57">In externally visible method 'RoleQuery.Execute(RoleQueryRequest, RoleQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleQueryAggregateRequest,Eleflex.Security.Message.RoleCommand.RoleQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleQueryAggregate.cs" Line="56">In externally visible method 'RoleQueryAggregate.Execute(RoleQueryAggregateRequest, RoleQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleCommand.RoleUpdateRequest,Eleflex.Security.Message.RoleCommand.RoleUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleUpdate.cs" Line="55">In externally visible method 'RoleUpdate.Execute(RoleUpdateRequest, RoleUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleCommand" File="RoleUpdate.cs" Line="64">In externally visible method 'RoleUpdate.Execute(RoleUpdateRequest, RoleUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.RolePermissionCommand">
+       <Types>
+        <Type Name="RolePermissionCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionCreateRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionCreate.cs" Line="56">In externally visible method 'RolePermissionCreate.Execute(RolePermissionCreateRequest, RolePermissionCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionCreate.cs" Line="65">In externally visible method 'RolePermissionCreate.Execute(RolePermissionCreateRequest, RolePermissionCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolePermissionDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionDeleteRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionDelete.cs" Line="55">In externally visible method 'RolePermissionDelete.Execute(RolePermissionDeleteRequest, RolePermissionDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolePermissionGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionGetRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionGet.cs" Line="55">In externally visible method 'RolePermissionGet.Execute(RolePermissionGetRequest, RolePermissionGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionGet.cs" Line="56">In externally visible method 'RolePermissionGet.Execute(RolePermissionGetRequest, RolePermissionGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolePermissionQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionQueryRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionQuery.cs" Line="57">In externally visible method 'RolePermissionQuery.Execute(RolePermissionQueryRequest, RolePermissionQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolePermissionQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionQueryAggregateRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionQueryAggregate.cs" Line="56">In externally visible method 'RolePermissionQueryAggregate.Execute(RolePermissionQueryAggregateRequest, RolePermissionQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RolePermissionUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RolePermissionCommand.RolePermissionUpdateRequest,Eleflex.Security.Message.RolePermissionCommand.RolePermissionUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionUpdate.cs" Line="55">In externally visible method 'RolePermissionUpdate.Execute(RolePermissionUpdateRequest, RolePermissionUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RolePermissionCommand" File="RolePermissionUpdate.cs" Line="65">In externally visible method 'RolePermissionUpdate.Execute(RolePermissionUpdateRequest, RolePermissionUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.RoleRoleCommand">
+       <Types>
+        <Type Name="RoleRoleCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleCreateRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleCreate.cs" Line="56">In externally visible method 'RoleRoleCreate.Execute(RoleRoleCreateRequest, RoleRoleCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleCreate.cs" Line="65">In externally visible method 'RoleRoleCreate.Execute(RoleRoleCreateRequest, RoleRoleCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleRoleDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleDeleteRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleDelete.cs" Line="55">In externally visible method 'RoleRoleDelete.Execute(RoleRoleDeleteRequest, RoleRoleDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleRoleGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleGetRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleGet.cs" Line="55">In externally visible method 'RoleRoleGet.Execute(RoleRoleGetRequest, RoleRoleGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleGet.cs" Line="56">In externally visible method 'RoleRoleGet.Execute(RoleRoleGetRequest, RoleRoleGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleRoleQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleQueryRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleQuery.cs" Line="57">In externally visible method 'RoleRoleQuery.Execute(RoleRoleQueryRequest, RoleRoleQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleRoleQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleQueryAggregateRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleQueryAggregate.cs" Line="56">In externally visible method 'RoleRoleQueryAggregate.Execute(RoleRoleQueryAggregateRequest, RoleRoleQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RoleRoleUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.RoleRoleCommand.RoleRoleUpdateRequest,Eleflex.Security.Message.RoleRoleCommand.RoleRoleUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleUpdate.cs" Line="55">In externally visible method 'RoleRoleUpdate.Execute(RoleRoleUpdateRequest, RoleRoleUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\RoleRoleCommand" File="RoleRoleUpdate.cs" Line="65">In externally visible method 'RoleRoleUpdate.Execute(RoleRoleUpdateRequest, RoleRoleUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.UserClaimCommand">
+       <Types>
+        <Type Name="UserClaimCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimCreateRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimCreate.cs" Line="56">In externally visible method 'UserClaimCreate.Execute(UserClaimCreateRequest, UserClaimCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimCreate.cs" Line="65">In externally visible method 'UserClaimCreate.Execute(UserClaimCreateRequest, UserClaimCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserClaimDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimDeleteRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimDelete.cs" Line="55">In externally visible method 'UserClaimDelete.Execute(UserClaimDeleteRequest, UserClaimDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserClaimGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimGetRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimGet.cs" Line="55">In externally visible method 'UserClaimGet.Execute(UserClaimGetRequest, UserClaimGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimGet.cs" Line="56">In externally visible method 'UserClaimGet.Execute(UserClaimGetRequest, UserClaimGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserClaimQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimQueryRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimQuery.cs" Line="57">In externally visible method 'UserClaimQuery.Execute(UserClaimQueryRequest, UserClaimQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserClaimQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimQueryAggregateRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimQueryAggregate.cs" Line="56">In externally visible method 'UserClaimQueryAggregate.Execute(UserClaimQueryAggregateRequest, UserClaimQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserClaimUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserClaimCommand.UserClaimUpdateRequest,Eleflex.Security.Message.UserClaimCommand.UserClaimUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimUpdate.cs" Line="55">In externally visible method 'UserClaimUpdate.Execute(UserClaimUpdateRequest, UserClaimUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserClaimCommand" File="UserClaimUpdate.cs" Line="65">In externally visible method 'UserClaimUpdate.Execute(UserClaimUpdateRequest, UserClaimUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.UserCommand">
+       <Types>
+        <Type Name="UserCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserCreateRequest,Eleflex.Security.Message.UserCommand.UserCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserCreate.cs" Line="56">In externally visible method 'UserCreate.Execute(UserCreateRequest, UserCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserCreate.cs" Line="79">In externally visible method 'UserCreate.Execute(UserCreateRequest, UserCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserDeleteRequest,Eleflex.Security.Message.UserCommand.UserDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserDelete.cs" Line="55">In externally visible method 'UserDelete.Execute(UserDeleteRequest, UserDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserGetRequest,Eleflex.Security.Message.UserCommand.UserGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserGet.cs" Line="55">In externally visible method 'UserGet.Execute(UserGetRequest, UserGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserGet.cs" Line="56">In externally visible method 'UserGet.Execute(UserGetRequest, UserGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserQueryRequest,Eleflex.Security.Message.UserCommand.UserQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserQuery.cs" Line="57">In externally visible method 'UserQuery.Execute(UserQueryRequest, UserQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserQueryAggregateRequest,Eleflex.Security.Message.UserCommand.UserQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserQueryAggregate.cs" Line="56">In externally visible method 'UserQueryAggregate.Execute(UserQueryAggregateRequest, UserQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserCommand.UserUpdateRequest,Eleflex.Security.Message.UserCommand.UserUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserUpdate.cs" Line="55">In externally visible method 'UserUpdate.Execute(UserUpdateRequest, UserUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserCommand" File="UserUpdate.cs" Line="79">In externally visible method 'UserUpdate.Execute(UserUpdateRequest, UserUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.UserLoginCommand">
+       <Types>
+        <Type Name="UserLoginCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginCreateRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginCreate.cs" Line="56">In externally visible method 'UserLoginCreate.Execute(UserLoginCreateRequest, UserLoginCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginCreate.cs" Line="65">In externally visible method 'UserLoginCreate.Execute(UserLoginCreateRequest, UserLoginCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserLoginDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginDeleteRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginDelete.cs" Line="55">In externally visible method 'UserLoginDelete.Execute(UserLoginDeleteRequest, UserLoginDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserLoginGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginGetRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginGet.cs" Line="55">In externally visible method 'UserLoginGet.Execute(UserLoginGetRequest, UserLoginGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginGet.cs" Line="56">In externally visible method 'UserLoginGet.Execute(UserLoginGetRequest, UserLoginGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserLoginQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginQueryRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginQuery.cs" Line="57">In externally visible method 'UserLoginQuery.Execute(UserLoginQueryRequest, UserLoginQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserLoginQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginQueryAggregateRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginQueryAggregate.cs" Line="56">In externally visible method 'UserLoginQueryAggregate.Execute(UserLoginQueryAggregateRequest, UserLoginQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserLoginUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserLoginCommand.UserLoginUpdateRequest,Eleflex.Security.Message.UserLoginCommand.UserLoginUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginUpdate.cs" Line="55">In externally visible method 'UserLoginUpdate.Execute(UserLoginUpdateRequest, UserLoginUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserLoginCommand" File="UserLoginUpdate.cs" Line="65">In externally visible method 'UserLoginUpdate.Execute(UserLoginUpdateRequest, UserLoginUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.UserPermissionCommand">
+       <Types>
+        <Type Name="UserPermissionCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionCreateRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionCreate.cs" Line="56">In externally visible method 'UserPermissionCreate.Execute(UserPermissionCreateRequest, UserPermissionCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionCreate.cs" Line="64">In externally visible method 'UserPermissionCreate.Execute(UserPermissionCreateRequest, UserPermissionCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserPermissionDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionDeleteRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionDelete.cs" Line="55">In externally visible method 'UserPermissionDelete.Execute(UserPermissionDeleteRequest, UserPermissionDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserPermissionGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionGetRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionGet.cs" Line="55">In externally visible method 'UserPermissionGet.Execute(UserPermissionGetRequest, UserPermissionGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionGet.cs" Line="56">In externally visible method 'UserPermissionGet.Execute(UserPermissionGetRequest, UserPermissionGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserPermissionQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionQueryRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionQuery.cs" Line="57">In externally visible method 'UserPermissionQuery.Execute(UserPermissionQueryRequest, UserPermissionQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserPermissionQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionQueryAggregateRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionQueryAggregate.cs" Line="56">In externally visible method 'UserPermissionQueryAggregate.Execute(UserPermissionQueryAggregateRequest, UserPermissionQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserPermissionUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserPermissionCommand.UserPermissionUpdateRequest,Eleflex.Security.Message.UserPermissionCommand.UserPermissionUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionUpdate.cs" Line="55">In externally visible method 'UserPermissionUpdate.Execute(UserPermissionUpdateRequest, UserPermissionUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserPermissionCommand" File="UserPermissionUpdate.cs" Line="64">In externally visible method 'UserPermissionUpdate.Execute(UserPermissionUpdateRequest, UserPermissionUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Eleflex.Security.Service.UserRoleCommand">
+       <Types>
+        <Type Name="UserRoleCreate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleCreateRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleCreateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleCreate.cs" Line="56">In externally visible method 'UserRoleCreate.Execute(UserRoleCreateRequest, UserRoleCreateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleCreate.cs" Line="64">In externally visible method 'UserRoleCreate.Execute(UserRoleCreateRequest, UserRoleCreateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserRoleDelete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleDeleteRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleDeleteResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleDelete.cs" Line="55">In externally visible method 'UserRoleDelete.Execute(UserRoleDeleteRequest, UserRoleDeleteResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserRoleGet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleGetRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleGetResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleGet.cs" Line="55">In externally visible method 'UserRoleGet.Execute(UserRoleGetRequest, UserRoleGetResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleGet.cs" Line="56">In externally visible method 'UserRoleGet.Execute(UserRoleGetRequest, UserRoleGetResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserRoleQuery" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleQueryRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleQueryResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleQuery.cs" Line="57">In externally visible method 'UserRoleQuery.Execute(UserRoleQueryRequest, UserRoleQueryResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserRoleQueryAggregate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleQueryAggregateRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleQueryAggregateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleQueryAggregate.cs" Line="56">In externally visible method 'UserRoleQueryAggregate.Execute(UserRoleQueryAggregateRequest, UserRoleQueryAggregateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserRoleUpdate" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Execute(Eleflex.Security.Message.UserRoleCommand.UserRoleUpdateRequest,Eleflex.Security.Message.UserRoleCommand.UserRoleUpdateResponse)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleUpdate.cs" Line="55">In externally visible method 'UserRoleUpdate.Execute(UserRoleUpdateRequest, UserRoleUpdateResponse)', validate parameter 'request' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-08-16 09:21:39Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\David\Desktop\tempEleflex\Eleflex\V2.1\src\Security Module\Eleflex.Security.Service\UserRoleCommand" File="UserRoleUpdate.cs" Line="64">In externally visible method 'UserRoleUpdate.Execute(UserRoleUpdateRequest, UserRoleUpdateResponse)', validate parameter 'response' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

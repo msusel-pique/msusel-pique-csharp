@@ -1,0 +1,10 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,14,960,566,324,36,73,3,321,1827,8,47
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure,14,960,566,324,36,73,3,321,1827,8,47
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\App_Start,1,45,19,11,0,2,0,24,147,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\Model,10,655,401,256,29,48,3,206,1144,8,47
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\Properties,1,37,15,3,0,5,0,17,120,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\VersionPatch,2,223,131,54,7,18,0,74,416,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\obj,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\obj\Debug,0,0,0,0,0,0,0,0,0,0,0
+C:\Users\David\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\Versioning Module\Eleflex.Versioning.Storage.Azure\obj\Release,0,0,0,0,0,0,0,0,0,0,0
