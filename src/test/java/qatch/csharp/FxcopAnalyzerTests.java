@@ -14,7 +14,7 @@ import java.io.IOException;
 public class FxcopAnalyzerTests {
 
     // FxCop analysis needs a compiled CSharp project located at 'src' in order to work
-    private final File src = new File("src/test/resources/compiled_projects/SimpleCSharp");
+    private final File src = new File("src/test/resources/single_project_eval/TestCsharpProject");
     private final File dest = new File("src/test/output");
     private final File toolsDir = new File("src/main/resources/tools");
     private final File rulesDir = new File(toolsDir, "FxCop/Rules");
@@ -51,8 +51,8 @@ public class FxcopAnalyzerTests {
         Assert.assertTrue(result02.exists());
         Assert.assertTrue(result01.isFile());
         Assert.assertTrue(result02.isFile());
-        Assert.assertEquals("SimpleCSharp_propertyName01.xml", result01.getName());
-        Assert.assertEquals("SimpleCSharp_propertyName02.xml", result02.getName());
+        Assert.assertEquals("TestCsharpProject_propertyName01.xml", result01.getName());
+        Assert.assertEquals("TestCsharpProject_propertyName02.xml", result02.getName());
 
         // XML file has expected number of bytes
         Assert.assertEquals(2844, result01.length(), 500);

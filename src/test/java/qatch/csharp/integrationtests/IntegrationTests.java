@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.xml.sax.SAXException;
 import qatch.csharp.runnable.SingleProjectEvaluation;
+import qatch.csharp.runnable.SolutionEvaluation;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
@@ -34,9 +35,10 @@ public class IntegrationTests {
         cleanTestOutput();
     }
 
+
     @Test
     public void testSingleProjectEvaluation() throws FileNotFoundException {
-        final Path PROJECT_PATH = Paths.get("src/test/resources/TestCsharpProject");
+        final Path PROJECT_PATH = Paths.get("src/test/resources/single_project_eval/TestCsharpProject");
         final Path RESULT_PATH = TEST_OUT;
 
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
@@ -53,6 +55,38 @@ public class IntegrationTests {
         Assert.assertTrue(eval < 0.9999 && eval > 0.0001);
     }
 
+
+    @Test
+    public void testSolutionEvaluation() throws FileNotFoundException {
+        final Path SOLUTION_PATH = Paths.get("src/test/resources/multi_project_eval");
+        final Path RESULT_PATH = TEST_OUT;
+
+        SolutionEvaluation.main(new String[] { SOLUTION_PATH.toString(), RESULT_PATH.toString() });
+
+        File qa_results = new File(RESULT_PATH.toFile(), "qa_out");
+        File alphaResults = new File(qa_results, "Alpha" + File.separator + "Alpha_evalResults.json");
+        File bravoResults = new File(qa_results, "Bravo" + File.separator + "Bravo_evalResults.json");
+        File charlieResults = new File(qa_results, "Charlie" + File.separator + "Charlie_evalResults.json");
+
+        JsonParser parser = new JsonParser();
+        JsonObject alphaData = (JsonObject) parser.parse(new FileReader(alphaResults));
+        JsonObject bravoData = (JsonObject) parser.parse(new FileReader(bravoResults));
+        JsonObject charlieData = (JsonObject) parser.parse(new FileReader(charlieResults));
+
+        double alphaEval = alphaData.getAsJsonObject("tqi").get("eval").getAsDouble();
+        double bravoEval = bravoData.getAsJsonObject("tqi").get("eval").getAsDouble();
+        double charlieEval = charlieData.getAsJsonObject("tqi").get("eval").getAsDouble();
+
+        Assert.assertTrue(alphaResults.exists());
+        Assert.assertTrue(bravoResults.exists());
+        Assert.assertTrue(charlieResults.exists());
+        Assert.assertTrue(alphaEval < 0.9999 && alphaEval > 0.0001);
+        Assert.assertTrue(bravoEval < 0.9999 && bravoEval > 0.0001);
+        Assert.assertTrue(charlieEval < 0.9999 && charlieEval > 0.0001);
+
+        System.out.println("...");
+    }
+
     private void cleanTestOutput() {
         try {
             FileUtils.deleteDirectory(TEST_OUT.toFile());
@@ -60,32 +94,4 @@ public class IntegrationTests {
             System.out.println(e.getMessage());
         }
     }
-
-//    @Test
-//    public void testSingleProjectEvaluation() throws SAXException, ParserConfigurationException, CloneNotSupportedException, IOException {
-//
-//        Path projectPath = Paths.get("C:\\Users\\davidrice3\\Desktop\\temp\\Eleflex\\src\\Applications\\Eleflex.WebClient");
-//        String resultPath = "./src/test/output";
-//
-//        clean(new File(resultPath));
-//        SingleProjectEvaluation.main(new String[]{projectPath.toString(), resultPath});
-//
-//        File evalResults = new File(resultPath + "/qa-results/" + projectPath.getFileName() + "_evalResults.json");
-//
-//        Assert.assertTrue(evalResults.exists());
-//
-//        JsonParser parser = new JsonParser();
-//        JsonObject data = (JsonObject) parser.parse(new FileReader(evalResults));
-//        double eval = data.getAsJsonObject("tqi").get("eval").getAsDouble();
-//
-//        Assert.assertTrue(eval < 0.9999 && eval > 0.0001);
-//    }
-
-    private void clean(File toClean) throws IOException {
-        if (toClean.exists()) {
-            FileUtils.cleanDirectory(toClean);
-        }
-        else toClean.mkdirs();
-    }
-
 }

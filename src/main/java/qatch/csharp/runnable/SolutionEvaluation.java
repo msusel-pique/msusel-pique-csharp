@@ -1,6 +1,8 @@
 package qatch.csharp.runnable;
 
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 import qatch.analysis.*;
 import qatch.csharp.*;
@@ -30,6 +32,7 @@ import java.util.jar.JarFile;
  */
 public class SolutionEvaluation {
 
+    private final static Logger logger = LoggerFactory.getLogger(SolutionEvaluation.class);
     private final static Path ROOT = Paths.get(System.getProperty("user.dir"));
     /**
      * Run single project evaluations on a .NET Framework solution in batch mode to produce analysis results
@@ -43,13 +46,14 @@ public class SolutionEvaluation {
     public static void main(String[] args) {
 
         // useful constants
-//        final boolean RERUN_TOOLS = false;  // TODO: remove this once no longer testing
-
         final Path SOLUTION;
         final Path OUTPUT;
-        final Path RESOURCES;
         final Path ANALYSIS;
+        final Path RESOURCES;
+        final Path MODELS;
+        final Path TOOLS;
 
+        // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
         final String QM_NAME = "qualityModel_iso25k_csharp.xml";
         final String projectRootFlag = ".csproj";   // how to know you are at a project root when recursing through files
 
@@ -68,36 +72,43 @@ public class SolutionEvaluation {
 
         // extract resources
         RESOURCES = extractResources(OUTPUT);
+        MODELS = Paths.get(RESOURCES.toString(), "models");
+        TOOLS = Paths.get(RESOURCES.toString(), "tools");
 
         // run single project evaluation on each project found in the target solution folder
-        System.out.println("[QATCH] *******************************************************");
-        System.out.println("[QATCH] * Beginning Qatch .NET quality analysis.");
-        System.out.println("[QATCH] * C# Solution being analyzed: " + SOLUTION.toString());
-        System.out.println("[QATCH] * Output directory: " + OUTPUT.toString());
-        System.out.println("[QATCH] * Active quality model: " + QM_NAME);
-        System.out.println("[QATCH] *******************************************************");
+        logger.info("* * * * * * * * * * * * * * *");
+        logger.info("* Beginning Qatch .NET quality analysis.");
+        logger.info("* C# Solution being analyzed: {}", SOLUTION.toString());
+        logger.info("* Output directory: {}", OUTPUT.toString());
+        logger.info("* Active quality model: {}", QM_NAME);
+        logger.info("* * * * * * * * * * * * * * *");
 
         Set<Path> projectRoots = FileUtility.multiProjectCollector(SOLUTION, projectRootFlag);
-        System.out.println("[QATCH] * " + projectRoots.size() + " projects found for analysis.");
+        logger.info("{} projects found for analysis.", projectRoots.size());
 
-        // TODO: use Qatch framework single project eval call
         projectRoots.forEach(p -> {
-            System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
-
-            // TODO: eventually all these calls will likely be moved to Qatch framework
-            QualityModel qualityModel = makeNewQM(Paths.get(RESOURCES.toString() + "/models/" + QM_NAME));
-            Project project = makeProject(p);
-//            if (RERUN_TOOLS) { runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel); }
-            runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel, Paths.get(RESOURCES.toString() + File.separator + "tools"));
-            project.setMetrics(getMetricsFromImporter(
-                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/metrics")));
-            project.setIssues(getIssuesFromImporter(
-                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/findings")));
-            project.cloneProperties(qualityModel);
-            aggregateAndNormalize(project);
-            evaluate(project, qualityModel);
-            export(project, ANALYSIS);
+            logger.info("Beginning analysis on {}", p.getFileName());
+            SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), TOOLS.toString() });
         });
+
+//        // TODO: use Qatch framework single project eval call
+//        projectRoots.forEach(p -> {
+//            System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
+//
+//            // TODO: eventually all these calls will likely be moved to Qatch framework
+//            QualityModel qualityModel = makeNewQM(Paths.get(RESOURCES.toString() + "/models/" + QM_NAME));
+//            Project project = makeProject(p);
+////            if (RERUN_TOOLS) { runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel); }
+//            runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel, Paths.get(RESOURCES.toString() + File.separator + "tools"));
+//            project.setMetrics(getMetricsFromImporter(
+//                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/metrics")));
+//            project.setIssues(getIssuesFromImporter(
+//                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/findings")));
+//            project.cloneProperties(qualityModel);
+//            aggregateAndNormalize(project);
+//            evaluate(project, qualityModel);
+//            export(project, ANALYSIS);
+//        });
     }
 
 

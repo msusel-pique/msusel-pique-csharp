@@ -65,3 +65,5 @@ issue = {Issue@1243}
  beginCol = 29
  endCol = 41
  classPath = "src\edu\montana\msusel\qatch\Main.java"
+
+ -- Maven Commands --
