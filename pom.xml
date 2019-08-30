@@ -6,11 +6,10 @@
 
   <groupId>msu.msusel</groupId>
   <artifactId>msusel-qatch-csharp</artifactId>
-  <version>0.1.0</version>
-
+  <version>0.2.0</version>
   <name>msusel-qatch-csharp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+<!--  <url>http://www.example.com</url>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,9 +49,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>miltos.diploma</groupId>
-      <artifactId>qatch-min</artifactId>
-      <version>1.0</version>
+      <groupId>msu.msusel</groupId>
+      <artifactId>msusel-qatch</artifactId>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -61,9 +60,9 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-jdk14</artifactId>
-      <version>1.7.27</version>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
     </dependency>
   </dependencies>
 
@@ -74,6 +73,24 @@
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>src/test/output</directory>
+              <includes>
+                <include>**/*</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+            <fileset>
+              <directory>r_working_directory</directory>
+              <useDefaultExcludes>false</useDefaultExcludes>
+              <excludes>
+                <exclude>comparison_matrices/*</exclude>
+              </excludes>
+            </fileset>
+          </filesets>
+        </configuration>
       </plugin>
 
       <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
@@ -161,7 +178,7 @@
 
   <profiles>
     <profile>
-      <id>UT</id>
+      <id>ut</id>
       <build>
         <plugins>
           <plugin>
@@ -171,23 +188,21 @@
               <includes>
                 <include>**/*.class</include>
               </includes>
-              <excludedGroups>miltos.diploma.integrationtests.IntegrationTest</excludedGroups>
+              <excludedGroups>qatch.csharp.integrationtests.IntegrationTest</excludedGroups>
             </configuration>
           </plugin>
         </plugins>
       </build>
     </profile>
     <profile>
-      <id>IT</id>
+      <id>it</id>
       <build>
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
             <configuration>
-              <includes>
-                <include>miltos.diploma.integrationtests.IntegrationTests</include>
-              </includes>
+              <groups>qatch.csharp.integrationtests.IntegrationTest</groups>
             </configuration>
           </plugin>
         </plugins>

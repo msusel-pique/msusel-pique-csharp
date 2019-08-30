@@ -10,8 +10,8 @@ import java.nio.file.Paths;
 
 public class LOCMetricsAnalyzerTests {
 
-    // LOCMetrics analysis needs a compiled CSharp project located at 'src' in order to work
-    private final File src = new File("src/test/resources/compiled_projects/SimpleCSharp");
+    // LOCMetrics analysis needs a compiled CSharp project in order to work
+    private final File src = new File("src/test/resources/single_project_eval/TestCsharpProject");
     private final File dest = new File("src/test/output");
 
     /**
@@ -31,7 +31,7 @@ public class LOCMetricsAnalyzerTests {
         // XML file exists in expected location with correct name
         Assert.assertTrue(results.exists());
         Assert.assertTrue(results.isFile());
-        Assert.assertEquals("SimpleCSharp_LocMetricsFolders.csv", results.getName());
+        Assert.assertEquals("TestCsharpProject_LocMetricsFolders.csv", results.getName());
 
         // XML file has approximate expected number of bytes. If LOCMetrics returns all 0's, the byte size is 101.0
         // A better way to test this would be to parse the XML output for expected entries, but
@@ -39,10 +39,11 @@ public class LOCMetricsAnalyzerTests {
         Assert.assertTrue("Is there a compiled C# project located at " + src.toString() + "?", results.length() > 102);
     }
 
-    private void clean() throws IOException {
+    private void clean() {
         File output =  this.dest;
         if (output.exists()) {
-            FileUtils.cleanDirectory(output);
+            try { FileUtils.cleanDirectory(output); }
+            catch (IOException e) { e.getMessage(); }
         }
         else output.mkdirs();
     }
