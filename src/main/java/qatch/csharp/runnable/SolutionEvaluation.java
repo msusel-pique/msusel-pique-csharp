@@ -48,10 +48,7 @@ public class SolutionEvaluation {
         // useful constants
         final Path SOLUTION;
         final Path OUTPUT;
-        final Path ANALYSIS;
         final Path RESOURCES;
-        final Path MODELS;
-        final Path TOOLS;
 
         // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
         final String QM_NAME = "qualityModel_iso25k_csharp.xml";
@@ -65,15 +62,11 @@ public class SolutionEvaluation {
         }
         SOLUTION = Paths.get(args[0]);
         OUTPUT = Paths.get(args[1], "qa_out");
-        ANALYSIS = new File(OUTPUT.toFile(), "analysis_results").toPath();
 
         OUTPUT.toFile().mkdirs();
-        ANALYSIS.toFile().mkdirs();
 
         // extract resources
         RESOURCES = extractResources(OUTPUT);
-        MODELS = Paths.get(RESOURCES.toString(), "models");
-        TOOLS = Paths.get(RESOURCES.toString(), "tools");
 
         // run single project evaluation on each project found in the target solution folder
         logger.info("* * * * * * * * * * * * * * *");
@@ -88,136 +81,8 @@ public class SolutionEvaluation {
 
         projectRoots.forEach(p -> {
             logger.info("Beginning analysis on {}", p.getFileName());
-            SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), TOOLS.toString() });
+            SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), RESOURCES.toString() });
         });
-
-//        // TODO: use Qatch framework single project eval call
-//        projectRoots.forEach(p -> {
-//            System.out.println("[QATCH] * Beginning analysis on " + p.getFileName());
-//
-//            // TODO: eventually all these calls will likely be moved to Qatch framework
-//            QualityModel qualityModel = makeNewQM(Paths.get(RESOURCES.toString() + "/models/" + QM_NAME));
-//            Project project = makeProject(p);
-////            if (RERUN_TOOLS) { runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel); }
-//            runTools(Paths.get(project.getPath()), ANALYSIS, qualityModel, Paths.get(RESOURCES.toString() + File.separator + "tools"));
-//            project.setMetrics(getMetricsFromImporter(
-//                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/metrics")));
-//            project.setIssues(getIssuesFromImporter(
-//                    Paths.get(ANALYSIS.toString() + "/" + project.getName() + "/findings")));
-//            project.cloneProperties(qualityModel);
-//            aggregateAndNormalize(project);
-//            evaluate(project, qualityModel);
-//            export(project, ANALYSIS);
-//        });
-    }
-
-
-    private static void aggregateAndNormalize(Project project) {
-        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
-        IFindingsAggregator findingsAggregator = new FxcopAggregator();
-
-        metricsAggregator.aggregate(project);
-        findingsAggregator.aggregate(project);
-
-        for(int i = 0; i < project.getProperties().size(); i++){
-            Property property =  project.getProperties().get(i);
-            property.getMeasure().calculateNormValue();
-        }
-    }
-
-
-    /**
-     * Evaluates properties first, then characteristics, then the TQI
-     */
-    private static void evaluate(Project project, QualityModel qualityModel) {
-        ProjectEvaluator evaluator = new ProjectEvaluator();
-        ProjectCharacteristicsEvaluator charEvaluator = new ProjectCharacteristicsEvaluator();
-
-        // evaluate properties
-        evaluator.evaluateProjectProperties(project);
-
-        try {
-            // evaluate characteristics
-            for (int i = 0; i < qualityModel.getCharacteristics().size(); i++) {
-                //Clone the characteristic and add it to the CharacteristicSet of the current project
-                Characteristic c = (Characteristic) qualityModel.getCharacteristics().get(i).clone();
-                project.getCharacteristics().addCharacteristic(c);
-            }
-            charEvaluator.evaluateProjectCharacteristics(project);
-
-            // evaluate TQI
-            project.setTqi((Tqi) qualityModel.getTqi().clone());
-            project.calculateTQI();
-        }
-        catch (CloneNotSupportedException e) { e.printStackTrace(); }
-    }
-
-
-    private static void export(Project project, Path parentDir) {
-        String name = project.getName();
-        File evalResults = new File(parentDir.toFile(), name + File.separator + name + "_evalResults.json");
-        EvaluationResultsExporter.exportProjectToJson(project, evalResults.toPath());
-    }
-
-
-    private static Vector<IssueSet> getIssuesFromImporter(Path path) {
-        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
-        File[] results = path.toFile().listFiles();
-        Vector<IssueSet> issues = new Vector<>();
-
-        for (File resultFile : results) {
-            try { issues.add(findingsImporter.parse(resultFile.toPath())); }
-            catch (IOException | ParserConfigurationException | SAXException e) { e.printStackTrace(); }
-        }
-
-        return issues;
-    }
-
-
-    private static MetricSet getMetricsFromImporter(Path path) {
-        // TODO: this functionality will eventually be moved to a qatch-min generic ResultsImporter class
-        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-        File[] results = path.toFile().listFiles();
-
-        if (results == null) throw new RuntimeException("Scanner results directory [" + path.toString() + "] has no files from static analysis.");
-
-        for (File resultFile : results) {
-            if (resultFile.getName().toLowerCase().contains("locmetrics")) {
-                try { return metricsImporter.parse(resultFile.toPath()); }
-                catch (IOException e) { e.printStackTrace(); }
-            }
-        }
-
-        throw new RuntimeException("Unable to find a LocMetrics file in directory " + path.toFile());
-    }
-
-    private static QualityModel makeNewQM(Path qmLocation) {
-        QualityModelLoader qmImporter = new QualityModelLoader(qmLocation.toString());
-        return qmImporter.importQualityModel();
-    }
-
-
-    private static Project makeProject(Path p) {
-        Project project = new Project();
-        project.setPath(p.toAbsolutePath().toString());
-        project.setName(p.getFileName().toString());
-        return project;
-    }
-
-
-    private static void runTools(Path projectDir, Path resultsDir, QualityModel qualityModel, Path toolsLocation) {
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(toolsLocation);
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(toolsLocation);
-
-        File projFolder = new File(resultsDir.toFile(), projectDir.getFileName().toString());
-        File findings = new File(projFolder, "findings");
-        File metrics = new File(projFolder, "metrics");
-
-        findings.mkdirs();
-        metrics.mkdirs();
-
-        metricsAnalyzer.analyze(projectDir, metrics.toPath(), qualityModel.getProperties());
-        findingsAnalyzer.analyze(projectDir, findings.toPath(), qualityModel.getProperties());
     }
 
 

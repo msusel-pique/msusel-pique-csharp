@@ -19,9 +19,10 @@ public class SingleProjectEvaluation {
     // parameter constants
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-    private static final File QM_LOCATION = new File(ROOT + "/src/main/resources/models/qualityModel_iso25k_csharp.xml");
+    private static File resources = new File(ROOT + "/src/main/resources");
+    private static File qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
+    private static File tools = new File(resources, "tools");
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
-    private static File toolsLocation = new File(ROOT + "/src/main/resources/tools");
 
     private static final Logger logger = LoggerFactory.getLogger(SingleProjectEvaluation.class);
 
@@ -32,8 +33,8 @@ public class SingleProjectEvaluation {
      * @param args configuration array in following order:
      *             0: path to project to be evaluated root folder
      *             1: path to folder to place results
-     *             2: (optional) path to tools location if not using default location. This is currently
-     *                necessary for JAR runs when coping tools out of resources folder.
+     *             2: (optional) path to resources folder if not using default location. This is currently
+     *                necessary for JAR runs when copying tools and quality models out of resources folder.
      *    These arg paths can be relative or full path
      */
     public static void main(String[] args) {
@@ -44,18 +45,22 @@ public class SingleProjectEvaluation {
             throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
                     "\n\t(0) Path to root directory of project to analyze, " +
                     "\n\t(1) Path to directory to place analysis results," +
-                    "\n\t(2) (optional) Path to tools location.");
+                    "\n\t(2) (optional) Path to resources location.");
         }
         HashMap<String, Path> initializePaths = initialize(args);
         final Path projectDir = initializePaths.get("projectLoc");
         final Path resultsDir = initializePaths.get("resultsLoc");
-        if (args.length >= 3) toolsLocation = new File(initializePaths.get("toolsLoc").toString());
+        if (args.length >= 3) {
+            resources = new File(initializePaths.get("resources").toString());
+            qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
+            tools = new File(resources, "tools");
+        }
 
 
         // instantiate interface classes
         logger.debug("Beginning interface instantiations");
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(toolsLocation.toPath());
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(toolsLocation.toPath());
+        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
+        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
         logger.trace("Analyzers loaded");
 
         IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
@@ -71,7 +76,7 @@ public class SingleProjectEvaluation {
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", projectDir.toString());
         Path evalResults = new SingleProjectEvaluator().runEvaluator(
-                projectDir, resultsDir, QM_LOCATION.toPath(), metricsAnalyzer,
+                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
                 findingsAnalyzer, metricsImporter, findingsImporter,
                 metricsAggregator, findingsAggregator
         );
@@ -105,7 +110,7 @@ public class SingleProjectEvaluation {
 
         String projectLoc = inputArgs[0];
         String resultsLoc = inputArgs[1];
-        String toolsLoc = (inputArgs.length < 3 ? null : inputArgs[2]);
+        String resources = (inputArgs.length < 3 ? null : inputArgs[2]);
 
         Path projectDir = new File(projectLoc).toPath();
         String resultsDirName = projectDir.getFileName().toString();
@@ -115,7 +120,7 @@ public class SingleProjectEvaluation {
         HashMap<String, Path> paths = new HashMap<>();
         paths.put("projectLoc", projectDir);
         paths.put("resultsLoc", qaDir);
-        if (toolsLoc != null) paths.put("toolsLoc", Paths.get(toolsLoc));
+        if (resources != null) paths.put("resources", Paths.get(resources));
 
         return paths;
     }
