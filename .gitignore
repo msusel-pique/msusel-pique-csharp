@@ -194,5 +194,5 @@ $RECYCLE.BIN/
 ### Project Specific ###
 /src/test/output/
 /src/test/java/qatch/csharp/Scratch.java
-/r_working_directory
+#/r_working_directory
 #doc/reference.txt

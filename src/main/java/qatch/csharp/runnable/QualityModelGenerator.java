@@ -20,7 +20,8 @@ public class QualityModelGenerator {
      * @param args configuration array in the following order:
      *             0: [true | false] execute benchmark calibration
      *             1: [true | false] rerun tool static analysis
-     *             1: path of the benchmark repository directory. Can be relative or full path
+     *             2: path of the benchmark repository directory. Can be relative or full path
+     *             3: path to folder to place results
      */
     public static void main(String[] args) {
 
@@ -29,25 +30,29 @@ public class QualityModelGenerator {
         final boolean RERUN_TOOLS;
         final Path BENCH_REPO_PATH;
         final Path ROOT = Paths.get(System.getProperty("user.dir"));
-        final Path OUTPUT = Paths.get(ROOT.toString(), "out");
-        final Path QM_DESCRIPTION_PATH = Paths.get(ROOT.toString(), "src/main/resources/models/qualityModel_iso25k_csharp_description.xml");
+        final Path OUTPUT; // = Paths.get(ROOT.toString(), "out");
+        final Path RESOURCES = Paths.get(ROOT.toString(), "src/main/resources");
+        final Path TOOLS = Paths.get(RESOURCES.toString(), "tools");
+        final Path QM_DESCRIPTION_PATH = Paths.get(RESOURCES.toString(), "models/qualityModel_iso25k_csharp_description.xml");
         final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
 
         System.out.println("\n\n******************************  Model Generator *******************************");
 
         // Initialize
-        if (args == null || args.length < 2) {
+        if (args == null || args.length < 3) {
             throw new RuntimeException("Incorrect input parameters given. Be sure to include " +
                 "\n\t(0) [true | false] flag for benchmark calibration," +
                 "\n\t(1) [true | false] flag for rerunning of tool analysis," +
-                "\n\t(2) location of benchmark repository");
+                "\n\t(2) location of benchmark repository," +
+                "\n\t(3) path of directory to place results.");
         }
         HashMap<String, String> config = initialize(args);
 
         RECALIBRATE = Boolean.parseBoolean(config.get("recalibrate"));
         RERUN_TOOLS = Boolean.parseBoolean(config.get("rerunTools"));
         BENCH_REPO_PATH = Paths.get(config.get("benchRepoPath"));
+        OUTPUT = Paths.get(config.get("resultsPath"));
         OUTPUT.toFile().mkdirs();
 
         System.out.println("* Benchmark Repository: " + BENCH_REPO_PATH.toString());
@@ -76,7 +81,7 @@ public class QualityModelGenerator {
             File r_dir = new File(RInvoker.R_WORK_DIR.toFile(), "Comparison_Matrices");
             File compMatrix = new File(r_dir, "TQI.xls");
             if (!r_dir.isDirectory() || !compMatrix.isFile()) {
-                throw new RuntimeException("There must exist the hand-entered .xls comparison matrices in directory " +
+                throw new IllegalStateException("There must exist the hand-entered .xls comparison matrices in directory " +
                         r_dir.toString() + ".\nSee ComparisonMatricesCreator class for more information.");
             }
 
@@ -91,8 +96,8 @@ public class QualityModelGenerator {
                 System.out.println("*");
 
                 // actualize language-specific analyzers
-                IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(Paths.get(ROOT.toString() + "/src/main/resources/models/tools"));
-                IAnalyzer findingsAnalyzer = new FxcopAnalyzer(Paths.get("src/main/resources/tools"));
+                IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(TOOLS);
+                IAnalyzer findingsAnalyzer = new FxcopAnalyzer(TOOLS);
 
                 //Start the analysis of the benchmark repository
                 benchAnalyzer.analyzeBenchmarkRepo(metricsAnalyzer, findingsAnalyzer, PROJ_ROOT_FLAG);
@@ -252,8 +257,6 @@ public class QualityModelGenerator {
 
         QualityModelExporter qmExp = new QualityModelExporter();
         qmExp.exportQualityModelToXML(qualityModel, Paths.get(OUTPUT.toString(), "qm_output"));
-
-        System.out.println("...");
     }
 
     /**
@@ -279,6 +282,7 @@ public class QualityModelGenerator {
         else throw new RuntimeException("inputArgs[1] did not match 'true' or 'false'");
 
         config.put("benchRepoPath", inputArgs[2]);
+        config.put("resultsPath", inputArgs[3]);
         return config;
     }
 

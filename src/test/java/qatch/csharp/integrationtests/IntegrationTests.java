@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.xml.sax.SAXException;
+import qatch.csharp.runnable.QualityModelGenerator;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.csharp.runnable.SolutionEvaluation;
 
@@ -33,6 +34,18 @@ public class IntegrationTests {
     @After
     public void cleanAfter()  {
         cleanTestOutput();
+    }
+
+
+    @Test
+    public void testQualityModelGenerator() {
+        final String CALIBRATE = "true";
+        final String RUN_TOOLS = "true";
+        final String REPO_PATH = "src/test/resources/multi_project_eval";
+        final String OUT = "src/test/output";
+
+        QualityModelGenerator.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
+
     }
 
 
@@ -83,9 +96,8 @@ public class IntegrationTests {
         Assert.assertTrue(alphaEval < 0.9999 && alphaEval > 0.0001);
         Assert.assertTrue(bravoEval < 0.9999 && bravoEval > 0.0001);
         Assert.assertTrue(charlieEval < 0.9999 && charlieEval > 0.0001);
-
-        System.out.println("...");
     }
+
 
     private void cleanTestOutput() {
         try {
