@@ -6,11 +6,10 @@
 
   <groupId>msu.msusel</groupId>
   <artifactId>msusel-qatch-csharp</artifactId>
-  <version>0.1.0</version>
-
+  <version>0.2.0</version>
   <name>msusel-qatch-csharp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+<!--  <url>http://www.example.com</url>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,9 +49,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>miltos.diploma</groupId>
-      <artifactId>qatch-min</artifactId>
-      <version>1.0</version>
+      <groupId>msu.msusel</groupId>
+      <artifactId>msusel-qatch</artifactId>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -82,6 +81,13 @@
                 <include>**/*</include>
               </includes>
               <followSymlinks>false</followSymlinks>
+            </fileset>
+            <fileset>
+              <directory>r_working_directory</directory>
+              <useDefaultExcludes>false</useDefaultExcludes>
+              <excludes>
+                <exclude>comparison_matrices/*</exclude>
+              </excludes>
             </fileset>
           </filesets>
         </configuration>
@@ -197,9 +203,6 @@
             <version>2.22.1</version>
             <configuration>
               <groups>qatch.csharp.integrationtests.IntegrationTest</groups>
-<!--              <includes>-->
-<!--                <include>qatch.csharp.integrationtests.IntegrationTest</include>-->
-<!--              </includes>-->
             </configuration>
           </plugin>
         </plugins>

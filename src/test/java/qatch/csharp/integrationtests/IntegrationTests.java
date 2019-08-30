@@ -46,6 +46,8 @@ public class IntegrationTests {
 
         QualityModelGenerator.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
 
+        // TODO: add assertion checks
+
     }
 
 
