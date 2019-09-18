@@ -1,6 +1,8 @@
 package qatch.csharp;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 import qatch.analysis.IFindingsResultsImporter;
@@ -12,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class FxcopResultsImporterTests {
+
 
     @Test
     public void testParse() throws IOException, SAXException, ParserConfigurationException {

@@ -1,9 +1,9 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FileUtils;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
-import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.model.Measure;
 import qatch.model.Property;
 import qatch.model.PropertySet;
@@ -19,9 +19,9 @@ public class FxcopAnalyzerTests {
     private final File toolsDir = new File("src/main/resources/tools");
     private final File rulesDir = new File(toolsDir, "FxCop/Rules");
 
+
     @Test
     public void testAnalyze() throws IOException {
-        clean();
 
         Measure measure01 = new Measure(
                 1,
@@ -57,14 +57,6 @@ public class FxcopAnalyzerTests {
         // XML file has expected number of bytes
         Assert.assertEquals(2844, result01.length(), 500);
         Assert.assertEquals(result01.length(), result02.length(), 500);
-    }
-
-    private void clean() throws IOException {
-        File output = this.dest;
-        if (output.exists()) {
-            FileUtils.cleanDirectory(output);
-        }
-        else output.mkdirs();
     }
 
 }
