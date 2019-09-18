@@ -10,6 +10,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class QualityModelGenerator {
 
@@ -79,8 +80,7 @@ public class QualityModelGenerator {
 
             // pre-run file system checks
             File r_dir = new File(RInvoker.R_WORK_DIR.toFile(), "Comparison_Matrices");
-            File compMatrix = new File(r_dir, "TQI.xls");
-            if (!r_dir.isDirectory() || !compMatrix.isFile()) {
+            if (!r_dir.isDirectory() || !Objects.requireNonNull(r_dir.listFiles())[0].isFile()) {
                 throw new IllegalStateException("There must exist the hand-entered .xls comparison matrices in directory " +
                         r_dir.toString() + ".\nSee ComparisonMatricesCreator class for more information.");
             }
@@ -163,7 +163,7 @@ public class QualityModelGenerator {
 
             // Create an analysis exporter and export the Properties in a xls form
             exporter = new BenchmarkAnalysisExporter();
-            exporter.exportToXls(projects);
+            exporter.exportToCsv(projects);
 
             System.out.println("*");
             System.out.println("* The xls file with the properties is successfully exported \n and placed into R's working directory!");

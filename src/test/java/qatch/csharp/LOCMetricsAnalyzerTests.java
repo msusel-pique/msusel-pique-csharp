@@ -1,7 +1,9 @@
 package qatch.csharp;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
@@ -21,7 +23,6 @@ public class LOCMetricsAnalyzerTests {
      */
     @Test
     public void testAnalyzeSubroutine() throws IOException {
-        clean();
 
         LOCMetricsAnalyzer analyzer = new LOCMetricsAnalyzer(Paths.get(System.getProperty("user.dir") + "/src/main/resources/tools"));
         analyzer.analyze(src.toPath(), dest.toPath(), null);
@@ -37,15 +38,6 @@ public class LOCMetricsAnalyzerTests {
         // A better way to test this would be to parse the XML output for expected entries, but
         // that approach adds substantial run time to the unit test.
         Assert.assertTrue("Is there a compiled C# project located at " + src.toString() + "?", results.length() > 102);
-    }
-
-    private void clean() {
-        File output =  this.dest;
-        if (output.exists()) {
-            try { FileUtils.cleanDirectory(output); }
-            catch (IOException e) { e.getMessage(); }
-        }
-        else output.mkdirs();
     }
 
 }
