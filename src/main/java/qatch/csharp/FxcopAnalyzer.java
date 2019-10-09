@@ -79,7 +79,7 @@ public class FxcopAnalyzer implements IAnalyzer {
         ProcessBuilder pb;
         String destFile = dest + sep + fileName;
 
-        // begin building the strings to run the FxCop CLT
+        // begin building the strings to run the FxCop CLI
         String fxcop = toolsDirectory.toString() + sep + "FxCop" + sep + "FxCopCmd.exe";
         String assemblyDir = "/f:" + src.toAbsolutePath().toString();
         String destExt = "/out:" + destFile;
