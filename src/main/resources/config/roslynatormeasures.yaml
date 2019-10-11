@@ -1,0 +1,28 @@
+Injection Findings:
+  Tool: Roslynator
+  Rules:
+    - SCS0001
+    - SCS0002
+    - SCS0003
+    - SCS0007
+    - SCS0014
+    - SCS0018
+    - SCS0020
+    - SCS0025
+    - SCS0026
+    - SCS0029
+    - SCS0031
+    - SCS0035
+    - SCS0036
+Cryptography Findings: 
+  Tool: Roslynator
+  Rules:
+    - SCS0004
+    - SCS0005
+    - SCS0006
+    - SCS0010
+    - SCS0011
+    - SCS0012
+    - SCS0013
+
+
