@@ -16,7 +16,6 @@ import java.nio.file.Path;
  * Roslynator is able to generate both static analysis findings and loc/lloc metrics.
  *
  * The .exe should be kept in resources/tools.
- *
  */
 public class Roslynator extends Tool implements ITool {
 
