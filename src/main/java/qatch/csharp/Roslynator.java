@@ -24,6 +24,16 @@ public class Roslynator extends Tool implements ITool {
     private Path toolsDirectory;
     private Path msBuild;
 
+    /**
+     * Constructor.
+     * Roslynator analsis needs the MSBuild.exe path
+     * (e.g. "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin")
+     *
+     * @param toolsDirectory
+     *      Qatch-csharp tools directory location
+     * @param msBuild
+     *      Path to Bin folder containing MSBuild.exe
+     */
     public Roslynator(Path toolsDirectory, Path msBuild) {
         this.setName("Roslynator");
         this.toolsDirectory = toolsDirectory;
@@ -55,17 +65,14 @@ public class Roslynator extends Tool implements ITool {
         Process p = null;
 
         // run the tool
-        try {
-            p = pb.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        try { p = pb.start(); }
+        catch (IOException e) { e.printStackTrace(); }
+
         try {
             assert p != null;
             p.waitFor();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
+        catch (InterruptedException e) { e.printStackTrace(); }
 
         return null;
     }
