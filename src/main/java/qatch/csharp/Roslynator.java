@@ -1,12 +1,13 @@
 package qatch.csharp;
 
-import qatch.analysis.AnalylsisResult;
 import qatch.analysis.ITool;
+import qatch.analysis.Measure;
 import qatch.analysis.Tool;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.List;
 
 /**
  * ITool implementation static analyasis tool class.
@@ -34,8 +35,8 @@ public class Roslynator extends Tool implements ITool {
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
-    public Roslynator(Path toolsDirectory, Path msBuild) {
-        this.setName("Roslynator");
+    public Roslynator(String name, Path toolConfig, Path toolsDirectory, Path msBuild) {
+        super(name, toolConfig);
         this.toolsDirectory = toolsDirectory;
         this.msBuild = msBuild;
     }
@@ -78,7 +79,7 @@ public class Roslynator extends Tool implements ITool {
     }
 
     @Override
-    public AnalylsisResult parse(Path path) {
+    public List<Measure> parse(Path path) {
         return null;
     }
 }

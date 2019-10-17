@@ -1,8 +1,8 @@
 package qatch.csharp;
 
 import qatch.analysis.IMetricsAggregator;
+import qatch.analysis.Measure;
 import qatch.evaluation.Project;
-import qatch.model.Measure;
 import qatch.model.MetricSet;
 import qatch.model.Metrics;
 import qatch.model.Property;
