@@ -194,5 +194,7 @@ $RECYCLE.BIN/
 ### Project Specific ###
 /src/test/output/
 /src/test/java/qatch/csharp/Scratch.java
-#/r_working_directory
+/r_working_directory/properties.csv
+/r_working_directory/threshold.json
+/r_working_directory/weights.json
 #doc/reference.txt
