@@ -1,11 +1,27 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class RoslynatorTests {
+
+    @Before
+    public void cleanBefore() throws IOException {
+        FileUtils.deleteDirectory(new File(System.getProperty("user.dir") + "/output"));
+    }
+
+    @After
+    public void cleanAfter() throws IOException {
+        FileUtils.deleteDirectory(new File(System.getProperty("user.dir") + "/output"));
+    }
 
     @Test
     public void testAnalyze() {
@@ -19,8 +35,15 @@ public class RoslynatorTests {
         Path target = Paths.get("src\\test\\resources\\net_framework_solution\\TestNetFramework\\TestNetFramework.sln");
 
         Path analysisOutput = roslynator.analyze(target);
+        File result = analysisOutput.toFile();
 
-        System.out.println("...");
+        // XML file exists in expected location with correct name
+        Assert.assertTrue(result.exists());
+        Assert.assertTrue(result.isFile());
+        Assert.assertEquals("roslynator_output.xml", result.getName());
+
+        // XML file has expected number of bytes
+        Assert.assertTrue(result.length() > 1001);
     }
 
 }

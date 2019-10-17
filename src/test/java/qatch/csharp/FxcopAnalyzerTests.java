@@ -1,5 +1,6 @@
 package qatch.csharp;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +19,6 @@ public class FxcopAnalyzerTests {
     private final File dest = new File("src/test/output");
     private final File toolsDir = new File("src/main/resources/tools");
     private final File rulesDir = new File(toolsDir, "FxCop/Rules");
-
 
     @Test
     public void testAnalyze() throws IOException {
