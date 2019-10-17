@@ -7,6 +7,7 @@ import qatch.analysis.Tool;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -41,19 +42,27 @@ public class Roslynator extends Tool implements ITool {
         this.msBuild = msBuild;
     }
 
+    /**
+     * @param path
+     *      The path to a .sln or .csproj file for the desired solution of project to analyze
+     * @return
+     *      The path to the .xml analysis results file
+     */
     @Override
     public Path analyze(Path path) {
 
         String sep = File.separator;
         ProcessBuilder pb;
-        String tempResults = "C:\\Users\\davidrice3\\Desktop\\temp\\out\\roslynator_output.xml";
+        File tempResults = new File(System.getProperty("user.dir") +"/output/roslynator_output.xml");
+        tempResults.getParentFile().mkdirs();
+//        String tempResults = "C:\\Users\\davidrice3\\Desktop\\temp\\out\\roslynator_output.xml";
 
         // strings for CLI call
         String roslynator = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";
         String command = "analyze";
-        String assemblyDir = "--analyzer-assemblies=" + toolsDirectory.toString() + sep + "Roslynator" + sep + "SecurityCodeScan";
+        String assemblyDir = "--analyzer-assemblies=" + toolsDirectory.toString() + sep + "Roslynator" + sep + "bin";
         String msBuild = "--msbuild-path=" + this.msBuild.toString();
-        String output = "--output=" + tempResults;
+        String output = "--output=" + tempResults.toString();
         String target = path.toString();
 
         if(System.getProperty("os.name").contains("Windows")){
@@ -75,7 +84,7 @@ public class Roslynator extends Tool implements ITool {
         }
         catch (InterruptedException e) { e.printStackTrace(); }
 
-        return null;
+        return tempResults.toPath();
     }
 
     @Override
