@@ -8,23 +8,26 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import qatch.csharp.Roslynator;
 import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelGenerator;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.csharp.runnable.SolutionEvaluation;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
-    private Path TEST_OUT = Paths.get("src/test/output");
+    final Path TEST_OUT = Paths.get("src/test/output");
+    final String ROSLYN_NAME = "Roslynator",
+                 CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
+                 TOOLS_LOC   = "src/main/resources/tools",
+                 TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln";
 
     @Test
     public void testQualityModelGenerator() {
@@ -47,8 +50,22 @@ public class IntegrationTests {
      *   (3) link Measure objects to properties using .yaml measure mapping config
      */
     @Test
-    public void testRoslynatorAnalysis() {
-        throw new NotImplementedException();
+    public void testRoslynatorAnalysis() throws IOException {
+
+        Properties properties = new Properties();
+        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
+
+        Roslynator roslynator = new Roslynator(
+                ROSLYN_NAME,
+                Paths.get(CONFIG_LOC),
+                Paths.get(TOOLS_LOC),
+                Paths.get(properties.getProperty("MSBUILD_BIN"))
+        );
+        Path target = Paths.get(TARGET_LOC);
+
+
+
+        System.out.println("...");
     }
 
 

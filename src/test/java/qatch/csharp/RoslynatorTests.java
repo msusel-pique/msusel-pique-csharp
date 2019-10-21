@@ -7,32 +7,44 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 public class RoslynatorTests {
 
+    final String ROSLYN_NAME = "Roslynator",
+                 CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
+                 TOOLS_LOC   = "src/main/resources/tools",
+                 TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln",
+                 OUTPUT_LOC  = System.getProperty("user.dir") + "/output";
+
     @Before
     public void cleanBefore() throws IOException {
-        FileUtils.deleteDirectory(new File(System.getProperty("user.dir") + "/output"));
+        FileUtils.deleteDirectory(new File(OUTPUT_LOC));
     }
 
     @After
     public void cleanAfter() throws IOException {
-        FileUtils.deleteDirectory(new File(System.getProperty("user.dir") + "/output"));
+        FileUtils.deleteDirectory(new File(OUTPUT_LOC));
     }
 
     @Test
-    public void testAnalyze() {
+    public void testAnalyze() throws IOException {
+
+        Properties properties = new Properties();
+        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
         Roslynator roslynator = new Roslynator(
-                "Roslynator",
-                Paths.get("src/test/resources/config/roslynator_test_measures.yaml"),
-                Paths.get("src/main/resources/tools"),
-                Paths.get("C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin")
+                ROSLYN_NAME,
+                Paths.get(CONFIG_LOC),
+                Paths.get(TOOLS_LOC),
+                Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
-        Path target = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
+        Path target = Paths.get(TARGET_LOC);
 
         Path analysisOutput = roslynator.analyze(target);
         File result = analysisOutput.toFile();
