@@ -12,6 +12,7 @@ import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelGenerator;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.csharp.runnable.SolutionEvaluation;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,6 +37,18 @@ public class IntegrationTests {
 
         // TODO: add assertion checks
 
+    }
+
+
+    /**
+     * Test entire analysis module procedure using Roslynator:
+     *   (1) run Roslynator tool
+     *   (2) prase output, apply findings and diagnostics to Measure objects
+     *   (3) link Measure objects to properties using .yaml measure mapping config
+     */
+    @Test
+    public void testRoslynatorAnalysis() {
+        throw new NotImplementedException();
     }
 
 

@@ -55,7 +55,6 @@ public class Roslynator extends Tool implements ITool {
         ProcessBuilder pb;
         File tempResults = new File(System.getProperty("user.dir") +"/output/roslynator_output.xml");
         tempResults.getParentFile().mkdirs();
-//        String tempResults = "C:\\Users\\davidrice3\\Desktop\\temp\\out\\roslynator_output.xml";
 
         // strings for CLI call
         String roslynator = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";

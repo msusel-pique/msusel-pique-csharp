@@ -32,7 +32,7 @@ public class RoslynatorTests {
                 Paths.get("src/main/resources/tools"),
                 Paths.get("C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin")
         );
-        Path target = Paths.get("src\\test\\resources\\net_framework_solution\\TestNetFramework\\TestNetFramework.sln");
+        Path target = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
 
         Path analysisOutput = roslynator.analyze(target);
         File result = analysisOutput.toFile();
