@@ -20,7 +20,8 @@ public class RoslynatorTests {
                  CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                  TOOLS_LOC   = "src/main/resources/tools",
                  TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln",
-                 OUTPUT_LOC  = System.getProperty("user.dir") + "/output";
+                 OUTPUT_LOC  = System.getProperty("user.dir") + "/output",
+                 SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
 
     @Before
     public void cleanBefore() throws IOException {
@@ -56,6 +57,19 @@ public class RoslynatorTests {
 
         // XML file has expected number of bytes
         Assert.assertTrue(result.length() > 1001);
+    }
+
+    @Test
+    public void testParse() {
+
+        Roslynator roslynator = new Roslynator(
+                ROSLYN_NAME,
+                Paths.get(CONFIG_LOC),
+                null,
+                null
+        );
+        roslynator.parse(Paths.get(SAMPLE_OUTPUT_LOC));
+        System.out.println("...");
     }
 
 }

@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
 import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelGenerator;
@@ -18,6 +19,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Properties;
 
 @Category(IntegrationTest.class)
@@ -62,6 +64,12 @@ public class IntegrationTests {
                 Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
         Path target = Paths.get(TARGET_LOC);
+
+        // (1) run Roslynator tool
+        Path analysisOutput = roslynator.analyze(target);
+
+        // (2) prase output, apply findings and diagnostics to Measure objects
+        List<Measure> roslynatorMeasures = roslynator.parse(analysisOutput);
 
 
 
