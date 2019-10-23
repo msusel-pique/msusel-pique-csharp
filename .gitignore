@@ -543,6 +543,7 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/git,java,macos,maven,windows,intellij
 
 ### Project Specific ###
+/.idea
 /output
 /r_working_directory/properties.csv
 /r_working_directory/threshold.json
