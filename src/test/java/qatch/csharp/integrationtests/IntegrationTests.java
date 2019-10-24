@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import qatch.analysis.Diagnostic;
 import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
 import qatch.csharp.TestHelper;
@@ -20,6 +21,7 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 @Category(IntegrationTest.class)
@@ -69,7 +71,7 @@ public class IntegrationTests {
         Path analysisOutput = roslynator.analyze(target);
 
         // (2) prase output, apply findings and diagnostics to Measure objects
-        List<Measure> roslynatorMeasures = roslynator.parse(analysisOutput);
+        Map<String, Diagnostic> diagnostics = roslynator.parse(analysisOutput);
 
 
 
