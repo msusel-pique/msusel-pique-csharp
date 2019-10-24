@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import qatch.analysis.Diagnostic;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 import java.util.Properties;
 
 public class RoslynatorTests {
@@ -69,8 +71,20 @@ public class RoslynatorTests {
                 null,
                 null
         );
-        roslynator.parse(Paths.get(SAMPLE_OUTPUT_LOC));
-        System.out.println("...");
+        Map<String, Diagnostic> diagnosticMap = roslynator.parse(Paths.get(SAMPLE_OUTPUT_LOC));
+
+        Diagnostic rcs1018 = diagnosticMap.get("RCS1018");
+        Diagnostic rcs1102 = diagnosticMap.get("RCS1102");
+        Diagnostic rcs1163 = diagnosticMap.get("RCS1163");
+
+        Assert.assertEquals(3, diagnosticMap.size());
+
+        Assert.assertEquals(2, rcs1018.getFindings().size());
+        Assert.assertEquals(1, rcs1102.getFindings().size());
+        Assert.assertEquals(1, rcs1163.getFindings().size());
+
+        Assert.assertEquals(rcs1102.getFindings().iterator().next().getLocation(), "TestNetFramework" + File.separator + "Program.cs" + ",9,11");
+        Assert.assertEquals(rcs1163.getFindings().iterator().next().getLocation(), "TestNetFramework" + File.separator + "Program.cs" + ",11,26");
     }
 
 }
