@@ -9,7 +9,7 @@
     </weights>
   </tqi>
   <characteristics>
-    <characteristic name="Confidentiality" standard="ISO/IEC 25010" description="Degree to which a product or system ensures that data are accessible only to those authorized to have access." />
+    <characteristic name="Confidentiality" standard="ISO/IEC 25010" description="Degree to which a product or system ensures that data are accessible only to those authorized to have access.">
       <weights>
         <weight>0.2</weight>
         <weight>0.2</weight>
@@ -18,7 +18,7 @@
         <weight>0.2</weight>
       </weights>
     </characteristic>
-    <characteristic name="Integrity" standard="ISO/IEC 25010" description="Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data." />
+    <characteristic name="Integrity" standard="ISO/IEC 25010" description="Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data.">
       <weights>
         <weight>0.2</weight>
         <weight>0.2</weight>
@@ -26,16 +26,7 @@
         <weight>0.2</weight>
         <weight>0.2</weight>
       </weights>
-    <characteristic name="Non-repudiation" standard="ISO/IEC 25010" description="Degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later." />
-      <weights>
-        <weight>0.2</weight>
-        <weight>0.2</weight>
-        <weight>0.2</weight>
-        <weight>0.2</weight>
-        <weight>0.2</weight>
-      </weights>
-    </characteristic>
-    <characteristic name="Accountability" standard="ISO/IEC 25010" description="Degree to which the actions of an entity can be traced uniquely to the entity." />
+    <characteristic name="Non-repudiation" standard="ISO/IEC 25010" description="Degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later.">
       <weights>
         <weight>0.2</weight>
         <weight>0.2</weight>
@@ -44,7 +35,16 @@
         <weight>0.2</weight>
       </weights>
     </characteristic>
-    <characteristic name="Authenticity" standard="ISO/IEC 25010" description="Degree to which the identity of a subject or resource can be proved to be the one claimed." />
+    <characteristic name="Accountability" standard="ISO/IEC 25010" description="Degree to which the actions of an entity can be traced uniquely to the entity.">
+      <weights>
+        <weight>0.2</weight>
+        <weight>0.2</weight>
+        <weight>0.2</weight>
+        <weight>0.2</weight>
+        <weight>0.2</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Authenticity" standard="ISO/IEC 25010" description="Degree to which the identity of a subject or resource can be proved to be the one claimed.">
       <weights>
         <weight>0.2</weight>
         <weight>0.2</weight>
@@ -55,35 +55,35 @@
     </characteristic>
   </characteristics>
   <properties>
-    <property name="Injection" description="Injection flaws occur when an attacker can send hostile data to an interpreter." positive_impact="false" measure="Injection Findings" />
+    <property name="Injection" description="Injection flaws occur when an attacker can send hostile data to an interpreter." positive_impact="false" measure="Injection Findings">
       <thresholds>
         <threshold>0.0</threshold>
         <threshold>0.0042</threshold>
         <threshold>0.0138</threshold>
       </thresholds>
     </property>
-    <property name="Cryptography" description="Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms." positive_impact="false" measure="Cryptography Findings" />
+    <property name="Cryptography" description="Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms." positive_impact="false" measure="Cryptography Findings">
       <thresholds>
         <threshold>0.0</threshold>
         <threshold>0.0137</threshold>
         <threshold>0.0312</threshold>
       </thresholds>
     </property>
-    <property name="Cookies" description="Cookie flaws involve incorrect flagging of cookies and insecure passing of information." positive_impact="false" measure="Cookie Findings" />
+    <property name="Cookies" description="Cookie flaws involve incorrect flagging of cookies and insecure passing of information." positive_impact="false" measure="Cookie Findings">
       <thresholds>
         <threshold>0.0</threshold>
         <threshold>0.0042</threshold>
         <threshold>0.0138</threshold>
       </thresholds>
     </property>
-    <property name="Request Validation" description="Disabled or incorrectly configured request validation that causes XSS vulnerability." positive_impact="false" measure="Requestion Validation Findings" />
+    <property name="Request Validation" description="Disabled or incorrectly configured request validation that causes XSS vulnerability." positive_impact="false" measure="Requestion Validation Findings">
       <thresholds>
         <threshold>0.0</threshold>
         <threshold>0.011</threshold>
         <threshold>0.0217</threshold>
       </thresholds>
     </property>
-    <property name="Password Management" description="Hard coded, short, or trivial password configuration." positive_impact="false" measure="Password Findings" />
+    <property name="Password Management" description="Hard coded, short, or trivial password configuration." positive_impact="false" measure="Password Findings">
       <thresholds>
         <threshold>0.0</threshold>
         <threshold>0.011</threshold>

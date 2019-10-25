@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qatch.analysis.*;
 import qatch.csharp.*;
+import qatch.runnable.SingleProjectEvaluator;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -51,8 +52,8 @@ public class SingleProjectEvaluation {
                     "\n\t(2) (optional) Path to resources location.");
         }
         HashMap<String, Path> initializePaths = initialize(args);
-        final Path projectDir = initializePaths.get("projectLoc");
-        final Path resultsDir = initializePaths.get("resultsLoc");
+        final Path PROJECT_DIR = initializePaths.get("projectLoc");
+        final Path RESULTS_DIR = initializePaths.get("resultsLoc");
 
         if (args.length >= 3) {     // temp fix for JAR runs, deal with later
             RESOURCES = new File(initializePaths.get("resources").toString());
@@ -90,7 +91,8 @@ public class SingleProjectEvaluation {
 //
 //        // run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
-        logger.debug("Analyzing project: {}", projectDir.toString());
+        logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
+        Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator);
 
 
 
