@@ -1,5 +1,5 @@
 <quality_model name="CSharp Security Model">
-    <quality name="Security" description="A representation of the static vulnerabilies and weaknesses of a CSharp project or solution."/>
+    <tqi name="Security" description="A representation of the static vulnerabilies and weaknesses of a CSharp project or solution."/>
     <characteristics>
         <characteristic name="Confidentiality" standard="ISO/IEC 25010" description="Degree to which a product or system ensures that data are accessible only to those authorized to have access." />
         <characteristic name="Integrity" standard="ISO/IEC 25010" description="Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data." />
