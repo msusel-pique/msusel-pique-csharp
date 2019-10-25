@@ -81,7 +81,11 @@ public class SolutionEvaluation {
 
         projectRoots.forEach(p -> {
             logger.info("Beginning analysis on {}", p.getFileName());
-            SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), RESOURCES.toString() });
+            try {
+                SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), RESOURCES.toString() });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 

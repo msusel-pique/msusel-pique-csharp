@@ -5,26 +5,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qatch.analysis.*;
 import qatch.csharp.*;
-import qatch.runnable.SingleProjectEvaluator;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Properties;
 
+// TODO: lots of todos to think about in runner regarding best approach for configuration strings
 public class SingleProjectEvaluation {
 
     // parameter constants
-    private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
+    private static File ROOT =        new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-    private static File resources = new File(ROOT + "/src/main/resources");
-    private static File qmLocation = new File(resources, "models/qualityModel_security_csharp.xml");
-    private static File tools = new File(resources, "tools");
+    private static File RESOURCES =   new File(ROOT, "src/main/resources");
+    private static File CONFIG_LOC =  new File(RESOURCES, "config/roslynatormeasures.yaml");
+    private static File QM_LOCATION =  new File(RESOURCES, "models/qualityModel_security_csharp.xml");
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
-
-    private static final Logger logger = LoggerFactory.getLogger(SingleProjectEvaluation.class);
+    private static File TOOLS =       new File(RESOURCES, "tools");
+    private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
+    private static String ROSLYN_NAME = "Roslynator";
 
 
     /**
@@ -37,9 +40,9 @@ public class SingleProjectEvaluation {
      *                necessary for JAR runs when copying tools and quality models out of resources folder.
      *    These arg paths can be relative or full path
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        // initialize
+        // initialize config
         logger.debug("Beginning initilization phase");
         if (args == null || args.length < 2) {
             throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
@@ -50,17 +53,27 @@ public class SingleProjectEvaluation {
         HashMap<String, Path> initializePaths = initialize(args);
         final Path projectDir = initializePaths.get("projectLoc");
         final Path resultsDir = initializePaths.get("resultsLoc");
-        if (args.length >= 3) {
-            resources = new File(initializePaths.get("resources").toString());
-            qmLocation = new File(resources, "models/qualityModel_security_csharp.xml");
-            tools = new File(resources, "tools");
+
+        if (args.length >= 3) {     // temp fix for JAR runs, deal with later
+            RESOURCES = new File(initializePaths.get("resources").toString());
+            QM_LOCATION = new File(RESOURCES, "models/qualityModel_security_csharp.xml");
+            TOOLS = new File(RESOURCES, "tools");
         }
+
+        Properties properties = new Properties();
+        // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
+        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
 
         // instantiate interface classes
         logger.debug("Beginning interface instantiations");
-
-
+        ITool roslynator = new Roslynator(
+                ROSLYN_NAME,
+                CONFIG_LOC.toPath(),
+                TOOLS.toPath(),
+                Paths.get(properties.getProperty("MSBUILD_BIN"))
+        );
+        logger.trace("Analyzer " + roslynator.getName() + " loaded");
 
 //        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
 //        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
@@ -76,8 +89,11 @@ public class SingleProjectEvaluation {
 //
 //
 //        // run evaluation
-//        logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
-//        logger.debug("Analyzing project: {}", projectDir.toString());
+        logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
+        logger.debug("Analyzing project: {}", projectDir.toString());
+
+
+
 //        Path evalResults = new SingleProjectEvaluator().runEvaluator(
 //                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
 //                findingsAnalyzer, metricsImporter, findingsImporter,

@@ -103,8 +103,8 @@ public class IntegrationTests {
 
 
     @Test
-    public void testSingleProjectEvaluation() throws FileNotFoundException {
-        final Path PROJECT_PATH = Paths.get("src/test/resources/net_frameworksolution/TestNetFramework");
+    public void testSingleProjectEvaluation() throws IOException {
+        final Path PROJECT_PATH = Paths.get("src/test/resources/net_frameworksolution/TestNetFramework/TestNetFramework.sln");
         final Path RESULT_PATH = TEST_OUT;
 
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });

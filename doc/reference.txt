@@ -10,7 +10,7 @@ Does not work when running it from within the root directory of TFS\FxcopFinding
 PS C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools> .\Roslynator\bin\Roslynator.exe  analyze --analyzer-assemblies="Roslynator\SecurityCodeScan" --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" --output="C:\Users\davidrice3\Desktop\temp\out\output.xml" -v diag "C:\Users\davidrice3\Desktop\temp\project\TempSolution\TempSolution.sln"
 
 -- Roslynator CLI LoC Command --
-PS C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools> .\Roslynator\bin\Roslynator.exe  analyze --analyzer-assemblies="Roslynator\SecurityCodeScan" --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" --output="C:\Users\davidrice3\Desktop\temp\out\output.xml" -v diag "C:\Users\davidrice3\Desktop\temp\project\TempSolution\TempSolution.sln"
+C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\Roslynator\bin\Roslynator.exe loc --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" src\test\resources\net_framework_solution\TestNetFramework\TestNetFramework.sln
 
 
 -- FxCop CLI Command --
