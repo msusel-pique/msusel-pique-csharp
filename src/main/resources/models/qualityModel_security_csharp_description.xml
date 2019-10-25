@@ -1,4 +1,5 @@
-<quality_model name="Security CSharp Model">
+<quality_model name="CSharp Security Model">
+    <quality name="Security" description="A representation of the static vulnerabilies and weaknesses of a CSharp project or solution."/>
     <characteristics>
         <characteristic name="Confidentiality" standard="ISO/IEC 25010" description="Degree to which a product or system ensures that data are accessible only to those authorized to have access." />
         <characteristic name="Integrity" standard="ISO/IEC 25010" description="Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data." />
@@ -7,10 +8,10 @@
         <characteristic name="Authenticity" standard="ISO/IEC 25010" description="Degree to which the identity of a subject or resource can be proved to be the one claimed." />
     </characteristics>
     <properties>
-        <property name="Injection" description="Injection flaws occur when an attacker can send hostile data to an interpreter." positive_impact="false" measure="Injection Findings" />
-        <property name="Cryptography" description="Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms." positive_impact="false" measure="Cryptography Findings" />
-        <property name="Cookies" description="Cookie flaws involve incorrect flagging of cookies and insecure passing of information." positive_impact="false" measure="Cookie Findings" />
-        <property name="Request Validation" description="Disabled or incorrectly configured request validation that causes XSS vulnerability." positive_impact="false" measure="Requestion Validation Findings" />
-        <property name="Password Management" description="Hard coded, short, or trivial password configuration." positive_impact="false" measure="Password Findings" />
+        <property name="Injection" description="Injection flaws occur when an attacker can send hostile data to an interpreter." positive_impact="false" />
+        <property name="Cryptography" description="Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms." positive_impact="false" />
+        <property name="Cookies" description="Cookie flaws involve incorrect flagging of cookies and insecure passing of information." positive_impact="false" />
+        <property name="Request Validation" description="Disabled or incorrectly configured request validation that causes XSS vulnerability." positive_impact="false" />
+        <property name="Password Management" description="Hard coded, short, or trivial password configuration." positive_impact="false" />
     </properties>
 </quality_model>
