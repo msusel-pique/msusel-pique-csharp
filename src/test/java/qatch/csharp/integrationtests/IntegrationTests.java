@@ -104,7 +104,7 @@ public class IntegrationTests {
 
     @Test
     public void testSingleProjectEvaluation() throws FileNotFoundException {
-        final Path PROJECT_PATH = Paths.get("src/test/resources/single_project_eval/TestCsharpProject");
+        final Path PROJECT_PATH = Paths.get("src/test/resources/net_frameworksolution/TestNetFramework");
         final Path RESULT_PATH = TEST_OUT;
 
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });

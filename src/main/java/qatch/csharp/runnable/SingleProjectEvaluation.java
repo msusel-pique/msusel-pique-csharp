@@ -20,7 +20,7 @@ public class SingleProjectEvaluation {
     private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
     private static File resources = new File(ROOT + "/src/main/resources");
-    private static File qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
+    private static File qmLocation = new File(resources, "models/qualityModel_security_csharp.xml");
     private static File tools = new File(resources, "tools");
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
 
@@ -52,35 +52,40 @@ public class SingleProjectEvaluation {
         final Path resultsDir = initializePaths.get("resultsLoc");
         if (args.length >= 3) {
             resources = new File(initializePaths.get("resources").toString());
-            qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
+            qmLocation = new File(resources, "models/qualityModel_security_csharp.xml");
             tools = new File(resources, "tools");
         }
 
 
         // instantiate interface classes
         logger.debug("Beginning interface instantiations");
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
-        logger.trace("Analyzers loaded");
-
-        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
-        logger.trace("ResultsImporters loaded");
-
-        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
-        IFindingsAggregator findingsAggregator = new FxcopAggregator();
-        logger.trace("Aggregators loaded");
 
 
-        // run evaluation
-        logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
-        logger.debug("Analyzing project: {}", projectDir.toString());
-        Path evalResults = new SingleProjectEvaluator().runEvaluator(
-                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
-                findingsAnalyzer, metricsImporter, findingsImporter,
-                metricsAggregator, findingsAggregator
-        );
-        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
+
+//        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
+//        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
+//        logger.trace("Analyzers loaded");
+//
+//        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
+//        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
+//        logger.trace("ResultsImporters loaded");
+//
+//        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
+//        IFindingsAggregator findingsAggregator = new FxcopAggregator();
+//        logger.trace("Aggregators loaded");
+//
+//
+//        // run evaluation
+//        logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
+//        logger.debug("Analyzing project: {}", projectDir.toString());
+//        Path evalResults = new SingleProjectEvaluator().runEvaluator(
+//                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
+//                findingsAnalyzer, metricsImporter, findingsImporter,
+//                metricsAggregator, findingsAggregator
+//        );
+//        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
+
+        System.out.println("...");
     }
 
     /**
