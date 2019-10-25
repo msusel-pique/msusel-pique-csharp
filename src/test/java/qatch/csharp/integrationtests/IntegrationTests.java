@@ -43,15 +43,18 @@ public class IntegrationTests {
         QualityModelGenerator.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
 
         // TODO: add assertion checks
-
     }
 
 
     /**
      * Test entire analysis module procedure using Roslynator:
      *   (1) run Roslynator tool
-     *   (2) prase output, apply findings and diagnostics to Measure objects
-     *   (3) link Measure objects to properties using .yaml measure mapping config
+     *   (2) prase output: make collection of diagnostic objects
+     *   (3) link findings and diagnostics to Measure objects using .yaml config
+     *
+     * A successful analysis results in the tool having a measureMappings instance variable
+     * with similar structure to the input .yaml config but with Measure objects, and those Measure
+     * objects have the actual findings from the analysis run included as Finding objects.
      */
     @Test
     public void testRoslynatorAnalysis() throws IOException {
@@ -70,12 +73,32 @@ public class IntegrationTests {
         // (1) run Roslynator tool
         Path analysisOutput = roslynator.analyze(target);
 
-        // (2) prase output, apply findings and diagnostics to Measure objects
-        Map<String, Diagnostic> diagnostics = roslynator.parse(analysisOutput);
+        // (2) prase output: make collection of diagnostic objects
+        roslynator.setDiagnostics(roslynator.parse(analysisOutput));
 
+        // (3) link findings and diagnostics to Measure objects using .yaml config
+        roslynator.setMeasureMappings(roslynator.buildMeasures());
 
+        // Assert the measureMappings object has the finidngs from the tool analysis scan
+        Map<String, Measure> results = roslynator.getMeasureMappings();
+        Measure injectionMeasure = results.get("Injection");
+        Measure cryptoMeasure = results.get("Cryptography");
 
-        System.out.println("...");
+        Assert.assertEquals(2, results.size());
+        Assert.assertTrue(results.containsKey("Injection"));
+        Assert.assertTrue(results.containsKey("Cryptography"));
+
+        Assert.assertEquals("Roslynator", injectionMeasure.getToolName());
+        Assert.assertEquals("Roslynator", cryptoMeasure.getToolName());
+
+        Assert.assertEquals(3, injectionMeasure.getDiagnostics().size());
+
+        Assert.assertEquals("RCS1018", injectionMeasure.getDiagnostics().get(0).getId());
+        Assert.assertEquals("example_unfound_diagnostic_01", injectionMeasure.getDiagnostics().get(1).getId());
+        Assert.assertEquals("example_unfound_diagnostic_02", injectionMeasure.getDiagnostics().get(2).getId());
+
+        Assert.assertEquals(2, injectionMeasure.getDiagnostics().get(0).getFindings().size());
+        Assert.assertEquals(0, injectionMeasure.getDiagnostics().get(1).getFindings().size());
     }
 
 

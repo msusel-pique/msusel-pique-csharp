@@ -2,17 +2,14 @@ Injection:
   Tool: Roslynator
   Measure: Injection Findings
   Diagnostics:
-    - SCS0001
-    - SCS0002
-    - SCS0003
-    - SCS0007
+    - RCS1018
+    - example_unfound_diagnostic_01
+    - example_unfound_diagnostic_02
 Cryptography: 
   Tool: Roslynator
   Measure: Cryptography Findings
   Diagnostics:
-    - SCS0004
-    - SCS0005
-    - SCS0006
-    - SCS0010
+    - RCS1163
+    - RCS1102
 
 
