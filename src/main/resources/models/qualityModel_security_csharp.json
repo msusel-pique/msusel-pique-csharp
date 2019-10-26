@@ -3,74 +3,59 @@
 	"tqi": {
 		"name": "Security",
 		"description": "A representation of the static vulnerabilies and weaknesses of a CSharp project or solution.",
-		"weights": [
-			"0.2",
-			"0.2",
-			"0.2",
-			"0.2",
-			"0.2"
-		]
+		"weights": {
+			"Confidentiality": 0.2,
+			"Integrity": 0.2,
+			"Non-repudiation": 0.2,
+			"Accountability": 0.2,
+			"Authenticity": 0.2
+		}
 	},
 	"characteristics": [
 		{
 			"name": "Confidentiality",
 			"standard": "ISO/IEC 25010",
 			"description": "Degree to which a product or system ensures that data are accessible only to those authorized to have access.",
-			"weights": [
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2"
-			]
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
 		},
 		{
 			"name": "Integrity",
 			"standard": "ISO/IEC 25010",
 			"description": "Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data.",
-			"weights": [
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2"
-			]
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
 		},
 		{
 			"name": "Non-repudiation",
 			"standard": "ISO/IEC 25010",
 			"description": "Degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later.",
-			"weights": [
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2"
-			]
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
 		},
 		{
 			"name": "Accountability",
 			"standard": "ISO/IEC 25010",
 			"description": "Degree to which the actions of an entity can be traced uniquely to the entity.",
-			"weights": [
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2"
-			]
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
 		},
 		{
 			"name": "Authenticity",
 			"standard": "ISO/IEC 25010",
 			"description": "Degree to which the identity of a subject or resource can be proved to be the one claimed.",
-			"weights": [
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2",
-				"0.2"
-			]
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
 		}
 	],
 	"properties": [

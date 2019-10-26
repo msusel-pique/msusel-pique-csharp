@@ -11,16 +11,13 @@ import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
 import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
-import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelGenerator;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.csharp.runnable.SolutionEvaluation;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 

@@ -24,7 +24,7 @@ public class SingleProjectEvaluation {
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
     private static File RESOURCES =   new File(ROOT, "src/main/resources");
     private static File CONFIG_LOC =  new File(RESOURCES, "config/roslynatormeasures.yaml");
-    private static File QM_LOCATION =  new File(RESOURCES, "models/qualityModel_security_csharp.xml");
+    private static File QM_LOCATION =  new File(RESOURCES, "models/qualityModel_security_csharp.json");
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
     private static File TOOLS =       new File(RESOURCES, "tools");
     private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
