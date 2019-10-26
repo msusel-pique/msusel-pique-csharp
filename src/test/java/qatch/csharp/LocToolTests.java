@@ -18,7 +18,6 @@ public class LocToolTests {
 
     @Test
     public void testAnalyze() throws IOException {
-
         Properties properties = new Properties();
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
@@ -26,7 +25,6 @@ public class LocToolTests {
         Integer result = tool.analyze(Paths.get(TARGET_LOC));
 
         Assert.assertEquals(39, result, 0);
-
     }
 
 }
