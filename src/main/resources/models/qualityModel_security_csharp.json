@@ -64,9 +64,9 @@
 			"description": "Injection flaws occur when an attacker can send hostile data to an interpreter.",
 			"positive_impact": "false",
 			"thresholds": [
-				"0.0",
-				"0.0042",
-				"0.0138"
+				0.0,
+				0.0042,
+				0.0138
 			],
 			"measure": {
 				"name": "Injection Findings",
@@ -93,9 +93,9 @@
 			"description": "Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms.",
 			"positive_impact": "false",
 			"thresholds": [
-				"0.0",
-				"0.0137",
-				"0.0312"
+				0.0,
+				0.0137,
+				0.0312
 			],
 			"measure": {
 				"name": "Cryptography Findings",

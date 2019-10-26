@@ -74,7 +74,8 @@ public class SingleProjectEvaluation {
                 TOOLS.toPath(),
                 Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
-        logger.trace("Analyzer " + roslynator.getName() + " loaded");
+        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
+        logger.trace("Analyzers loaded");
 
 //        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
 //        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
@@ -92,7 +93,7 @@ public class SingleProjectEvaluation {
 //        // run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
-        Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator);
+        Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator, loc);
 
 
 

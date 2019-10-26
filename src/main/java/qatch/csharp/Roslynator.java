@@ -134,7 +134,7 @@ public class Roslynator extends Tool implements ITool {
                             break;
                     }
                 }
-                diagnostic.addFinding(finding);
+                diagnostic.setFinding(finding);
 
                 // add parsed diagnostic with attached finding objects to collection
                 diagnostics.put(diagnosticId, diagnostic);
@@ -160,6 +160,6 @@ public class Roslynator extends Tool implements ITool {
     // helper methods
     private Diagnostic findMapMemberByDiagnosticId(Map<String, Diagnostic> diagnostics, String id) {
         if (diagnostics.containsKey(id)) { return diagnostics.get(id); }
-        else { return new Diagnostic(this.getName(), id); }
+        else { return new Diagnostic(id); }
     }
 }
