@@ -29,8 +29,11 @@ import java.util.*;
  */
 public class Roslynator extends Tool implements ITool {
 
+    // Fields
     private Path toolsDirectory;
     private Path msBuild;
+    private ProcessBuilder pb;
+
 
     /**
      * Constructor.
@@ -48,6 +51,12 @@ public class Roslynator extends Tool implements ITool {
         this.msBuild = msBuild;
     }
 
+
+    // Getters and setters
+    public ProcessBuilder getPb() { return pb; }
+
+
+    // Methods
     /**
      * @param path
      *      The path to a .sln or .csproj file for the desired solution of project to analyze
@@ -58,7 +67,6 @@ public class Roslynator extends Tool implements ITool {
     public Path analyze(Path path) {
 
         String sep = File.separator;
-        ProcessBuilder pb;
         File tempResults = new File(System.getProperty("user.dir") +"/output/roslynator_output.xml");
         tempResults.getParentFile().mkdirs();
 

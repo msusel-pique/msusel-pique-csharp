@@ -1,6 +1,7 @@
 package qatch.csharp.runnable;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qatch.analysis.*;
@@ -52,8 +53,9 @@ public class SingleProjectEvaluation {
                     "\n\t(2) (optional) Path to resources location.");
         }
         HashMap<String, Path> initializePaths = initialize(args);
-        final Path PROJECT_DIR = initializePaths.get("projectLoc");
-        final Path RESULTS_DIR = initializePaths.get("resultsLoc");
+        Path PROJECT_DIR = initializePaths.get("projectLoc");
+        Path RESULTS_DIR = initializePaths.get("resultsLoc");
+        RESULTS_DIR = Paths.get(FilenameUtils.getBaseName(RESULTS_DIR.toString()));
 
         if (args.length >= 3) {     // temp fix for JAR runs, deal with later
             RESOURCES = new File(initializePaths.get("resources").toString());
@@ -64,7 +66,6 @@ public class SingleProjectEvaluation {
         Properties properties = new Properties();
         // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
-
 
         // instantiate interface classes
         logger.debug("Beginning interface instantiations");
@@ -77,20 +78,7 @@ public class SingleProjectEvaluation {
         IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
         logger.trace("Analyzers loaded");
 
-//        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
-//        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
-//        logger.trace("Analyzers loaded");
-//
-//        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-//        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
-//        logger.trace("ResultsImporters loaded");
-//
-//        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
-//        IFindingsAggregator findingsAggregator = new FxcopAggregator();
-//        logger.trace("Aggregators loaded");
-//
-//
-//        // run evaluation
+        // run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
         Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator, loc);
