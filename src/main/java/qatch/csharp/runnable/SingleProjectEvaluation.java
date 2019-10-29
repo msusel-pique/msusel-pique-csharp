@@ -55,7 +55,6 @@ public class SingleProjectEvaluation {
         HashMap<String, Path> initializePaths = initialize(args);
         Path PROJECT_DIR = initializePaths.get("projectLoc");
         Path RESULTS_DIR = initializePaths.get("resultsLoc");
-        RESULTS_DIR = Paths.get(FilenameUtils.getBaseName(RESULTS_DIR.toString()));
 
         if (args.length >= 3) {     // temp fix for JAR runs, deal with later
             RESOURCES = new File(initializePaths.get("resources").toString());
@@ -82,17 +81,7 @@ public class SingleProjectEvaluation {
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
         Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator, loc);
-
-
-
-//        Path evalResults = new SingleProjectEvaluator().runEvaluator(
-//                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
-//                findingsAnalyzer, metricsImporter, findingsImporter,
-//                metricsAggregator, findingsAggregator
-//        );
-//        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
-
-        System.out.println("...");
+        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
     }
 
     /**
@@ -125,7 +114,7 @@ public class SingleProjectEvaluation {
         String resources = (inputArgs.length < 3 ? null : inputArgs[2]);
 
         Path projectDir = new File(projectLoc).toPath();
-        String resultsDirName = projectDir.getFileName().toString();
+        String resultsDirName = FilenameUtils.getBaseName(projectDir.getFileName().toString());
         Path qaDir = new File(resultsLoc, resultsDirName).toPath();
         qaDir.toFile().mkdirs();
 

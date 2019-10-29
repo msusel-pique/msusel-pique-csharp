@@ -3,6 +3,7 @@ package qatch.csharp.integrationtests;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -108,15 +109,22 @@ public class IntegrationTests {
         final Path PROJECT_PATH = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
         final Path RESULT_PATH = TEST_OUT;
 
+        // run evaluation
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
 
+        // handle results
+        String projectName = FilenameUtils.getBaseName(PROJECT_PATH.getFileName().toString());
         File evalResults = new File(
                 RESULT_PATH.toFile(),
-                PROJECT_PATH.getFileName().toString() + File.separator + PROJECT_PATH.getFileName().toString() + "_evalResults.json"
+                projectName + File.separator + projectName + "_evalResults.json"
         );
+        FileReader fr = new FileReader(evalResults);
         JsonParser parser = new JsonParser();
-        JsonObject data = (JsonObject) parser.parse(new FileReader(evalResults));
-        double eval = data.getAsJsonObject("tqi").get("eval").getAsDouble();
+        JsonObject data = (JsonObject) parser.parse(fr);
+        fr.close();
+
+        // assert values
+        double eval = data.getAsJsonObject("tqi").getAsJsonPrimitive("value").getAsDouble();
 
         Assert.assertTrue(evalResults.exists());
         Assert.assertTrue(eval < 0.9999 && eval > 0.0001);
