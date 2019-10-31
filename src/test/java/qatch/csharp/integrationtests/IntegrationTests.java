@@ -109,15 +109,17 @@ public class IntegrationTests {
         final Path PROJECT_PATH = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
         final Path RESULT_PATH = TEST_OUT;
 
+        // run evaluation
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
 
+        // handle results
         String projectName = FilenameUtils.getBaseName(PROJECT_PATH.getFileName().toString());
         File evalResults = new File(
                 RESULT_PATH.toFile(),
                 projectName + File.separator + projectName + "_evalResults.json"
         );
-        JsonParser parser = new JsonParser();
         FileReader fr = new FileReader(evalResults);
+        JsonParser parser = new JsonParser();
         JsonObject data = (JsonObject) parser.parse(fr);
         fr.close();
 

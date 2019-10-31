@@ -53,8 +53,8 @@ public class SingleProjectEvaluation {
                     "\n\t(2) (optional) Path to resources location.");
         }
         HashMap<String, Path> initializePaths = initialize(args);
-        final Path PROJECT_DIR = initializePaths.get("projectLoc");
-        final Path RESULTS_DIR = initializePaths.get("resultsLoc");
+        Path PROJECT_DIR = initializePaths.get("projectLoc");
+        Path RESULTS_DIR = initializePaths.get("resultsLoc");
 
         if (args.length >= 3) {     // temp fix for JAR runs, deal with later
             RESOURCES = new File(initializePaths.get("resources").toString());
@@ -65,7 +65,6 @@ public class SingleProjectEvaluation {
         Properties properties = new Properties();
         // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
-
 
         // instantiate interface classes
         logger.debug("Beginning interface instantiations");
