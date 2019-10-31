@@ -1,0 +1,115 @@
+{
+	"name": "CSharp Security Model",
+	"tqi": {
+		"name": "Security",
+		"description": "A representation of the static vulnerabilies and weaknesses of a CSharp project or solution.",
+		"weights": {
+			"Confidentiality": 0.2,
+			"Integrity": 0.2,
+			"Non-repudiation": 0.2,
+			"Accountability": 0.2,
+			"Authenticity": 0.2
+		}
+	},
+	"characteristics": [
+		{
+			"name": "Confidentiality",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which a product or system ensures that data are accessible only to those authorized to have access.",
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
+		},
+		{
+			"name": "Integrity",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data.",
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
+		},
+		{
+			"name": "Non-repudiation",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later.",
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
+		},
+		{
+			"name": "Accountability",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which the actions of an entity can be traced uniquely to the entity.",
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
+		},
+		{
+			"name": "Authenticity",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which the identity of a subject or resource can be proved to be the one claimed.",
+			"weights": {
+				"Injection": 0.5,
+				"Cryptography": 0.5
+			}
+		}
+	],
+	"properties": [
+		{
+			"name": "Injection",
+			"description": "Injection flaws occur when an attacker can send hostile data to an interpreter.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.0042,
+				0.0138
+			],
+			"measure": {
+				"name": "Injection Findings",
+				"tool": "Roslynator",
+				"diagnostics": [
+					"SCS0001",
+					"SCS0002",
+					"SCS0003",
+					"SCS0007",
+					"SCS0014",
+					"SCS0018",
+					"SCS0020",
+					"SCS0025",
+					"SCS0026",
+					"SCS0029",
+					"SCS0031",
+					"SCS0035",
+					"SCS0036"
+				]
+			}
+		},
+		{
+			"name": "Cryptography",
+			"description": "Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.0137,
+				0.0312
+			],
+			"measure": {
+				"name": "Cryptography Findings",
+				"tool": "Roslynator",
+				"diagnostics": [
+					"SCS0004",
+					"SCS0005",
+					"SCS0006",
+					"SCS0010",
+					"SCS0011",
+					"SCS0012",
+					"SCS0013"
+				]
+			}
+		}
+	]
+}

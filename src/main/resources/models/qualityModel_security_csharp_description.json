@@ -1,0 +1,61 @@
+{
+	"name": "CSharp Security Model",
+	"tqi": {
+		"name": "Security",
+		"description": "A representation of the static vulnerabilies and weaknesses of a CSharp project or solution."
+	},
+	"characteristics": [
+		{
+			"name": "Confidentiality",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which a product or system ensures that data are accessible only to those authorized to have access."
+		},
+		{
+			"name": "Integrity",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data."
+		},
+		{
+			"name": "Non-repudiation",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later."
+		},
+		{
+			"name": "Accountability",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which the actions of an entity can be traced uniquely to the entity."
+		},
+		{
+			"name": "Authenticity",
+			"standard": "ISO/IEC 25010",
+			"description": "Degree to which the identity of a subject or resource can be proved to be the one claimed."
+		}
+	],
+	"properties": [
+		{
+			"name": "Injection",
+			"description": "Injection flaws occur when an attacker can send hostile data to an interpreter.",
+			"positive_impact": "false"
+		},
+		{
+			"name": "Cryptography",
+			"description": "Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms.",
+			"positive_impact": "false"
+		},
+		{
+			"name": "Cookies",
+			"description": "Cookie flaws involve incorrect flagging of cookies and insecure passing of information.",
+			"positive_impact": "false"
+		},
+		{
+			"name": "Request Validation",
+			"description": "Disabled or incorrectly configured request validation that causes XSS vulnerability.",
+			"positive_impact": "false"
+		},
+		{
+			"name": "Password Management",
+			"description": "Hard coded, short, or trivial password configuration.",
+			"positive_impact": "false"
+		}
+	]
+}

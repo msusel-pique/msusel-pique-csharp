@@ -71,7 +71,7 @@ public class RoslynatorTests {
                 null,
                 null
         );
-        Map<String, Diagnostic> diagnosticMap = roslynator.parse(Paths.get(SAMPLE_OUTPUT_LOC));
+        Map<String, Diagnostic> diagnosticMap = roslynator.parseAnalysis(Paths.get(SAMPLE_OUTPUT_LOC));
 
         Diagnostic rcs1018 = diagnosticMap.get("RCS1018");
         Diagnostic rcs1102 = diagnosticMap.get("RCS1102");

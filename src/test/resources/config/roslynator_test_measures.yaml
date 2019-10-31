@@ -9,7 +9,7 @@ Cryptography:
   Tool: Roslynator
   Measure: Cryptography Findings
   Diagnostics:
-    - RCS1163
+    - SCS0005
     - RCS1102
 
 

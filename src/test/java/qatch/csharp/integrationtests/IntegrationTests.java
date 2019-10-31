@@ -3,6 +3,7 @@ package qatch.csharp.integrationtests;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,27 +12,24 @@ import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
 import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
-import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelGenerator;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 import qatch.csharp.runnable.SolutionEvaluation;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
-    final Path TEST_OUT = Paths.get("src/test/output");
-    final String ROSLYN_NAME = "Roslynator",
-                 CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
-                 TOOLS_LOC   = "src/main/resources/tools",
-                 TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln";
+    private final Path TEST_OUT = Paths.get("src/test/output");
+    private final String ROSLYN_NAME = "Roslynator",
+                         CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
+                         TOOLS_LOC   = "src/main/resources/tools",
+                         TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln";
 
     @Test
     public void testQualityModelGenerator() {
@@ -48,11 +46,12 @@ public class IntegrationTests {
 
     /**
      * Test entire analysis module procedure using Roslynator:
-     *   (1) run Roslynator tool
-     *   (2) prase output: make collection of diagnostic objects
-     *   (3) link findings and diagnostics to Measure objects using .yaml config
+     *   (1) run Roslynator static analysis tool
+     *   (2) parse config: get object representation of the .yaml measure->diagnostics configuration
+     *   (3) prase output: make collection of diagnostic objects
+     *   (4) link findings and diagnostics to Measure objects
      *
-     * A successful analysis results in the tool having a measureMappings instance variable
+     * A successful analysis results in the tool producing a measureMappings variable
      * with similar structure to the input .yaml config but with Measure objects, and those Measure
      * objects have the actual findings from the analysis run included as Finding objects.
      */
@@ -73,14 +72,17 @@ public class IntegrationTests {
         // (1) run Roslynator tool
         Path analysisOutput = roslynator.analyze(target);
 
-        // (2) prase output: make collection of diagnostic objects
-        roslynator.setDiagnostics(roslynator.parse(analysisOutput));
+        // (2) parse config: get object representation of the .yaml measure->diagnostics configuration
+        Map<String, Measure> propertyMeasureMap = roslynator.parseConfig(roslynator.getConfig());
 
-        // (3) link findings and diagnostics to Measure objects using .yaml config
-        roslynator.setMeasureMappings(roslynator.buildMeasures());
+        // (3) prase output: make collection of diagnostic objects
+        Map<String, Diagnostic> analysisResults = roslynator.parseAnalysis(analysisOutput);
+
+        // (4) link findings and diagnostics to Measure objects
+        propertyMeasureMap = roslynator.applyFindings(propertyMeasureMap, analysisResults);
 
         // Assert the measureMappings object has the finidngs from the tool analysis scan
-        Map<String, Measure> results = roslynator.getMeasureMappings();
+        Map<String, Measure> results = propertyMeasureMap;
         Measure injectionMeasure = results.get("Injection");
         Measure cryptoMeasure = results.get("Cryptography");
 
@@ -103,22 +105,32 @@ public class IntegrationTests {
 
 
     @Test
-    public void testSingleProjectEvaluation() throws FileNotFoundException {
-        final Path PROJECT_PATH = Paths.get("src/test/resources/single_project_eval/TestCsharpProject");
+    public void testSingleProjectEvaluation() throws IOException {
+        final Path PROJECT_PATH = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
         final Path RESULT_PATH = TEST_OUT;
 
+        // run evaluation
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
 
+        // handle results
+        String projectName = FilenameUtils.getBaseName(PROJECT_PATH.getFileName().toString());
         File evalResults = new File(
                 RESULT_PATH.toFile(),
-                PROJECT_PATH.getFileName().toString() + File.separator + PROJECT_PATH.getFileName().toString() + "_evalResults.json"
+                projectName + File.separator + projectName + "_evalResults.json"
         );
+        FileReader fr = new FileReader(evalResults);
         JsonParser parser = new JsonParser();
-        JsonObject data = (JsonObject) parser.parse(new FileReader(evalResults));
-        double eval = data.getAsJsonObject("tqi").get("eval").getAsDouble();
+        JsonObject data = (JsonObject) parser.parse(fr);
+        fr.close();
+
+        int loc = data.getAsJsonPrimitive("linesOfCode").getAsInt();
+        double tqiValue = data.getAsJsonObject("tqi").getAsJsonPrimitive("value").getAsDouble();
+        String tqiName = data.getAsJsonObject("tqi").getAsJsonPrimitive("name").getAsString();
 
         Assert.assertTrue(evalResults.exists());
-        Assert.assertTrue(eval < 0.9999 && eval > 0.0001);
+        Assert.assertEquals(39, loc);
+        Assert.assertEquals(0.58, tqiValue, 0.0001);
+        Assert.assertEquals("Security", tqiName);
     }
 
 
