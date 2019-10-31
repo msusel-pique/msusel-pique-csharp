@@ -30,6 +30,7 @@ import java.util.jar.JarFile;
  * This executable class is responsible for producing quality analysis reports on all modules contained within
  * a C# solution (.sln).  This driver supports deployed JAR functionality when packaged with dependencies.
  */
+@Deprecated
 public class SolutionEvaluation {
 
     private final static Logger logger = LoggerFactory.getLogger(SolutionEvaluation.class);
@@ -43,6 +44,7 @@ public class SolutionEvaluation {
      *             1: path to folder to place analysis results
      *    These arg paths can be relative or full path
      */
+    @Deprecated
     public static void main(String[] args) {
 
         // useful constants

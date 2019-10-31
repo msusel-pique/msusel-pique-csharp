@@ -104,6 +104,9 @@ public class IntegrationTests {
     }
 
 
+    /**
+     * Test entire evaluation process on a C# project or solution.
+     */
     @Test
     public void testSingleProjectEvaluation() throws IOException {
         final Path PROJECT_PATH = Paths.get("src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln");
@@ -133,28 +136,4 @@ public class IntegrationTests {
         Assert.assertEquals("Security", tqiName);
     }
 
-
-    @Test
-    public void testSolutionEvaluation() throws FileNotFoundException {
-        final Path SOLUTION_PATH = Paths.get("src/test/resources/multi_project_eval");
-        final Path RESULT_PATH = TEST_OUT;
-
-        SolutionEvaluation.main(new String[] { SOLUTION_PATH.toString(), RESULT_PATH.toString() });
-
-        File qa_results = new File(RESULT_PATH.toFile(), "qa_out");
-        File alphaResults = new File(qa_results, "Alpha" + File.separator + "Alpha_evalResults.json");
-        File bravoResults = new File(qa_results, "Bravo" + File.separator + "Bravo_evalResults.json");
-
-        JsonParser parser = new JsonParser();
-        JsonObject alphaData = (JsonObject) parser.parse(new FileReader(alphaResults));
-        JsonObject bravoData = (JsonObject) parser.parse(new FileReader(bravoResults));
-
-        double alphaEval = alphaData.getAsJsonObject("tqi").get("eval").getAsDouble();
-        double bravoEval = bravoData.getAsJsonObject("tqi").get("eval").getAsDouble();
-
-        Assert.assertTrue(alphaResults.exists());
-        Assert.assertTrue(bravoResults.exists());
-        Assert.assertTrue(alphaEval < 0.9999 && alphaEval > 0.0001);
-        Assert.assertTrue(bravoEval < 0.9999 && bravoEval > 0.0001);
-    }
 }

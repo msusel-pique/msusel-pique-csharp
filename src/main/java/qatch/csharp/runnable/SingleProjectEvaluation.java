@@ -33,7 +33,7 @@ public class SingleProjectEvaluation {
 
 
     /**
-     * Main method for running quality evaluation on a single C# project.
+     * Main method for running quality evaluation on a single C# project or solution.
      *
      * @param args configuration array in following order:
      *             0: path to project to be evaluated root folder
