@@ -3,6 +3,7 @@ package qatch.csharp.integrationtests;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -110,16 +111,24 @@ public class IntegrationTests {
 
         SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
 
+        String projectName = FilenameUtils.getBaseName(PROJECT_PATH.getFileName().toString());
         File evalResults = new File(
                 RESULT_PATH.toFile(),
-                PROJECT_PATH.getFileName().toString() + File.separator + PROJECT_PATH.getFileName().toString() + "_evalResults.json"
+                projectName + File.separator + projectName + "_evalResults.json"
         );
         JsonParser parser = new JsonParser();
-        JsonObject data = (JsonObject) parser.parse(new FileReader(evalResults));
-        double eval = data.getAsJsonObject("tqi").get("eval").getAsDouble();
+        FileReader fr = new FileReader(evalResults);
+        JsonObject data = (JsonObject) parser.parse(fr);
+        fr.close();
+
+        int loc = data.getAsJsonPrimitive("linesOfCode").getAsInt();
+        double tqiValue = data.getAsJsonObject("tqi").getAsJsonPrimitive("value").getAsDouble();
+        String tqiName = data.getAsJsonObject("tqi").getAsJsonPrimitive("name").getAsString();
 
         Assert.assertTrue(evalResults.exists());
-        Assert.assertTrue(eval < 0.9999 && eval > 0.0001);
+        Assert.assertEquals(39, loc);
+        Assert.assertEquals(0.58, tqiValue, 0.0001);
+        Assert.assertEquals("Security", tqiName);
     }
 
 

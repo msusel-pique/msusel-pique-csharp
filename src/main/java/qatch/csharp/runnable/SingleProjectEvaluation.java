@@ -1,6 +1,7 @@
 package qatch.csharp.runnable;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qatch.analysis.*;
@@ -77,34 +78,11 @@ public class SingleProjectEvaluation {
         IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
         logger.trace("Analyzers loaded");
 
-//        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
-//        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
-//        logger.trace("Analyzers loaded");
-//
-//        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-//        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
-//        logger.trace("ResultsImporters loaded");
-//
-//        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
-//        IFindingsAggregator findingsAggregator = new FxcopAggregator();
-//        logger.trace("Aggregators loaded");
-//
-//
-//        // run evaluation
+        // run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
         Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION.toPath(), roslynator, loc);
-
-
-
-//        Path evalResults = new SingleProjectEvaluator().runEvaluator(
-//                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
-//                findingsAnalyzer, metricsImporter, findingsImporter,
-//                metricsAggregator, findingsAggregator
-//        );
-//        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
-
-        System.out.println("...");
+        logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
     }
 
     /**
@@ -137,7 +115,7 @@ public class SingleProjectEvaluation {
         String resources = (inputArgs.length < 3 ? null : inputArgs[2]);
 
         Path projectDir = new File(projectLoc).toPath();
-        String resultsDirName = projectDir.getFileName().toString();
+        String resultsDirName = FilenameUtils.getBaseName(projectDir.getFileName().toString());
         Path qaDir = new File(resultsLoc, resultsDirName).toPath();
         qaDir.toFile().mkdirs();
 
