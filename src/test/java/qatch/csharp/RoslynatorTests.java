@@ -21,7 +21,7 @@ public class RoslynatorTests {
     final String ROSLYN_NAME = "Roslynator",
                  CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                  TOOLS_LOC   = "src/main/resources/tools",
-                 TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln",
+                 TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln",
                  OUTPUT_LOC  = System.getProperty("user.dir") + "/output",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
 
