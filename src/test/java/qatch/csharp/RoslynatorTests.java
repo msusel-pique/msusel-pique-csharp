@@ -22,7 +22,7 @@ public class RoslynatorTests {
                  CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                  TOOLS_LOC   = "src/main/resources/tools",
                  TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln",
-                 OUTPUT_LOC  = System.getProperty("user.dir") + "/output",
+                 OUTPUT_LOC  = "src/test/out",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
 
     @Before

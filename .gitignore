@@ -548,6 +548,6 @@ $RECYCLE.BIN/
 /r_working_directory/properties.csv
 /r_working_directory/threshold.json
 /r_working_directory/weights.json
-/src/test/output/
+/src/test/out/
 /src/test/java/qatch/csharp/Scratch.java
 #doc/reference.txt

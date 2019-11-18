@@ -67,7 +67,7 @@ public class Roslynator extends Tool implements ITool {
     public Path analyze(Path path) {
 
         String sep = File.separator;
-        File tempResults = new File(System.getProperty("user.dir") +"/output/roslynator_output.xml");
+        File tempResults = new File(System.getProperty("user.dir") +"/out/roslynator_output.xml");
         tempResults.getParentFile().mkdirs();
 
         // strings for CLI call

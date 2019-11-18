@@ -25,7 +25,7 @@ import java.util.Properties;
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
-    private final Path TEST_OUT = Paths.get("src/test/output");
+    private final Path TEST_OUT = Paths.get("src/test/out");
     private final String ROSLYN_NAME = "Roslynator",
                          CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                          TOOLS_LOC   = "src/main/resources/tools",
@@ -36,7 +36,7 @@ public class IntegrationTests {
         final String CALIBRATE = "true";
         final String RUN_TOOLS = "true";
         final String REPO_PATH = "src/test/resources/multi_project_eval";
-        final String OUT = "src/test/output";
+        final String OUT = "src/test/out";
 
         QualityModelGenerator.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
 
