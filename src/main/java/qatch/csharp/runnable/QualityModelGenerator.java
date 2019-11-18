@@ -34,7 +34,7 @@ public class QualityModelGenerator {
         final Path OUTPUT; // = Paths.get(ROOT.toString(), "out");
         final Path RESOURCES = Paths.get(ROOT.toString(), "src/main/resources");
         final Path TOOLS = Paths.get(RESOURCES.toString(), "tools");
-        final Path QM_DESCRIPTION_PATH = Paths.get(RESOURCES.toString(), "models/qualityModel_iso25k_csharp_description.xml");
+        final Path QM_DESCRIPTION_PATH = Paths.get(RESOURCES.toString(), "todo");
         final String PROJ_ROOT_FLAG = ".csproj";    // identifies individual C# project (module) roots in the repo (at any depth)
 
 

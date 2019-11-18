@@ -53,7 +53,7 @@ public class SolutionEvaluation {
         final Path RESOURCES;
 
         // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-        final String QM_NAME = "qualityModel_iso25k_csharp.xml";
+        final String QM_NAME = "todo";
         final String projectRootFlag = ".csproj";   // how to know you are at a project root when recursing through files
 
         // initialize
