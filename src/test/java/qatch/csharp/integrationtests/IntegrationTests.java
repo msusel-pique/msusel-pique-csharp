@@ -9,8 +9,10 @@ import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
 import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
-import qatch.csharp.runnable.QualityModelDeriver;
+import qatch.csharp.runnable.QualityModelDeriverCSharp;
 import qatch.csharp.runnable.SingleProjectEvaluation;
+import qatch.evaluation.Project;
+import qatch.model.QualityModel;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -22,6 +24,7 @@ import java.util.Properties;
 public class IntegrationTests {
 
     private final Path TEST_OUT = Paths.get("src/test/out");
+    private final Path TEST_ANALYSIS_QM = Paths.get("src/test/resources/quality_models/test_roslynator_analysis.json");
     private final String ROSLYN_NAME = "Roslynator",
                          CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                          TOOLS_LOC   = "src/main/resources/tools",
@@ -51,7 +54,7 @@ public class IntegrationTests {
         final Path weightsOut = Paths.get("src/test/out");
         final String flag =".sln";
 
-        QualityModelDeriver.main(new String[] {
+        QualityModelDeriverCSharp.main(new String[] {
                 qmPath.toString(), benchmarkRepository.toString(), comparisonMatrices.toString(),
                 benchmarkData.toString(), thresholdOut.toString(), weightsOut.toString(), flag
         });
@@ -63,61 +66,33 @@ public class IntegrationTests {
 
     /**
      * Test entire analysis module procedure using Roslynator:
-     *   (1) run Roslynator static analysis tool
-     *   (2) parse config: get object representation of the .yaml measure->diagnostics configuration
-     *   (3) prase output: make collection of diagnostic objects
-     *   (4) link findings and diagnostics to Measure objects
-     *
-     * A successful analysis results in the tool producing a measureMappings variable
-     * with similar structure to the input .yaml config but with Measure objects, and those Measure
-     * objects have the actual findings from the analysis run included as Finding objects.
+     *   (1) run Roslynator tool
+     *   (2) parse: get object representation of the diagnostics described by the QM
+     *   (3) make collection of diagnostic objects
      */
     @Test
     public void testRoslynatorAnalysis() throws IOException {
 
+        // Initialize main objects
         Properties properties = new Properties();
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
-        Roslynator roslynator = new Roslynator(
-                ROSLYN_NAME,
-                Paths.get(CONFIG_LOC),
-                Paths.get(TOOLS_LOC),
-                Paths.get(properties.getProperty("MSBUILD_BIN"))
-        );
         Path target = Paths.get(TARGET_LOC);
+        QualityModel qualityModel = new QualityModel(TEST_ANALYSIS_QM);
+        Project project = new Project(FilenameUtils.getBaseName(target.getFileName().toString()), target, qualityModel);
+        Roslynator roslynator = new Roslynator(ROSLYN_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("MSBUILD_BIN")));
 
         // (1) run Roslynator tool
         Path analysisOutput = roslynator.analyze(target);
 
-        // (2) parse config: get object representation of the .yaml measure->diagnostics configuration
-        Map<String, Measure> propertyMeasureMap = roslynator.parseConfig(roslynator.getConfig());
-
-        // (3) prase output: make collection of diagnostic objects
+        // (2 and 3) parse: get object representation of the diagnostics described by the QM
         Map<String, Diagnostic> analysisResults = roslynator.parseAnalysis(analysisOutput);
 
-        // (4) link findings and diagnostics to Measure objects
-        propertyMeasureMap = roslynator.applyFindings(propertyMeasureMap, analysisResults);
-
-        // Assert the measureMappings object has the finidngs from the tool analysis scan
-        Map<String, Measure> results = propertyMeasureMap;
-        Measure injectionMeasure = results.get("Injection");
-        Measure cryptoMeasure = results.get("Cryptography");
-
-        Assert.assertEquals(2, results.size());
-        Assert.assertTrue(results.containsKey("Injection"));
-        Assert.assertTrue(results.containsKey("Cryptography"));
-
-        Assert.assertEquals("Roslynator", injectionMeasure.getToolName());
-        Assert.assertEquals("Roslynator", cryptoMeasure.getToolName());
-
-        Assert.assertEquals(3, injectionMeasure.getDiagnostics().size());
-
-        Assert.assertEquals("RCS1018", injectionMeasure.getDiagnostics().get(0).getId());
-        Assert.assertEquals("example_unfound_diagnostic_01", injectionMeasure.getDiagnostics().get(1).getId());
-        Assert.assertEquals("example_unfound_diagnostic_02", injectionMeasure.getDiagnostics().get(2).getId());
-
-        Assert.assertEquals(2, injectionMeasure.getDiagnostics().get(0).getFindings().size());
-        Assert.assertEquals(0, injectionMeasure.getDiagnostics().get(1).getFindings().size());
+        // Assert the results has the finidngs from the tool analysis scan
+        Assert.assertEquals(3, analysisResults.size());
+        Assert.assertEquals(2, analysisResults.get("RCS1018").getFindings().size());
+        Assert.assertEquals(1, analysisResults.get("RCS1163").getFindings().size());
+        Assert.assertEquals(1, analysisResults.get("SCS0005").getFindings().size());
     }
 
 

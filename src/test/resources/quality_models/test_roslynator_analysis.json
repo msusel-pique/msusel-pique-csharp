@@ -1,0 +1,48 @@
+{
+    "name": "Test Roslynator Analysis",
+    "tqi": {
+        "name": "TQI",
+        "description": "Sample tqi description"
+    },
+    "characteristics": [
+        {
+            "name": "Characteristic 01",
+            "standard": "Sample standard",
+            "description": "Sample description"
+        },
+        {
+            "name": "Characteristic 02",
+            "standard": "Sample standard",
+            "description": "Integrity description"
+        }
+    ],
+    "properties": [
+        {
+            "name": "Property 01",
+            "description": "Property 01 description",
+            "positive_impact": "false",
+            "measure": {
+                "name": "Injection Findings",
+                "tool": "Roslynator",
+                "diagnostics": [
+                    "RCS1018",
+                    "example_unfound_diagnostic_01",
+                    "example_unfound_diagnostic_02"
+                ]
+            }
+        },
+        {
+            "name": "Property 02",
+            "description": "Property 02 description",
+            "positive_impact": "false",
+            "measure": {
+                "name": "Cryptography Findings",
+                "tool": "Roslynator",
+                "diagnostics": [
+                    "SCS0005",
+                    "RCS1102"
+                ]
+            }
+        }
+    ]
+}

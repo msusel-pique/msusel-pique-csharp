@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
-public class QualityModelDeriver {
+public class QualityModelDeriverCSharp {
 
     // Fields
     private static final File RESOURCES = new File("src/main/resources");
@@ -54,10 +54,18 @@ public class QualityModelDeriver {
         Map<String, String> inputArgs = initialize(args);
         QualityModel qmDescription = new QualityModel(inputArgs.get("qmPath"));
         IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
-        ITool roslynator = new Roslynator(
-                "Roslynator",
-                TOOLS.toPath(),
-                Paths.get(properties.getProperty("MSBUILD_BIN"))
+        ITool roslynator = new Roslynator("Roslynator", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
+        HashMap<String, ITool> tools = new HashMap<String, ITool>() {{ put(roslynator.getName(), roslynator); }};
+        Path benchmarkRepository = Paths.get(inputArgs.get("benchmarkRepository"));
+        Path comparisonMatricesDirectory = Paths.get(inputArgs.get("comparisonMatrices"));
+        Path benchmarkData = Paths.get(inputArgs.get("benchmarkData"));
+        Path rThresholdsOutput = Paths.get(inputArgs.get("thresholdOut"));
+        Path tempWeightsDirectory = Paths.get(inputArgs.get("weightsOut"));
+        String projectRootFlag = inputArgs.get("flag");
+
+        qatch.runnable.QualityModelDeriver.deriveModel(
+                qmDescription, loc, tools, benchmarkRepository, comparisonMatricesDirectory,
+                benchmarkData, rThresholdsOutput, tempWeightsDirectory, projectRootFlag
         );
 
         System.out.println("...");

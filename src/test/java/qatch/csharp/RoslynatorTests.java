@@ -9,7 +9,6 @@ import qatch.analysis.Diagnostic;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -44,7 +43,6 @@ public class RoslynatorTests {
 
         Roslynator roslynator = new Roslynator(
                 ROSLYN_NAME,
-                Paths.get(CONFIG_LOC),
                 Paths.get(TOOLS_LOC),
                 Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
@@ -67,7 +65,6 @@ public class RoslynatorTests {
 
         Roslynator roslynator = new Roslynator(
                 ROSLYN_NAME,
-                Paths.get(CONFIG_LOC),
                 null,
                 null
         );
