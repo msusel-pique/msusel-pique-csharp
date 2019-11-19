@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class QualityModelGenerator {
+public class QualityModelDeriver {
 
     /**
      * Main method for deriving a C# quality model.

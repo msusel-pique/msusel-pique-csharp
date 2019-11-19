@@ -40,7 +40,7 @@ public class SingleProjectEvaluation {
      *             1: path to folder to place results
      *             2: (optional) path to resources folder if not using default location. This is currently
      *                necessary for JAR runs when copying tools and quality models out of resources folder.
-     *    These arg paths can be relative or full path
+     *    These arg paths can be relative or full path.
      */
     public static void main(String[] args) throws IOException {
 

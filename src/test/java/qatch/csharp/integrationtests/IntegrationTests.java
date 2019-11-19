@@ -2,19 +2,15 @@ package qatch.csharp.integrationtests;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
 import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
-import qatch.csharp.runnable.QualityModelGenerator;
+import qatch.csharp.runnable.QualityModelDeriver;
 import qatch.csharp.runnable.SingleProjectEvaluation;
-import qatch.csharp.runnable.SolutionEvaluation;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -32,13 +28,13 @@ public class IntegrationTests {
                          TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln";
 
     @Test
-    public void testQualityModelGenerator() {
+    public void testQualityModelDeriver() {
         final String CALIBRATE = "true";
         final String RUN_TOOLS = "true";
         final String REPO_PATH = "src/test/resources/multi_project_eval";
         final String OUT = "src/test/out";
 
-        QualityModelGenerator.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
+        QualityModelDeriver.main(new String[] { CALIBRATE, RUN_TOOLS, REPO_PATH, OUT });
 
         // TODO: add assertion checks
     }

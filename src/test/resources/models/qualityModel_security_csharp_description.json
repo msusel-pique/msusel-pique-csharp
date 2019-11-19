@@ -1,0 +1,63 @@
+{
+    "name": "Security CSharp Test Model",
+    "tqi": {
+        "name": "Security TQI",
+        "description": "Sample tqi description"
+    },
+    "characteristics": [
+        {
+            "name": "Confidentiality",
+            "standard": "ISO/IEC 25010",
+            "description": "Confidentiality description"
+        },
+        {
+            "name": "Integrity",
+            "standard": "ISO/IEC 25010",
+            "description": "Integrity description"
+        }
+    ],
+    "properties": [
+        {
+            "name": "Injection",
+            "description": "Injection description",
+            "positive_impact": "false",
+            "measure": {
+                "name": "Injection Measure",
+                "tool": "Roslynator",
+                "diagnostics": [
+                    "SCS0001",
+                    "SCS0002",
+                    "SCS0003",
+                    "SCS0007",
+                    "SCS0014",
+                    "SCS0018",
+                    "SCS0020",
+                    "SCS0025",
+                    "SCS0026",
+                    "SCS0029",
+                    "SCS0031",
+                    "SCS0035",
+                    "SCS0036"
+                ]
+            }
+        },
+        {
+            "name": "Cryptography",
+            "description": "Cryptography description",
+            "positive_impact": "false",
+            "measure": {
+                "name": "Cryptography Measure",
+                "tool": "Roslynator",
+                "diagnostics": [
+                    "SCS0004",
+                    "SCS0005",
+                    "SCS0006",
+                    "SCS0010",
+                    "SCS0011",
+                    "SCS0012",
+                    "SCS0013"
+                ]
+            }
+        }
+    ]
+}
