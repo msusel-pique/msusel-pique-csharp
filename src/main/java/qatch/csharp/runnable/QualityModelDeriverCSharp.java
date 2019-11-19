@@ -52,7 +52,7 @@ public class QualityModelDeriverCSharp {
 
         // Initialize inputs
         Map<String, String> inputArgs = initialize(args);
-        QualityModel qmDescription = new QualityModel(inputArgs.get("qmPath"));
+        QualityModel qmDescription = new QualityModel(Paths.get(inputArgs.get("qmPath")));
         IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
         ITool roslynator = new Roslynator("Roslynator", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
         HashMap<String, ITool> tools = new HashMap<String, ITool>() {{ put(roslynator.getName(), roslynator); }};
