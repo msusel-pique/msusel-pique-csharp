@@ -1,19 +1,28 @@
 package qatch.csharp.runnable;
 
 import qatch.analysis.IAnalyzer;
+import qatch.analysis.ITool;
+import qatch.analysis.IToolLOC;
 import qatch.calibration.*;
 import qatch.csharp.*;
 import qatch.model.*;
 import qatch.utility.FileUtility;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Properties;
 
 public class QualityModelDeriver {
+
+    // Fields
+    private static final File RESOURCES = new File("src/main/resources");
+    private static final File TOOLS = new File(RESOURCES, "tools");
 
     /**
      * Main method for deriving a C# quality model.
@@ -35,9 +44,21 @@ public class QualityModelDeriver {
      */
     public static void main(String[] args) {
 
-        // Initialize input args
-        Map<String, String> inputArgs = initialize(args);
+        // Setup
+        Properties properties = new Properties();
+        // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
+        try { properties.load((new FileInputStream("src/test/resources/config/config.properties"))); }
+        catch (IOException e) { e.printStackTrace(); }
 
+        // Initialize inputs
+        Map<String, String> inputArgs = initialize(args);
+        QualityModel qmDescription = new QualityModel(inputArgs.get("qmPath"));
+        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
+        ITool roslynator = new Roslynator(
+                "Roslynator",
+                TOOLS.toPath(),
+                Paths.get(properties.getProperty("MSBUILD_BIN"))
+        );
 
         System.out.println("...");
 
@@ -282,7 +303,8 @@ public class QualityModelDeriver {
      * the values to a key-value hashmap
      *
      * @param inputArgs project and results location as described in main method
-     * @return HashMap
+     * @return HashMap of config with following key strings:
+     *      [qmPath, benchmarkRepository, comparisonMatrices, benchmarkData, thresholdOut, weightsOut, flag]
      */
     private static HashMap<String, String> initialize(String[] inputArgs) {
 

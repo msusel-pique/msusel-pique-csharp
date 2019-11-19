@@ -45,8 +45,8 @@ public class Roslynator extends Tool implements ITool {
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
-    public Roslynator(String name, Path toolConfig, Path toolsDirectory, Path msBuild) {
-        super(name, toolConfig);
+    public Roslynator(String name, Path toolsDirectory, Path msBuild) {
+        super(name);
         this.toolsDirectory = toolsDirectory;
         this.msBuild = msBuild;
     }

@@ -70,7 +70,6 @@ public class SingleProjectEvaluation {
         logger.debug("Beginning interface instantiations");
         ITool roslynator = new Roslynator(
                 ROSLYN_NAME,
-                CONFIG_LOC.toPath(),
                 TOOLS.toPath(),
                 Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
