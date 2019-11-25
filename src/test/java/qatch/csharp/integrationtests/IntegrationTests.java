@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
-import qatch.analysis.Measure;
 import qatch.csharp.Roslynator;
 import qatch.csharp.runnable.QualityModelDeriverCSharp;
 import qatch.csharp.runnable.SingleProjectEvaluation;
@@ -23,12 +22,11 @@ import java.util.Properties;
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
+    private final Path TARGET = Paths.get("src/test/resources/projects/TestNetFramework");
     private final Path TEST_OUT = Paths.get("src/test/out");
-    private final Path TEST_ANALYSIS_QM = Paths.get("src/test/resources/quality_models/test_roslynator_analysis.json");
+    private final Path TEST_QM = Paths.get("src/test/resources/quality_models/basic_roslynator_qm.json");
     private final String ROSLYN_NAME = "Roslynator",
-                         CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
-                         TOOLS_LOC   = "src/main/resources/tools",
-                         TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln";
+                         TOOLS_LOC   = "src/main/resources/tools";
 
     @Test
     public void testQualityModelDeriver() {
@@ -81,13 +79,12 @@ public class IntegrationTests {
         Properties properties = new Properties();
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
-        Path target = Paths.get(TARGET_LOC);
-        QualityModel qualityModel = new QualityModel(TEST_ANALYSIS_QM);
-        Project project = new Project(FilenameUtils.getBaseName(target.getFileName().toString()), target, qualityModel);
+        QualityModel qualityModel = new QualityModel(TEST_QM);
+        Project project = new Project(FilenameUtils.getBaseName(TARGET.getFileName().toString()), TARGET, qualityModel);
         Roslynator roslynator = new Roslynator(ROSLYN_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("MSBUILD_BIN")));
 
         // (1) run Roslynator tool
-        Path analysisOutput = roslynator.analyze(target);
+        Path analysisOutput = roslynator.analyze(TARGET);
 
         // (2 and 3) parse: get object representation of the diagnostics described by the QM
         Map<String, Diagnostic> analysisResults = roslynator.parseAnalysis(analysisOutput);
@@ -105,16 +102,14 @@ public class IntegrationTests {
      */
     @Test
     public void testSingleProjectEvaluation() throws IOException {
-        final Path PROJECT_PATH = Paths.get("src/test/resources/projects/TestNetFramework/TestNetFramework.sln");
-        final Path RESULT_PATH = TEST_OUT;
 
-        // run evaluation
-        SingleProjectEvaluation.main(new String[] { PROJECT_PATH.toString(), RESULT_PATH.toString() });
+        // Run evaluation
+        SingleProjectEvaluation.main(new String[] { TARGET.toString(), TEST_OUT.toString(), TEST_QM.toString() });
 
-        // handle results
-        String projectName = FilenameUtils.getBaseName(PROJECT_PATH.getFileName().toString());
+        // Handle results
+        String projectName = FilenameUtils.getBaseName(TARGET.getFileName().toString());
         File evalResults = new File(
-                RESULT_PATH.toFile(),
+                TEST_OUT.toFile(),
                 projectName + File.separator + projectName + "_evalResults.json"
         );
         FileReader fr = new FileReader(evalResults);
@@ -122,14 +117,41 @@ public class IntegrationTests {
         JsonObject data = (JsonObject) parser.parse(fr);
         fr.close();
 
+        // Assert: Set up
+        String jsonProjectName = data.getAsJsonPrimitive("name").getAsString();
         int loc = data.getAsJsonPrimitive("linesOfCode").getAsInt();
-        double tqiValue = data.getAsJsonObject("tqi").getAsJsonPrimitive("value").getAsDouble();
-        String tqiName = data.getAsJsonObject("tqi").getAsJsonPrimitive("name").getAsString();
+        String jsonQualityModelName = data.getAsJsonObject("qualityModel").getAsJsonPrimitive("name").getAsString();
 
+        JsonObject jsonTqi = data.getAsJsonObject("qualityModel").getAsJsonObject("tqi");
+
+        JsonObject characteristic01 = jsonTqi.getAsJsonObject("characteristics").getAsJsonObject("Characteristic 01");
+        JsonObject characteristic01Property01 = characteristic01.getAsJsonObject("properties").getAsJsonObject("Property 01");
+        JsonObject characteristic01Property02 = characteristic01.getAsJsonObject("properties").getAsJsonObject("Property 01");
+
+        JsonObject characteristic02 = jsonTqi.getAsJsonObject("characteristics").getAsJsonObject("Characteristic 02");
+        JsonObject characteristic02Property01 = characteristic02.getAsJsonObject("properties").getAsJsonObject("Property 01");
+        JsonObject characteristic02Property02 = characteristic02.getAsJsonObject("properties").getAsJsonObject("Property 02");
+
+        // Assert: Project basics
         Assert.assertTrue(evalResults.exists());
+        Assert.assertEquals("TestNetFramework", jsonProjectName);
         Assert.assertEquals(39, loc);
-        Assert.assertEquals(0.58, tqiValue, 0.0001);
-        Assert.assertEquals("Security", tqiName);
-    }
+        Assert.assertEquals("Test Roslynator Analysis", jsonQualityModelName);
 
+        // Assert: Property values
+        // TODO PICKUP: Set thresholds so that (0.0, 1.0) values return from analysis
+        Assert.assertEquals(-1.0, characteristic01Property01.getAsJsonPrimitive("value").getAsDouble(), 0.000001);
+        Assert.assertEquals(-1.0, characteristic01Property02.getAsJsonPrimitive("value").getAsDouble(), 0.000001);
+        Assert.assertEquals(-1.0, characteristic02Property01.getAsJsonPrimitive("value").getAsDouble(), 0.000001);
+        Assert.assertEquals(-1.0, characteristic02Property02.getAsJsonPrimitive("value").getAsDouble(), 0.000001);
+
+        // Assert: Characteristic values
+        // TODO PICKUP: Set thresholds so that (0.0, 1.0) values return from analysis
+        Assert.assertEquals(-1.0, characteristic01.getAsJsonPrimitive("value").getAsFloat(), 0.000001);
+        Assert.assertEquals(-1.0, characteristic02.getAsJsonPrimitive("value").getAsFloat(), 0.000001);
+
+        // Assert: TQI
+        // TODO PICKUP: Set thresholds so that (0.0, 1.0) values return from analysis
+        Assert.assertEquals(-1.0, jsonTqi.getAsJsonPrimitive("value").getAsFloat(), 0.000001);
+    }
 }

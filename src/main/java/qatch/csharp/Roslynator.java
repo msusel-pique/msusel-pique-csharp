@@ -191,6 +191,6 @@ public class Roslynator extends Tool implements ITool {
     // helper methods
     private Diagnostic findMapMemberByDiagnosticId(Map<String, Diagnostic> diagnostics, String id) {
         if (diagnostics.containsKey(id)) { return diagnostics.get(id); }
-        else { return new Diagnostic(id); }
+        else { return new Diagnostic(id, "", "Roslynator"); }
     }
 }

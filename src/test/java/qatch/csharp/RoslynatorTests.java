@@ -18,9 +18,8 @@ import java.util.Properties;
 public class RoslynatorTests {
 
     final String ROSLYN_NAME = "Roslynator",
-                 CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                  TOOLS_LOC   = "src/main/resources/tools",
-                 TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln",
+                 TARGET_LOC  = "src/test/resources/projects/TestNetFramework",
                  OUTPUT_LOC  = "src/test/out",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
 

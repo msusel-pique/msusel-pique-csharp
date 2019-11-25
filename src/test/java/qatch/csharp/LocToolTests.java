@@ -14,7 +14,7 @@ public class LocToolTests {
 
     private final String TOOL_NAME = "LoC",
                          TOOLS_LOC   = "src/main/resources/tools",
-                         TARGET_LOC  = "src/test/resources/projects/TestNetFramework/TestNetFramework.sln";
+                         TARGET_LOC  = "src/test/resources/projects/TestNetFramework";
 
     @Test
     public void testAnalyze() throws IOException {

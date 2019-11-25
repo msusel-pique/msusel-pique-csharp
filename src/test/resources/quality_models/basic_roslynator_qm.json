@@ -1,27 +1,44 @@
 {
-	"name": "CSharp Roslynator Test QM",
-	"tqi": {
-		"name": "TQI",
-		"description": "Sample tqi description"
-	},
-	"characteristics": [
-		{
-			"name": "Characteristic 01",
-			"standard": "ISO/IEC 25010",
-			"description": "Placeholder description"
-		},
-		{
-			"name": "Characteristic 02",
-			"standard": "ISO/IEC 25010",
-			"description": "Placeholder description"
+    "name": "Test Roslynator Analysis",
+    "tqi": {
+        "name": "TQI",
+		"description": "Sample tqi description",
+		"weights": {
+			"Characteristic 01": 0.8,
+			"Characteristic 02": 0.2
 		}
-	],
-	"properties": [
-		{
-			"name": "Property 01",
-			"description": "Test property for RCS findings",
+    },
+    "characteristics": [
+        {
+            "name": "Characteristic 01",
+            "standard": "Sample standard",
+			"description": "Sample description",
+			"weights": {
+				"Property 01": 0.6,
+				"Property 02": 0.4
+			}
+        },
+        {
+            "name": "Characteristic 02",
+            "standard": "Sample standard",
+			"description": "Integrity description",
+			"weights": {
+				"Property 01": 0.5,
+				"Property 02": 0.5
+			}
+        }
+    ],
+    "properties": [
+        {
+            "name": "Property 01",
+            "description": "Property 01 description",
 			"positive_impact": "false",
-			"measure": {
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+            "measure": {
 				"name": "Measure 01",
 				"diagnostics": [
 					{
@@ -41,11 +58,16 @@
 					}
 				]
 			}
-		},
-		{
+        },
+        {
 			"name": "Property 02",
 			"description": "Test property for SCS findings",
 			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.01,
+				0.02
+			],
 			"measure": {
 				"name": "Measure 02",
 				"diagnostics": [
@@ -87,5 +109,5 @@
 				]
 			}
 		}
-	]
+    ]
 }
