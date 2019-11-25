@@ -79,8 +79,6 @@ public class IntegrationTests {
         Properties properties = new Properties();
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
-        QualityModel qualityModel = new QualityModel(qm);
-        Project project = new Project(FilenameUtils.getBaseName(TARGET.getFileName().toString()), TARGET, qualityModel);
         Roslynator roslynator = new Roslynator(ROSLYN_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("MSBUILD_BIN")));
 
         // (1) run Roslynator tool
@@ -104,7 +102,8 @@ public class IntegrationTests {
     public void testSingleProjectEvaluation() throws IOException {
 
         // Initialize config
-        Path qm = Paths.get("src/test/resources/quality_models/test_single_project_eval_qm.json");
+//        Path qm = Paths.get("src/test/resources/quality_models/test_single_project_eval_qm.json");
+        Path qm = Paths.get("out/qualityModel_CSharpRoslynatorTestQM.json");
 
         // Run evaluation
         SingleProjectEvaluation.main(new String[] { TARGET.toString(), TEST_OUT.toString(), qm.toString() });
