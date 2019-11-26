@@ -2,6 +2,7 @@ package qatch.csharp.integrationtests;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,7 +29,7 @@ public class IntegrationTests {
                          TOOLS_LOC   = "src/main/resources/tools";
 
     @Test
-    public void testQualityModelDeriver() {
+    public void testQualityModelDeriver() throws IOException {
 
         /*
          * @param args configuration array in following order:
@@ -60,8 +61,41 @@ public class IntegrationTests {
                 flag, output.toString()
         });
 
-        // TODO PICKUP: finish model deriver test
-        System.out.println("...");
+        // Parse resulting QM file
+        Path result = Paths.get(output.toString(), "qualityModel_CSharpRoslynatorTestQM.json");
+        FileReader fr = new FileReader(result.toString());
+        JsonObject jsonResults = new JsonParser().parse(fr).getAsJsonObject();
+        fr.close();
+
+        // Assert expected results
+        JsonObject jsonTqi = jsonResults.getAsJsonObject("tqi");
+        JsonObject jsonCharacteristics = jsonResults.getAsJsonObject("characteristics");
+        JsonObject jsonChar01 = jsonCharacteristics.getAsJsonObject("Characteristic 01");
+        JsonObject jsonChar02 = jsonCharacteristics.getAsJsonObject("Characteristic 02");
+        JsonObject jsonProperties = jsonResults.getAsJsonObject("properties");
+        JsonObject jsonProperty01 = jsonProperties.getAsJsonObject("Property 01");
+        JsonObject jsonProperty02 = jsonProperties.getAsJsonObject("Property 02");
+
+        Assert.assertEquals("CSharp Roslynator Test QM", jsonResults.getAsJsonPrimitive("name").getAsString());
+
+        Assert.assertEquals("TQI", jsonTqi.getAsJsonPrimitive("name").getAsString());
+        Assert.assertEquals(0.6667, jsonTqi.getAsJsonObject("weights").getAsJsonPrimitive("Characteristic 01").getAsDouble(), 0.0001);
+        Assert.assertEquals(0.3333, jsonTqi.getAsJsonObject("weights").getAsJsonPrimitive("Characteristic 02").getAsDouble(), 0.0001);
+
+        Assert.assertEquals(0.25, jsonChar01.getAsJsonObject("weights").getAsJsonPrimitive("Property 01").getAsDouble(), 0.0001);
+        Assert.assertEquals(0.75, jsonChar01.getAsJsonObject("weights").getAsJsonPrimitive("Property 02").getAsDouble(), 0.0001);
+
+        Assert.assertEquals(0.8, jsonChar02.getAsJsonObject("weights").getAsJsonPrimitive("Property 01").getAsDouble(), 0.0001);
+        Assert.assertEquals(0.2, jsonChar02.getAsJsonObject("weights").getAsJsonPrimitive("Property 02").getAsDouble(), 0.0001);
+
+        Assert.assertEquals(0.0385, jsonProperty01.getAsJsonArray("thresholds").get(0).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.0667, jsonProperty01.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.0976, jsonProperty01.getAsJsonArray("thresholds").get(2).getAsFloat(), 0.0001);
+
+        Assert.assertEquals(0.0, jsonProperty02.getAsJsonArray("thresholds").get(0).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.00, jsonProperty02.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.0244, jsonProperty02.getAsJsonArray("thresholds").get(2).getAsFloat(), 0.0001);
+
     }
 
 
@@ -102,8 +136,8 @@ public class IntegrationTests {
     public void testSingleProjectEvaluation() throws IOException {
 
         // Initialize config
-//        Path qm = Paths.get("src/test/resources/quality_models/test_single_project_eval_qm.json");
-        Path qm = Paths.get("out/qualityModel_CSharpRoslynatorTestQM.json");
+        Path qm = Paths.get("src/test/resources/quality_models/test_single_project_eval_qm.json");
+//        Path qm = Paths.get("out/qualityModel_CSharpRoslynatorTestQM.json");
 
         // Run evaluation
         SingleProjectEvaluation.main(new String[] { TARGET.toString(), TEST_OUT.toString(), qm.toString() });
