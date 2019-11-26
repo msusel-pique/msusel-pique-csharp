@@ -9,7 +9,6 @@ import qatch.analysis.Diagnostic;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,10 +18,9 @@ import java.util.Properties;
 public class RoslynatorTests {
 
     final String ROSLYN_NAME = "Roslynator",
-                 CONFIG_LOC  = "src/test/resources/config/roslynator_test_measures.yaml",
                  TOOLS_LOC   = "src/main/resources/tools",
-                 TARGET_LOC  = "src/test/resources/net_framework_solution/TestNetFramework/TestNetFramework.sln",
-                 OUTPUT_LOC  = System.getProperty("user.dir") + "/output",
+                 TARGET_LOC  = "src/test/resources/projects/TestNetFramework",
+                 OUTPUT_LOC  = "src/test/out",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
 
     @Before
@@ -39,12 +37,11 @@ public class RoslynatorTests {
     public void testAnalyze() throws IOException {
 
         Properties properties = new Properties();
-        // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
+        // TODO: Find source control friendly way to deal with MSBuild location property.
         properties.load((new FileInputStream("src/test/resources/config/config.properties")));
 
         Roslynator roslynator = new Roslynator(
                 ROSLYN_NAME,
-                Paths.get(CONFIG_LOC),
                 Paths.get(TOOLS_LOC),
                 Paths.get(properties.getProperty("MSBUILD_BIN"))
         );
@@ -67,7 +64,6 @@ public class RoslynatorTests {
 
         Roslynator roslynator = new Roslynator(
                 ROSLYN_NAME,
-                Paths.get(CONFIG_LOC),
                 null,
                 null
         );

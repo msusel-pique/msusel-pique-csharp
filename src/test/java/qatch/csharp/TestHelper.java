@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class TestHelper {
 
     private static final Path TEST_DIR = new File("src/test").toPath();
-    private static final Path OUTPUT = Paths.get(TEST_DIR.toString(), "output").toAbsolutePath();
+    private static final Path OUTPUT = Paths.get(TEST_DIR.toString(), "out").toAbsolutePath();
 
     public static void clean(File dest) throws IOException {
         if (dest.exists()) { FileUtils.cleanDirectory(dest); }

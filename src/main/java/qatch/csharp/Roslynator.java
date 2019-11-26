@@ -6,6 +6,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import qatch.analysis.*;
+import qatch.utility.FileUtility;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -14,6 +15,7 @@ import javax.xml.xpath.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 /**
@@ -45,8 +47,8 @@ public class Roslynator extends Tool implements ITool {
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
-    public Roslynator(String name, Path toolConfig, Path toolsDirectory, Path msBuild) {
-        super(name, toolConfig);
+    public Roslynator(String name, Path toolsDirectory, Path msBuild) {
+        super(name);
         this.toolsDirectory = toolsDirectory;
         this.msBuild = msBuild;
     }
@@ -67,8 +69,29 @@ public class Roslynator extends Tool implements ITool {
     public Path analyze(Path path) {
 
         String sep = File.separator;
-        File tempResults = new File(System.getProperty("user.dir") +"/output/roslynator_output.xml");
+        File tempResults = new File(System.getProperty("user.dir") +"/out/roslynator_output.xml");
         tempResults.getParentFile().mkdirs();
+
+        // Append .sln or .csproj file to path
+        // TODO: refactor to method and find better way that doesn't use stacked if statements.
+        Set<String> targetFiles = FileUtility.findFileNamesFromExtension(path, ".sln", 1);
+        if (targetFiles.size() == 1) {
+            path = Paths.get(path.toString(), targetFiles.iterator().next() + ".sln");
+        }
+        else if (targetFiles.size() > 1) {
+            throw new RuntimeException("More than one .sln file exists in the give path root directory. " +
+                    "Ensure the directory has only one .sln file to target.");
+        }
+        else {
+            targetFiles = FileUtility.findFileNamesFromExtension(path, ".csproj", 1);
+            if (targetFiles.size() == 1) {
+                path = Paths.get(path.toString(), targetFiles.iterator().next() + ".csproj");
+            }
+            else if (targetFiles.size() > 1) {
+                throw new RuntimeException("A .sln file not found and more than one .csproj file exists in the give path root directory. " +
+                        "Ensure the directory has only one .csproj file to target.");
+            }
+        }
 
         // strings for CLI call
         String roslynator = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";
@@ -168,6 +191,6 @@ public class Roslynator extends Tool implements ITool {
     // helper methods
     private Diagnostic findMapMemberByDiagnosticId(Map<String, Diagnostic> diagnostics, String id) {
         if (diagnostics.containsKey(id)) { return diagnostics.get(id); }
-        else { return new Diagnostic(id); }
+        else { return new Diagnostic(id, "", "Roslynator"); }
     }
 }

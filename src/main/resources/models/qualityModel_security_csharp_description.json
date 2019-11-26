@@ -35,27 +35,74 @@
 		{
 			"name": "Injection",
 			"description": "Injection flaws occur when an attacker can send hostile data to an interpreter.",
-			"positive_impact": "false"
+			"positive_impact": "false",
+			"measure": {
+				"name": "Injection Findings",
+				"tool": "Roslynator",
+				"diagnostics": [
+					"SCS0001",
+					"SCS0002",
+					"SCS0003",
+					"SCS0007",
+					"SCS0014",
+					"SCS0018",
+					"SCS0020",
+					"SCS0025",
+					"SCS0026",
+					"SCS0029",
+					"SCS0031",
+					"SCS0035",
+					"SCS0036"
+				]
+			}
 		},
 		{
 			"name": "Cryptography",
 			"description": "Cryptography flaws involve vulnerabilities to decrpting content through flaws such as invalidated certificates, weak hashing functions, and weak cipher algorithms.",
-			"positive_impact": "false"
+			"positive_impact": "false",
+			"measure": {
+				"name": "Cryptography Findings",
+				"tool": "Roslynator",
+				"diagnostics": [
+					"SCS0004",
+					"SCS0005",
+					"SCS0006",
+					"SCS0010",
+					"SCS0011",
+					"SCS0012",
+					"SCS0013"
+				]
+			}
 		},
 		{
 			"name": "Cookies",
 			"description": "Cookie flaws involve incorrect flagging of cookies and insecure passing of information.",
-			"positive_impact": "false"
+			"positive_impact": "false",
+			"measure": {
+				"name": "Cookie Findings",
+				"tools": "",
+				"diagnostics": [ ]
+			}
 		},
 		{
 			"name": "Request Validation",
 			"description": "Disabled or incorrectly configured request validation that causes XSS vulnerability.",
-			"positive_impact": "false"
+			"positive_impact": "false",
+			"measure": {
+				"name": "Request Validation Findings",
+				"tools": "",
+				"diagnostics": [ ]
+			}
 		},
 		{
 			"name": "Password Management",
 			"description": "Hard coded, short, or trivial password configuration.",
-			"positive_impact": "false"
+			"positive_impact": "false",
+			"measure": {
+				"name": "Password Management Findings",
+				"tools": "",
+				"diagnostics": [ ]
+			}
 		}
 	]
 }
