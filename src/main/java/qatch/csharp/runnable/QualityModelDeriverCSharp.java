@@ -1,12 +1,9 @@
 package qatch.csharp.runnable;
 
-import qatch.analysis.IAnalyzer;
 import qatch.analysis.ITool;
 import qatch.analysis.IToolLOC;
-import qatch.calibration.*;
 import qatch.csharp.*;
 import qatch.model.*;
-import qatch.utility.FileUtility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Properties;
 
 public class QualityModelDeriverCSharp {

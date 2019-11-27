@@ -3,17 +3,8 @@ package qatch.csharp.runnable;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
-import qatch.analysis.*;
-import qatch.csharp.*;
-import qatch.evaluation.EvaluationResultsExporter;
-import qatch.evaluation.Project;
-import qatch.evaluation.ProjectCharacteristicsEvaluator;
-import qatch.evaluation.ProjectEvaluator;
-import qatch.model.*;
 import qatch.utility.FileUtility;
 
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
@@ -22,7 +13,6 @@ import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.Objects;
 import java.util.Set;
-import java.util.Vector;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
