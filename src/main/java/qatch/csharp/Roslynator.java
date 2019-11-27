@@ -93,7 +93,7 @@ public class Roslynator extends Tool implements ITool {
             }
         }
 
-        // strings for CLI call
+        // Strings for CLI call
         String roslynator = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";
         String command = "analyze";
         String assemblyDir = "--analyzer-assemblies=" + toolsDirectory.toString() + sep + "Roslynator" + sep + "bin";
@@ -110,7 +110,7 @@ public class Roslynator extends Tool implements ITool {
         pb.redirectErrorStream(true);
         Process p = null;
 
-        // run the tool
+        // Run the tool
         try { p = pb.start(); }
         catch (IOException e) { e.printStackTrace(); }
 
@@ -119,6 +119,11 @@ public class Roslynator extends Tool implements ITool {
             p.waitFor();
         }
         catch (InterruptedException e) { e.printStackTrace(); }
+
+        // Assert result file was created
+        if (!tempResults.isFile()) {
+            throw new RuntimeException("Roslynator.analyze() did not generate a results file in the expected location");
+        }
 
         return tempResults.toPath();
     }
