@@ -1,11 +1,12 @@
 package qatch.csharp.runnable;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import qatch.analysis.*;
-import qatch.csharp.*;
+import qatch.analysis.ITool;
+import qatch.analysis.IToolLOC;
+import qatch.csharp.LocTool;
+import qatch.csharp.Roslynator;
 import qatch.runnable.SingleProjectEvaluator;
 
 import java.io.File;
@@ -15,7 +16,6 @@ import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Properties;
 
 // TODO: lots of todos to think about in runner regarding best approach for configuration strings
@@ -33,11 +33,8 @@ public class SingleProjectEvaluation {
     /**
      * Main method for running quality evaluation on a single C# project or solution.
      *
-     * @param args configuration array in following order:
-     *             0: path to config file. See the config.properties file in src/test/resources/config for an example.
-     *             1: (optional) path to resources folder if not using default location. This is currently
-     *                necessary for JAR runs when copying tools and quality models out of resources folder.
-     *    These arg paths can be relative or full path.
+     * @param args configuration array:
+     *             0: path to config file. See the single_project_evaluation.properties.properties file in src/test/resources/config for an example.
      */
     public static void main(String[] args) throws IOException {
 
@@ -53,6 +50,10 @@ public class SingleProjectEvaluation {
             throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
                     "\n\t(0) Path to config file. See the config.properties file in src/test/resources/config for an example., " +
                     "\n\t(1) (optional) Path to resources location.,");
+        }
+        if (!FilenameUtils.getExtension(args[0]).equals("properties")) {
+            throw new IllegalArgumentException("Incorrect input parameter given.\n"
+                    + "Arg[0] should end with filetype .properties");
         }
 
         Properties properties = new Properties();
@@ -86,35 +87,4 @@ public class SingleProjectEvaluation {
         Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION, roslynator, loc);
         logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
     }
-
-
-    /**
-     * Initialize results directory and handle input parameters
-     *
-     * @param inputArgs project and results location as described in main method
-     * @return HashMap containing paths of analysis project and results folder
-     */
-    @Deprecated
-    private static HashMap<String, Path> initialize(String[] inputArgs) {
-
-        String projectLoc = inputArgs[0];
-        String resultsLoc = inputArgs[1];
-        Path qmLoc = Paths.get(inputArgs[2]);
-        String resources = (inputArgs.length < 4 ? null : inputArgs[3]);
-
-        Path projectDir = new File(projectLoc).toPath();
-
-        String resultsDirName = FilenameUtils.getBaseName(projectDir.getFileName().toString());
-        Path qaDir = new File(resultsLoc, resultsDirName).toPath();
-        qaDir.toFile().mkdirs();
-
-        HashMap<String, Path> paths = new HashMap<>();
-        paths.put("projectLoc", projectDir);
-        paths.put("resultsLoc", qaDir);
-        paths.put("qmLoc", qmLoc);
-        if (resources != null) paths.put("resources", Paths.get(resources));
-
-        return paths;
-    }
-
 }

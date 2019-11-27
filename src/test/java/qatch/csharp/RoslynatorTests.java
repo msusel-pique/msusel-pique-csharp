@@ -38,12 +38,12 @@ public class RoslynatorTests {
 
         Properties properties = new Properties();
         // TODO: Find source control friendly way to deal with MSBuild location property.
-        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
+        properties.load((new FileInputStream("src/test/resources/config/single_project_evaluation.properties")));
 
         Roslynator roslynator = new Roslynator(
                 ROSLYN_NAME,
                 Paths.get(TOOLS_LOC),
-                Paths.get(properties.getProperty("MSBUILD_BIN"))
+                Paths.get(properties.getProperty("msbuild.bin"))
         );
         Path target = Paths.get(TARGET_LOC);
 
@@ -51,7 +51,7 @@ public class RoslynatorTests {
         File result = analysisOutput.toFile();
 
         // XML file exists in expected location with correct name
-        Assert.assertTrue("Check that MSBUILD_BIN in config.properties points to a valid MSBuild bin location", result.exists());
+        Assert.assertTrue("Check that msbuild.bin in single_project_evaluation.properties points to a valid MSBuild bin location", result.exists());
         Assert.assertTrue(result.isFile());
         Assert.assertEquals("roslynator_output.xml", result.getName());
 

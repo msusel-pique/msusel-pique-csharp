@@ -19,9 +19,9 @@ public class LocToolTests {
     @Test
     public void testAnalyze() throws IOException {
         Properties properties = new Properties();
-        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
+        properties.load((new FileInputStream("src/test/resources/config/single_project_evaluation.properties")));
 
-        IToolLOC tool = new LocTool(TOOL_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("MSBUILD_BIN")));
+        IToolLOC tool = new LocTool(TOOL_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("msbuild.bin")));
         Integer result = tool.analyze(Paths.get(TARGET_LOC));
 
         Assert.assertEquals(39, result, 0);
