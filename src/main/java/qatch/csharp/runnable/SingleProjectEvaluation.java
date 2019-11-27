@@ -11,6 +11,7 @@ import qatch.runnable.SingleProjectEvaluator;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -27,78 +28,65 @@ public class SingleProjectEvaluation {
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
     private static File TOOLS =       new File(RESOURCES, "tools");
     private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
-    private static String ROSLYN_NAME = "Roslynator";
 
 
     /**
      * Main method for running quality evaluation on a single C# project or solution.
      *
      * @param args configuration array in following order:
-     *             0: path to project to be evaluated root folder
-     *             1: path to folder to place results
-     *             2: path to quality model file
-     *             3: (optional) path to resources folder if not using default location. This is currently
+     *             0: path to config file. See the config.properties file in src/test/resources/config for an example.
+     *             1: (optional) path to resources folder if not using default location. This is currently
      *                necessary for JAR runs when copying tools and quality models out of resources folder.
      *    These arg paths can be relative or full path.
      */
     public static void main(String[] args) throws IOException {
 
-        // initialize config
+        // Initialize config
         logger.debug("Beginning initilization phase");
-        if (args == null || args.length < 3) {
-            throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
-                    "\n\t(0) Path to root directory of project to analyze, " +
-                    "\n\t(1) Path to directory to place analysis results," +
-                    "\n\t(3) (optional) Path to resources location.");
-        }
-        HashMap<String, Path> initializePaths = initialize(args);
-        Path PROJECT_DIR = initializePaths.get("projectLoc");
-        Path RESULTS_DIR = initializePaths.get("resultsLoc");
-        Path QM_LOCATION = initializePaths.get("qmLoc");
 
-        if (args.length >= 4) {     // temp fix for JAR runs, deal with later
-            RESOURCES = new File(initializePaths.get("resources").toString());
-//            QM_LOCATION = new File(RESOURCES, "models/qualityModel_security_csharp.xml");
-            TOOLS = new File(RESOURCES, "tools");
+        Path PROJECT_DIR;
+        Path RESULTS_DIR;
+        Path QM_LOCATION;
+        Path MS_BUILD;
+
+        if (args == null || args.length < 1) {
+            throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
+                    "\n\t(0) Path to config file. See the config.properties file in src/test/resources/config for an example., " +
+                    "\n\t(1) (optional) Path to resources location.,");
         }
 
         Properties properties = new Properties();
-        // TODO (maybe): Find source control friendly way to deal with MSBuild location property.
-        properties.load((new FileInputStream("src/test/resources/config/config.properties")));
+        String propertiesConfigFilePath = args[0];
+        try (InputStream input = new FileInputStream(propertiesConfigFilePath)) {
+            properties.load(input);
+            PROJECT_DIR = Paths.get(properties.getProperty("project.root"));
+            RESULTS_DIR = Paths.get(properties.getProperty("results.directory"));
+            QM_LOCATION = Paths.get(properties.getProperty("qm.filepath"));
+            MS_BUILD = Paths.get(properties.getProperty("msbuild.bin"));
+        }
 
-        // instantiate interface classes
-        logger.debug("Beginning interface instantiations");
+        // Create output directory if not existing yet
+        String resultsDirName = FilenameUtils.getBaseName(PROJECT_DIR.getFileName().toString());
+        RESULTS_DIR = new File(RESULTS_DIR.toString(), resultsDirName).toPath();
+        RESULTS_DIR.toFile().mkdirs();
+
+        // Instantiate interface classes
+        logger.debug("Beginning tool instantiations");
         ITool roslynator = new Roslynator(
-                ROSLYN_NAME,
+                "Roslynator",
                 TOOLS.toPath(),
-                Paths.get(properties.getProperty("MSBUILD_BIN"))
+                MS_BUILD
         );
-        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("MSBUILD_BIN")));
+        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), MS_BUILD);
         logger.trace("Analyzers loaded");
 
-        // run evaluation
+        // Run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
         logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
         Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION, roslynator, loc);
         logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
     }
 
-    /**
-     * Cleans directory. Creates if it does not exist.
-     * @param dir File object of directory to create or clear
-     */
-    private static void checkCreateClearDirectory(File dir){
-
-        //Check if the directory exists
-        if(!dir.isDirectory() || !dir.exists()) dir.mkdirs();
-
-        //Clear previous results
-        try {
-            FileUtils.cleanDirectory(dir);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
     /**
      * Initialize results directory and handle input parameters
@@ -106,6 +94,7 @@ public class SingleProjectEvaluation {
      * @param inputArgs project and results location as described in main method
      * @return HashMap containing paths of analysis project and results folder
      */
+    @Deprecated
     private static HashMap<String, Path> initialize(String[] inputArgs) {
 
         String projectLoc = inputArgs[0];

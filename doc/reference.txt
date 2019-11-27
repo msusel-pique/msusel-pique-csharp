@@ -1,3 +1,9 @@
+"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework"
+"C:\Users\davidrice3\Desktop\temp\out"
+"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
+
+java -jar "C:\Users\davidrice3\Desktop\temp\jar\msusel-qatch-csharp-0.2.0-jar-with-dependencies.jar" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework" "C:\Users\davidrice3\Desktop\temp\out" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
+
 -- Working JAR run on FxcopFindings in TFS folder --
 PS C:\Users\davidrice3\Desktop\temp> java -jar .\qatch-0.2-jar-with-dependencies.jar C:/Users/davidrice3/Repository/TFS/FxcopFindings C:\Users\davidrice3\Desktop\temp
 
