@@ -1,9 +1,0 @@
-tqi,Functional Suitability,Performance Efficiency,Compatibility,Usability,Reliability,Security,Maintainability,Portability
-Functional Suitability,0,1.67,2,1,2,.11,5,.33
-Performance Efficiency,0,0,6,.25,.5,.11,5,1
-Compatibility,0,0,0,.2,.25,.11,3,.14
-Usability,0,0,0,0,1.25,.22,6,1
-Reliability,0,0,0,0,0,.11,5,.33
-Security,0,0,0,0,0,0,8,2
-Maintainability,0,0,0,0,0,0,0,5
-Portability,0,0,0,0,0,0,0,0
