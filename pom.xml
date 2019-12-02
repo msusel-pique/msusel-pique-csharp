@@ -82,13 +82,6 @@
               </includes>
               <followSymlinks>false</followSymlinks>
             </fileset>
-            <fileset>
-              <directory>r_working_directory</directory>
-              <useDefaultExcludes>false</useDefaultExcludes>
-              <excludes>
-                <exclude>comparison_matrices/*</exclude>
-              </excludes>
-            </fileset>
           </filesets>
         </configuration>
       </plugin>
