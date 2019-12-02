@@ -2,8 +2,8 @@ package qatch.csharp.runnable;
 
 import qatch.analysis.ITool;
 import qatch.analysis.IToolLOC;
-import qatch.csharp.LocTool;
-import qatch.csharp.Roslynator;
+import qatch.csharp.RoslynatorLoc;
+import qatch.csharp.RoslynatorAnalyzer;
 import qatch.model.QualityModel;
 
 import java.io.File;
@@ -38,8 +38,8 @@ public class QualityModelDeriverCSharp {
 
         // Initialize inputs
         QualityModel qmDescription = new QualityModel(Paths.get(properties.getProperty("qm.filepath")));
-        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
-        ITool roslynator = new Roslynator("Roslynator", TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
+        IToolLOC loc = new RoslynatorLoc(TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
+        ITool roslynator = new RoslynatorAnalyzer(TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
         HashMap<String, ITool> tools = new HashMap<String, ITool>() {{ put(roslynator.getName(), roslynator); }};
         Path benchmarkRepository = Paths.get(properties.getProperty("benchmark.repo"));
         Path comparisonMatricesDirectory = Paths.get(properties.getProperty("comparison.matrices"));
