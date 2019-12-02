@@ -1,0 +1,113 @@
+{
+	"name": "Test Roslynator Analysis",
+	"tqi": {
+		"name": "TQI",
+		"description": "Sample tqi description",
+		"weights": {
+			"Characteristic 01": 0.8,
+			"Characteristic 02": 0.2
+		}
+	},
+	"characteristics": [
+		{
+			"name": "Characteristic 01",
+			"standard": "Sample standard",
+			"description": "Sample description",
+			"weights": {
+				"Property 01": 0.6,
+				"Property 02": 0.4
+			}
+		},
+		{
+			"name": "Characteristic 02",
+			"standard": "Sample standard",
+			"description": "Integrity description",
+			"weights": {
+				"Property 01": 0.5,
+				"Property 02": 0.5
+			}
+		}
+	],
+	"properties": [
+		{
+			"name": "Property 01",
+			"description": "Property 01 description",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.04,
+				0.1
+			],
+			"measure": {
+				"name": "Measure 01",
+				"diagnostics": [
+					{
+						"name": "RCS1018",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1163",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS_fake_diagnostic",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
+		{
+			"name": "Property 02",
+			"description": "Test property for SCS findings",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.06,
+				0.1
+			],
+			"measure": {
+				"name": "Measure 02",
+				"diagnostics": [
+					{
+						"name": "SCS0001",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0002",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0003",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0004",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0005",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0006",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS_fake_diagnostic",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		}
+	]
+}

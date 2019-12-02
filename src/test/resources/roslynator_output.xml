@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roslynator>
+  <CodeAnalysis>
+    <Summary>
+      <Diagnostic Id="RCS1018" Title="Add default access modifier." Count="2" />
+      <Diagnostic Id="RCS1102" Title="Make class static." Count="1" />
+      <Diagnostic Id="RCS1163" Title="Unused parameter." Count="1" />
+    </Summary>
+    <Projects>
+      <Project Name="TestNetFramework" FilePath="TestNetFramework\TestNetFramework.csproj">
+        <Diagnostics>
+          <Diagnostic Id="RCS1018">
+            <Severity>Info</Severity>
+            <Message>Add default access modifier.</Message>
+            <FilePath>TestNetFramework\Program.cs</FilePath>
+            <Location Line="9" Character="11" />
+          </Diagnostic>
+          <Diagnostic Id="RCS1018">
+            <Severity>Info</Severity>
+            <Message>Add default access modifier.</Message>
+            <FilePath>TestNetFramework\Program.cs</FilePath>
+            <Location Line="11" Character="21" />
+          </Diagnostic>
+          <Diagnostic Id="RCS1102">
+            <Severity>Warning</Severity>
+            <Message>Make class static.</Message>
+            <FilePath>TestNetFramework\Program.cs</FilePath>
+            <Location Line="9" Character="11" />
+          </Diagnostic>
+          <Diagnostic Id="RCS1163">
+            <Severity>Info</Severity>
+            <Message>Unused parameter 'args'.</Message>
+            <FilePath>TestNetFramework\Program.cs</FilePath>
+            <Location Line="11" Character="26" />
+          </Diagnostic>
+        </Diagnostics>
+      </Project>
+    </Projects>
+  </CodeAnalysis>
+</Roslynator>

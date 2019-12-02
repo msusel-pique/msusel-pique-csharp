@@ -3,17 +3,8 @@ package qatch.csharp.runnable;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
-import qatch.analysis.*;
-import qatch.csharp.*;
-import qatch.evaluation.EvaluationResultsExporter;
-import qatch.evaluation.Project;
-import qatch.evaluation.ProjectCharacteristicsEvaluator;
-import qatch.evaluation.ProjectEvaluator;
-import qatch.model.*;
 import qatch.utility.FileUtility;
 
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
@@ -22,7 +13,6 @@ import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.Objects;
 import java.util.Set;
-import java.util.Vector;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
@@ -30,6 +20,7 @@ import java.util.jar.JarFile;
  * This executable class is responsible for producing quality analysis reports on all modules contained within
  * a C# solution (.sln).  This driver supports deployed JAR functionality when packaged with dependencies.
  */
+@Deprecated
 public class SolutionEvaluation {
 
     private final static Logger logger = LoggerFactory.getLogger(SolutionEvaluation.class);
@@ -43,6 +34,7 @@ public class SolutionEvaluation {
      *             1: path to folder to place analysis results
      *    These arg paths can be relative or full path
      */
+    @Deprecated
     public static void main(String[] args) {
 
         // useful constants
@@ -51,7 +43,7 @@ public class SolutionEvaluation {
         final Path RESOURCES;
 
         // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-        final String QM_NAME = "qualityModel_iso25k_csharp.xml";
+        final String QM_NAME = "todo";
         final String projectRootFlag = ".csproj";   // how to know you are at a project root when recursing through files
 
         // initialize
@@ -81,7 +73,11 @@ public class SolutionEvaluation {
 
         projectRoots.forEach(p -> {
             logger.info("Beginning analysis on {}", p.getFileName());
-            SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), RESOURCES.toString() });
+            try {
+                SingleProjectEvaluation.main(new String[] { p.toString(), OUTPUT.toString(), RESOURCES.toString() });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 

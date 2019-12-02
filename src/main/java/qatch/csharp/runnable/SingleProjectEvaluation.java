@@ -1,128 +1,90 @@
 package qatch.csharp.runnable;
 
-import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import qatch.analysis.*;
-import qatch.csharp.*;
+import qatch.analysis.ITool;
+import qatch.analysis.IToolLOC;
+import qatch.csharp.LocTool;
+import qatch.csharp.Roslynator;
 import qatch.runnable.SingleProjectEvaluator;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
+import java.util.Properties;
 
+// TODO: lots of todos to think about in runner regarding best approach for configuration strings
 public class SingleProjectEvaluation {
 
     // parameter constants
-    private static final File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
+    private static File ROOT =        new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-    private static File resources = new File(ROOT + "/src/main/resources");
-    private static File qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
-    private static File tools = new File(resources, "tools");
+    private static File RESOURCES =   new File(ROOT, "src/main/resources");
     // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
-
-    private static final Logger logger = LoggerFactory.getLogger(SingleProjectEvaluation.class);
+    private static File TOOLS =       new File(RESOURCES, "tools");
+    private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
 
 
     /**
-     * Main method for running quality evaluation on a single C# project.
+     * Main method for running quality evaluation on a single C# project or solution.
      *
-     * @param args configuration array in following order:
-     *             0: path to project to be evaluated root folder
-     *             1: path to folder to place results
-     *             2: (optional) path to resources folder if not using default location. This is currently
-     *                necessary for JAR runs when copying tools and quality models out of resources folder.
-     *    These arg paths can be relative or full path
+     * @param args configuration array:
+     *             0: path to config file. See the single_project_evaluation.properties.properties file in src/test/resources/config for an example.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        // initialize
+        // Initialize config
         logger.debug("Beginning initilization phase");
-        if (args == null || args.length < 2) {
+
+        Path PROJECT_DIR;
+        Path RESULTS_DIR;
+        Path QM_LOCATION;
+        Path MS_BUILD;
+
+        if (args == null || args.length < 1) {
             throw new IllegalArgumentException("Incorrect input parameters given. Be sure to include " +
-                    "\n\t(0) Path to root directory of project to analyze, " +
-                    "\n\t(1) Path to directory to place analysis results," +
-                    "\n\t(2) (optional) Path to resources location.");
+                    "\n\t(0) Path to config file. See the config.properties file in src/test/resources/config for an example., " +
+                    "\n\t(1) (optional) Path to resources location.,");
         }
-        HashMap<String, Path> initializePaths = initialize(args);
-        final Path projectDir = initializePaths.get("projectLoc");
-        final Path resultsDir = initializePaths.get("resultsLoc");
-        if (args.length >= 3) {
-            resources = new File(initializePaths.get("resources").toString());
-            qmLocation = new File(resources, "models/qualityModel_iso25k_csharp.xml");
-            tools = new File(resources, "tools");
+        if (!FilenameUtils.getExtension(args[0]).equals("properties")) {
+            throw new IllegalArgumentException("Incorrect input parameter given.\n"
+                    + "Arg[0] should end with filetype .properties");
         }
 
+        Properties properties = new Properties();
+        String propertiesConfigFilePath = args[0];
+        try (InputStream input = new FileInputStream(propertiesConfigFilePath)) {
+            properties.load(input);
+            PROJECT_DIR = Paths.get(properties.getProperty("project.root"));
+            RESULTS_DIR = Paths.get(properties.getProperty("results.directory"));
+            QM_LOCATION = Paths.get(properties.getProperty("qm.filepath"));
+            MS_BUILD = Paths.get(properties.getProperty("msbuild.bin"));
+        }
 
-        // instantiate interface classes
-        logger.debug("Beginning interface instantiations");
-        IAnalyzer metricsAnalyzer = new LOCMetricsAnalyzer(tools.toPath());
-        IAnalyzer findingsAnalyzer = new FxcopAnalyzer(tools.toPath());
+        // Create output directory if not existing yet
+        String resultsDirName = FilenameUtils.getBaseName(PROJECT_DIR.getFileName().toString());
+        RESULTS_DIR = new File(RESULTS_DIR.toString(), resultsDirName).toPath();
+        RESULTS_DIR.toFile().mkdirs();
+
+        // Instantiate interface classes
+        logger.debug("Beginning tool instantiations");
+        ITool roslynator = new Roslynator(
+                "Roslynator",
+                TOOLS.toPath(),
+                MS_BUILD
+        );
+        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), MS_BUILD);
         logger.trace("Analyzers loaded");
 
-        IMetricsResultsImporter metricsImporter = new LOCMetricsResultsImporter();
-        IFindingsResultsImporter findingsImporter = new FxcopResultsImporter();
-        logger.trace("ResultsImporters loaded");
-
-        IMetricsAggregator metricsAggregator = new LOCMetricsAggregator();
-        IFindingsAggregator findingsAggregator = new FxcopAggregator();
-        logger.trace("Aggregators loaded");
-
-
-        // run evaluation
+        // Run evaluation
         logger.debug("BEGINNING SINGLE PROJECT EVALUATION");
-        logger.debug("Analyzing project: {}", projectDir.toString());
-        Path evalResults = new SingleProjectEvaluator().runEvaluator(
-                projectDir, resultsDir, qmLocation.toPath(), metricsAnalyzer,
-                findingsAnalyzer, metricsImporter, findingsImporter,
-                metricsAggregator, findingsAggregator
-        );
+        logger.debug("Analyzing project: {}", PROJECT_DIR.toString());
+        Path evalResults = new SingleProjectEvaluator().runEvaluator(PROJECT_DIR, RESULTS_DIR, QM_LOCATION, roslynator, loc);
         logger.info("Evaluation finished. You can find the results at {}", evalResults.toString());
     }
-
-    /**
-     * Cleans directory. Creates if it does not exist.
-     * @param dir File object of directory to create or clear
-     */
-    private static void checkCreateClearDirectory(File dir){
-
-        //Check if the directory exists
-        if(!dir.isDirectory() || !dir.exists()) dir.mkdirs();
-
-        //Clear previous results
-        try {
-            FileUtils.cleanDirectory(dir);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    /**
-     * Initialize results directory and handle input parameters
-     *
-     * @param inputArgs project and results location as described in main method
-     * @return HashMap containing paths of analysis project and results folder
-     */
-    private static HashMap<String, Path> initialize(String[] inputArgs) {
-
-        String projectLoc = inputArgs[0];
-        String resultsLoc = inputArgs[1];
-        String resources = (inputArgs.length < 3 ? null : inputArgs[2]);
-
-        Path projectDir = new File(projectLoc).toPath();
-        String resultsDirName = projectDir.getFileName().toString();
-        Path qaDir = new File(resultsLoc, resultsDirName).toPath();
-        qaDir.toFile().mkdirs();
-
-        HashMap<String, Path> paths = new HashMap<>();
-        paths.put("projectLoc", projectDir);
-        paths.put("resultsLoc", qaDir);
-        if (resources != null) paths.put("resources", Paths.get(resources));
-
-        return paths;
-    }
-
 }

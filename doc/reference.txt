@@ -1,3 +1,9 @@
+"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework"
+"C:\Users\davidrice3\Desktop\temp\out"
+"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
+
+java -jar "C:\Users\davidrice3\Desktop\temp\jar\msusel-qatch-csharp-0.2.0-jar-with-dependencies.jar" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework" "C:\Users\davidrice3\Desktop\temp\out" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
+
 -- Working JAR run on FxcopFindings in TFS folder --
 PS C:\Users\davidrice3\Desktop\temp> java -jar .\qatch-0.2-jar-with-dependencies.jar C:/Users/davidrice3/Repository/TFS/FxcopFindings C:\Users\davidrice3\Desktop\temp
 
@@ -5,15 +11,22 @@ PS C:\Users\davidrice3\Desktop> java -jar C:\Users\davidrice3\Repository\TFS\Fxc
 
 Does not work when running it from within the root directory of TFS\FxcopFindings or if the resources folder exists in the root!
 
+
+-- Roslynator CLI Analyze Command --
+C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>src\main\resources\tools\Roslynator\bin\Roslynator.exe analyze --analyzer-assemblies="src\main\resources\tools\Roslynator\SecurityCodeScan" --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" --output="C:\Users\David\Desktop\temp\out\roslyn.xml" src\test\resources\net_framework_solution\TestNetFramework\TestNetFramework.sln
+
+-- Roslynator CLI LoC Command --
+C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>src\main\resources\tools\Roslynator\bin\Roslynator.exe loc --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" src\test\resources\projects\TestNetFramework\TestNetFramework.sln > C:\Users\David\Desktop\temp\out\loc.txt
+
+
 -- FxCop CLI Command --
-"cmd.exe"
-"/c"
-"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\FxCop\FxCopCmd.exe"
-"/out:C:\Users\davidrice3\Desktop\results\qa-results\DesignRules.xml"
-"/r:DesignRules.dll"
-"/t:Eleflex*"
-"/fo"
-"/f:C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\temp_bin_dir"
+0 = "cmd.exe"
+1 = "/c"
+2 = "src\main\resources\tools\FxCop\FxCopCmd.exe"
+3 = "/f:C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\single_project_eval\TestCsharpProject\Debug\SimpleCSharp.exe"
+4 = "/out:src\test\out\TestCsharpProject_propertyName01.xml"
+5 = "/r:src\main\resources\tools\FxCop\Rules\DesignRules.dll"
+
 
 -- LOCMetrics CLI Command --
 "cmd.exe"
@@ -24,12 +37,10 @@ Does not work when running it from within the root directory of TFS\FxcopFinding
 "-o"
 "C:\Users\davidrice3\Desktop\results\testing"
 
+
 -- R, thresholdsExtractor.R --
 "C:\Program Files\R\R-3.6.1\bin\x64\Rscript.exe" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-min\r_working_directory\thresholdsExtractor.R" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-min\r_working_directory"
 
-
--- Ant commands --
-ant -Dbasedir="C:\Users\davidrice3\Repository\MSUSEL\msusel-qatch" -f "resources/Ant/fxcop_build.xml" -Dsrc.dir="/f:C:\Users\davidrice3\Repository\MSUSEL\sample-analysis-projects\csharp\FxcopFindings\bin\Debug /f:C:\Users\davidrice3\Repository\MSUSEL\sample-analysis-projects\csharp\FxcopFindings\obj\Debug " -Ddest.dir="/out:C:\Users\davidrice3\Repository\MSUSEL\msusel-qatch\testresult.xml" -Druleset.file="/r:resources/Rulesets/CSharpTestModel/DesignRules.dll"
 
 -- PMD Finding --
 <file name="src\edu\montana\msusel\qatch\Main.java">
@@ -37,6 +48,7 @@ ant -Dbasedir="C:\Users\davidrice3\Repository\MSUSEL\msusel-qatch" -f "resources
   Avoid short class names like Main
   </violation>
 </file>
+
 
 -- FxCop Finding --
 <FxCopReport Version="15.0">
@@ -52,6 +64,7 @@ ant -Dbasedir="C:\Users\davidrice3\Repository\MSUSEL\msusel-qatch" -f "resources
           						<Message Id="Quamoco" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-03-28 18:18:56Z" FixCategory="Breaking">
            							<Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Quamoco' in type name 'QuamocoHelloWorldAllFindings'.</Issue>
 
+
 -- PMD Issue --
 issue = {Issue@1243} 
  ruleName = "MethodArgumentCouldBeFinal"
@@ -65,6 +78,7 @@ issue = {Issue@1243}
  beginCol = 29
  endCol = 41
  classPath = "src\edu\montana\msusel\qatch\Main.java"
+
 
  -- Maven Commands --
 - Run specific test profile
