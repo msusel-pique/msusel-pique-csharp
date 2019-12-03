@@ -66,6 +66,8 @@ public class SingleProjectEvaluation {
             MS_BUILD = Paths.get(properties.getProperty("msbuild.bin"));
         }
 
+        // Validate input strings
+
         // Create output directory if not existing yet
         String resultsDirName = FilenameUtils.getBaseName(PROJECT_DIR.getFileName().toString());
         RESULTS_DIR = new File(RESULTS_DIR.toString(), resultsDirName).toPath();

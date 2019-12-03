@@ -1,41 +1,28 @@
-"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework"
-"C:\Users\davidrice3\Desktop\temp\out"
-"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
-
-java -jar "C:\Users\davidrice3\Desktop\temp\jar\msusel-qatch-csharp-0.2.0-jar-with-dependencies.jar" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework" "C:\Users\davidrice3\Desktop\temp\out" "C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\quality_models\test_single_project_eval_qm.json"
-
--- Working JAR run on FxcopFindings in TFS folder --
-PS C:\Users\davidrice3\Desktop\temp> java -jar .\qatch-0.2-jar-with-dependencies.jar C:/Users/davidrice3/Repository/TFS/FxcopFindings C:\Users\davidrice3\Desktop\temp
-
-PS C:\Users\davidrice3\Desktop> java -jar C:\Users\davidrice3\Repository\TFS\FxcopFindings\external\qatch-0.2-jar-with-dependencies.jar C:/Users/davidrice3/Repository/TFS/FxcopFindings C:\Users\davidrice3\Repository\TFS\FxcopFindings
-
-Does not work when running it from within the root directory of TFS\FxcopFindings or if the resources folder exists in the root!
-
 
 -- Roslynator CLI Analyze Command --
-C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>src\main\resources\tools\Roslynator\bin\Roslynator.exe analyze --analyzer-assemblies="src\main\resources\tools\Roslynator\SecurityCodeScan" --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" --output="C:\Users\David\Desktop\temp\out\roslyn.xml" src\test\resources\net_framework_solution\TestNetFramework\TestNetFramework.sln
+C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\Roslynator\bin\Roslynator.exe analyze --analyzer-assemblies="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\Roslynator" --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" --output="C:\Users\davidrice3\Desktop\temp\out\roslyn.xml" C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework\TestNetFramework.sln
+
 
 -- Roslynator CLI LoC Command --
 C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>src\main\resources\tools\Roslynator\bin\Roslynator.exe loc --msbuild-path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin" src\test\resources\projects\TestNetFramework\TestNetFramework.sln > C:\Users\David\Desktop\temp\out\loc.txt
 
 
--- FxCop CLI Command --
-0 = "cmd.exe"
-1 = "/c"
-2 = "src\main\resources\tools\FxCop\FxCopCmd.exe"
-3 = "/f:C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\single_project_eval\TestCsharpProject\Debug\SimpleCSharp.exe"
-4 = "/out:src\test\out\TestCsharpProject_propertyName01.xml"
-5 = "/r:src\main\resources\tools\FxCop\Rules\DesignRules.dll"
+-- Roslynator CLI Analyze with variables helper --
+SET exe="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\Roslynator\bin\Roslynator.exe"
+SET assembly="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\Roslynator"
+SET msbuild="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+SET output="C:\Users\davidrice3\Desktop\temp\out\roslyn.xml"
+SET target="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework\TestNetFramework.sln"
+
+%exe% analyze --analyzer-assemblies=%assembly% --msbuild-path=%msbuild% --output=%output% %target%
 
 
--- LOCMetrics CLI Command --
-"cmd.exe"
-"/c"
-"C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\tools\LocMetrics.exe"
-"-i"
-"C:\Users\davidrice3\Repository\msusel-qatch\benchmark-repository-csharp\Eleflex\src\Lookups Module\Eleflex.Lookups"
-"-o"
-"C:\Users\davidrice3\Desktop\results\testing"
+-- Roslynator CLI LoC with variables helper --
+SET exe="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\main\resources\Roslynator\bin\Roslynator.exe"
+SET msbuild="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+SET target="C:\Users\davidrice3\Repository\msusel-qatch\msusel-qatch-csharp\src\test\resources\projects\TestNetFramework\TestNetFramework.sln"
+
+%exe% loc --msbuild-path=%msbuild% %target%
 
 
 -- R, thresholdsExtractor.R --
@@ -48,36 +35,6 @@ C:\Users\David\Repository\msusel-qatch\msusel-qatch-csharp>src\main\resources\to
   Avoid short class names like Main
   </violation>
 </file>
-
-
--- FxCop Finding --
-<FxCopReport Version="15.0">
-	<Targets>
-		  <Target Name="C:\Users\davidrice3\Repository\MSUSEL\sample-analysis-projects\csharp\QuamocoHelloWorldAllFindings\QuamocoHelloWorldAllFindings\bin\Release\QuamocoHelloWorldAllFindings.exe">
-		  	<Modules>
-		  		<Module Name="quamocohelloworldallfindings.exe">
-		  			<Namespaces>
-		  				<Namespace Name="QuamocoHelloWorldAllFindings">
-		  					<Types>
-		  						<Type Name="QuamocoHelloWorldAllFindings" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-		  							<Messages>
-          						<Message Id="Quamoco" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-03-28 18:18:56Z" FixCategory="Breaking">
-           							<Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Quamoco' in type name 'QuamocoHelloWorldAllFindings'.</Issue>
-
-
--- PMD Issue --
-issue = {Issue@1243} 
- ruleName = "MethodArgumentCouldBeFinal"
- ruleSetName = "Optimization"
- packageName = "edu.montana.msusel.qatch"
- description = "\nParameter 'args' is not assigned and could be declared final\n"
- externalInfoUrl = "https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal"
- priority = 3
- beginLine = 5
- endLine = 5
- beginCol = 29
- endCol = 41
- classPath = "src\edu\montana\msusel\qatch\Main.java"
 
 
  -- Maven Commands --

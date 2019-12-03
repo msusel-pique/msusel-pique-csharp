@@ -14,8 +14,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -111,17 +113,18 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
         }
 
         pb.redirectErrorStream(true);
-        Process p = null;
 
         // Run the tool
-        try { p = pb.start(); }
-        catch (IOException e) { e.printStackTrace(); }
-
         try {
-            assert p != null;
+            Process p = pb.start();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null)
+                System.out.println("roslynator: " + line);
+
             p.waitFor();
         }
-        catch (InterruptedException e) { e.printStackTrace(); }
+        catch (IOException | InterruptedException e) { e.printStackTrace(); }
 
         // Assert result file was created
         if (!tempResults.isFile()) {
