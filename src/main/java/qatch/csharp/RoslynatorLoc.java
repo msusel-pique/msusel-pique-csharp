@@ -13,6 +13,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * IToolLOC implementation using Roslynator CLI
@@ -106,7 +108,12 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
 
             // parse the line of code integer
             assert locLoc != null;
-            loc = new Integer(locLoc.substring(0, locLoc.indexOf(" ")).replace(",", ""));
+            Pattern p = Pattern.compile("\\d*,*\\d+");
+            Matcher m = p.matcher(locLoc);
+            if (m.find()) {
+                loc = Integer.parseInt(m.group().replaceAll(",", ""));
+            }
+            else throw new RuntimeException("LoC expected output from tool was not found by regex");
         } catch (IOException e) {
             e.printStackTrace();
         }
