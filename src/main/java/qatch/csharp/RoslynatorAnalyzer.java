@@ -5,7 +5,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import qatch.analysis.*;
+import qatch.analysis.Diagnostic;
+import qatch.analysis.Finding;
+import qatch.analysis.ITool;
 import qatch.utility.FileUtility;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -16,7 +18,9 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * ITool implementation static analyasis tool class.
@@ -29,10 +33,9 @@ import java.util.*;
  *
  * The .exe should be kept in resources/tools.
  */
-public class Roslynator extends Tool implements ITool {
+public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
 
     // Fields
-    private Path toolsDirectory;
     private Path msBuild;
     private ProcessBuilder pb;
 
@@ -42,14 +45,13 @@ public class Roslynator extends Tool implements ITool {
      * Roslynator analsis needs the MSBuild.exe path
      * (e.g. "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin")
      *
-     * @param toolsDirectory
+     * @param toolRoot
      *      Qatch-csharp tools directory location
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
-    public Roslynator(String name, Path toolsDirectory, Path msBuild) {
-        super(name);
-        this.toolsDirectory = toolsDirectory;
+    public RoslynatorAnalyzer(Path toolRoot, Path msBuild) {
+        super("Roslynator", toolRoot);
         this.msBuild = msBuild;
     }
 
@@ -68,6 +70,7 @@ public class Roslynator extends Tool implements ITool {
     @Override
     public Path analyze(Path path) {
 
+        path = path.toAbsolutePath();
         String sep = File.separator;
         File tempResults = new File(System.getProperty("user.dir") +"/out/roslynator_output.xml");
         tempResults.getParentFile().mkdirs();
@@ -94,9 +97,9 @@ public class Roslynator extends Tool implements ITool {
         }
 
         // Strings for CLI call
-        String roslynator = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";
+        String roslynator = getExecutable().toAbsolutePath().toString();
         String command = "analyze";
-        String assemblyDir = "--analyzer-assemblies=" + toolsDirectory.toString() + sep + "Roslynator" + sep + "bin";
+        String assemblyDir = "--analyzer-assemblies=" + getToolRoot().toAbsolutePath().toString()  + sep + "bin";
         String msBuild = "--msbuild-path=" + this.msBuild.toString();
         String output = "--output=" + tempResults.toString();
         String target = path.toString();
@@ -197,5 +200,10 @@ public class Roslynator extends Tool implements ITool {
     private Diagnostic findMapMemberByDiagnosticId(Map<String, Diagnostic> diagnostics, String id) {
         if (diagnostics.containsKey(id)) { return diagnostics.get(id); }
         else { return new Diagnostic(id, "", "Roslynator"); }
+    }
+
+    @Override
+    public Path initialize(Path toolRoot) {
+        return roslynatorInitializeToTempFolder();
     }
 }

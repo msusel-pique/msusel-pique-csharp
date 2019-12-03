@@ -15,10 +15,9 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Properties;
 
-public class RoslynatorTests {
+public class RoslynatorAnalyzerTests {
 
-    final String ROSLYN_NAME = "Roslynator",
-                 TOOLS_LOC   = "src/main/resources/tools",
+    final String ROSLYN_ROOT = "src/main/resources/tools/Roslynator",
                  TARGET_LOC  = "src/test/resources/projects/TestNetFramework",
                  OUTPUT_LOC  = "src/test/out",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
@@ -37,17 +36,15 @@ public class RoslynatorTests {
     public void testAnalyze() throws IOException {
 
         Properties properties = new Properties();
-        // TODO: Find source control friendly way to deal with MSBuild location property.
         properties.load((new FileInputStream("src/test/resources/config/single_project_evaluation.properties")));
 
-        Roslynator roslynator = new Roslynator(
-                ROSLYN_NAME,
-                Paths.get(TOOLS_LOC),
+        RoslynatorAnalyzer roslynatorAnalyzer = new RoslynatorAnalyzer(
+                Paths.get(ROSLYN_ROOT),
                 Paths.get(properties.getProperty("msbuild.bin"))
         );
         Path target = Paths.get(TARGET_LOC);
 
-        Path analysisOutput = roslynator.analyze(target);
+        Path analysisOutput = roslynatorAnalyzer.analyze(target);
         File result = analysisOutput.toFile();
 
         // XML file exists in expected location with correct name
@@ -62,12 +59,11 @@ public class RoslynatorTests {
     @Test
     public void testParse() {
 
-        Roslynator roslynator = new Roslynator(
-                ROSLYN_NAME,
+        RoslynatorAnalyzer roslynatorAnalyzer = new RoslynatorAnalyzer(
                 null,
                 null
         );
-        Map<String, Diagnostic> diagnosticMap = roslynator.parseAnalysis(Paths.get(SAMPLE_OUTPUT_LOC));
+        Map<String, Diagnostic> diagnosticMap = roslynatorAnalyzer.parseAnalysis(Paths.get(SAMPLE_OUTPUT_LOC));
 
         Diagnostic rcs1018 = diagnosticMap.get("RCS1018");
         Diagnostic rcs1102 = diagnosticMap.get("RCS1102");

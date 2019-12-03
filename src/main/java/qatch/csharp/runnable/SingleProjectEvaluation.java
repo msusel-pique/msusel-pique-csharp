@@ -5,8 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qatch.analysis.ITool;
 import qatch.analysis.IToolLOC;
-import qatch.csharp.LocTool;
-import qatch.csharp.Roslynator;
+import qatch.csharp.RoslynatorLoc;
+import qatch.csharp.RoslynatorAnalyzer;
 import qatch.runnable.SingleProjectEvaluator;
 
 import java.io.File;
@@ -73,12 +73,11 @@ public class SingleProjectEvaluation {
 
         // Instantiate interface classes
         logger.debug("Beginning tool instantiations");
-        ITool roslynator = new Roslynator(
-                "Roslynator",
+        ITool roslynator = new RoslynatorAnalyzer(
                 TOOLS.toPath(),
                 MS_BUILD
         );
-        IToolLOC loc = new LocTool("RoslynatorLOC", TOOLS.toPath(), MS_BUILD);
+        IToolLOC loc = new RoslynatorLoc(TOOLS.toPath(), MS_BUILD);
         logger.trace("Analyzers loaded");
 
         // Run evaluation

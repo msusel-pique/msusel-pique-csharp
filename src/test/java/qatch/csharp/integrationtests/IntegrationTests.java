@@ -4,10 +4,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import qatch.analysis.Diagnostic;
-import qatch.csharp.Roslynator;
+import qatch.csharp.RoslynatorAnalyzer;
+import qatch.csharp.TestHelper;
 import qatch.csharp.runnable.QualityModelDeriverCSharp;
 import qatch.csharp.runnable.SingleProjectEvaluation;
 
@@ -23,10 +25,13 @@ import java.util.Properties;
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
+    private final Path ROSLYN_ROOT = Paths.get("src/main/Roslynator");
     private final Path TARGET = Paths.get("src/test/resources/projects/TestNetFramework");
-    private final Path TEST_OUT = Paths.get("src/test/out");
-    private final String ROSLYN_NAME = "Roslynator",
-                         TOOLS_LOC   = "src/main/resources/tools";
+
+    @Before
+    public void setUp() throws Exception {
+        TestHelper.cleanTestOutput();
+    }
 
     @Test
     public void testQualityModelDeriver() throws IOException {
@@ -75,7 +80,6 @@ public class IntegrationTests {
 
     }
 
-
     /**
      * Test entire analysis module procedure using Roslynator:
      *   (1) run Roslynator tool
@@ -86,17 +90,16 @@ public class IntegrationTests {
     public void testRoslynatorAnalysis() throws IOException {
 
         // Initialize main objects
-        Path qm = Paths.get("src/test/resources/quality_models/basic_roslynator_qm.json");
         Properties properties = new Properties();
         properties.load((new FileInputStream("src/test/resources/config/single_project_evaluation.properties")));
 
-        Roslynator roslynator = new Roslynator(ROSLYN_NAME, Paths.get(TOOLS_LOC), Paths.get(properties.getProperty("msbuild.bin")));
+        RoslynatorAnalyzer roslynatorAnalyzer = new RoslynatorAnalyzer(ROSLYN_ROOT, Paths.get(properties.getProperty("msbuild.bin")));
 
         // (1) run Roslynator tool
-        Path analysisOutput = roslynator.analyze(TARGET);
+        Path analysisOutput = roslynatorAnalyzer.analyze(TARGET);
 
         // (2 and 3) parse: get object representation of the diagnostics described by the QM
-        Map<String, Diagnostic> analysisResults = roslynator.parseAnalysis(analysisOutput);
+        Map<String, Diagnostic> analysisResults = roslynatorAnalyzer.parseAnalysis(analysisOutput);
 
         // Assert the results has the finidngs from the tool analysis scan
         Assert.assertEquals(3, analysisResults.size());
@@ -104,7 +107,6 @@ public class IntegrationTests {
         Assert.assertEquals(1, analysisResults.get("RCS1163").getFindings().size());
         Assert.assertEquals(1, analysisResults.get("SCS0005").getFindings().size());
     }
-
 
     /**
      * Test entire evaluation process on a C# project or solution.

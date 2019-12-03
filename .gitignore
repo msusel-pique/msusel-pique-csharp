@@ -548,6 +548,9 @@ $RECYCLE.BIN/
 ### Project Specific ###
 /.idea
 /output
+/out
 /src/test/out/
 /src/test/java/qatch/csharp/Scratch.java
 #doc/reference.txt
+
+!src/main/resources/Roslynator/bin

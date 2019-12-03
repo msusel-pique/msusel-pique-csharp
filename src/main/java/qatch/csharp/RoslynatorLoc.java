@@ -1,8 +1,9 @@
 package qatch.csharp;
 
-import org.apache.commons.io.FilenameUtils;
+import qatch.analysis.Diagnostic;
 import qatch.analysis.IToolLOC;
 import qatch.utility.FileUtility;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -20,9 +22,8 @@ import java.util.Set;
  *
  * The .exe should be kept in resources/tools.
  */
-public class LocTool implements IToolLOC {
+public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
 
-    private Path toolsDirectory;
     private Path msBuild;
 
     /**
@@ -30,34 +31,29 @@ public class LocTool implements IToolLOC {
      * Roslynator analsis needs the MSBuild.exe path
      * (e.g. "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin")
      *
-     * @param toolsDirectory
-     *      Qatch-csharp tools directory location
+     * @param toolRoot
+     *      *      Qatch-csharp tools directory location
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
-    public LocTool(String name, Path toolsDirectory, Path msBuild) {
-        this.toolsDirectory = toolsDirectory;
+    public RoslynatorLoc(Path toolRoot, Path msBuild) {
+        super("Roslynator", toolRoot);
         this.msBuild = msBuild;
     }
 
-    /**
-     * LocTool analyze procedure.  Assumes that path points to the root directory of the project.
-     * This LOC tool needs its target to point to either a .sln or .csproj file, so this method handles
-     * appending the extra path part to its target.
-     *
-     * @param path
-     *      Path to root directory of CSharp project
-     * @return
-     *      Integer lines of code value of either the .sln or .csproj in the root directory.
-     */
     @Override
-    public Integer analyze(Path path) {
+    public Path analyze(Path path) {
+        throw new NotImplementedException();
+    }
 
+    @Override
+    public Integer analyzeLinesOfCode(Path path) {
+
+        path = path.toAbsolutePath();
         String sep = File.separator;
         ProcessBuilder pb;
 
         // Append .sln or .csproj file to path
-        // TODO: refactor to method and find better way that doesn't use stacked if statements.
         Set<String> targetFiles = FileUtility.findFileNamesFromExtension(path, ".sln", 1);
         if (targetFiles.size() == 1) {
             path = Paths.get(path.toString(), targetFiles.iterator().next() + ".sln");
@@ -78,7 +74,7 @@ public class LocTool implements IToolLOC {
         }
 
         // Strings for CLI call
-        String tool = toolsDirectory.toAbsolutePath().toString() + sep + "Roslynator" + sep + "bin" + sep + "Roslynator.exe";
+        String tool = getExecutable().toAbsolutePath().toString();
         String command = "loc";
         String msBuild = "--msbuild-path=" + this.msBuild.toString();
         String target = path.toString();
@@ -118,5 +114,15 @@ public class LocTool implements IToolLOC {
             throw new RuntimeException("LoC variable did not evaluate to a positive number");
         }
         return loc;
+    }
+
+    @Override
+    public Path initialize(Path path) {
+        return roslynatorInitializeToTempFolder();
+    }
+
+    @Override
+    public Map<String, Diagnostic> parseAnalysis(Path path) {
+        throw new NotImplementedException();
     }
 }

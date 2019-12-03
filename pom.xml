@@ -82,6 +82,20 @@
               </includes>
               <followSymlinks>false</followSymlinks>
             </fileset>
+            <fileset>
+              <directory>out</directory>
+              <includes>
+                <include>**/*</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+            <fileset>
+              <directory>resources</directory>
+              <includes>
+                <include>**/*</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
           </filesets>
         </configuration>
       </plugin>
@@ -170,6 +184,7 @@
   </build>
 
   <profiles>
+
     <profile>
       <id>ut</id>
       <build>
@@ -187,6 +202,7 @@
         </plugins>
       </build>
     </profile>
+
     <profile>
       <id>it</id>
       <build>
@@ -201,5 +217,6 @@
         </plugins>
       </build>
     </profile>
+
   </profiles>
 </project>
