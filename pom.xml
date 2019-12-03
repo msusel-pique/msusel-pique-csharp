@@ -184,6 +184,7 @@
   </build>
 
   <profiles>
+
     <profile>
       <id>ut</id>
       <build>
@@ -201,6 +202,7 @@
         </plugins>
       </build>
     </profile>
+
     <profile>
       <id>it</id>
       <build>
@@ -215,5 +217,6 @@
         </plugins>
       </build>
     </profile>
+
   </profiles>
 </project>

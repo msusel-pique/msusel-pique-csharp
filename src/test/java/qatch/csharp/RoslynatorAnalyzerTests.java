@@ -36,7 +36,6 @@ public class RoslynatorAnalyzerTests {
     public void testAnalyze() throws IOException {
 
         Properties properties = new Properties();
-        // TODO: Find source control friendly way to deal with MSBuild location property.
         properties.load((new FileInputStream("src/test/resources/config/single_project_evaluation.properties")));
 
         RoslynatorAnalyzer roslynatorAnalyzer = new RoslynatorAnalyzer(
