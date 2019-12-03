@@ -98,6 +98,7 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
             String s;
             String locLoc = null;
             while ((s = stdInput.readLine()) != null) {
+                System.out.println("roslynator LoC: " + s);
                 if (s.contains("% lines of code")) {
                     locLoc = s;
                 }
@@ -105,7 +106,7 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
 
             // parse the line of code integer
             assert locLoc != null;
-            loc = new Integer(locLoc.substring(0, locLoc.indexOf(" ")));
+            loc = new Integer(locLoc.substring(0, locLoc.indexOf(" ")).replace(",", ""));
         } catch (IOException e) {
             e.printStackTrace();
         }
