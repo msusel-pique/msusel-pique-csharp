@@ -108,7 +108,6 @@ public class IntegrationTests {
         Assert.assertEquals(1, analysisResults.get("SCS0005").getFindings().size());
     }
 
-
     /**
      * Test entire evaluation process on a C# project or solution.
      */

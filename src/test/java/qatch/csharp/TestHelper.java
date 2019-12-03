@@ -11,11 +11,13 @@ public class TestHelper {
 
     private static final Path TEST_DIR = new File("src/test").toPath();
     private static final Path TEST_OUT = Paths.get(TEST_DIR.toString(), "out").toAbsolutePath();
-    private static final Path ROOT_OUT = Paths.get(TEST_DIR.toString(), "out").toAbsolutePath();
+    private static final Path ROOT_OUT = Paths.get("out").toAbsolutePath();
+    private static final Path RESOURCES = Paths.get("resources").toAbsolutePath();
 
     public static void cleanTestOutput() throws IOException {
         if (TEST_OUT.toFile().exists()) FileUtils.forceDelete(TEST_OUT.toFile());
         if (ROOT_OUT.toFile().exists()) FileUtils.forceDelete(ROOT_OUT.toFile());
+        if (RESOURCES.toFile().exists()) FileUtils.forceDelete(RESOURCES.toFile());
     }
 
 }
