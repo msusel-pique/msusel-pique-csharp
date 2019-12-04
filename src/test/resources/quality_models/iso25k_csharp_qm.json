@@ -132,7 +132,27 @@
 						"name": "RCS1138",
 						"description": "Add summary to documentation comment",
 						"toolName": "Roslynator"
-					}
+					},
+					{
+						"name": "RCS1139",
+						"description": "Add summary element to documentation comment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1140",
+						"description": "Add exception to documentation comment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1141",
+						"description": "Add 'param' element to documentation comment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1142",
+						"description": "Add 'typeparam' element to documentation comment",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "",
 						"description": "",
@@ -431,6 +451,37 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1154",
+						"description": "Sort enum members",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
+		{
+			"name": "Functional Semantics",
+			"description": "The meaning and intended output of funtional acts.  For example, dividing all items in a list by two versus multiplying all items by two have different functional semantics.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "Functional Semantics Findings",
+				"description": "The functional semantics property is measured by static analysis tools that can collect findings categorized under source code functional semantics faults.",
+				"diagnostics": [
+					{
+						"name": "RCS1155",
+						"description": "Use StringComparison when comparing strings",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -440,7 +491,7 @@
 		},
 		{
 			"name": "Functional Syntax",
-			"description": "The operators, syntactic decision, object selection, etc., that determine how a function is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
+			"description": "The operators, syntactic decision, object selection, etc., that determine how a functional act is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
 			"positive_impact": "false",
 			"thresholds": [
 				0.0,
@@ -479,6 +530,11 @@
 					{
 						"name": "RCS1113",
 						"description": "Use 'string.IsNullOrEmpty' method",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1146",
+						"description": "Use conditional access",
 						"toolName": "Roslynator"
 					},
 					{
