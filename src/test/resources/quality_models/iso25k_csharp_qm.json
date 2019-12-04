@@ -103,8 +103,39 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1135",
+						"description": "Declare enum member with zero value (when enum has FlagsAttribute)",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "TODO",
 						"description": "TODO",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
+		{
+			"name": "Documentation",
+			"description": "Information about the source code intended to assist human understanding.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "Documentation Findings",
+				"description": "The documentation property is measured by static analysis tools that can collect findings categorized under source code documentation faults.",
+				"diagnostics": [
+					{
+						"name": "RCS1138",
+						"description": "Add summary to documentation comment",
+						"toolName": "Roslynator"
+					}
+					{
+						"name": "",
+						"description": "",
 						"toolName": "Roslynator"
 					}
 				]
@@ -385,6 +416,21 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1104",
+						"description": "Simplify conditional expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1128",
+						"description": "Use coalesce expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1134",
+						"description": "Remove redundant statement",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -428,6 +474,11 @@
 					{
 						"name": "RCS1096",
 						"description": "Use bitwise operation instead of calling 'HasFlag'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1113",
+						"description": "Use 'string.IsNullOrEmpty' method",
 						"toolName": "Roslynator"
 					},
 					{
@@ -495,6 +546,11 @@
 					{
 						"name": "RCS1102",
 						"description": "Make class static",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1110",
+						"description": "Declare type inside namespace",
 						"toolName": "Roslynator"
 					},
 					{
