@@ -10,49 +10,49 @@
 	"characteristics": [
 		{
 			"name": "Performance Efficiency",
-			"description": "TODO: description",
+			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Compatability",
-			"description": "TODO: description",
+			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Usability",
-			"description": "TODO: description",
+			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Reliability",
-			"description": "TODO: description",
+			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Security",
-			"description": "TODO: description",
+			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Maintainability",
-			"description": "TODO: description",
+			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
 		},
 		{
 			"name": "Portability",
-			"description": "TODO: description",
+			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another.",
 			"weights": {
 				"TODO": "characteristics property weights"
 			}
