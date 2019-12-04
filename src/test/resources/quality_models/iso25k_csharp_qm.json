@@ -54,7 +54,7 @@
 	"properties": [
 		{
 			"name": "Format",
-			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention'.",
+			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention', 'Verbosity'.",
 			"positive_impact": "false",
 			"thresholds": [
 				0.0,
@@ -62,11 +62,228 @@
 				0.02
 			],
 			"measure": {
-				"name": "Measure 01",
+				"name": "Format Findings",
+				"description": "The format property is measured by static analysis tools that can collect findings categorized under source code format faults.",
 				"diagnostics": [
 					{
+						"name": "RCS1001",
+						"description": "Add braces (when expression spans over multiple lines)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1002",
+						"description": "Remove braces",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1003",
+						"description": "Add braces to if-else (when expression spans over multiple lines)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1004",
+						"description": "Remove braces from if-else",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1005",
+						"description": "Simplify nested using statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1006",
+						"description": "Merge else clause with nested if statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1007",
+						"description": "Add braces",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1016",
+						"description": "Use expression-bodied member",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1017",
+						"description": "Avoid multiline expression body",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1018",
-						"description": "Description for test diagnostic",
+						"description": "Add accessibility modifiers",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1019",
+						"description": "Order modifiers",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1020",
+						"description": "Simplify Nullable<T> to T?",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1021",
+						"description": "Simplify lambda expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1024",
+						"description": "Format accessor list",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1025",
+						"description": "Add new line before enum member",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1026",
+						"description": "Add new line before statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1027",
+						"description": "Add new line before embedded statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1028",
+						"description": "Add new line after switch label",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1029",
+						"description": "Format binary operator on next line",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1030",
+						"description": "Add empty line after embedded statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1031",
+						"description": "Remove unnecessary braces",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1032",
+						"description": "Remove redundant parentheses",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1033",
+						"description": "Remove redundant boolean literal",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1034",
+						"description": "Remove redundant 'sealed' modifier",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1035",
+						"description": "Remove redundant comma in initializer",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1036",
+						"description": "Remove redundant empty line",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1037",
+						"description": "Remove trailing white-space",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1038",
+						"description": "Remove empty statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1039",
+						"description": "Remove argument list from attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1040",
+						"description": "Remove empty else clause",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1041",
+						"description": "Remove empty initializer",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1042",
+						"description": "Remove enum default underlying type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1043",
+						"description": "Remove 'partial' modifier from type with a single part",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "TODO",
+						"description": "TODO",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
+		{
+			"name": "Data Type Integrity",
+			"description": "A representation of how well each object adheres to C# object oriented typing expectations.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "Data Type Integrity Findings",
+				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
+				"diagnostics":[
+					{
+						"name": "RCS1008",
+						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1009",
+						"description": "Use explicit type instead of 'var' (foreach variable)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1010",
+						"description": "Use 'var' instead of explicit type (when the type is obvious)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1012",
+						"description": "Use explicit type instead of 'var' (when the type is obvious)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1013",
+						"description": "Use predefined type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1014",
+						"description": "Avoid implicitly-typed array",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "TODO",
+						"description": "TODO",
 						"toolName": "Roslynator"
 					}
 				]
