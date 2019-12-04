@@ -108,6 +108,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1177",
+						"description": "Use 'var' instead of explicit type (in foreach)",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "TODO",
 						"description": "TODO",
 						"toolName": "Roslynator"
@@ -151,6 +156,11 @@
 					{
 						"name": "RCS1142",
 						"description": "Add 'typeparam' element to documentation comment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1181",
+						"description": "Convert comment to documentation comment",
 						"toolName": "Roslynator"
 					},
 					{
@@ -456,6 +466,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1172",
+						"description": "Use 'is' operator instead of 'as' operator",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -479,6 +494,11 @@
 					{
 						"name": "RCS1155",
 						"description": "Use StringComparison when comparing strings",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1156",
+						"description": "Use string.Length instead of comparison with empty string",
 						"toolName": "Roslynator"
 					},
 					{
@@ -538,6 +558,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1165",
+						"description": "Unconstrained type parameter checked for null",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -566,6 +591,11 @@
 					{
 						"name": "RCS1090",
 						"description": "Call 'ConfigureAwait(false)'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1159",
+						"description": "Use EventHandler<T>",
 						"toolName": "Roslynator"
 					},
 					{
@@ -607,6 +637,46 @@
 					{
 						"name": "RCS1110",
 						"description": "Declare type inside namespace",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1157",
+						"description": "Composite enum value contains undefined flag",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1158",
+						"description": "Static member in generic type should use a type parameter",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1160",
+						"description": "Abstract type should not have public constructors",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1161",
+						"description": "Enum should declare explicit values",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1168",
+						"description": "Parameter name differs from base name",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1169",
+						"description": "Make field read-only",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1170",
+						"description": "Use read-only auto-implemented property",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1187",
+						"description": "Use constant instead of field",
 						"toolName": "Roslynator"
 					},
 					{
