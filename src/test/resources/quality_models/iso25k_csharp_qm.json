@@ -1,0 +1,76 @@
+{
+	"name": "ISO 25010 CSharp Quality Model",
+	"tqi": {
+		"name": "Total Software Quality",
+		"description": "Sample tqi description",
+		"weights": {
+			"TODO": "tqi characteristic weights"
+		}
+	},
+	"characteristics": [
+		{
+			"name": "Compatability",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
+			"name": "Usability",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
+			"name": "Reliability",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
+			"name": "Security",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
+			"name": "Maintainability",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
+			"name": "Portability",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		}
+	],
+	"properties": [
+		{
+			"name": "Format",
+			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention'.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "Measure 01",
+				"diagnostics": [
+					{
+						"name": "RCS1018",
+						"description": "Description for test diagnostic",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		}
+	]
+}
