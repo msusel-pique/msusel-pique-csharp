@@ -4,7 +4,13 @@
 		"name": "Total Software Quality",
 		"description": "Sample tqi description",
 		"weights": {
-			"TODO": "tqi characteristic weights"
+			"Performance Efficiency": 0.2,
+			"Compatability": 0.1,
+			"Usability": 0.1,
+			"Reliability": 0.1,
+			"Security": 0.3,
+			"Maintainability": 0.1,
+			"Portability": 0.1
 		}
 	},
 	"characteristics": [
