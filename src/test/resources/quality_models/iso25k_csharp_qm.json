@@ -9,6 +9,13 @@
 	},
 	"characteristics": [
 		{
+			"name": "Performance Efficiency",
+			"description": "TODO: description",
+			"weights": {
+				"TODO": "characteristics property weights"
+			}
+		},
+		{
 			"name": "Compatability",
 			"description": "TODO: description",
 			"weights": {
@@ -64,7 +71,7 @@
 			"measure": {
 				"name": "Data Type Integrity Findings",
 				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
-				"diagnostics":[
+				"diagnostics": [
 					{
 						"name": "RCS1008",
 						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
@@ -115,10 +122,15 @@
 			"measure": {
 				"name": "Exception Handling Findings",
 				"description": "The exception handling property is measured by static analysis tools that can collect findings categorized under source code exception handling faults.",
-				"diagnostics":[
+				"diagnostics": [
 					{
 						"name": "RCS1044",
 						"description": "Remove original exception from throw statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1075",
+						"description": "Avoid empty catch clause that catches System.Exception",
 						"toolName": "Roslynator"
 					},
 					{
@@ -338,20 +350,50 @@
 						"toolName": "Roslynator"
 					},
 					{
-						"name": "RCS1052",
-						"description": "Declare each attribute separately",
+						"name": "RCS1057",
+						"description": "Add empty line between declarations",
 						"toolName": "Roslynator"
 					},
 					{
-						"name": "TODO",
-						"description": "TODO",
+						"name": "RCS1058",
+						"description": "Use compound assignment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1068",
+						"description": "Simplify logical negation",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1073",
+						"description": "Convert 'if' to 'return' statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1094",
+						"description": "Declare using directive on top level",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1103",
+						"description": "Convert 'if' to assignment",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1104",
+						"description": "Simplify conditional expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
 						"toolName": "Roslynator"
 					}
 				]
 			}
 		},
 		{
-			"name": "Function Syntax",
+			"name": "Functional Syntax",
 			"description": "The operators, syntactic decision, object selection, etc., that determine how a function is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
 			"positive_impact": "false",
 			"thresholds": [
@@ -360,17 +402,109 @@
 				0.02
 			],
 			"measure": {
-				"name": "Function Syntax Findings",
+				"name": "Functional Syntax Findings",
 				"description": "The function syntax property is measured by static analysis tools that can collect findings categorized under source code funciton syntax faults.",
 				"diagnostics": [
 					{
 						"name": "RCS1048",
 						"description": "Use lambda expression instead of anonymous method",
 						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1061",
+						"description": "Merge if statement with nested if statement",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1077",
+						"description": "Optimize LINQ method call",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1080",
+						"description": "Use 'Count/Length' property instead of 'Any' method",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1096",
+						"description": "Use bitwise operation instead of calling 'HasFlag'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
 					}
 				]
 			}
-		}
+		},
+		{
+			"name": "Resource Handling",
+			"description": "Management of resources: often related to locking of instances and file I/O.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "",
+				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
+				"diagnostics": [
+					{
+						"name": "RCS1059",
+						"description": "Avoid locking on publicly accessible instance",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1090",
+						"description": "Call 'ConfigureAwait(false)'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
+		{
+			"name": "Structure",
+			"description": "The organization of classes, files, and methods.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "",
+				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
+				"diagnostics": [
+					{
+						"name": "RCS1060",
+						"description": "Declare each type in separate file",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1085",
+						"description": "Use auto-implemented property",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1102",
+						"description": "Make class static",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		},
 		{
 			"name": "",
 			"description": "",
