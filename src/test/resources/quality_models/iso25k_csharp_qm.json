@@ -154,6 +154,26 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1204",
+						"description": "Use EventArgs.Empty",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1210",
+						"description": "Return Task.FromResult instead of returning null",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1231",
+						"description": "Make parameter ref read-only",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1234",
+						"description": "Duplicate enum value",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "TODO",
 						"description": "TODO",
 						"toolName": "Roslynator"
@@ -205,6 +225,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1232",
+						"description": "Order elements in documentation comment",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -238,6 +263,21 @@
 					{
 						"name": "RCS1194",
 						"description": "Implement exception constructors",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1202",
+						"description": "Avoid NullReferenceException",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1210",
+						"description": "Return Task.FromResult instead of returning null",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1236",
+						"description": "Use exception filter",
 						"toolName": "Roslynator"
 					},
 					{
@@ -517,6 +557,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1215",
+						"description": "Expression is always equal to true/false",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -545,6 +590,16 @@
 					{
 						"name": "RCS1156",
 						"description": "Use string.Length instead of comparison with empty string",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1200",
+						"description": "Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1227",
+						"description": "Validate arguments correctly",
 						"toolName": "Roslynator"
 					},
 					{
@@ -614,6 +669,41 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1198",
+						"description": "Avoid unnecessary boxing of value type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1206",
+						"description": "Use conditional access instead of conditional expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1215",
+						"description": "Expression is always equal to true/false",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1219",
+						"description": "Call 'Enumerable.Skip' and 'Enumerable.Any' instead of 'Enumerable.Count'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1233",
+						"description": "Use short-circuiting operator",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1235",
+						"description": "Optimize method call",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1236",
+						"description": "Use exception filter",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -647,6 +737,16 @@
 					{
 						"name": "RCS1159",
 						"description": "Use EventHandler<T>",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1210",
+						"description": "Return Task.FromResult instead of returning null",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1229",
+						"description": "Use async/await when necessary",
 						"toolName": "Roslynator"
 					},
 					{
@@ -738,6 +838,31 @@
 					{
 						"name": "RCS1194",
 						"description": "Implement exception constructors",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1203",
+						"description": "Use AttributeUsageAttribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1216",
+						"description": "Unnecessary unsafe context",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1224",
+						"description": "Make method an extension method",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1225",
+						"description": "Make class sealed",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1241",
+						"description": "Implement non-generic counterpart",
 						"toolName": "Roslynator"
 					},
 					{
