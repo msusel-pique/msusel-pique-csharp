@@ -195,6 +195,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1194",
+						"description": "Implement exception constructors",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "TODO",
 						"description": "TODO",
 						"toolName": "Roslynator"
@@ -563,6 +568,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1197",
+						"description": "Optimize StringBuilder.Append/AppendLine call",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "",
 						"description": "",
 						"toolName": "Roslynator"
@@ -608,7 +618,7 @@
 		},
 		{
 			"name": "Structure",
-			"description": "The organization of classes, files, and methods.",
+			"description": "The organization of classes, files, and methods. Includes object oriented concepts such as inheritance",
 			"positive_impact": "false",
 			"thresholds": [
 				0.0,
@@ -677,6 +687,16 @@
 					{
 						"name": "RCS1187",
 						"description": "Use constant instead of field",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1193",
+						"description": "Overriding member cannot change 'params' modifier",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1194",
+						"description": "Implement exception constructors",
 						"toolName": "Roslynator"
 					},
 					{
