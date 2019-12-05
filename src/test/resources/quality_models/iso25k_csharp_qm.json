@@ -712,6 +712,27 @@
 			}
 		},
 		{
+			"name": "Input/Output Handling",
+			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, etc.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "",
+				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
+				"diagnostics": [
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		}
+		{
 			"name": "Resource Handling",
 			"description": "Management of resources: often related to locking of instances and file I/O.",
 			"positive_impact": "false",
