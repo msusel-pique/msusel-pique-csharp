@@ -238,6 +238,57 @@
 			}
 		},
 		{
+			"name": "Encryption",
+			"description": "The concealment of code elements such that external entities are unable to decipher its information.",
+			"positive_impact": "false",
+			"thresholds": [
+				0.0,
+				0.004,
+				0.02
+			],
+			"measure": {
+				"name": "Encryption Findings",
+				"description": "The encryption property is measured by static analysis tools that can collect findings categorized under source code encryption faults.",
+				"diagnostics": [
+					{
+						"name": "SCS0005",
+						"description": "Weak Random Number Generator",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0006",
+						"description": "Weak hashing function",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0010",
+						"description": "Weak cipher algorithm",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0011",
+						"description": "Weak CBC Mode",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0012",
+						"description": "Weak ECB Mode",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0013",
+						"description": "Weak Cipher Mode",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "",
+						"description": "",
+						"toolName": "Roslynator"
+					}
+				]
+			}
+		}
+		{
 			"name": "Exception Handling",
 			"description": "Goodness of approach in handling exceptions in a compliant and productive way.",
 			"positive_impact": "false",
@@ -713,7 +764,7 @@
 		},
 		{
 			"name": "Input/Output Handling",
-			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, etc.",
+			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc.",
 			"positive_impact": "false",
 			"thresholds": [
 				0.0,
@@ -721,9 +772,84 @@
 				0.02
 			],
 			"measure": {
-				"name": "",
+				"name": "Input/Output Handling Findings",
 				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
 				"diagnostics": [
+					{
+						"name": "SCS0001",
+						"description": "Command Injection",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0002",
+						"description": "SQL Injection (LINQ)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0003",
+						"description": "XPath Injection",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0004",
+						"description": "Certificate Validation Disabled",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0007",
+						"description": "XML eXternal Entity Injection (XXE)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0011",
+						"description": "Weak CBC Mode",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0014",
+						"description": "SQL Injection (WebControls)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0018",
+						"description": "Path Traversal",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0020",
+						"description": "SQL Injection (OLE DB)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0025",
+						"description": "SQL Injection (ODBC)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0026",
+						"description": "SQL Injection (MsSQL Data Provider)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0029",
+						"description": "Cross-Site Scripting (XSS)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0031",
+						"description": "LDAP Injection",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0035",
+						"description": "SQL Injection (Entity Framework)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0036",
+						"description": "SQL Injection (EnterpriseLibrary.Data)",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "",
 						"description": "",
@@ -742,7 +868,7 @@
 				0.02
 			],
 			"measure": {
-				"name": "",
+				"name": "Resource Handling Findings",
 				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
 				"diagnostics": [
 					{
