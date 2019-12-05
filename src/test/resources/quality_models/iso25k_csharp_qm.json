@@ -4,13 +4,13 @@
 		"name": "Total Software Quality",
 		"description": "Sample tqi description",
 		"weights": {
-			"Performance Efficiency": 0.2,
 			"Compatability": 0.1,
-			"Usability": 0.1,
+			"Maintainability": 0.1,
+			"Performance Efficiency": 0.2,
+			"Portability": 0.1,
 			"Reliability": 0.1,
 			"Security": 0.3,
-			"Maintainability": 0.1,
-			"Portability": 0.1
+			"Usability": 0.1
 		}
 	},
 	"characteristics": [
@@ -19,11 +19,15 @@
 			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions.",
 			"weights": {
 				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
 				"Format": 0.1,
+				"Functional Semantics": 0.1,
 				"Functional Syntax": 0.1,
-				"Resource Handling": 0.4,
-				"Structure": 0.2
+				"Input/Output Handling": 0.1,
+				"Resource Handling": 0.1,
+				"Structure": 0.1
 			}
 		},
 		{
@@ -31,11 +35,15 @@
 			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment.",
 			"weights": {
 				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
-				"Format": 0.3,
-				"Functional Syntax": 0.2,
+				"Format": 0.1,
+				"Functional Semantics": 0.1,
+				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
 				"Resource Handling": 0.1,
-				"Structure": 0.2
+				"Structure": 0.1
 			}
 		},
 		{
@@ -43,47 +51,63 @@
 			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.",
 			"weights": {
 				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
-				"Format": 0.3,
-				"Functional Syntax": 0.2,
+				"Format": 0.1,
+				"Functional Semantics": 0.1,
+				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
 				"Resource Handling": 0.1,
-				"Structure": 0.2
+				"Structure": 0.1
 			}
 		},
 		{
 			"name": "Reliability",
 			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
 			"weights": {
-				"Data Type Integrity": 0.3,
-				"Exception Handling": 0.2,
+				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
+				"Exception Handling": 0.1,
 				"Format": 0.1,
+				"Functional Semantics": 0.1,
 				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
 				"Resource Handling": 0.1,
-				"Structure": 0.2
+				"Structure": 0.1
 			}
 		},
 		{
 			"name": "Security",
 			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
 			"weights": {
-				"Data Type Integrity": 0.2,
+				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
-				"Format": 0.2,
-				"Functional Syntax": 0.2,
+				"Format": 0.1,
+				"Functional Semantics": 0.1,
+				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
 				"Resource Handling": 0.1,
-				"Structure": 0.2
+				"Structure": 0.1
 			}
 		},
 		{
 			"name": "Maintainability",
 			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
 			"weights": {
-				"Data Type Integrity": 0.05,
+				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
-				"Format": 0.3,
-				"Functional Syntax": 0.2,
-				"Resource Handling": 0.05,
-				"Structure": 0.3
+				"Format": 0.1,
+				"Functional Semantics": 0.1,
+				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
+				"Resource Handling": 0.1,
+				"Structure": 0.1
 			}
 		},
 		{
@@ -91,11 +115,15 @@
 			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another.",
 			"weights": {
 				"Data Type Integrity": 0.1,
+				"Documentation": 0.1,
+				"Encryption": 0.1,
 				"Exception Handling": 0.1,
-				"Format": 0.3,
-				"Functional Syntax": 0.2,
+				"Format": 0.1,
+				"Functional Semantics": 0.1,
+				"Functional Syntax": 0.1,
+				"Input/Output Handling": 0.1,
 				"Resource Handling": 0.1,
-				"Structure": 0.2
+				"Structure": 0.1
 			}
 		}
 	],
@@ -172,11 +200,6 @@
 						"name": "RCS1234",
 						"description": "Duplicate enum value",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "TODO",
-						"description": "TODO",
-						"toolName": "Roslynator"
 					}
 				]
 			}
@@ -228,11 +251,6 @@
 						"name": "RCS1232",
 						"description": "Order elements in documentation comment",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
 					}
 				]
 			}
@@ -281,13 +299,38 @@
 						"toolName": "Roslynator"
 					},
 					{
-						"name": "",
-						"description": "",
+						"name": "SCS0015",
+						"description": "Hardcoded Password",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0023",
+						"description": "View State Not Encrypted",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0024",
+						"description": "View State MAC Disabled",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0032",
+						"description": "Password RequiredLength Too Small",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0033",
+						"description": "Password Complexity",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0034",
+						"description": "Password RequiredLength Not Set",
 						"toolName": "Roslynator"
 					}
 				]
 			}
-		}
+		},
 		{
 			"name": "Exception Handling",
 			"description": "Goodness of approach in handling exceptions in a compliant and productive way.",
@@ -329,11 +372,6 @@
 					{
 						"name": "RCS1236",
 						"description": "Use exception filter",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "TODO",
-						"description": "TODO",
 						"toolName": "Roslynator"
 					}
 				]
@@ -611,11 +649,6 @@
 						"name": "RCS1215",
 						"description": "Expression is always equal to true/false",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
 					}
 				]
 			}
@@ -651,11 +684,6 @@
 					{
 						"name": "RCS1227",
 						"description": "Validate arguments correctly",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
 						"toolName": "Roslynator"
 					}
 				]
@@ -753,11 +781,6 @@
 						"name": "RCS1236",
 						"description": "Use exception filter",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
 					}
 				]
 			}
@@ -801,6 +824,16 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "SCS0008",
+						"description": "Cookie Without SSL Flag",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0009",
+						"description": "Cookie Without HttpOnly Flag",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "SCS0011",
 						"description": "Weak CBC Mode",
 						"toolName": "Roslynator"
@@ -811,13 +844,38 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "SCS0016",
+						"description": "Cross-Site Request Forgery (CSRF)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0017",
+						"description": "Request Validation Disabled (Attribute)",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "SCS0018",
 						"description": "Path Traversal",
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "SCS0019",
+						"description": "OutputCache Conflict",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "SCS0020",
 						"description": "SQL Injection (OLE DB)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0021",
+						"description": "Request Validation Disabled (Configuration File)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0022",
+						"description": "Event Validation Disabled",
 						"toolName": "Roslynator"
 					},
 					{
@@ -831,8 +889,23 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "SCS0027",
+						"description": "Open Redirect",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0028",
+						"description": "Insecure Deserialization",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "SCS0029",
 						"description": "Cross-Site Scripting (XSS)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "SCS0030",
+						"description": "Request validation is enabled only for pages (Configuration File)",
 						"toolName": "Roslynator"
 					},
 					{
@@ -849,15 +922,10 @@
 						"name": "SCS0036",
 						"description": "SQL Injection (EnterpriseLibrary.Data)",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
 					}
 				]
 			}
-		}
+		},
 		{
 			"name": "Resource Handling",
 			"description": "Management of resources: often related to locking of instances and file I/O.",
@@ -895,11 +963,6 @@
 						"name": "RCS1229",
 						"description": "Use async/await when necessary",
 						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
 					}
 				]
 			}
@@ -914,7 +977,7 @@
 				0.02
 			],
 			"measure": {
-				"name": "",
+				"name": "Structure Findings",
 				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
 				"diagnostics": [
 					{
@@ -1010,32 +1073,6 @@
 					{
 						"name": "RCS1241",
 						"description": "Implement non-generic counterpart",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "",
-						"description": "",
-						"toolName": "Roslynator"
-					}
-				]
-			}
-		},
-		{
-			"name": "",
-			"description": "",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
-			"measure": {
-				"name": "",
-				"description": "The __ property is measured by static analysis tools that can collect findings categorized under source code __ faults.",
-				"diagnostics": [
-					{
-						"name": "",
-						"description": "",
 						"toolName": "Roslynator"
 					}
 				]
