@@ -6,7 +6,6 @@ import qatch.utility.FileUtility;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
@@ -90,6 +89,8 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
         // Run the cmd command
         Integer loc = null;
         Process proc = null;
+        System.out.println("roslynator LoC: beginning analysis.\n\tTarget: " + path.toString());
+
         try {
             proc = pb.start();
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
