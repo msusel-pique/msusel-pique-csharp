@@ -7,31 +7,31 @@
 	"characteristics": [
 		{
 			"name": "Compatability",
-			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment."
+			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment. Sub-characteristics: Co-existence, Interoperability."
 		},
 		{
 			"name": "Maintainability",
-			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements."
+			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. Sub-characteristics: Modularity, Reusability, Analysability, Modifiability, Testability."
 		},
 		{
 			"name": "Performance Efficiency",
-			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions."
+			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions. Sub-characteristics: Time Behaviour, Resource Utilization, Capacity."
 		},
 		{
 			"name": "Portability",
-			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another."
+			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another. Sub-characteristics: Adapability, Installability, Replaceability."
 		},
 		{
 			"name": "Reliability",
-			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time."
+			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. Maturity, Availability, Fault Tolerance, Recoverability."
 		},
 		{
 			"name": "Security",
-			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization."
+			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization. Sub-characteristics: Confidentiality, Integrity, Non-repudiation, Authenticity, Accountability."
 		},
 		{
 			"name": "Usability",
-			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use."
+			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use. Appropriateness, Learnability, Operability, User Error Protection, User Interface Aesthetics, Accessibility."
 		}
 	],
 	"properties": [
