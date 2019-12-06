@@ -1,8 +1,8 @@
 Total Software Quality,Compatability,Maintainability,Performance Efficiency,Portability,Reliability,Security,Usability
-Compatability,0.00,,"","","","",""
-Maintainability,0.00,0.00,"","","","",""
-Performance Efficiency,0.00,0.00,0.00,"","","",""
-Portability,0.00,0.00,0.00,0.00,"","",""
-Reliability,0.00,0.00,0.00,0.00,0.00,"",""
-Security,0.00,0.00,0.00,0.00,0.00,0.00,""
+Compatability,0.00,1/5,1/3,1/4,1/3,6,2
+Maintainability,0.00,0.00,2,4,3,7,6
+Performance Efficiency,0.00,0.00,0.00,3,2,6,5
+Portability,0.00,0.00,0.00,0.00,1/2,4,2
+Reliability,0.00,0.00,0.00,0.00,0.00,5,4
+Security,0.00,0.00,0.00,0.00,0.00,0.00,1/5
 Usability,0.00,0.00,0.00,0.00,0.00,0.00,0.00
