@@ -13,7 +13,7 @@ import java.util.Properties;
 public class RoslynatorLocTests {
 
     private final String TARGET_LOC  = "src/test/resources/projects/TestNetFramework";
-    private final Path LOC_ROOT = Paths.get("src/main/resources/tools/Roslynator");
+    private final Path LOC_ROOT = Paths.get("src/main/resources/Roslynator");
 
     @Test
     public void testAnalyzeLinesOfCode() throws IOException {

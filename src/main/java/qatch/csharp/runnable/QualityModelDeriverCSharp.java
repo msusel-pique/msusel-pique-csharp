@@ -18,7 +18,7 @@ public class QualityModelDeriverCSharp {
 
     // Fields
     private static final File RESOURCES = new File("src/main/resources");
-    private static final File TOOLS = new File(RESOURCES, "tools");
+    private static final Path ROSLYN_RESOURCE_ROOT = Paths.get(RESOURCES.toString(), "Roslynator");
 
     /**
      * Main method for deriving a C# quality model.
@@ -38,8 +38,8 @@ public class QualityModelDeriverCSharp {
 
         // Initialize inputs
         QualityModel qmDescription = new QualityModel(Paths.get(properties.getProperty("qm.filepath")));
-        IToolLOC loc = new RoslynatorLoc(TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
-        ITool roslynator = new RoslynatorAnalyzer(TOOLS.toPath(), Paths.get(properties.getProperty("msbuild.bin")));
+        IToolLOC loc = new RoslynatorLoc(ROSLYN_RESOURCE_ROOT, Paths.get(properties.getProperty("msbuild.bin")));
+        ITool roslynator = new RoslynatorAnalyzer(ROSLYN_RESOURCE_ROOT, Paths.get(properties.getProperty("msbuild.bin")));
         HashMap<String, ITool> tools = new HashMap<String, ITool>() {{ put(roslynator.getName(), roslynator); }};
         Path benchmarkRepository = Paths.get(properties.getProperty("benchmark.repo"));
         Path comparisonMatricesDirectory = Paths.get(properties.getProperty("comparison.matrices"));

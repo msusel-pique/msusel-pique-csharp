@@ -23,7 +23,7 @@ public abstract class RoslynatorTool extends Tool {
 
         switch (protocol) {
             case "file":
-                Path roslynatorResource = Paths.get("src/main/resources/Roslynator");
+                Path roslynatorResource = getToolRoot();
                 tempResourceDirectory = FileUtility.extractResourcesAsIde(tempResourceDirectory, roslynatorResource);
                 break;
             case "jar":

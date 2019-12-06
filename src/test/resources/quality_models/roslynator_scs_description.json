@@ -7,12 +7,10 @@
 	"characteristics": [
 		{
 			"name": "Characteristic 01",
-			"standard": "ISO/IEC 25010",
 			"description": "Placeholder description"
 		},
 		{
 			"name": "Characteristic 02",
-			"standard": "ISO/IEC 25010",
 			"description": "Placeholder description"
 		}
 	],
@@ -23,6 +21,7 @@
 			"positive_impact": "false",
 			"measure": {
 				"name": "Measure 01",
+				"description": "Test measure for RCS findings",
 				"diagnostics": [
 					{
 						"name": "RCS1018",
@@ -48,6 +47,7 @@
 			"positive_impact": "false",
 			"measure": {
 				"name": "Measure 02",
+				"description": "Test measure for RCS findings",
 				"diagnostics": [
 					{
 						"name": "SCS0001",
