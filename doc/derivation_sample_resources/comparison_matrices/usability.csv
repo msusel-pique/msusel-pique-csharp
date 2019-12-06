@@ -1,0 +1,11 @@
+Usability,Data Type Integrity,Documentation,Encryption,Exception Handling,Format,Functional Semantics,Functional Syntax,Input/Output Handling,Resource Handling,Structure
+Data Type Integrity,0.00,,,,,,,"","",""
+Documentation,0.00,0.00,,,,,,"","",""
+Encryption,0.00,0.00,0.00,,,,,"","",""
+Exception Handling,0.00,0.00,0.00,0.00,,,,"","",""
+Format,0.00,0.00,0.00,0.00,0.00,,,"","",""
+Functional Semantics,0.00,0.00,0.00,0.00,0.00,0.00,,"","",""
+Functional Syntax,0.00,0.00,0.00,0.00,0.00,0.00,0.00,"","",""
+Input/Output Handling,"",0.00,0.00,0.00,0.00,0.00,0.00,0.00,"",""
+Resource Handling,"",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,""
+Structure,"",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
