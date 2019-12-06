@@ -658,11 +658,11 @@
 			}
 		},
 		{
-			"name": "Input/Output Handling",
+			"name": "Input Output Handling",
 			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc.",
 			"positive_impact": "false",
 			"measure": {
-				"name": "Input/Output Handling Findings",
+				"name": "Input Output Handling Findings",
 				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
 				"diagnostics": [
 					{

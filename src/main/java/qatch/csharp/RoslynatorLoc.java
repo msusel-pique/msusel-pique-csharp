@@ -52,7 +52,6 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
     public Integer analyzeLinesOfCode(Path path) {
 
         path = path.toAbsolutePath();
-        String sep = File.separator;
         ProcessBuilder pb;
 
         // Append .sln or .csproj file to path
@@ -61,8 +60,8 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
             path = Paths.get(path.toString(), targetFiles.iterator().next() + ".sln");
         }
         else if (targetFiles.size() > 1) {
-            throw new RuntimeException("More than one .sln file exists in the give path root directory. " +
-                    "Ensure the directory has only one .sln file to target.");
+            throw new RuntimeException("More than one .sln file exists in the given path root directory at path: " +
+                    path.toString() + "\nEnsure the directory has only one .sln file to target.");
         }
         else {
             targetFiles = FileUtility.findFileNamesFromExtension(path, ".csproj", 1);
