@@ -6,10 +6,9 @@
 
   <groupId>msu.msusel</groupId>
   <artifactId>msusel-qatch-csharp</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
   <name>msusel-qatch-csharp</name>
-  <!-- FIXME change it to the project's website -->
-<!--  <url>http://www.example.com</url>-->
+  <url>https://msusel.github.io/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,7 +50,7 @@
     <dependency>
       <groupId>msu.msusel</groupId>
       <artifactId>msusel-qatch</artifactId>
-      <version>0.2.0</version>
+      <version>0.3.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
