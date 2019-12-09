@@ -1,24 +1,20 @@
 {
 	"name": "CSharp Roslynator Test QM",
 	"tqi": {
-		"name": "TQI",
-		"description": "Sample tqi description"
+		"name": "TQI"
 	},
-	"characteristics": [
-		{
+	"characteristics": {
+		"Characteristic 01": {
 			"name": "Characteristic 01",
-			"description": "Placeholder description"
+			"description": "Sample description"
 		},
-		{
+		"Characteristic 02": {
 			"name": "Characteristic 02",
-			"description": "Placeholder description"
+			"description": "Sample description"
 		}
-	],
-	"properties": [
-		{
-			"name": "Property 01",
-			"description": "Test property for RCS findings",
-			"positive_impact": "false",
+	},
+	"properties": {
+		"Property 01": {
 			"measure": {
 				"name": "Measure 01",
 				"description": "Test measure for RCS findings",
@@ -39,12 +35,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Property 01",
+			"description": "Sample description"
 		},
-		{
-			"name": "Property 02",
-			"description": "Test property for SCS findings",
-			"positive_impact": "false",
+		"Property 02": {
 			"measure": {
 				"name": "Measure 02",
 				"description": "Test measure for RCS findings",
@@ -85,7 +81,10 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Property 02",
+			"description": "Sample description"
 		}
-	]
+	}
 }

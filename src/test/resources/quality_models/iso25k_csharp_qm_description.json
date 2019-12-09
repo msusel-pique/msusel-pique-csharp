@@ -1,142 +1,41 @@
 {
 	"name": "ISO 25010 CSharp Quality Model",
+	"additionalData": {},
 	"tqi": {
-		"name": "Total Software Quality",
-		"description": "Sample tqi description",
-		"weights": {
-			"Compatability": 0.1,
-			"Maintainability": 0.1,
-			"Performance Efficiency": 0.2,
-			"Portability": 0.1,
-			"Reliability": 0.1,
-			"Security": 0.3,
-			"Usability": 0.1
+		"name": "Total Software Quality"
+	},
+	"characteristics": {
+		"Compatability": {
+			"name": "Compatability",
+			"description": "Sample description"
+		},
+		"Maintainability": {
+			"name": "Maintainability",
+			"description": "Sample description"
+		},
+		"Performance Efficiency": {
+			"name": "Performance Efficiency",
+			"description": "Sample description"
+		},
+		"Portability": {
+			"name": "Portability",
+			"description": "Sample description"
+		},
+		"Reliability": {
+			"name": "Reliability",
+			"description": "Sample description"
+		},
+		"Security": {
+			"name": "Security",
+			"description": "Sample description"
+		},
+		"Usability": {
+			"name": "Usability",
+			"description": "Sample description"
 		}
 	},
-	"characteristics": [
-		{
-			"name": "Performance Efficiency",
-			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Compatability",
-			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Usability",
-			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Reliability",
-			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Security",
-			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Maintainability",
-			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		},
-		{
-			"name": "Portability",
-			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another.",
-			"weights": {
-				"Data Type Integrity": 0.1,
-				"Documentation": 0.1,
-				"Encryption": 0.1,
-				"Exception Handling": 0.1,
-				"Format": 0.1,
-				"Functional Semantics": 0.1,
-				"Functional Syntax": 0.1,
-				"Input/Output Handling": 0.1,
-				"Resource Handling": 0.1,
-				"Structure": 0.1
-			}
-		}
-	],
-	"properties": [
-		{
-			"name": "Data Type Integrity",
-			"description": "A representation of how well each object adheres to C# object oriented typing expectations.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+	"properties": {
+		"Data Type Integrity": {
 			"measure": {
 				"name": "Data Type Integrity Findings",
 				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
@@ -202,17 +101,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Data Type Integrity",
+			"description": "Sample description"
 		},
-		{
-			"name": "Documentation",
-			"description": "Information about the source code intended to assist human understanding.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Documentation": {
 			"measure": {
 				"name": "Documentation Findings",
 				"description": "The documentation property is measured by static analysis tools that can collect findings categorized under source code documentation faults.",
@@ -253,17 +147,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Documentation",
+			"description": "Sample description"
 		},
-		{
-			"name": "Encryption",
-			"description": "The concealment of code elements such that external entities are unable to decipher its information.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Encryption": {
 			"measure": {
 				"name": "Encryption Findings",
 				"description": "The encryption property is measured by static analysis tools that can collect findings categorized under source code encryption faults.",
@@ -329,17 +218,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Encryption",
+			"description": "Sample description"
 		},
-		{
-			"name": "Exception Handling",
-			"description": "Goodness of approach in handling exceptions in a compliant and productive way.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Exception Handling": {
 			"measure": {
 				"name": "Exception Handling Findings",
 				"description": "The exception handling property is measured by static analysis tools that can collect findings categorized under source code exception handling faults.",
@@ -375,17 +259,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Exception Handling",
+			"description": "Sample description"
 		},
-		{
-			"name": "Format",
-			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention', 'Verbosity', 'Naming'.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Format": {
 			"measure": {
 				"name": "Format Findings",
 				"description": "The format property is measured by static analysis tools that can collect findings categorized under source code format faults.",
@@ -651,17 +530,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Format",
+			"description": "Sample description"
 		},
-		{
-			"name": "Functional Semantics",
-			"description": "The meaning and intended output of funtional acts.  For example, dividing all items in a list by two versus multiplying all items by two have different functional semantics.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Functional Semantics": {
 			"measure": {
 				"name": "Functional Semantics Findings",
 				"description": "The functional semantics property is measured by static analysis tools that can collect findings categorized under source code functional semantics faults.",
@@ -687,17 +561,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Functional Semantics",
+			"description": "Sample description"
 		},
-		{
-			"name": "Functional Syntax",
-			"description": "The operators, syntactic decision, object selection, etc., that determine how a functional act is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Functional Syntax": {
 			"measure": {
 				"name": "Functional Syntax Findings",
 				"description": "The function syntax property is measured by static analysis tools that can collect findings categorized under source code funciton syntax faults.",
@@ -783,19 +652,14 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Functional Syntax",
+			"description": "Sample description"
 		},
-		{
-			"name": "Input/Output Handling",
-			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Input Output Handling": {
 			"measure": {
-				"name": "Input/Output Handling Findings",
+				"name": "Input Output Handling Findings",
 				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
 				"diagnostics": [
 					{
@@ -924,17 +788,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Input Output Handling",
+			"description": "Sample description"
 		},
-		{
-			"name": "Resource Handling",
-			"description": "Management of resources: often related to locking of instances and file I/O.",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Resource Handling": {
 			"measure": {
 				"name": "Resource Handling Findings",
 				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
@@ -965,17 +824,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Resource Handling",
+			"description": "Sample description"
 		},
-		{
-			"name": "Structure",
-			"description": "The organization of classes, files, and methods. Includes object oriented concepts such as inheritance",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.004,
-				0.02
-			],
+		"Structure": {
 			"measure": {
 				"name": "Structure Findings",
 				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
@@ -1076,7 +930,10 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Structure",
+			"description": "Sample description"
 		}
-	]
+	}
 }
