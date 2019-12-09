@@ -25,7 +25,7 @@ import java.util.Properties;
 @Category(IntegrationTest.class)
 public class IntegrationTests {
 
-    private final Path ROSLYN_ROOT = Paths.get("src/main/Roslynator");
+    private final Path ROSLYN_ROOT = Paths.get("src/main/resources/Roslynator");
     private final Path TARGET = Paths.get("src/test/resources/projects/TestNetFramework");
 
     @Before

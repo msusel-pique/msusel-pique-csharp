@@ -6,13 +6,14 @@ import qatch.utility.FileUtility;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * IToolLOC implementation using Roslynator CLI
@@ -50,7 +51,6 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
     public Integer analyzeLinesOfCode(Path path) {
 
         path = path.toAbsolutePath();
-        String sep = File.separator;
         ProcessBuilder pb;
 
         // Append .sln or .csproj file to path
@@ -59,8 +59,8 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
             path = Paths.get(path.toString(), targetFiles.iterator().next() + ".sln");
         }
         else if (targetFiles.size() > 1) {
-            throw new RuntimeException("More than one .sln file exists in the give path root directory. " +
-                    "Ensure the directory has only one .sln file to target.");
+            throw new RuntimeException("More than one .sln file exists in the given path root directory at path: " +
+                    path.toString() + "\nEnsure the directory has only one .sln file to target.");
         }
         else {
             targetFiles = FileUtility.findFileNamesFromExtension(path, ".csproj", 1);
@@ -89,6 +89,8 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
         // Run the cmd command
         Integer loc = null;
         Process proc = null;
+        System.out.println("roslynator LoC: beginning analysis.\n\tTarget: " + path.toString());
+
         try {
             proc = pb.start();
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
@@ -106,7 +108,12 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
 
             // parse the line of code integer
             assert locLoc != null;
-            loc = new Integer(locLoc.substring(0, locLoc.indexOf(" ")).replace(",", ""));
+            Pattern p = Pattern.compile("\\d*,*\\d+");
+            Matcher m = p.matcher(locLoc);
+            if (m.find()) {
+                loc = Integer.parseInt(m.group().replaceAll(",", ""));
+            }
+            else throw new RuntimeException("LoC expected output from tool was not found by regex");
         } catch (IOException e) {
             e.printStackTrace();
         }

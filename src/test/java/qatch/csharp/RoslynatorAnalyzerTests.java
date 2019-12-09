@@ -17,7 +17,7 @@ import java.util.Properties;
 
 public class RoslynatorAnalyzerTests {
 
-    final String ROSLYN_ROOT = "src/main/resources/tools/Roslynator",
+    final String ROSLYN_ROOT = "src/main/resources/Roslynator",
                  TARGET_LOC  = "src/test/resources/projects/TestNetFramework",
                  OUTPUT_LOC  = "src/test/out",
                  SAMPLE_OUTPUT_LOC = "src/test/resources/roslynator_output.xml";
@@ -60,7 +60,7 @@ public class RoslynatorAnalyzerTests {
     public void testParse() {
 
         RoslynatorAnalyzer roslynatorAnalyzer = new RoslynatorAnalyzer(
-                null,
+                Paths.get(ROSLYN_ROOT),
                 null
         );
         Map<String, Diagnostic> diagnosticMap = roslynatorAnalyzer.parseAnalysis(Paths.get(SAMPLE_OUTPUT_LOC));

@@ -115,13 +115,15 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
         pb.redirectErrorStream(true);
 
         // Run the tool
+        System.out.println("roslynator: beginning static analysis.\n\tTarget: " + path.toString());
         try {
             Process p = pb.start();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String line;
-            while ((line = reader.readLine()) != null)
-                System.out.println("roslynator: " + line);
 
+            while ((line = stdInput.readLine()) != null) {
+                System.out.println("roslynator: " + line);
+            }
             p.waitFor();
         }
         catch (IOException | InterruptedException e) { e.printStackTrace(); }

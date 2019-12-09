@@ -1,43 +1,36 @@
 {
 	"name": "Test Roslynator Analysis",
+	"additionalData": {},
 	"tqi": {
-		"name": "TQI",
-		"description": "Sample tqi description",
 		"weights": {
 			"Characteristic 01": 0.8,
 			"Characteristic 02": 0.2
-		}
+		},
+		"name": "TQI",
+		"value": 0.0
 	},
-	"characteristics": [
-		{
-			"name": "Characteristic 01",
-			"standard": "Sample standard",
-			"description": "Sample description",
+	"characteristics": {
+		"Characteristic 01": {
 			"weights": {
 				"Property 01": 0.6,
 				"Property 02": 0.4
-			}
+			},
+			"name": "Characteristic 01",
+			"description": "Sample description",
+			"value": 0.0
 		},
-		{
-			"name": "Characteristic 02",
-			"standard": "Sample standard",
-			"description": "Integrity description",
+		"Characteristic 02": {
 			"weights": {
 				"Property 01": 0.5,
 				"Property 02": 0.5
-			}
+			},
+			"name": "Characteristic 02",
+			"description": "Sample description",
+			"value": 0.0
 		}
-	],
-	"properties": [
-		{
-			"name": "Property 01",
-			"description": "Property 01 description",
-			"positive_impact": "false",
-			"thresholds": [
-				0.0,
-				0.04,
-				0.1
-			],
+	},
+	"properties": {
+		"Property 01": {
 			"measure": {
 				"name": "Measure 01",
 				"diagnostics": [
@@ -57,17 +50,18 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
-		},
-		{
-			"name": "Property 02",
-			"description": "Test property for SCS findings",
-			"positive_impact": "false",
+			},
+			"positive": false,
 			"thresholds": [
 				0.0,
-				0.06,
+				0.04,
 				0.1
 			],
+			"name": "Property 01",
+			"description": "Sample description",
+			"value": 0.0
+		},
+		"Property 02": {
 			"measure": {
 				"name": "Measure 02",
 				"diagnostics": [
@@ -107,7 +101,16 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"thresholds": [
+				0.0,
+				0.06,
+				0.1
+			],
+			"name": "Property 02",
+			"description": "Sample description",
+			"value": 0.0
 		}
-	]
+	}
 }

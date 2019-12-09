@@ -25,8 +25,7 @@ public class SingleProjectEvaluation {
     private static File ROOT =        new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
     // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
     private static File RESOURCES =   new File(ROOT, "src/main/resources");
-    // TODO: discuss how to deal with potentially different tools locations due to differences in JAR runs and multi-project runs
-    private static File TOOLS =       new File(RESOURCES, "tools");
+    private static Path ROSLYN_RESOURCE_ROOT = Paths.get(RESOURCES.toString(), "Roslynator");
     private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
 
 
@@ -76,10 +75,10 @@ public class SingleProjectEvaluation {
         // Instantiate interface classes
         logger.debug("Beginning tool instantiations");
         ITool roslynator = new RoslynatorAnalyzer(
-                TOOLS.toPath(),
+                ROSLYN_RESOURCE_ROOT,
                 MS_BUILD
         );
-        IToolLOC loc = new RoslynatorLoc(TOOLS.toPath(), MS_BUILD);
+        IToolLOC loc = new RoslynatorLoc(ROSLYN_RESOURCE_ROOT, MS_BUILD);
         logger.trace("Analyzers loaded");
 
         // Run evaluation
