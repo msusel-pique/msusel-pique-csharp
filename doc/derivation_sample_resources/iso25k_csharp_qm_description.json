@@ -1,44 +1,44 @@
 {
 	"name": "ISO 25010 CSharp Quality Model",
+	"additionalData": {},
 	"tqi": {
-		"name": "Total Software Quality",
-		"description": "Sample tqi description"
+		"name": "Total Software Quality"
 	},
-	"characteristics": [
-		{
+	"characteristics": {
+		"Compatability": {
 			"name": "Compatability",
 			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment. Sub-characteristics: Co-existence, Interoperability."
 		},
-		{
-			"name": "Maintainability",
-			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. Sub-characteristics: Modularity, Reusability, Analysability, Modifiability, Testability."
-		},
-		{
+		"Performance Efficiency": {
 			"name": "Performance Efficiency",
 			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions. Sub-characteristics: Time Behaviour, Resource Utilization, Capacity."
 		},
-		{
+		"Portability": {
 			"name": "Portability",
 			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another. Sub-characteristics: Adapability, Installability, Replaceability."
 		},
-		{
+		"Maintainability": {
+			"name": "Maintainability",
+			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. Sub-characteristics: Modularity, Reusability, Analysability, Modifiability, Testability."
+		},
+		"Reliability": {
 			"name": "Reliability",
 			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. Maturity, Availability, Fault Tolerance, Recoverability."
 		},
-		{
+		"Security": {
 			"name": "Security",
 			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization. Sub-characteristics: Confidentiality, Integrity, Non-repudiation, Authenticity, Accountability."
 		},
-		{
+		"Usability": {
 			"name": "Usability",
 			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use. Appropriateness, Learnability, Operability, User Error Protection, User Interface Aesthetics, Accessibility."
 		}
-	],
-	"properties": [
-		{
+	},
+	"properties": {
+		"Data Type Integrity": {
 			"name": "Data Type Integrity",
 			"description": "A representation of how well each object adheres to C# object oriented typing expectations.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Data Type Integrity Findings",
 				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
@@ -106,10 +106,10 @@
 				]
 			}
 		},
-		{
+		"Documentation": {
 			"name": "Documentation",
 			"description": "Information about the source code intended to assist human understanding.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Documentation Findings",
 				"description": "The documentation property is measured by static analysis tools that can collect findings categorized under source code documentation faults.",
@@ -152,10 +152,10 @@
 				]
 			}
 		},
-		{
+		"Encryption": {
 			"name": "Encryption",
 			"description": "The concealment of code elements such that external entities are unable to decipher its information.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Encryption Findings",
 				"description": "The encryption property is measured by static analysis tools that can collect findings categorized under source code encryption faults.",
@@ -223,10 +223,10 @@
 				]
 			}
 		},
-		{
+		"Exception Handling": {
 			"name": "Exception Handling",
 			"description": "Goodness of approach in handling exceptions in a compliant and productive way.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Exception Handling Findings",
 				"description": "The exception handling property is measured by static analysis tools that can collect findings categorized under source code exception handling faults.",
@@ -264,10 +264,10 @@
 				]
 			}
 		},
-		{
+		"Format": {
 			"name": "Format",
 			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention', 'Verbosity', 'Naming'.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Format Findings",
 				"description": "The format property is measured by static analysis tools that can collect findings categorized under source code format faults.",
@@ -535,10 +535,10 @@
 				]
 			}
 		},
-		{
+		"Functional Semantics": {
 			"name": "Functional Semantics",
 			"description": "The meaning and intended output of funtional acts.  For example, dividing all items in a list by two versus multiplying all items by two have different functional semantics.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Functional Semantics Findings",
 				"description": "The functional semantics property is measured by static analysis tools that can collect findings categorized under source code functional semantics faults.",
@@ -566,10 +566,10 @@
 				]
 			}
 		},
-		{
+		"Functional Syntax": {
 			"name": "Functional Syntax",
 			"description": "The operators, syntactic decision, object selection, etc., that determine how a functional act is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Functional Syntax Findings",
 				"description": "The function syntax property is measured by static analysis tools that can collect findings categorized under source code funciton syntax faults.",
@@ -657,10 +657,10 @@
 				]
 			}
 		},
-		{
+		"Input Output Handling": {
 			"name": "Input Output Handling",
 			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Input Output Handling Findings",
 				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
@@ -793,10 +793,10 @@
 				]
 			}
 		},
-		{
+		"Resource Handling": {
 			"name": "Resource Handling",
 			"description": "Management of resources: often related to locking of instances and file I/O.",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Resource Handling Findings",
 				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
@@ -829,10 +829,10 @@
 				]
 			}
 		},
-		{
+		"Structure": {
 			"name": "Structure",
 			"description": "The organization of classes, files, and methods. Includes object oriented concepts such as inheritance",
-			"positive_impact": "false",
+			"positive": "false",
 			"measure": {
 				"name": "Structure Findings",
 				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
@@ -935,5 +935,5 @@
 				]
 			}
 		}
-	]
+	}
 }
