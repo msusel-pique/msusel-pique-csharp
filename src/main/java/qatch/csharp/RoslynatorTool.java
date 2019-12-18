@@ -17,6 +17,7 @@ public abstract class RoslynatorTool extends Tool {
         super(name, toolRoot);
     }
 
+
     protected Path roslynatorInitializeToTempFolder() {
         String protocol = RoslynatorTool.class.getResource("").getProtocol();
         Path tempResourceDirectory = Paths.get(System.getProperty("user.dir"), "resources");

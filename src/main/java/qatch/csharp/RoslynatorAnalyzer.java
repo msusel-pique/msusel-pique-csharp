@@ -136,6 +136,7 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
         return tempResults.toPath();
     }
 
+
     @Override
     public Map<String, Diagnostic> parseAnalysis(Path path) {
 
@@ -201,11 +202,14 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
         return diagnostics;
     }
 
-    // helper methods
+
+    // Helper methods
+
     private Diagnostic findMapMemberByDiagnosticId(Map<String, Diagnostic> diagnostics, String id) {
         if (diagnostics.containsKey(id)) { return diagnostics.get(id); }
         else { return new Diagnostic(id, "", "Roslynator"); }
     }
+
 
     @Override
     public Path initialize(Path toolRoot) {

@@ -17,8 +17,10 @@ import java.util.Properties;
 public class QualityModelDeriverCSharp {
 
     // Fields
+
     private static final File RESOURCES = new File("src/main/resources");
     private static final Path ROSLYN_RESOURCE_ROOT = Paths.get(RESOURCES.toString(), "Roslynator");
+
 
     /**
      * Main method for deriving a C# quality model.

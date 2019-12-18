@@ -18,22 +18,22 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
 
-// TODO: lots of todos to think about in runner regarding best approach for configuration strings
+
 public class SingleProjectEvaluation {
 
-    // parameter constants
-    private static File ROOT =        new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
-    // TODO: discuss having QM file packaged and referenced with runner or referenced via config file
-    private static File RESOURCES =   new File(ROOT, "src/main/resources");
+    // Fields and constants
+
+    private static File ROOT = new File(FileSystems.getDefault().getPath(".").toAbsolutePath().toString()).getParentFile();
+    private static File RESOURCES = new File(ROOT, "src/main/resources");
     private static Path ROSLYN_RESOURCE_ROOT = Paths.get(RESOURCES.toString(), "Roslynator");
-    private static Logger logger =    LoggerFactory.getLogger(SingleProjectEvaluation.class);
+    private static Logger logger = LoggerFactory.getLogger(SingleProjectEvaluation.class);
 
 
     /**
      * Main method for running quality evaluation on a single C# project or solution.
      *
      * @param args configuration array:
-     *             0: path to config file. See the single_project_evaluation.properties.properties file in src/test/resources/config for an example.
+     *      0: path to config file. See the single_project_evaluation.properties.properties file in src/test/resources/config for an example.
      */
     public static void main(String[] args) throws IOException {
 

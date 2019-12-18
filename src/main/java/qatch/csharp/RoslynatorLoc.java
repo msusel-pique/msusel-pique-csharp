@@ -42,10 +42,12 @@ public class RoslynatorLoc extends RoslynatorTool implements IToolLOC {
         this.msBuild = msBuild;
     }
 
+
     @Override
     public Path analyze(Path path) {
         throw new NotImplementedException();
     }
+
 
     @Override
     public Integer analyzeLinesOfCode(Path path) {
