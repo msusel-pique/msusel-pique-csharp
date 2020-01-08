@@ -175,6 +175,22 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
                             finding.setLineNumber(Integer.parseInt(((DeferredElementImpl) diagnosticChild).getAttribute("Line")));
                             finding.setCharacterNumber(Integer.parseInt(((DeferredElementImpl) diagnosticChild).getAttribute("Character")));
                             break;
+                        case "Severity":
+                            switch (diagnosticChild.getTextContent()) {
+                                case "Info":
+                                    finding.setSeverity(2);
+                                    break;
+                                case "Warning":
+                                    finding.setSeverity(3);
+                                    break;
+                                case "Error":
+                                    finding.setSeverity(4);
+                                    break;
+                                default:
+                                    finding.setSeverity(1);
+                                    break;
+                            }
+                            break;
                         default:
                             break;
                     }
