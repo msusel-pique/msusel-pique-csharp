@@ -822,6 +822,106 @@
 						"name": "RCS1229",
 						"description": "Use async/await when necessary",
 						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD001",
+						"description": "Avoid legacy thread switching methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD002",
+						"description": "Avoid problematic synchronous waits",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD003",
+						"description": "Avoid awaiting foreign Tasks",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD004",
+						"description": "Await SwitchToMainThreadAsync",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD010",
+						"description": "Invoke single-threaded types on Main thread",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD011",
+						"description": "Use AsyncLazy<T>",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD012",
+						"description": "Provide JoinableTaskFactory where allowed",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD100",
+						"description": "Avoid async void methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD101",
+						"description": "Avoid unsupported async delegates",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD102",
+						"description": "Implement internal logic asynchronously",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD103",
+						"description": "Call async methods when in an async method",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD104",
+						"description": "Offer async option",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD105",
+						"description": "Avoid method overloads that assume TaskScheduler.Current",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD106",
+						"description": "Use InvokeAsync to raise async events",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD107",
+						"description": "Await Task within using expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD108",
+						"description": "Assert thread affinity unconditionally",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD109",
+						"description": "Switch instead of assert in async methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD110",
+						"description": "Observe result of async calls",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD111",
+						"description": "Use .ConfigureAwait(bool)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD200",
+						"description": "Use Async naming convention",
+						"toolName": "Roslynator"
 					}
 				]
 			},
