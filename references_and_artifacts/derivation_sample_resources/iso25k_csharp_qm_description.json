@@ -7,38 +7,35 @@
 	"characteristics": {
 		"Compatability": {
 			"name": "Compatability",
-			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment. Sub-characteristics: Co-existence, Interoperability."
-		},
-		"Performance Efficiency": {
-			"name": "Performance Efficiency",
-			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions. Sub-characteristics: Time Behaviour, Resource Utilization, Capacity."
-		},
-		"Portability": {
-			"name": "Portability",
-			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another. Sub-characteristics: Adapability, Installability, Replaceability."
+			"description": "Sample description"
 		},
 		"Maintainability": {
 			"name": "Maintainability",
-			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. Sub-characteristics: Modularity, Reusability, Analysability, Modifiability, Testability."
+			"description": "Sample description"
+		},
+		"Performance Efficiency": {
+			"name": "Performance Efficiency",
+			"description": "Sample description"
+		},
+		"Portability": {
+			"name": "Portability",
+			"description": "Sample description"
 		},
 		"Reliability": {
 			"name": "Reliability",
-			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. Maturity, Availability, Fault Tolerance, Recoverability."
+			"description": "Sample description"
 		},
 		"Security": {
 			"name": "Security",
-			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization. Sub-characteristics: Confidentiality, Integrity, Non-repudiation, Authenticity, Accountability."
+			"description": "Sample description"
 		},
 		"Usability": {
 			"name": "Usability",
-			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use. Appropriateness, Learnability, Operability, User Error Protection, User Interface Aesthetics, Accessibility."
+			"description": "Sample description"
 		}
 	},
 	"properties": {
 		"Data Type Integrity": {
-			"name": "Data Type Integrity",
-			"description": "A representation of how well each object adheres to C# object oriented typing expectations.",
-			"positive": "false",
 			"measure": {
 				"name": "Data Type Integrity Findings",
 				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
@@ -104,12 +101,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Data Type Integrity",
+			"description": "Sample description"
 		},
 		"Documentation": {
-			"name": "Documentation",
-			"description": "Information about the source code intended to assist human understanding.",
-			"positive": "false",
 			"measure": {
 				"name": "Documentation Findings",
 				"description": "The documentation property is measured by static analysis tools that can collect findings categorized under source code documentation faults.",
@@ -150,12 +147,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Documentation",
+			"description": "Sample description"
 		},
 		"Encryption": {
-			"name": "Encryption",
-			"description": "The concealment of code elements such that external entities are unable to decipher its information.",
-			"positive": "false",
 			"measure": {
 				"name": "Encryption Findings",
 				"description": "The encryption property is measured by static analysis tools that can collect findings categorized under source code encryption faults.",
@@ -221,12 +218,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Encryption",
+			"description": "Sample description"
 		},
 		"Exception Handling": {
-			"name": "Exception Handling",
-			"description": "Goodness of approach in handling exceptions in a compliant and productive way.",
-			"positive": "false",
 			"measure": {
 				"name": "Exception Handling Findings",
 				"description": "The exception handling property is measured by static analysis tools that can collect findings categorized under source code exception handling faults.",
@@ -262,12 +259,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Exception Handling",
+			"description": "Sample description"
 		},
 		"Format": {
-			"name": "Format",
-			"description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include 'Style', 'Simplification', 'Readability', 'Convention', 'Verbosity', 'Naming'.",
-			"positive": "false",
 			"measure": {
 				"name": "Format Findings",
 				"description": "The format property is measured by static analysis tools that can collect findings categorized under source code format faults.",
@@ -533,12 +530,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Format",
+			"description": "Sample description"
 		},
 		"Functional Semantics": {
-			"name": "Functional Semantics",
-			"description": "The meaning and intended output of funtional acts.  For example, dividing all items in a list by two versus multiplying all items by two have different functional semantics.",
-			"positive": "false",
 			"measure": {
 				"name": "Functional Semantics Findings",
 				"description": "The functional semantics property is measured by static analysis tools that can collect findings categorized under source code functional semantics faults.",
@@ -564,12 +561,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Functional Semantics",
+			"description": "Sample description"
 		},
 		"Functional Syntax": {
-			"name": "Functional Syntax",
-			"description": "The operators, syntactic decision, object selection, etc., that determine how a functional act is defined. This is disjoint from the 'Format' property by having potential impact on more than just human-readability.",
-			"positive": "false",
 			"measure": {
 				"name": "Functional Syntax Findings",
 				"description": "The function syntax property is measured by static analysis tools that can collect findings categorized under source code funciton syntax faults.",
@@ -655,12 +652,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Functional Syntax",
+			"description": "Sample description"
 		},
 		"Input Output Handling": {
-			"name": "Input Output Handling",
-			"description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc.",
-			"positive": "false",
 			"measure": {
 				"name": "Input Output Handling Findings",
 				"description": "The I/O handling property is measured by static analysis tools that can collect findings categorized under source code I/O handling faults.",
@@ -791,12 +788,12 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Input Output Handling",
+			"description": "Sample description"
 		},
 		"Resource Handling": {
-			"name": "Resource Handling",
-			"description": "Management of resources: often related to locking of instances and file I/O.",
-			"positive": "false",
 			"measure": {
 				"name": "Resource Handling Findings",
 				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
@@ -825,14 +822,114 @@
 						"name": "RCS1229",
 						"description": "Use async/await when necessary",
 						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD001",
+						"description": "Avoid legacy thread switching methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD002",
+						"description": "Avoid problematic synchronous waits",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD003",
+						"description": "Avoid awaiting foreign Tasks",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD004",
+						"description": "Await SwitchToMainThreadAsync",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD010",
+						"description": "Invoke single-threaded types on Main thread",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD011",
+						"description": "Use AsyncLazy<T>",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD012",
+						"description": "Provide JoinableTaskFactory where allowed",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD100",
+						"description": "Avoid async void methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD101",
+						"description": "Avoid unsupported async delegates",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD102",
+						"description": "Implement internal logic asynchronously",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD103",
+						"description": "Call async methods when in an async method",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD104",
+						"description": "Offer async option",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD105",
+						"description": "Avoid method overloads that assume TaskScheduler.Current",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD106",
+						"description": "Use InvokeAsync to raise async events",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD107",
+						"description": "Await Task within using expression",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD108",
+						"description": "Assert thread affinity unconditionally",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD109",
+						"description": "Switch instead of assert in async methods",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD110",
+						"description": "Observe result of async calls",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD111",
+						"description": "Use .ConfigureAwait(bool)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "VSTHRD200",
+						"description": "Use Async naming convention",
+						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Resource Handling",
+			"description": "Sample description"
 		},
 		"Structure": {
-			"name": "Structure",
-			"description": "The organization of classes, files, and methods. Includes object oriented concepts such as inheritance",
-			"positive": "false",
 			"measure": {
 				"name": "Structure Findings",
 				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
@@ -933,7 +1030,10 @@
 						"toolName": "Roslynator"
 					}
 				]
-			}
+			},
+			"positive": false,
+			"name": "Structure",
+			"description": "Sample description"
 		}
 	}
 }
