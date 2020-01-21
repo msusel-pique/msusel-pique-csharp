@@ -1,0 +1,62 @@
+[
+    {
+        "t1": 0,
+        "t2": 0.00199156,
+        "t3": 0.0054852,
+        "_row": "Functional.Syntax.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0.00279001,
+        "t3": 0.02345917,
+        "_row": "Resource.Handling.Findings"
+    },
+    {
+        "t1": 0.0013624,
+        "t2": 0.04409588,
+        "t3": 0.1249054,
+        "_row": "Format.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "_row": "Input.Output.Handling.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0.00419955,
+        "t3": 0.01471302,
+        "_row": "Structure.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0.00037003,
+        "t3": 0.00405715,
+        "_row": "Documentation.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0.00010779,
+        "_row": "Functional.Semantics.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0.00001452,
+        "_row": "Data.Type.Integrity.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0.00009865,
+        "t3": 0.00135754,
+        "_row": "Exception.Handling.Findings"
+    },
+    {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "_row": "Encryption.Findings"
+    }
+]
