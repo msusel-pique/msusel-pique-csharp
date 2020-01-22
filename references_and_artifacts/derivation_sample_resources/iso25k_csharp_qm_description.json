@@ -1098,6 +1098,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "CS4014",
+						"description": "The current method calls an async method that returns a Task or a Task<TResult> and doesn’t apply the await operator to the result",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1059",
 						"description": "Avoid locking on publicly accessible instance",
 						"toolName": "Roslynator"
