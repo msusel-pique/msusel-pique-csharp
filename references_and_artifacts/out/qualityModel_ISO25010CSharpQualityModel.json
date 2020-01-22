@@ -1,1 +1,2113 @@
-{"name":"ISO 25010 CSharp Quality Model","additionalData":{},"tqi":{"weights":{"Compatability":0.0543,"Performance Efficiency":0.1587,"Portability":0.0892,"Maintainability":0.1949,"Reliability":0.407,"Security":0.0161,"Usability":0.0799},"name":"Total Software Quality","value":0.0},"characteristics":{"Compatability":{"weights":{"Functional Syntax":0.048,"Format":0.017,"Resource Handling":0.1635,"Data Type Integrity":0.163,"Documentation":0.0352,"Exception Handling":0.2522,"Encryption":0.0216,"Input Output Handling":0.2134,"Structure":0.0293,"Functional Semantics":0.0567},"name":"Compatability","description":"Sample description","value":0.0},"Performance Efficiency":{"weights":{"Functional Syntax":0.0217,"Format":0.0159,"Resource Handling":0.232,"Data Type Integrity":0.1163,"Documentation":0.0152,"Exception Handling":0.232,"Encryption":0.0318,"Input Output Handling":0.232,"Structure":0.0507,"Functional Semantics":0.0524},"name":"Performance Efficiency","description":"Sample description","value":0.0},"Portability":{"weights":{"Functional Syntax":0.0513,"Format":0.0257,"Resource Handling":0.1907,"Data Type Integrity":0.0589,"Documentation":0.1066,"Exception Handling":0.1995,"Encryption":0.0267,"Input Output Handling":0.2658,"Structure":0.0521,"Functional Semantics":0.0227},"name":"Portability","description":"Sample description","value":0.0},"Maintainability":{"weights":{"Functional Syntax":0.173,"Format":0.173,"Resource Handling":0.0355,"Data Type Integrity":0.0978,"Documentation":0.173,"Exception Handling":0.0832,"Encryption":0.0115,"Input Output Handling":0.0416,"Structure":0.173,"Functional Semantics":0.0384},"name":"Maintainability","description":"Sample description","value":0.0},"Reliability":{"weights":{"Functional Syntax":0.0232,"Format":0.0099,"Resource Handling":0.1493,"Data Type Integrity":0.1685,"Documentation":0.0978,"Exception Handling":0.1967,"Encryption":0.0102,"Input Output Handling":0.1493,"Structure":0.1545,"Functional Semantics":0.0408},"name":"Reliability","description":"Sample description","value":0.0},"Security":{"weights":{"Functional Syntax":0.018,"Format":0.0157,"Resource Handling":0.1357,"Data Type Integrity":0.1357,"Documentation":0.018,"Exception Handling":0.1373,"Encryption":0.2412,"Input Output Handling":0.2412,"Structure":0.0153,"Functional Semantics":0.0417},"name":"Security","description":"Sample description","value":0.0},"Usability":{"weights":{"Functional Syntax":0.0323,"Format":0.0323,"Resource Handling":0.0323,"Data Type Integrity":0.0323,"Documentation":0.111,"Exception Handling":0.3315,"Encryption":0.0323,"Input Output Handling":0.3315,"Structure":0.0323,"Functional Semantics":0.0323},"name":"Usability","description":"Sample description","value":0.0}},"properties":{"Functional Syntax":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1048","description":"Use lambda expression instead of anonymous method","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1061","description":"Merge if statement with nested if statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1077","description":"Optimize LINQ method call","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1080","description":"Use 'Count/Length' property instead of 'Any' method","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1096","description":"Use bitwise operation instead of calling 'HasFlag'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1113","description":"Use 'string.IsNullOrEmpty' method","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1146","description":"Use conditional access","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1165","description":"Unconstrained type parameter checked for null","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1197","description":"Optimize StringBuilder.Append/AppendLine call","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1198","description":"Avoid unnecessary boxing of value type","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1206","description":"Use conditional access instead of conditional expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1215","description":"Expression is always equal to true/false","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1219","description":"Call 'Enumerable.Skip' and 'Enumerable.Any' instead of 'Enumerable.Count'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1233","description":"Use short-circuiting operator","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1235","description":"Optimize method call","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1236","description":"Use exception filter","value":0.0}],"name":"Functional Syntax Findings","value":0.0},"positive":false,"thresholds":[0.0,0.00199156,0.0054852],"name":"Functional Syntax","description":"Sample description","value":0.0},"Format":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1001","description":"Add braces (when expression spans over multiple lines)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1002","description":"Remove braces","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1003","description":"Add braces to if-else (when expression spans over multiple lines)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1004","description":"Remove braces from if-else","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1005","description":"Simplify nested using statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1006","description":"Merge else clause with nested if statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1007","description":"Add braces","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1016","description":"Use expression-bodied member","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1017","description":"Avoid multiline expression body","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1018","description":"Add accessibility modifiers","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1019","description":"Order modifiers","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1020","description":"Simplify Nullable<T> to T?","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1021","description":"Simplify lambda expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1024","description":"Format accessor list","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1025","description":"Add new line before enum member","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1026","description":"Add new line before statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1027","description":"Add new line before embedded statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1028","description":"Add new line after switch label","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1029","description":"Format binary operator on next line","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1030","description":"Add empty line after embedded statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1031","description":"Remove unnecessary braces","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1032","description":"Remove redundant parentheses","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1033","description":"Remove redundant boolean literal","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1034","description":"Remove redundant 'sealed' modifier","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1035","description":"Remove redundant comma in initializer","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1036","description":"Remove redundant empty line","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1037","description":"Remove trailing white-space","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1038","description":"Remove empty statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1039","description":"Remove argument list from attribute","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1040","description":"Remove empty else clause","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1041","description":"Remove empty initializer","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1042","description":"Remove enum default underlying type","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1043","description":"Remove 'partial' modifier from type with a single part","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1045","description":"Rename private field according to camel case with underscore","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1046","description":"Asynchronous method name should end with 'Async'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1047","description":"Non-asynchronous method name should not end with 'Async'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1049","description":"Simplify boolean comparison","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1050","description":"Add argument list to object creation expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1051","description":"Parenthesize condition in conditional expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1057","description":"Add empty line between declarations","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1058","description":"Use compound assignment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1068","description":"Simplify logical negation","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1073","description":"Convert 'if' to 'return' statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1094","description":"Declare using directive on top level","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1103","description":"Convert 'if' to assignment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1104","description":"Simplify conditional expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1104","description":"Simplify conditional expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1128","description":"Use coalesce expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1134","description":"Remove redundant statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1154","description":"Sort enum members","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1172","description":"Use 'is' operator instead of 'as' operator","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1215","description":"Expression is always equal to true/false","value":0.0}],"name":"Format Findings","value":0.0},"positive":false,"thresholds":[0.0013624,0.04409588,0.1249054],"name":"Format","description":"Sample description","value":0.0},"Resource Handling":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1059","description":"Avoid locking on publicly accessible instance","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1090","description":"Call 'ConfigureAwait(false)'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1159","description":"Use EventHandler<T>","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1210","description":"Return Task.FromResult instead of returning null","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1229","description":"Use async/await when necessary","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD001","description":"Avoid legacy thread switching methods","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD002","description":"Avoid problematic synchronous waits","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD003","description":"Avoid awaiting foreign Tasks","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD004","description":"Await SwitchToMainThreadAsync","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD010","description":"Invoke single-threaded types on Main thread","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD011","description":"Use AsyncLazy<T>","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD012","description":"Provide JoinableTaskFactory where allowed","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD100","description":"Avoid async void methods","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD101","description":"Avoid unsupported async delegates","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD102","description":"Implement internal logic asynchronously","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD103","description":"Call async methods when in an async method","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD104","description":"Offer async option","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD105","description":"Avoid method overloads that assume TaskScheduler.Current","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD106","description":"Use InvokeAsync to raise async events","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD107","description":"Await Task within using expression","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD108","description":"Assert thread affinity unconditionally","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD109","description":"Switch instead of assert in async methods","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD110","description":"Observe result of async calls","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD111","description":"Use .ConfigureAwait(bool)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"VSTHRD200","description":"Use Async naming convention","value":0.0}],"name":"Resource Handling Findings","value":0.0},"positive":false,"thresholds":[0.0,0.00279001,0.02345917],"name":"Resource Handling","description":"Sample description","value":0.0},"Data Type Integrity":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1008","description":"Use explicit type instead of 'var' (when the type is not obvious)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1009","description":"Use explicit type instead of 'var' (foreach variable)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1010","description":"Use 'var' instead of explicit type (when the type is obvious)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1012","description":"Use explicit type instead of 'var' (when the type is obvious)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1013","description":"Use predefined type","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1014","description":"Avoid implicitly-typed array","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1135","description":"Declare enum member with zero value (when enum has FlagsAttribute)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1177","description":"Use 'var' instead of explicit type (in foreach)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1204","description":"Use EventArgs.Empty","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1210","description":"Return Task.FromResult instead of returning null","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1231","description":"Make parameter ref read-only","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1234","description":"Duplicate enum value","value":0.0}],"name":"Data Type Integrity Findings","value":0.0},"positive":false,"thresholds":[0.0,0.0,1.452E-5],"name":"Data Type Integrity","description":"Sample description","value":0.0},"Documentation":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1138","description":"Add summary to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1139","description":"Add summary element to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1140","description":"Add exception to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1141","description":"Add 'param' element to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1142","description":"Add 'typeparam' element to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1181","description":"Convert comment to documentation comment","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1232","description":"Order elements in documentation comment","value":0.0}],"name":"Documentation Findings","value":0.0},"positive":false,"thresholds":[0.0,3.7003E-4,0.00405715],"name":"Documentation","description":"Sample description","value":0.0},"Exception Handling":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1044","description":"Remove original exception from throw statement","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1075","description":"Avoid empty catch clause that catches System.Exception","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1194","description":"Implement exception constructors","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1202","description":"Avoid NullReferenceException","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1210","description":"Return Task.FromResult instead of returning null","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1236","description":"Use exception filter","value":0.0}],"name":"Exception Handling Findings","value":0.0},"positive":false,"thresholds":[0.0,9.865E-5,0.00135754],"name":"Exception Handling","description":"Sample description","value":0.0},"Encryption":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"SCS0005","description":"Weak Random Number Generator","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0006","description":"Weak hashing function","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0010","description":"Weak cipher algorithm","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0011","description":"Weak CBC Mode","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0012","description":"Weak ECB Mode","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0013","description":"Weak Cipher Mode","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0015","description":"Hardcoded Password","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0023","description":"View State Not Encrypted","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0024","description":"View State MAC Disabled","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0032","description":"Password RequiredLength Too Small","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0033","description":"Password Complexity","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0034","description":"Password RequiredLength Not Set","value":0.0}],"name":"Encryption Findings","value":0.0},"positive":false,"thresholds":[0.0,0.0,0.0],"name":"Encryption","description":"Sample description","value":0.0},"Input Output Handling":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"SCS0001","description":"Command Injection","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0002","description":"SQL Injection (LINQ)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0003","description":"XPath Injection","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0004","description":"Certificate Validation Disabled","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0007","description":"XML eXternal Entity Injection (XXE)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0008","description":"Cookie Without SSL Flag","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0009","description":"Cookie Without HttpOnly Flag","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0011","description":"Weak CBC Mode","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0014","description":"SQL Injection (WebControls)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0016","description":"Cross-Site Request Forgery (CSRF)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0017","description":"Request Validation Disabled (Attribute)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0018","description":"Path Traversal","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0019","description":"OutputCache Conflict","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0020","description":"SQL Injection (OLE DB)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0021","description":"Request Validation Disabled (Configuration File)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0022","description":"Event Validation Disabled","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0025","description":"SQL Injection (ODBC)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0026","description":"SQL Injection (MsSQL Data Provider)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0027","description":"Open Redirect","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0028","description":"Insecure Deserialization","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0029","description":"Cross-Site Scripting (XSS)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0030","description":"Request validation is enabled only for pages (Configuration File)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0031","description":"LDAP Injection","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0035","description":"SQL Injection (Entity Framework)","value":0.0},{"findings":[],"toolName":"Roslynator","name":"SCS0036","description":"SQL Injection (EnterpriseLibrary.Data)","value":0.0}],"name":"Input Output Handling Findings","value":0.0},"positive":false,"thresholds":[0.0,0.0,0.0],"name":"Input Output Handling","description":"Sample description","value":0.0},"Structure":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1060","description":"Declare each type in separate file","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1085","description":"Use auto-implemented property","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1102","description":"Make class static","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1110","description":"Declare type inside namespace","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1157","description":"Composite enum value contains undefined flag","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1158","description":"Static member in generic type should use a type parameter","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1160","description":"Abstract type should not have public constructors","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1161","description":"Enum should declare explicit values","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1168","description":"Parameter name differs from base name","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1169","description":"Make field read-only","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1170","description":"Use read-only auto-implemented property","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1187","description":"Use constant instead of field","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1193","description":"Overriding member cannot change 'params' modifier","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1194","description":"Implement exception constructors","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1203","description":"Use AttributeUsageAttribute","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1216","description":"Unnecessary unsafe context","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1224","description":"Make method an extension method","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1225","description":"Make class sealed","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1241","description":"Implement non-generic counterpart","value":0.0}],"name":"Structure Findings","value":0.0},"positive":false,"thresholds":[0.0,0.00419955,0.01471302],"name":"Structure","description":"Sample description","value":0.0},"Functional Semantics":{"measure":{"diagnostics":[{"findings":[],"toolName":"Roslynator","name":"RCS1155","description":"Use StringComparison when comparing strings","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1156","description":"Use string.Length instead of comparison with empty string","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1200","description":"Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'","value":0.0},{"findings":[],"toolName":"Roslynator","name":"RCS1227","description":"Validate arguments correctly","value":0.0}],"name":"Functional Semantics Findings","value":0.0},"positive":false,"thresholds":[0.0,0.0,1.0779E-4],"name":"Functional Semantics","description":"Sample description","value":0.0}}}
+{
+    "name": "ISO 25010 CSharp Quality Model",
+    "additionalData": {},
+    "tqi": {
+        "weights": {
+            "Compatability": 0.0543,
+            "Performance Efficiency": 0.1587,
+            "Portability": 0.0892,
+            "Maintainability": 0.1949,
+            "Reliability": 0.407,
+            "Security": 0.0161,
+            "Usability": 0.0799
+        },
+        "name": "Total Software Quality",
+        "value": 0.0
+    },
+    "characteristics": {
+        "Compatability": {
+            "weights": {
+                "Functional Syntax": 0.0565,
+                "Format": 0.0204,
+                "Resource Handling": 0.1521,
+                "Data Type Integrity": 0.1743,
+                "Documentation": 0.033,
+                "Exception Handling": 0.2853,
+                "Encryption": 0.0267,
+                "Input Output Handling": 0.2196,
+                "Structure": 0.0319
+            },
+            "name": "Compatability",
+            "description": "Degree to which a product, system or component can exchange information with other products, systems or components, and or perform its required functions while sharing the same hardware or software environment.",
+            "value": 0.0
+        },
+        "Performance Efficiency": {
+            "weights": {
+                "Functional Syntax": 0.0264,
+                "Format": 0.019,
+                "Resource Handling": 0.2426,
+                "Data Type Integrity": 0.1102,
+                "Documentation": 0.018,
+                "Exception Handling": 0.2426,
+                "Encryption": 0.0353,
+                "Input Output Handling": 0.2426,
+                "Structure": 0.0633
+            },
+            "name": "Performance Efficiency",
+            "description": "This characteristic represents the performance relative to the amount of resources used under stated conditions.",
+            "value": 0.0
+        },
+        "Portability": {
+            "weights": {
+                "Functional Syntax": 0.0502,
+                "Format": 0.0265,
+                "Resource Handling": 0.1991,
+                "Data Type Integrity": 0.0581,
+                "Documentation": 0.1059,
+                "Exception Handling": 0.2081,
+                "Encryption": 0.0273,
+                "Input Output Handling": 0.276,
+                "Structure": 0.0487
+            },
+            "name": "Portability",
+            "description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another.",
+            "value": 0.0
+        },
+        "Maintainability": {
+            "weights": {
+                "Functional Syntax": 0.1778,
+                "Format": 0.1778,
+                "Resource Handling": 0.0381,
+                "Data Type Integrity": 0.1067,
+                "Documentation": 0.1778,
+                "Exception Handling": 0.0859,
+                "Encryption": 0.0129,
+                "Input Output Handling": 0.0452,
+                "Structure": 0.1778
+            },
+            "name": "Maintainability",
+            "description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
+            "value": 0.0
+        },
+        "Reliability": {
+            "weights": {
+                "Functional Syntax": 0.0259,
+                "Format": 0.009,
+                "Resource Handling": 0.1484,
+                "Data Type Integrity": 0.1774,
+                "Documentation": 0.096,
+                "Exception Handling": 0.211,
+                "Encryption": 0.0093,
+                "Input Output Handling": 0.1484,
+                "Structure": 0.1747
+            },
+            "name": "Reliability",
+            "description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
+            "value": 0.0
+        },
+        "Security": {
+            "weights": {
+                "Functional Syntax": 0.0222,
+                "Format": 0.0194,
+                "Resource Handling": 0.1327,
+                "Data Type Integrity": 0.1331,
+                "Documentation": 0.0184,
+                "Exception Handling": 0.1351,
+                "Encryption": 0.2599,
+                "Input Output Handling": 0.2599,
+                "Structure": 0.0194
+            },
+            "name": "Security",
+            "description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
+            "value": 0.0
+        },
+        "Usability": {
+            "weights": {
+                "Functional Syntax": 0.0332,
+                "Format": 0.0332,
+                "Resource Handling": 0.0332,
+                "Data Type Integrity": 0.0332,
+                "Documentation": 0.1118,
+                "Exception Handling": 0.3445,
+                "Encryption": 0.0332,
+                "Input Output Handling": 0.3445,
+                "Structure": 0.0332
+            },
+            "name": "Usability",
+            "description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.",
+            "value": 0.0
+        }
+    },
+    "properties": {
+        "Functional Syntax": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0183",
+                        "description": "The given expression is always of the provided ('type') type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0464",
+                        "description": "Comparing with null of type 'type' always produces 'false'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0628",
+                        "description": "A sealed class cannot introduce a protected member because no other class will be able to inherit from the sealed class and use the protected member",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0652",
+                        "description": "Comparison to integral constant is useless; the constant is outside the range of type 'type'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1048",
+                        "description": "Use lambda expression instead of anonymous method",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1061",
+                        "description": "Merge if statement with nested if statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1077",
+                        "description": "Optimize LINQ method call",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1080",
+                        "description": "Use 'Count/Length' property instead of 'Any' method",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1096",
+                        "description": "Use bitwise operation instead of calling 'HasFlag'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1113",
+                        "description": "Use 'string.IsNullOrEmpty' method",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1146",
+                        "description": "Use conditional access",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1155",
+                        "description": "Use StringComparison when comparing strings",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1156",
+                        "description": "Use string.Length instead of comparison with empty string",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1165",
+                        "description": "Unconstrained type parameter checked for null",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1197",
+                        "description": "Optimize StringBuilder.Append/AppendLine call",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1198",
+                        "description": "Avoid unnecessary boxing of value type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1200",
+                        "description": "Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1206",
+                        "description": "Use conditional access instead of conditional expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1215",
+                        "description": "Expression is always equal to true/false",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1219",
+                        "description": "Call 'Enumerable.Skip' and 'Enumerable.Any' instead of 'Enumerable.Count'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1227",
+                        "description": "Validate arguments correctly",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1233",
+                        "description": "Use short-circuiting operator",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1235",
+                        "description": "Optimize method call",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1236",
+                        "description": "Use exception filter",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Functional Syntax Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.00213809,
+                0.00579511
+            ],
+            "name": "Functional Syntax",
+            "description": "Function syntax is the property of source code referring to syntactical differences of functional processes. That is, the use of alternate coding approach to accomplish the same functional goal.",
+            "value": 0.0
+        },
+        "Format": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0067",
+                        "description": "The event 'event' is never used",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0162",
+                        "description": "Unreachable code detected",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0164",
+                        "description": "A label was declared but never used",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0642",
+                        "description": "Possible mistaken empty statement. A semicolon after a conditional statement may cause your code to execute differently than intended",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0811",
+                        "description": "The fully qualified name for 'name' is too long for debug information",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1687",
+                        "description": "Source file has exceeded the limit of 16,707,565 lines representable in the PDB, debug information will be incorrect",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1001",
+                        "description": "Add braces (when expression spans over multiple lines)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1002",
+                        "description": "Remove braces",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1003",
+                        "description": "Add braces to if-else (when expression spans over multiple lines)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1004",
+                        "description": "Remove braces from if-else",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1005",
+                        "description": "Simplify nested using statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1006",
+                        "description": "Merge else clause with nested if statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1007",
+                        "description": "Add braces",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1016",
+                        "description": "Use expression-bodied member",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1017",
+                        "description": "Avoid multiline expression body",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1018",
+                        "description": "Add accessibility modifiers",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1019",
+                        "description": "Order modifiers",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1020",
+                        "description": "Simplify Nullable<T> to T?",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1021",
+                        "description": "Simplify lambda expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1024",
+                        "description": "Format accessor list",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1025",
+                        "description": "Add new line before enum member",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1026",
+                        "description": "Add new line before statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1027",
+                        "description": "Add new line before embedded statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1028",
+                        "description": "Add new line after switch label",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1029",
+                        "description": "Format binary operator on next line",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1030",
+                        "description": "Add empty line after embedded statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1031",
+                        "description": "Remove unnecessary braces",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1032",
+                        "description": "Remove redundant parentheses",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1033",
+                        "description": "Remove redundant boolean literal",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1034",
+                        "description": "Remove redundant 'sealed' modifier",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1035",
+                        "description": "Remove redundant comma in initializer",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1036",
+                        "description": "Remove redundant empty line",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1037",
+                        "description": "Remove trailing white-space",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1038",
+                        "description": "Remove empty statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1039",
+                        "description": "Remove argument list from attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1040",
+                        "description": "Remove empty else clause",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1041",
+                        "description": "Remove empty initializer",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1042",
+                        "description": "Remove enum default underlying type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1043",
+                        "description": "Remove 'partial' modifier from type with a single part",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1045",
+                        "description": "Rename private field according to camel case with underscore",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1046",
+                        "description": "Asynchronous method name should end with 'Async'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1047",
+                        "description": "Non-asynchronous method name should not end with 'Async'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1049",
+                        "description": "Simplify boolean comparison",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1050",
+                        "description": "Add argument list to object creation expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1051",
+                        "description": "Parenthesize condition in conditional expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1057",
+                        "description": "Add empty line between declarations",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1058",
+                        "description": "Use compound assignment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1068",
+                        "description": "Simplify logical negation",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1073",
+                        "description": "Convert 'if' to 'return' statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1094",
+                        "description": "Declare using directive on top level",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1103",
+                        "description": "Convert 'if' to assignment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1104",
+                        "description": "Simplify conditional expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1104",
+                        "description": "Simplify conditional expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1128",
+                        "description": "Use coalesce expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1134",
+                        "description": "Remove redundant statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1154",
+                        "description": "Sort enum members",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1172",
+                        "description": "Use 'is' operator instead of 'as' operator",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1215",
+                        "description": "Expression is always equal to true/false",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Format Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0013624,
+                0.04461867,
+                0.1249054
+            ],
+            "name": "Format",
+            "description": "Format properties refer to how the code is organized from a human-readable stance but not from a semantical point of view.  Format properties directly relate to the understandability characteristic, but can also apply to much more.",
+            "value": 0.0
+        },
+        "Resource Handling": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0728",
+                        "description": "Possibly incorrect assignment to local 'variable' which is the argument to a using or lock statement. The Dispose call or unlocking will happen on the original value of the local",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS4014",
+                        "description": "The current method calls an async method that returns a Task or a Task<TResult> and doesn’t apply the await operator to the result",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1059",
+                        "description": "Avoid locking on publicly accessible instance",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1090",
+                        "description": "Call 'ConfigureAwait(false)'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1159",
+                        "description": "Use EventHandler<T>",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1210",
+                        "description": "Return Task.FromResult instead of returning null",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1229",
+                        "description": "Use async/await when necessary",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD001",
+                        "description": "Avoid legacy thread switching methods",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD002",
+                        "description": "Avoid problematic synchronous waits",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD003",
+                        "description": "Avoid awaiting foreign Tasks",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD004",
+                        "description": "Await SwitchToMainThreadAsync",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD010",
+                        "description": "Invoke single-threaded types on Main thread",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD011",
+                        "description": "Use AsyncLazy<T>",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD012",
+                        "description": "Provide JoinableTaskFactory where allowed",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD100",
+                        "description": "Avoid async void methods",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD101",
+                        "description": "Avoid unsupported async delegates",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD102",
+                        "description": "Implement internal logic asynchronously",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD103",
+                        "description": "Call async methods when in an async method",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD104",
+                        "description": "Offer async option",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD105",
+                        "description": "Avoid method overloads that assume TaskScheduler.Current",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD106",
+                        "description": "Use InvokeAsync to raise async events",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD107",
+                        "description": "Await Task within using expression",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD108",
+                        "description": "Assert thread affinity unconditionally",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD109",
+                        "description": "Switch instead of assert in async methods",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD110",
+                        "description": "Observe result of async calls",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD111",
+                        "description": "Use .ConfigureAwait(bool)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "VSTHRD200",
+                        "description": "Use Async naming convention",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Resource Handling Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.00300709,
+                0.02345917
+            ],
+            "name": "Resource Handling",
+            "description": "Resource handling refers to the properties of code relating resource management. Resources can be threads, foreign tasks, events, public instances, and much more.",
+            "value": 0.0
+        },
+        "Data Type Integrity": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0028",
+                        "description": "'function declaration' has the wrong signature to be an entry point",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0108",
+                        "description": "'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0114",
+                        "description": "'function1' hides inherited member 'function2'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0184",
+                        "description": "The given expression is never of the provided ('type') type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0197",
+                        "description": "Passing 'argument' as ref or out or taking its address may cause a runtime exception because it is a field of a marshal-by-reference class",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0251",
+                        "description": "Indexing an array with a negative index (array indices always start at zero)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0252",
+                        "description": "Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'type'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0253",
+                        "description": "Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'type'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0420",
+                        "description": "'identifier': a reference to a volatile field will not be treated as volatile",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0435",
+                        "description": "The namespace 'namespace' in 'assembly' conflicts with the imported type 'type' in 'assembly'. Using the namespace defined in 'assembly'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0436",
+                        "description": "The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0437",
+                        "description": "The type 'type' in 'assembly2' conflicts with the imported namespace 'namespace' in 'fassembly1'. Using the type defined in 'assembly'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0440",
+                        "description": "Defining an alias named 'global' is ill-advised since 'global::' always references the global namespace and not an alias",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0458",
+                        "description": "The result of the expression is always 'null' of type 'type name'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0465",
+                        "description": "Introducing a 'Finalize' method can interfere with destructor invocation",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0469",
+                        "description": "The 'goto case' value is not implicitly convertible to type 'type'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0626",
+                        "description": "Method, operator, or accessor 'method' is marked external and has no attributes on it. A method marked extern should also be marked with an attribute, for example, the DllImport attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0649",
+                        "description": "Field 'field' is never assigned to, and will always have its default value 'value'. The compiler detected an uninitialized private or internal field declaration that is never assigned a value",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0657",
+                        "description": "'attribute modifier' is not a valid attribute location for this declaration. Valid attribute locations for this declaration are 'locations'. All attributes in this block will be ignored",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0658",
+                        "description": "'attribute modifier' is not a recognized attribute location. All attributes in this block will be ignored",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0659",
+                        "description": "'class' overrides Object.Equals(object o) but does not override Object.GetHashCode()",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0660",
+                        "description": "'class' defines operator == or operator != but does not override Object.Equals(object o)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0661",
+                        "description": "'class' defines operator == or operator != but does not override Object.GetHashCode()",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0675",
+                        "description": "Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0693",
+                        "description": "Type parameter 'type parameter' has the same name as the type parameter from outer type 'type'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0824",
+                        "description": "A constructor may be marked as extern. However, the compiler cannot verify that the constructor actually exists",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1690",
+                        "description": "Accessing a member on 'member' may cause a runtime exception because it is a field of a marshal-by-reference class",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1720",
+                        "description": "Expression will always cause a System.NullReferenceException because the default value of 'generic type' is null",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1956",
+                        "description": "Member 'name' implements interface member 'name' in type 'type'. There are multiple matches for the interface member at run-time. It is implementation dependent which method will be called",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1957",
+                        "description": "Member 'name' overrides 'method'. There are multiple override candidates at run-time. It is implementation dependent which method will be called",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1008",
+                        "description": "Use explicit type instead of 'var' (when the type is not obvious)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1009",
+                        "description": "Use explicit type instead of 'var' (foreach variable)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1010",
+                        "description": "Use 'var' instead of explicit type (when the type is obvious)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1013",
+                        "description": "Use predefined type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1014",
+                        "description": "Avoid implicitly-typed array",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1135",
+                        "description": "Declare enum member with zero value (when enum has FlagsAttribute)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1177",
+                        "description": "Use 'var' instead of explicit type (in foreach)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1204",
+                        "description": "Use EventArgs.Empty",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1210",
+                        "description": "Return Task.FromResult instead of returning null",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1231",
+                        "description": "Make parameter ref read-only",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1234",
+                        "description": "Duplicate enum value",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Data Type Integrity Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                1.1368E-4,
+                0.0010407
+            ],
+            "name": "Data Type Integrity",
+            "description": "Data type integrity refers to the wellness and understandability of data objects. This often involves not using null, returning the correct object in function declarations, and avoiding overridding or hiding other intended data objects.",
+            "value": 0.0
+        },
+        "Documentation": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0419",
+                        "description": "Ambiguous reference in cref attribute: 'Method Name1'. Assuming 'Method Name2', but could have also matched other overloads including 'Method Name3'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0612",
+                        "description": "The class designer marked a member with the Obsolete attribute. This means that the member might not be supported in a future version of the class",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0618",
+                        "description": "A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1570",
+                        "description": "XML comment on 'construct' has badly formed XML",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1571",
+                        "description": "XML comment on 'construct' has a duplicate param tag for 'parameter'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1572",
+                        "description": "XML comment on 'construct' has a param tag for 'parameter', but there is no parameter by that name",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1573",
+                        "description": "Parameter 'parameter' has no matching param tag in the XML comment for 'parameter' (but other parameters do)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1574",
+                        "description": "XML comment on 'construct' has syntactically incorrect cref attribute 'name'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1580",
+                        "description": "Invalid type for parameter 'parameter number' in XML comment cref attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1581",
+                        "description": "Invalid return type in XML comment cref attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1584",
+                        "description": "XML comment on 'member' has syntactically incorrect cref attribute 'invalid_syntax'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1587",
+                        "description": "XML comment is not placed on a valid language element",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1589",
+                        "description": "Unable to include XML fragment 'fragment' of file 'file'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1590",
+                        "description": "Invalid XML include element -- Missing file attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1591",
+                        "description": "Missing XML comment for publicly visible type or member 'Type_or_Member'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1592",
+                        "description": "Badly formed XML in included comments file",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1710",
+                        "description": "XML comment on 'type' has a duplicate typeparam tag for 'parameter'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1711",
+                        "description": "XML comment on 'type' has a typeparam tag for 'parameter', but there is no type parameter by that name",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1712",
+                        "description": "Type parameter 'type parameter' has no matching typeparam tag in the XML comment on 'type' (but other type parameters do)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1723",
+                        "description": "XML comment on 'param' has cref attribute 'attribute' that refers to a type parameter",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1138",
+                        "description": "Add summary to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1139",
+                        "description": "Add summary element to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1140",
+                        "description": "Add exception to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1141",
+                        "description": "Add 'param' element to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1142",
+                        "description": "Add 'typeparam' element to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1181",
+                        "description": "Convert comment to documentation comment",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1232",
+                        "description": "Order elements in documentation comment",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Documentation Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.0015783,
+                0.03269019
+            ],
+            "name": "Documentation",
+            "description": "The property of source code having to do with documentation.  This does not refer to in-line comments but strictly documentation-intended blocks of code.",
+            "value": 0.0
+        },
+        "Exception Handling": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0197",
+                        "description": "Passing 'argument' as ref or out or taking its address may cause a runtime exception because it is a field of a marshal-by-reference class",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1058",
+                        "description": "A previous catch clause already catches all exceptions",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1044",
+                        "description": "Remove original exception from throw statement",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1075",
+                        "description": "Avoid empty catch clause that catches System.Exception",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1194",
+                        "description": "Implement exception constructors",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1202",
+                        "description": "Avoid NullReferenceException",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1210",
+                        "description": "Return Task.FromResult instead of returning null",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1236",
+                        "description": "Use exception filter",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Exception Handling Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                1.0018E-4,
+                0.00135754
+            ],
+            "name": "Exception Handling",
+            "description": "Exception handling refers to properties in source code relating to exceptions: try, catch, throw statements, exception constructors, exception objects, and program exit or continuation in exceptional situations.",
+            "value": 0.0
+        },
+        "Encryption": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0005",
+                        "description": "Weak Random Number Generator",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0006",
+                        "description": "Weak hashing function",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0010",
+                        "description": "Weak cipher algorithm",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0011",
+                        "description": "Weak CBC Mode",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0012",
+                        "description": "Weak ECB Mode",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0013",
+                        "description": "Weak Cipher Mode",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0015",
+                        "description": "Hardcoded Password",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0023",
+                        "description": "View State Not Encrypted",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0024",
+                        "description": "View State MAC Disabled",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0032",
+                        "description": "Password RequiredLength Too Small",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0033",
+                        "description": "Password Complexity",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0034",
+                        "description": "Password RequiredLength Not Set",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Encryption Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Encryption",
+            "description": "Refers to elements of code directly relating to encryption, random number generation, password settings, or ciphers and hashes.",
+            "value": 0.0
+        },
+        "Input Output Handling": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0001",
+                        "description": "Command Injection",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0002",
+                        "description": "SQL Injection (LINQ)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0003",
+                        "description": "XPath Injection",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0004",
+                        "description": "Certificate Validation Disabled",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0007",
+                        "description": "XML eXternal Entity Injection (XXE)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0008",
+                        "description": "Cookie Without SSL Flag",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0009",
+                        "description": "Cookie Without HttpOnly Flag",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0011",
+                        "description": "Weak CBC Mode",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0014",
+                        "description": "SQL Injection (WebControls)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0016",
+                        "description": "Cross-Site Request Forgery (CSRF)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0017",
+                        "description": "Request Validation Disabled (Attribute)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0018",
+                        "description": "Path Traversal",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0019",
+                        "description": "OutputCache Conflict",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0020",
+                        "description": "SQL Injection (OLE DB)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0021",
+                        "description": "Request Validation Disabled (Configuration File)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0022",
+                        "description": "Event Validation Disabled",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0025",
+                        "description": "SQL Injection (ODBC)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0026",
+                        "description": "SQL Injection (MsSQL Data Provider)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0027",
+                        "description": "Open Redirect",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0028",
+                        "description": "Insecure Deserialization",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0029",
+                        "description": "Cross-Site Scripting (XSS)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0030",
+                        "description": "Request validation is enabled only for pages (Configuration File)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0031",
+                        "description": "LDAP Injection",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0035",
+                        "description": "SQL Injection (Entity Framework)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "SCS0036",
+                        "description": "SQL Injection (EnterpriseLibrary.Data)",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Input Output Handling Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Input Output Handling",
+            "description": "Input and output handling refers to the properties of code involved with the passage of external information to the internal system, or the sending of internal data to external systems.",
+            "value": 0.0
+        },
+        "Structure": {
+            "measure": {
+                "diagnostics": [
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0278",
+                        "description": "'type' does not implement the 'pattern name' pattern. 'method name' is ambiguous with 'method name'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0279",
+                        "description": "'type name' does not implement the 'pattern name' pattern. 'method name' is either static or not public",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0280",
+                        "description": "'type' does not implement the 'pattern name' pattern. 'method name' has the wrong signature",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0282",
+                        "description": "There is no defined ordering between fields in multiple declarations of partial class or struct 'type'. To specify an ordering, all instance fields must be in the same declaration",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0402",
+                        "description": "'identifier' : an entry point cannot be generic or in a generic type",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0435",
+                        "description": "The namespace 'namespace' in 'assembly' conflicts with the imported type 'type' in 'assembly'. Using the namespace defined in 'assembly'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0436",
+                        "description": "The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0437",
+                        "description": "The type 'type' in 'assembly2' conflicts with the imported namespace 'namespace' in 'fassembly1'. Using the type defined in 'assembly'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0473",
+                        "description": "Explicit interface implementation 'method name' matches more than one interface member",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0612",
+                        "description": "The class designer marked a member with the Obsolete attribute. This means that the member might not be supported in a future version of the class",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0618",
+                        "description": "A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0626",
+                        "description": "Method, operator, or accessor 'method' is marked external and has no attributes on it. A method marked extern should also be marked with an attribute, for example, the DllImport attribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0628",
+                        "description": "A sealed class cannot introduce a protected member because no other class will be able to inherit from the sealed class and use the protected member",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0659",
+                        "description": "'class' overrides Object.Equals(object o) but does not override Object.GetHashCode()",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0660",
+                        "description": "'class' defines operator == or operator != but does not override Object.Equals(object o)",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0661",
+                        "description": "'class' defines operator == or operator != but does not override Object.GetHashCode()",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS0684",
+                        "description": "'interface' interface marked with 'CoClassAttribute' not marked with 'ComImportAttribute'",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1616",
+                        "description": "Option 'option' overrides attribute 'attribute' given in a source file or added module. This warning occurs if the assembly attributes AssemblyKeyFileAttribute or AssemblyKeyNameAttribute found in source conflict with the -keyfile or -keycontainer command line option or key file name or key container specified in the Project Properties",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1685",
+                        "description": "The predefined type 'System.type name' is defined in multiple assemblies in the global alias; using definition from 'File Name'. This error occurs when a predefined system type such as System.int32 is found in two assemblies. One way this can happen is if you are referencing mscorlib from two different places, such as trying to run the.Net Framework versions 1.0 and 1.1 side-by-side",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "CS1762",
+                        "description": "A reference was created to embedded interop assembly '<assembly1>' because of an indirect reference to that assembly from assembly '<assembly2>'. Consider changing the 'Embed Interop Types' property on either assembly",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1060",
+                        "description": "Declare each type in separate file",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1085",
+                        "description": "Use auto-implemented property",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1102",
+                        "description": "Make class static",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1110",
+                        "description": "Declare type inside namespace",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1157",
+                        "description": "Composite enum value contains undefined flag",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1158",
+                        "description": "Static member in generic type should use a type parameter",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1160",
+                        "description": "Abstract type should not have public constructors",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1161",
+                        "description": "Enum should declare explicit values",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1168",
+                        "description": "Parameter name differs from base name",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1169",
+                        "description": "Make field read-only",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1170",
+                        "description": "Use read-only auto-implemented property",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1187",
+                        "description": "Use constant instead of field",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1193",
+                        "description": "Overriding member cannot change 'params' modifier",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1194",
+                        "description": "Implement exception constructors",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1203",
+                        "description": "Use AttributeUsageAttribute",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1216",
+                        "description": "Unnecessary unsafe context",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1224",
+                        "description": "Make method an extension method",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1225",
+                        "description": "Make class sealed",
+                        "value": 0.0
+                    },
+                    {
+                        "findings": [],
+                        "toolName": "Roslynator",
+                        "name": "RCS1241",
+                        "description": "Implement non-generic counterpart",
+                        "value": 0.0
+                    }
+                ],
+                "name": "Structure Findings",
+                "value": 0.0
+            },
+            "positive": false,
+            "thresholds": [
+                0.0,
+                0.00488304,
+                0.012939
+            ],
+            "name": "Structure",
+            "description": "Structure properites are the elements of source code relating to syntactic and semantic organization of files and objects from the compiler's perspective.",
+            "value": 0.0
+        }
+    }
+}
