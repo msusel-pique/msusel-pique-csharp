@@ -7,31 +7,31 @@
 	"characteristics": {
 		"Compatability": {
 			"name": "Compatability",
-			"description": "Sample description"
+			"description": "Degree to which a product, system or component can exchange information with other products, systems or components, and or perform its required functions while sharing the same hardware or software environment."
 		},
 		"Maintainability": {
 			"name": "Maintainability",
-			"description": "Sample description"
+			"description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements."
 		},
 		"Performance Efficiency": {
 			"name": "Performance Efficiency",
-			"description": "Sample description"
+			"description": "This characteristic represents the performance relative to the amount of resources used under stated conditions."
 		},
 		"Portability": {
 			"name": "Portability",
-			"description": "Sample description"
+			"description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another."
 		},
 		"Reliability": {
 			"name": "Reliability",
-			"description": "Sample description"
+			"description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time."
 		},
 		"Security": {
 			"name": "Security",
-			"description": "Sample description"
+			"description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization."
 		},
 		"Usability": {
 			"name": "Usability",
-			"description": "Sample description"
+			"description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use."
 		}
 	},
 	"properties": {
@@ -108,8 +108,8 @@
 				]
 			},
 			"positive": false,
-			"name": "Data Type Integrity refers to the wellness and understandability of data objects. This often involves not using null, returning the correct object in function declarations, is overridding or hiding of other intended data objects.",
-			"description": "Sample description"
+			"name": "Data Type Integrity",
+			"description": "Data type integrity refers to the wellness and understandability of data objects. This often involves not using null, returning the correct object in function declarations, and avoiding overridding or hiding other intended data objects."
 		},
 		"Documentation": {
 			"measure": {
@@ -155,7 +155,7 @@
 			},
 			"positive": false,
 			"name": "Documentation",
-			"description": "Sample description"
+			"description": "The property of source code having to do with documentation.  This does not refer to in-line comments but strictly documentation-intended blocks of code."
 		},
 		"Encryption": {
 			"measure": {
@@ -226,7 +226,7 @@
 			},
 			"positive": false,
 			"name": "Encryption",
-			"description": "Sample description"
+			"description": "Refers to elements of code directly relating to encryption, random number generation, password settings, or ciphers and hashes."
 		},
 		"Exception Handling": {
 			"measure": {
@@ -267,7 +267,7 @@
 			},
 			"positive": false,
 			"name": "Exception Handling",
-			"description": "Sample description"
+			"description": "Exception handling refers to properties in source code relating to exceptions: try, catch, throw statements, exception constructors, exception objects, and program exit or continuation in exceptional situations."
 		},
 		"Format": {
 			"measure": {
@@ -543,7 +543,7 @@
 			},
 			"positive": false,
 			"name": "Format",
-			"description": "Sample description"
+			"description": "Format properties refer to how the code is organized from a human-readable stance but not from a semantical point of view.  Format properties directly relate to the understandability characteristic, but can also apply to much more."
 		},
 		"Functional Syntax": {
 			"measure": {
@@ -790,7 +790,7 @@
 			},
 			"positive": false,
 			"name": "Input Output Handling",
-			"description": "Sample description"
+			"description": "Input and output handling refers to the properties of code involved with the passage of external information to the internal system, or the sending of internal data to external systems."
 		},
 		"Resource Handling": {
 			"measure": {
@@ -926,7 +926,7 @@
 			},
 			"positive": false,
 			"name": "Resource Handling",
-			"description": "Sample description"
+			"description": "Resource handling refers to the properties of code relating resource management. Resources can be threads, foreign tasks, events, public instances, and much more."
 		},
 		"Structure": {
 			"measure": {
@@ -1032,7 +1032,7 @@
 			},
 			"positive": false,
 			"name": "Structure",
-			"description": "Sample description"
+			"description": "Structure properites are the elements of source code relating to syntactic and semantic organization of files and objects from the compiler's perspective."
 		}
 	}
 }
