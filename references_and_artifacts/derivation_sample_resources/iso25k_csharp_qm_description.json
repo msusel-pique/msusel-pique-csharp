@@ -41,6 +41,16 @@
 				"description": "The data type integrity property is measured by static analysis tools that can collect findings categorized under source code data type faults.",
 				"diagnostics": [
 					{
+						"name": "CS0028",
+						"description": "'function declaration' has the wrong signature to be an entry point",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0108",
+						"description": "'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1008",
 						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
 						"toolName": "Roslynator"
@@ -53,11 +63,6 @@
 					{
 						"name": "RCS1010",
 						"description": "Use 'var' instead of explicit type (when the type is obvious)",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "RCS1012",
-						"description": "Use explicit type instead of 'var' (when the type is obvious)",
 						"toolName": "Roslynator"
 					},
 					{
@@ -103,7 +108,7 @@
 				]
 			},
 			"positive": false,
-			"name": "Data Type Integrity",
+			"name": "Data Type Integrity refers to the wellness and understandability of data objects. This often involves not using null, returning the correct object in function declarations, is overridding or hiding of other intended data objects.",
 			"description": "Sample description"
 		},
 		"Documentation": {
@@ -269,6 +274,11 @@
 				"name": "Format Findings",
 				"description": "The format property is measured by static analysis tools that can collect findings categorized under source code format faults.",
 				"diagnostics": [
+					{
+						"name": "CS0067",
+						"description": "The event 'event' is never used",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "RCS1001",
 						"description": "Add braces (when expression spans over multiple lines)",
@@ -535,37 +545,6 @@
 			"name": "Format",
 			"description": "Sample description"
 		},
-		"Functional Semantics": {
-			"measure": {
-				"name": "Functional Semantics Findings",
-				"description": "The functional semantics property is measured by static analysis tools that can collect findings categorized under source code functional semantics faults.",
-				"diagnostics": [
-					{
-						"name": "RCS1155",
-						"description": "Use StringComparison when comparing strings",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "RCS1156",
-						"description": "Use string.Length instead of comparison with empty string",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "RCS1200",
-						"description": "Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'",
-						"toolName": "Roslynator"
-					},
-					{
-						"name": "RCS1227",
-						"description": "Validate arguments correctly",
-						"toolName": "Roslynator"
-					}
-				]
-			},
-			"positive": false,
-			"name": "Functional Semantics",
-			"description": "Sample description"
-		},
 		"Functional Syntax": {
 			"measure": {
 				"name": "Functional Syntax Findings",
@@ -607,6 +586,16 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1155",
+						"description": "Use StringComparison when comparing strings",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1156",
+						"description": "Use string.Length instead of comparison with empty string",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1165",
 						"description": "Unconstrained type parameter checked for null",
 						"toolName": "Roslynator"
@@ -622,6 +611,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "RCS1200",
+						"description": "Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1206",
 						"description": "Use conditional access instead of conditional expression",
 						"toolName": "Roslynator"
@@ -634,6 +628,11 @@
 					{
 						"name": "RCS1219",
 						"description": "Call 'Enumerable.Skip' and 'Enumerable.Any' instead of 'Enumerable.Count'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "RCS1227",
+						"description": "Validate arguments correctly",
 						"toolName": "Roslynator"
 					},
 					{
@@ -655,7 +654,7 @@
 			},
 			"positive": false,
 			"name": "Functional Syntax",
-			"description": "Sample description"
+			"description": "Function syntax is the property of source code referring to syntactical differences of functional processes. That is, the use of alternate coding approach to accomplish the same functional goal."
 		},
 		"Input Output Handling": {
 			"measure": {
