@@ -176,6 +176,21 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "CS1720",
+						"description": "Expression will always cause a System.NullReferenceException because the default value of 'generic type' is null",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1956",
+						"description": "Member 'name' implements interface member 'name' in type 'type'. There are multiple matches for the interface member at run-time. It is implementation dependent which method will be called",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1957",
+						"description": "Member 'name' overrides 'method'. There are multiple override candidates at run-time. It is implementation dependent which method will be called",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1008",
 						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
 						"toolName": "Roslynator"
@@ -319,6 +334,26 @@
 					{
 						"name": "CS1592",
 						"description": "Badly formed XML in included comments file",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1710",
+						"description": "XML comment on 'type' has a duplicate typeparam tag for 'parameter'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1711",
+						"description": "XML comment on 'type' has a typeparam tag for 'parameter', but there is no type parameter by that name",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1712",
+						"description": "Type parameter 'type parameter' has no matching typeparam tag in the XML comment on 'type' (but other type parameters do)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1723",
+						"description": "XML comment on 'param' has cref attribute 'attribute' that refers to a type parameter",
 						"toolName": "Roslynator"
 					},
 					{
@@ -1291,6 +1326,11 @@
 					{
 						"name": "CS1685",
 						"description": "The predefined type 'System.type name' is defined in multiple assemblies in the global alias; using definition from 'File Name'. This error occurs when a predefined system type such as System.int32 is found in two assemblies. One way this can happen is if you are referencing mscorlib from two different places, such as trying to run the.Net Framework versions 1.0 and 1.1 side-by-side",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1762",
+						"description": "A reference was created to embedded interop assembly '<assembly1>' because of an indirect reference to that assembly from assembly '<assembly2>'. Consider changing the 'Embed Interop Types' property on either assembly",
 						"toolName": "Roslynator"
 					},
 					{
