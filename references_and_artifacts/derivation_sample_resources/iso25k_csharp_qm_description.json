@@ -156,6 +156,26 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "CS0675",
+						"description": "Bitwise-or operator used on a sign-extended operand; consider casting to a smaller unsigned type first",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0693",
+						"description": "Type parameter 'type parameter' has the same name as the type parameter from outer type 'type'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0824",
+						"description": "A constructor may be marked as extern. However, the compiler cannot verify that the constructor actually exists",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1690",
+						"description": "Accessing a member on 'member' may cause a runtime exception because it is a field of a marshal-by-reference class",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1008",
 						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
 						"toolName": "Roslynator"
@@ -234,6 +254,71 @@
 					{
 						"name": "CS0618",
 						"description": "A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1570",
+						"description": "XML comment on 'construct' has badly formed XML",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1571",
+						"description": "XML comment on 'construct' has a duplicate param tag for 'parameter'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1572",
+						"description": "XML comment on 'construct' has a param tag for 'parameter', but there is no parameter by that name",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1573",
+						"description": "Parameter 'parameter' has no matching param tag in the XML comment for 'parameter' (but other parameters do)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1574",
+						"description": "XML comment on 'construct' has syntactically incorrect cref attribute 'name'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1580",
+						"description": "Invalid type for parameter 'parameter number' in XML comment cref attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1581",
+						"description": "Invalid return type in XML comment cref attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1584",
+						"description": "XML comment on 'member' has syntactically incorrect cref attribute 'invalid_syntax'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1587",
+						"description": "XML comment is not placed on a valid language element",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1589",
+						"description": "Unable to include XML fragment 'fragment' of file 'file'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1590",
+						"description": "Invalid XML include element -- Missing file attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1591",
+						"description": "Missing XML comment for publicly visible type or member 'Type_or_Member'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1592",
+						"description": "Badly formed XML in included comments file",
 						"toolName": "Roslynator"
 					},
 					{
@@ -359,6 +444,11 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "CS1058",
+						"description": "A previous catch clause already catches all exceptions",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1044",
 						"description": "Remove original exception from throw statement",
 						"toolName": "Roslynator"
@@ -417,6 +507,16 @@
 					{
 						"name": "CS0642",
 						"description": "Possible mistaken empty statement. A semicolon after a conditional statement may cause your code to execute differently than intended",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0811",
+						"description": "The fully qualified name for 'name' is too long for debug information",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1687",
+						"description": "Source file has exceeded the limit of 16,707,565 lines representable in the PDB, debug information will be incorrect",
 						"toolName": "Roslynator"
 					},
 					{
@@ -958,6 +1058,11 @@
 				"description": "The resource handling property is measured by static analysis tools that can collect findings categorized under source code resource handling faults.",
 				"diagnostics": [
 					{
+						"name": "CS0728",
+						"description": "Possibly incorrect assignment to local 'variable' which is the argument to a using or lock statement. The Dispose call or unlocking will happen on the original value of the local",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1059",
 						"description": "Avoid locking on publicly accessible instance",
 						"toolName": "Roslynator"
@@ -1171,6 +1276,21 @@
 					{
 						"name": "CS0661",
 						"description": "'class' defines operator == or operator != but does not override Object.GetHashCode()",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0684",
+						"description": "'interface' interface marked with 'CoClassAttribute' not marked with 'ComImportAttribute'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1616",
+						"description": "Option 'option' overrides attribute 'attribute' given in a source file or added module. This warning occurs if the assembly attributes AssemblyKeyFileAttribute or AssemblyKeyNameAttribute found in source conflict with the -keyfile or -keycontainer command line option or key file name or key container specified in the Project Properties",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS1685",
+						"description": "The predefined type 'System.type name' is defined in multiple assemblies in the global alias; using definition from 'File Name'. This error occurs when a predefined system type such as System.int32 is found in two assemblies. One way this can happen is if you are referencing mscorlib from two different places, such as trying to run the.Net Framework versions 1.0 and 1.1 side-by-side",
 						"toolName": "Roslynator"
 					},
 					{
