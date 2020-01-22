@@ -51,6 +51,111 @@
 						"toolName": "Roslynator"
 					},
 					{
+						"name": "CS0114",
+						"description": "'function1' hides inherited member 'function2'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0184",
+						"description": "The given expression is never of the provided ('type') type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0197",
+						"description": "Passing 'argument' as ref or out or taking its address may cause a runtime exception because it is a field of a marshal-by-reference class",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0251",
+						"description": "Indexing an array with a negative index (array indices always start at zero)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0252",
+						"description": "Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'type'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0253",
+						"description": "Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'type'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0420",
+						"description": "'identifier': a reference to a volatile field will not be treated as volatile",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0435",
+						"description": "The namespace 'namespace' in 'assembly' conflicts with the imported type 'type' in 'assembly'. Using the namespace defined in 'assembly'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0436",
+						"description": "The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0437",
+						"description": "The type 'type' in 'assembly2' conflicts with the imported namespace 'namespace' in 'fassembly1'. Using the type defined in 'assembly'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0440",
+						"description": "Defining an alias named 'global' is ill-advised since 'global::' always references the global namespace and not an alias",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0458",
+						"description": "The result of the expression is always 'null' of type 'type name'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0465",
+						"description": "Introducing a 'Finalize' method can interfere with destructor invocation",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0469",
+						"description": "The 'goto case' value is not implicitly convertible to type 'type'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0626",
+						"description": "Method, operator, or accessor 'method' is marked external and has no attributes on it. A method marked extern should also be marked with an attribute, for example, the DllImport attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0649",
+						"description": "Field 'field' is never assigned to, and will always have its default value 'value'. The compiler detected an uninitialized private or internal field declaration that is never assigned a value",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0657",
+						"description": "'attribute modifier' is not a valid attribute location for this declaration. Valid attribute locations for this declaration are 'locations'. All attributes in this block will be ignored",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0658",
+						"description": "'attribute modifier' is not a recognized attribute location. All attributes in this block will be ignored",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0659",
+						"description": "'class' overrides Object.Equals(object o) but does not override Object.GetHashCode()",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0660",
+						"description": "'class' defines operator == or operator != but does not override Object.Equals(object o)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0661",
+						"description": "'class' defines operator == or operator != but does not override Object.GetHashCode()",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1008",
 						"description": "Use explicit type instead of 'var' (when the type is not obvious)",
 						"toolName": "Roslynator"
@@ -116,6 +221,21 @@
 				"name": "Documentation Findings",
 				"description": "The documentation property is measured by static analysis tools that can collect findings categorized under source code documentation faults.",
 				"diagnostics": [
+					{
+						"name": "CS0419",
+						"description": "Ambiguous reference in cref attribute: 'Method Name1'. Assuming 'Method Name2', but could have also matched other overloads including 'Method Name3'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0612",
+						"description": "The class designer marked a member with the Obsolete attribute. This means that the member might not be supported in a future version of the class",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0618",
+						"description": "A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "RCS1138",
 						"description": "Add summary to documentation comment",
@@ -234,6 +354,11 @@
 				"description": "The exception handling property is measured by static analysis tools that can collect findings categorized under source code exception handling faults.",
 				"diagnostics": [
 					{
+						"name": "CS0197",
+						"description": "Passing 'argument' as ref or out or taking its address may cause a runtime exception because it is a field of a marshal-by-reference class",
+						"toolName": "Roslynator"
+					},
+					{
 						"name": "RCS1044",
 						"description": "Remove original exception from throw statement",
 						"toolName": "Roslynator"
@@ -277,6 +402,21 @@
 					{
 						"name": "CS0067",
 						"description": "The event 'event' is never used",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0162",
+						"description": "Unreachable code detected",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0164",
+						"description": "A label was declared but never used",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0642",
+						"description": "Possible mistaken empty statement. A semicolon after a conditional statement may cause your code to execute differently than intended",
 						"toolName": "Roslynator"
 					},
 					{
@@ -550,6 +690,26 @@
 				"name": "Functional Syntax Findings",
 				"description": "The function syntax property is measured by static analysis tools that can collect findings categorized under source code funciton syntax faults.",
 				"diagnostics": [
+					{
+						"name": "CS0183",
+						"description": "The given expression is always of the provided ('type') type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0464",
+						"description": "Comparing with null of type 'type' always produces 'false'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0628",
+						"description": "A sealed class cannot introduce a protected member because no other class will be able to inherit from the sealed class and use the protected member",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0652",
+						"description": "Comparison to integral constant is useless; the constant is outside the range of type 'type'",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "RCS1048",
 						"description": "Use lambda expression instead of anonymous method",
@@ -933,6 +1093,86 @@
 				"name": "Structure Findings",
 				"description": "The structure property is measured by static analysis tools that can collect findings categorized under source code structure faults.",
 				"diagnostics": [
+					{
+						"name": "CS0278",
+						"description": "'type' does not implement the 'pattern name' pattern. 'method name' is ambiguous with 'method name'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0279",
+						"description": "'type name' does not implement the 'pattern name' pattern. 'method name' is either static or not public",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0280",
+						"description": "'type' does not implement the 'pattern name' pattern. 'method name' has the wrong signature",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0282",
+						"description": "There is no defined ordering between fields in multiple declarations of partial class or struct 'type'. To specify an ordering, all instance fields must be in the same declaration",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0402",
+						"description": "'identifier' : an entry point cannot be generic or in a generic type",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0435",
+						"description": "The namespace 'namespace' in 'assembly' conflicts with the imported type 'type' in 'assembly'. Using the namespace defined in 'assembly'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0436",
+						"description": "The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0437",
+						"description": "The type 'type' in 'assembly2' conflicts with the imported namespace 'namespace' in 'fassembly1'. Using the type defined in 'assembly'",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0473",
+						"description": "Explicit interface implementation 'method name' matches more than one interface member",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0612",
+						"description": "The class designer marked a member with the Obsolete attribute. This means that the member might not be supported in a future version of the class",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0618",
+						"description": "A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0626",
+						"description": "Method, operator, or accessor 'method' is marked external and has no attributes on it. A method marked extern should also be marked with an attribute, for example, the DllImport attribute",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0628",
+						"description": "A sealed class cannot introduce a protected member because no other class will be able to inherit from the sealed class and use the protected member",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0659",
+						"description": "'class' overrides Object.Equals(object o) but does not override Object.GetHashCode()",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0660",
+						"description": "'class' defines operator == or operator != but does not override Object.Equals(object o)",
+						"toolName": "Roslynator"
+					},
+					{
+						"name": "CS0661",
+						"description": "'class' defines operator == or operator != but does not override Object.GetHashCode()",
+						"toolName": "Roslynator"
+					},
 					{
 						"name": "RCS1060",
 						"description": "Declare each type in separate file",
