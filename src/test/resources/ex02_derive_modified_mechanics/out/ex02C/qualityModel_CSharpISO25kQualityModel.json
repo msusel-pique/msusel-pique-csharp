@@ -1,0 +1,1771 @@
+{
+  "name": "CSharp ISO25k Quality Model",
+  "additionalData": {},
+  "global_config": {
+    "benchmark_strategy": "pique.csharp.calibration.LinearBenchmarker",
+    "weights_strategy": "pique.calibration.AHPWeighter"
+  },
+  "factors": {
+    "product_factors": {
+      "Functional Syntax": {
+        "description": "The operators, syntactic decision, object selection, etc., that determine how a functional act is defined. This is disjoint from the Format property by having potential impact on more than just human-readability",
+        "value": 0.0
+      },
+      "Format": {
+        "description": "Code formatting. This involves how the code is written as it appears to a human reader. Common synonyms include Style, Simplification, Readability, Convention, Verbosity, Naming",
+        "value": 0.0
+      },
+      "Resource Handling": {
+        "description": "Management of resources: often related to locking of instances and file IO",
+        "value": 0.0
+      },
+      "Data Type Integrity": {
+        "description": "A  representation of how well each object adheres to CSharp object oriented typing expectations",
+        "value": 0.0
+      },
+      "Documentation": {
+        "description": "Information about the source code intended to assist human understanding",
+        "value": 0.0
+      },
+      "IO Handling": {
+        "description": "Management of the data going into and out of a source component.  Can relate to data sanitization, filtering, rejection, querying, database queries and storage, etc",
+        "value": 0.0
+      },
+      "Exception Handling": {
+        "description": "Goodness of approach in handling exceptions in a compliant and productive way",
+        "value": 0.0
+      },
+      "Encryption": {
+        "description": "The concealment of code elements such that external entities are unable to decipher its information",
+        "value": 0.0
+      },
+      "Structure": {
+        "description": "The organization of classes, files, and methods. Includes object oriented concepts such as inheritance",
+        "value": 0.0
+      }
+    },
+    "quality_aspects": {
+      "Performance Efficiency": {
+        "weights": {
+          "Functional Syntax": 0.0296,
+          "Format": 0.0198,
+          "Resource Handling": 0.2408,
+          "Data Type Integrity": 0.1229,
+          "Documentation": 0.017,
+          "IO Handling": 0.2408,
+          "Exception Handling": 0.2408,
+          "Encryption": 0.0265,
+          "Structure": 0.0617
+        },
+        "description": "This characteristic represents the performance relative to the amount of resources used under stated conditions",
+        "value": 0.0
+      },
+      "Portability": {
+        "weights": {
+          "Functional Syntax": 0.0575,
+          "Format": 0.0292,
+          "Resource Handling": 0.2351,
+          "Data Type Integrity": 0.0449,
+          "Documentation": 0.0909,
+          "IO Handling": 0.2714,
+          "Exception Handling": 0.2042,
+          "Encryption": 0.0262,
+          "Structure": 0.0407
+        },
+        "description": "Degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another",
+        "value": 0.0
+      },
+      "Maintainability": {
+        "weights": {
+          "Functional Syntax": 0.1747,
+          "Format": 0.1747,
+          "Resource Handling": 0.0321,
+          "Data Type Integrity": 0.1339,
+          "Documentation": 0.1747,
+          "IO Handling": 0.0419,
+          "Exception Handling": 0.0808,
+          "Encryption": 0.0124,
+          "Structure": 0.1747
+        },
+        "description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements",
+        "value": 0.0
+      },
+      "Compatibility": {
+        "weights": {
+          "Functional Syntax": 0.0518,
+          "Format": 0.0221,
+          "Resource Handling": 0.1701,
+          "Data Type Integrity": 0.1488,
+          "Documentation": 0.0318,
+          "IO Handling": 0.1983,
+          "Exception Handling": 0.3283,
+          "Encryption": 0.0244,
+          "Structure": 0.0244
+        },
+        "description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same hardware or software environment",
+        "value": 0.0
+      },
+      "Reliability": {
+        "weights": {
+          "Functional Syntax": 0.0265,
+          "Format": 0.0115,
+          "Resource Handling": 0.1318,
+          "Data Type Integrity": 0.1924,
+          "Documentation": 0.0275,
+          "IO Handling": 0.1318,
+          "Exception Handling": 0.2606,
+          "Encryption": 0.0115,
+          "Structure": 0.2063
+        },
+        "description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time",
+        "value": 0.0
+      },
+      "Security": {
+        "weights": {
+          "Functional Syntax": 0.0184,
+          "Format": 0.0184,
+          "Resource Handling": 0.1219,
+          "Data Type Integrity": 0.1219,
+          "Documentation": 0.0184,
+          "IO Handling": 0.2803,
+          "Exception Handling": 0.1219,
+          "Encryption": 0.2803,
+          "Structure": 0.0184
+        },
+        "description": "Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization",
+        "value": 0.0
+      },
+      "Usability": {
+        "weights": {
+          "Functional Syntax": 0.0312,
+          "Format": 0.1762,
+          "Resource Handling": 0.0312,
+          "Data Type Integrity": 0.0312,
+          "Documentation": 0.1111,
+          "IO Handling": 0.2205,
+          "Exception Handling": 0.3363,
+          "Encryption": 0.0312,
+          "Structure": 0.0312
+        },
+        "description": "Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use",
+        "value": 0.0
+      }
+    },
+    "tqi": {
+      "Total Software Quality": {
+        "weights": {
+          "Performance Efficiency": 0.151,
+          "Portability": 0.0816,
+          "Maintainability": 0.1822,
+          "Compatibility": 0.0537,
+          "Reliability": 0.4327,
+          "Security": 0.0156,
+          "Usability": 0.0831
+        },
+        "description": "The total quality value representing the entire system",
+        "value": 0.0
+      }
+    }
+  },
+  "measures": {
+    "Exception Handling Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Exception Handling"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1044",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove original exception from throw statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1075",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid empty catch clause that catches System.Exception",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1194",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Implement exception constructors",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1202",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid NullReferenceException",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1210",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Return Task.FromResult instead of returning null",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1236",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use exception filter",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        4.1562E-4
+      ],
+      "description": "Code smells related to exception handling",
+      "value": 0.0
+    },
+    "Functional Syntax Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Functional Syntax"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1048",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use lambda expression instead of anonymous method",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1061",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Merge if statement with nested if statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1077",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Optimize LINQ method call",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1080",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use 'Count/Length' property instead of 'Any' method",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1096",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use bitwise operation instead of calling 'HasFlag'",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1113",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use 'string.IsNullOrEmpty' method",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1146",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use conditional access",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1165",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Unconstrained type parameter checked for null",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1197",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Optimize StringBuilder.Append/AppendLine call",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1198",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid unnecessary boxing of value type",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1206",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use conditional access instead of conditional expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1215",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Expression is always equal to true/false",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1219",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Call 'Enumerable.Skip' and 'Enumerable.Any' instead of 'Enumerable.Count'",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1233",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use short-circuiting operator",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1235",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Optimize method call",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1236",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use exception filter",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.0013966
+      ],
+      "description": "Code smells related to functional syntax",
+      "value": 0.0
+    },
+    "Encryption Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Encryption"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0005",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak Random Number Generator",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0006",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak hashing function",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0010",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak cipher algorithm",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0011",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak CBC Mode",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0012",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak ECB Mode",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0013",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak Cipher Mode",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0015",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Hardcoded Password",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0023",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "View State Not Encrypted",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0024",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "View State MAC Disabled",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0032",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Password RequiredLength Too Small",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0033",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Password Complexity",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0034",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Password RequiredLength Not Set",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.0
+      ],
+      "description": "Code smells related to Encryption",
+      "value": 0.0
+    },
+    "Documentation Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Documentation"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1138",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add summary to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1139",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add summary element to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1140",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add exception to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1141",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add 'param' element to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1142",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add 'typeparam' element to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1181",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Convert comment to documentation comment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1232",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Order elements in documentation comment",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        5.1914E-4
+      ],
+      "description": "Code smells related to documentation",
+      "value": 0.0
+    },
+    "Format Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Format"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1001",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add braces (when expression spans over multiple lines)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1002",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove braces",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1003",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add braces to if-else (when expression spans over multiple lines)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1004",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove braces from if-else",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1005",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify nested using statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1006",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Merge else clause with nested if statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1007",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add braces",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1016",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use expression-bodied member",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1017",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid multiline expression body",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1018",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add accessibility modifiers",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1019",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Order modifiers",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1020",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify Nullable<T> to T?",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1021",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify lambda expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1024",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Format accessor list",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1025",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add new line before enum member",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1026",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add new line before statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1027",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add new line before embedded statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1028",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add new line after switch label",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1029",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Format binary operator on next line",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1030",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add empty line after embedded statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1031",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove unnecessary braces",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1032",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant parentheses",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1033",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant boolean literal",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1034",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant 'sealed' modifier",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1035",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant comma in initializer",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1036",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant empty line",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1037",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove trailing white-space",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1038",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove empty statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1039",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove argument list from attribute",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1040",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove empty else clause",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1041",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove empty initializer",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1042",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove enum default underlying type",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1043",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove 'partial' modifier from type with a single part",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1045",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Rename private field according to camel case with underscore",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1046",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Asynchronous method name should end with 'Async'",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1047",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Non-asynchronous method name should not end with 'Async'",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1049",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify boolean comparison",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1050",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add argument list to object creation expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1051",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Parenthesize condition in conditional expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1057",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Add empty line between declarations",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1058",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use compound assignment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1068",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify logical negation",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1073",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Convert 'if' to 'return' statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1094",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Declare using directive on top level",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1103",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Convert 'if' to assignment",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1104",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify conditional expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1104",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Simplify conditional expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1128",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use coalesce expression",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1134",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Remove redundant statement",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1154",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Sort enum members",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1172",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use 'is' operator instead of 'as' operator",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1215",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Expression is always equal to true/false",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.04586979
+      ],
+      "description": "Code smells related to format",
+      "value": 0.0
+    },
+    "DTI Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Data Type Integrity"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1008",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use explicit type instead of 'var' (when the type is not obvious)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1009",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use explicit type instead of 'var' (foreach variable)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1010",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use 'var' instead of explicit type (when the type is obvious)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1012",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use explicit type instead of 'var' (when the type is obvious)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1013",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use predefined type",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1014",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid implicitly-typed array",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1135",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Declare enum member with zero value (when enum has FlagsAttribute)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1177",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use 'var' instead of explicit type (in foreach)",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1204",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use EventArgs.Empty",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1210",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Return Task.FromResult instead of returning null",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1231",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Make parameter ref read-only",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1234",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Duplicate enum value",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.0
+      ],
+      "description": "Code smells related to data type integrity",
+      "value": 0.0
+    },
+    "Resource Handling Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Resource Handling"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1059",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid locking on publicly accessible instance",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1090",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Call 'ConfigureAwait(false)'",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1159",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use EventHandler<T>",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1210",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Return Task.FromResult instead of returning null",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1229",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use async/await when necessary",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD001",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid legacy thread switching methods",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD002",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid problematic synchronous waits",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD003",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid awaiting foreign Tasks",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD004",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Await SwitchToMainThreadAsync",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD010",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Invoke single-threaded types on Main thread",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD011",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use AsyncLazy<T>",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD012",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Provide JoinableTaskFactory where allowed",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD100",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid async void methods",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD101",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid unsupported async delegates",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD102",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Implement internal logic asynchronously",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD103",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Call async methods when in an async method",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD104",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Offer async option",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD105",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Avoid method overloads that assume TaskScheduler.Current",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD106",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use InvokeAsync to raise async events",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD107",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Await Task within using expression",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD108",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Assert thread affinity unconditionally",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD109",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Switch instead of assert in async methods",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD110",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Observe result of async calls",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD111",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use .ConfigureAwait(bool)",
+          "value": 0.0
+        },
+        {
+          "name": "VSTHRD200",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use Async naming convention",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.00107048
+      ],
+      "description": "Code smells related to resource handling",
+      "value": 0.0
+    },
+    "IO Handling Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "IO Handling"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0001",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Command Injection",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0002",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (LINQ)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0003",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "XPath Injection",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0004",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Certificate Validation Disabled",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0007",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "XML eXternal Entity Injection (XXE)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0008",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Cookie Without SSL Flag",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0009",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Cookie Without HttpOnly Flag",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0011",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Weak CBC Mode",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0014",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (WebControls)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0016",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Cross-Site Request Forgery (CSRF)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0017",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Request Validation Disabled (Attribute)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0018",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Path Traversal",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0019",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "OutputCache Conflict",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0020",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (OLE DB)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0021",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Request Validation Disabled (Configuration File)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0022",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Event Validation Disabled",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0025",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (ODBC)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0026",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (MsSQL Data Provider)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0027",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Open Redirect",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0028",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Insecure Deserialization",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0029",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Cross-Site Scripting (XSS)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0030",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Request validation is enabled only for pages (Configuration File)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0031",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "LDAP Injection",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0035",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (Entity Framework)",
+          "value": 0.0
+        },
+        {
+          "name": "SCS0036",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "SQL Injection (EnterpriseLibrary.Data)",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.0
+      ],
+      "description": "Code smells related to IO handling",
+      "value": 0.0
+    },
+    "Structure Smells": {
+      "positive": false,
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
+      "parents": [
+        "Structure"
+      ],
+      "diagnostics": [
+        {
+          "name": "loc",
+          "eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+          "toolName": "RoslynatorLoc",
+          "findings": [],
+          "description": "Normalizer diagnostic lines of code",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1060",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Declare each type in separate file",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1085",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use auto-implemented property",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1102",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Make class static",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1110",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Declare type inside namespace",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1157",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Composite enum value contains undefined flag",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1158",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Static member in generic type should use a type parameter",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1160",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Abstract type should not have public constructors",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1161",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Enum should declare explicit values",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1168",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Parameter name differs from base name",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1169",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Make field read-only",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1170",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use read-only auto-implemented property",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1187",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use constant instead of field",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1193",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Overriding member cannot change 'params' modifier",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1194",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Implement exception constructors",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1203",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Use AttributeUsageAttribute",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1216",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Unnecessary unsafe context",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1224",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Make method an extension method",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1225",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Make class sealed",
+          "value": 0.0
+        },
+        {
+          "name": "RCS1241",
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "toolName": "Roslynator",
+          "findings": [],
+          "description": "Implement non-generic counterpart",
+          "value": 0.0
+        }
+      ],
+      "thresholds": [
+        0.00274462
+      ],
+      "description": "Code smells related to structure",
+      "value": 0.0
+    }
+  }
+}

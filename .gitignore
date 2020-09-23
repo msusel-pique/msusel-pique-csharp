@@ -549,6 +549,7 @@ $RECYCLE.BIN/
 /output
 /out
 /src/test/out/
+/src/test/resources/thesis_tests/out/
 /src/test/java/qatch/csharp/Scratch.java
 #doc/reference.txt
 

@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>msu.msusel</groupId>
-  <artifactId>msusel-qatch-csharp</artifactId>
+  <artifactId>msusel-pique-csharp</artifactId>
   <version>0.3.0</version>
-  <name>msusel-qatch-csharp</name>
+  <name>msusel-pique-csharp</name>
   <url>https://msusel.github.io/</url>
 
   <properties>
@@ -49,7 +49,7 @@
     </dependency>
     <dependency>
       <groupId>msu.msusel</groupId>
-      <artifactId>msusel-qatch</artifactId>
+      <artifactId>msusel-pique</artifactId>
       <version>0.3.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -101,6 +101,13 @@
               </includes>
               <followSymlinks>false</followSymlinks>
             </fileset>
+            <fileset>
+              <directory>src/test/thesis_out</directory>
+              <includes>
+                <include>**/*</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
           </filesets>
         </configuration>
       </plugin>
@@ -128,7 +135,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>qatch.csharp.runnable.SingleProjectEvaluation</mainClass>
+          <mainClass>pique.csharp.runnable.Assessment</mainClass>
         </configuration>
       </plugin>
 
@@ -137,7 +144,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>qatch.csharp.runnable.SingleProjectEvaluation</mainClass>
+              <mainClass>pique.csharp.runnable.Assessment</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
@@ -189,19 +196,15 @@
   </build>
 
   <profiles>
-
     <profile>
-      <id>ut</id>
+      <id>experiments</id>
       <build>
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
             <configuration>
-              <includes>
-                <include>**/*.class</include>
-              </includes>
-              <excludedGroups>qatch.csharp.integrationtests.IntegrationTest</excludedGroups>
+              <groups>pique.csharp.experiments.ExperimentTest</groups>
             </configuration>
           </plugin>
         </plugins>
@@ -216,7 +219,22 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
             <configuration>
-              <groups>qatch.csharp.integrationtests.IntegrationTest</groups>
+              <groups>pique.csharp.integrationtests.IntegrationTest</groups>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>thesis</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.1</version>
+            <configuration>
+              <groups>pique.csharp.thesis_tests.ThesisTest</groups>
             </configuration>
           </plugin>
         </plugins>

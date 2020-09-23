@@ -1,0 +1,136 @@
+{
+	"name": "Test Roslynator Analysis",
+	"additionalData": {},
+	"factors": {
+		"tqi": {
+			"TQI": {
+				"value": 0.0,
+				"description": "Sample description",
+				"weights": {
+					"QualityAspect 01": 0.8,
+					"QualityAspect 02": 0.2
+				}
+			}
+		},
+		"quality_aspects": {
+			"QualityAspect 01": {
+				"value": 0.0,
+				"description": "Sample description",
+				"weights": {
+					"ProductFactor 01": 0.6,
+					"ProductFactor 02": 0.4
+				}
+			},
+			"QualityAspect 02": {
+				"value": 0.0,
+				"description": "Sample description",
+				"weights": {
+					"ProductFactor 01": 0.5,
+					"ProductFactor 02": 0.5
+				}
+			}
+		},
+		"product_factors": {
+			"ProductFactor 01": {
+				"value": 0.0,
+				"description": "Sample description"
+			},
+			"ProductFactor 02": {
+				"value": 0.0,
+				"description": "Sample description"
+			}
+		}
+	},
+	"measures": {
+		"Measure 01": {
+			"description": "Sample description",
+			"positive": false,
+			"parents": [
+				"ProductFactor 01"
+			],
+			"thresholds": [
+				0.0,
+				0.04,
+				0.1
+			],
+			"diagnostics": [
+				{
+					"name": "loc",
+					"description": "Normalizer diagnostic for measure 01",
+					"eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+					"toolName": "RoslynatorLoc" 
+				},
+				{
+					"name": "RCS1018",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "RCS1163",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "RCS_fake_diagnostic",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				}
+			]
+		},
+		"Measure 02": {
+			"description": "Sample description",
+			"positive": false,
+			"parents": [
+				"ProductFactor 02"
+			],
+			"thresholds": [
+				0.0,
+				0.06,
+				0.1
+			],
+			"diagnostics": [
+				{
+					"name": "loc",
+					"description": "Normalizer diagnostic for measure 02",
+					"eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
+					"toolName": "RoslynatorLoc" 
+				},
+				{
+					"name": "SCS0001",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS0002",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS0003",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS0004",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS0005",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS0006",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				},
+				{
+					"name": "SCS_fake_diagnostic",
+					"description": "Description for test diagnostic",
+					"toolName": "Roslynator"
+				}
+			]
+		}
+	}
+}
