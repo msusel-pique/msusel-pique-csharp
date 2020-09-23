@@ -1,5 +1,9 @@
-# msusel-qatch-csharp
-C# actualization of Qatch QA framework
+# msusel-pique-csharp
+This repository represents a C# actualization of the [PIQUE](https://github.com/msusel-pique/msusel-pique) quality analysis platform.
+This project integrates the C# static analysis framework tool, *Roslynator*, and provides example extensions of the default weighting, benchmarking, normalizing, and evaluation strategies provided by PIQUE.
+
+Additionally, this project provides the test cases and exercises used to verify components of the PIQUE system from the thesis backing this project.  
+
 
 ## Build Environment
 - Java 8+
