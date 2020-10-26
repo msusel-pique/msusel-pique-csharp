@@ -5,9 +5,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import pique.analysis.ITool;
-import pique.calibration.DefaultBenchmarker;
+import pique.calibration.NaiveBenchmarker;
 import pique.calibration.IBenchmarker;
-import pique.calibration.RInvoker;
 import pique.evaluation.Project;
 import pique.model.Diagnostic;
 import pique.model.QualityModel;
@@ -15,10 +14,7 @@ import pique.utility.FileUtility;
 
 import java.io.*;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class LinearBenchmarker implements IBenchmarker {
 
@@ -68,11 +64,31 @@ public class LinearBenchmarker implements IBenchmarker {
             System.out.println("\t" + counter + " of " + totalProjects + " analyzed.\n");
         }
 
-        // Create [Project_Name:Measure_Values] matrix file
-        DefaultBenchmarker.createProjectMeasureMatrix(projects, analysisResults);
+//        Map<String, Measure> measures = qmDescription.getMeasures();
+        Map<String, ArrayList<Double>> measureBenchmarkData = new HashMap<>();
+        projects.forEach(p -> {
+            p.getQualityModel().getMeasures().values().forEach(m -> {
+                        if (!measureBenchmarkData.containsKey(m.getName())) {
+                            measureBenchmarkData.put(m.getName(), new ArrayList<Double>() {{
+                                add(m.getValue());
+                            }});
+                        }
+                        else {
+                            measureBenchmarkData.get(m.getName()).add(m.getValue());
+                        }
+                    }
+            );
+        });
 
-        // Generate thresholds
-        return rMeasureMedians(rThresholdsOutput, analysisResults);
+        Map<String, Double[]> measureThresholds = new HashMap<>();
+        measureBenchmarkData.forEach((measureName, measureValues) -> {
+            measureThresholds.putIfAbsent(measureName, new Double[2]);
+            measureThresholds.get(measureName)[0] = Collections.min(measureValues);
+            measureThresholds.get(measureName)[1] = Collections.max(measureValues);
+
+        });
+
+        return measureThresholds;
 
     }
 
@@ -98,73 +114,4 @@ public class LinearBenchmarker implements IBenchmarker {
         return "pique.csharp.calibration.LinearBenchmarker";
     }
 
-
-    Map<String, Double[]> rMeasureMedians(Path output, Path analysisResults) {
-
-        // Precondition check
-        if (!analysisResults.toFile().isFile()) {
-            throw new RuntimeException("Benchmark analysisResults field must point to an existing file");
-        }
-
-        // Prepare temp file for R Script results
-        output.toFile().mkdirs();
-        File thresholdsFile = new File(output.toFile(), "threshold.json");
-
-        // R script expects the directory containining the analysis results as a parameter
-        Path analysisDirectory = analysisResults.getParent();
-
-        // Run R Script
-        RInvoker.executeRScript(RInvoker.Script.THRESHOLD, analysisDirectory, output, FileUtility.getRoot());
-
-        if (!thresholdsFile.isFile()) {
-            throw new RuntimeException("Execution of R script did not result in an existing file at " + thresholdsFile.toString());
-        }
-
-        // Remove min and max
-        String jsonString = "";
-        try {
-            FileReader fr = new FileReader(thresholdsFile.toString());
-            JsonArray jsonThreshArray = new JsonParser().parse(fr).getAsJsonArray();
-            fr.close();
-
-            jsonThreshArray.forEach(measure -> {
-                measure.getAsJsonObject().remove("t1");
-                measure.getAsJsonObject().remove("t3");
-            });
-
-            jsonString = jsonThreshArray.toString();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Save the results
-        try {
-            FileWriter writer = new FileWriter(thresholdsFile.toString());
-            writer.write(jsonString);
-            writer.close();
-        } catch(IOException e){ System.out.println(e.getMessage());  }
-
-
-        // Build object representation of data from R script
-        Map<String, Double[]> thresholds = new HashMap<>();
-        try {
-            FileReader fr = new FileReader(thresholdsFile.toString());
-            JsonArray jsonEntries = new JsonParser().parse(fr).getAsJsonArray();
-
-            for (JsonElement entry : jsonEntries) {
-                JsonObject jsonProperty = entry.getAsJsonObject();
-                String name = jsonProperty.getAsJsonPrimitive("_row").getAsString().replaceAll("\\.", " ");
-                Double[] threshold = new Double[] {
-                        jsonProperty.getAsJsonPrimitive("t2").getAsDouble()
-                };
-                thresholds.put(name, threshold);
-            }
-
-            fr.close();
-        }
-        catch (IOException e) { e.printStackTrace(); }
-
-        return thresholds;
-    }
 }
