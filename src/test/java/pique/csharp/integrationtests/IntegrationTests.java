@@ -67,18 +67,17 @@ public class IntegrationTests {
         // Assert
         Assert.assertEquals("Test Roslynator Analysis", qmName);
 
-        Assert.assertEquals(0.9, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 01").getAsDouble(), 0.001);
-        Assert.assertEquals(0.1, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 02").getAsDouble(), 0.001);
+        Assert.assertEquals(0.5, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 01").getAsDouble(), 0.001);
+        Assert.assertEquals(0.5, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 02").getAsDouble(), 0.001);
 
         Assert.assertEquals(0.5, qualiyAspect01.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 01").getAsDouble(), 0.001);
         Assert.assertEquals(0.5, qualiyAspect01.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 02").getAsDouble(), 0.001);
 
-        Assert.assertEquals(0.2, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 01").getAsDouble(), 0.001);
-        Assert.assertEquals(0.8, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 02").getAsDouble(), 0.001);
+        Assert.assertEquals(0.5, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 01").getAsDouble(), 0.001);
+        Assert.assertEquals(0.5, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 02").getAsDouble(), 0.001);
 
         Assert.assertEquals(0.0769, measure01.getAsJsonArray("thresholds").get(0).getAsFloat(), 0.001);
-        Assert.assertEquals(0.1333, measure01.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
-        Assert.assertEquals(0.1951, measure01.getAsJsonArray("thresholds").get(2).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.1951, measure01.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
 
     }
 
@@ -177,29 +176,27 @@ public class IntegrationTests {
         Assert.assertEquals("TestNetFramework", additionalData.getAsJsonPrimitive("projectName").getAsString());
         Assert.assertEquals("39", additionalData.getAsJsonPrimitive("projectLinesOfCode").getAsString());
 
-        Assert.assertEquals(0.1212, tqi.getAsJsonPrimitive("value").getAsFloat(), 0.001);
+        Assert.assertEquals(0.0323, tqi.getAsJsonPrimitive("value").getAsFloat(), 0.001);
         Assert.assertEquals(0.8, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 01").getAsDouble(), 0.001);
         Assert.assertEquals(0.2, tqi.getAsJsonObject("weights").getAsJsonPrimitive("QualityAspect 02").getAsDouble(), 0.001);
 
-        Assert.assertEquals(.1153, qualiyAspect01.getAsJsonPrimitive("value").getAsFloat(), 0.001);
+        Assert.assertEquals(.0307, qualiyAspect01.getAsJsonPrimitive("value").getAsFloat(), 0.001);
         Assert.assertEquals(0.6, qualiyAspect01.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 01").getAsDouble(), 0.001);
         Assert.assertEquals(0.4, qualiyAspect01.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 02").getAsDouble(), 0.001);
 
-        Assert.assertEquals(0.1442, qualiyAspect02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
+        Assert.assertEquals(0.0384, qualiyAspect02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
         Assert.assertEquals(0.5, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 01").getAsDouble(), 0.001);
         Assert.assertEquals(0.5, qualiyAspect02.getAsJsonObject("weights").getAsJsonPrimitive("ProductFactor 02").getAsDouble(), 0.001);
 
         Assert.assertEquals(0.0, productFactor01.getAsJsonPrimitive("value").getAsFloat(), 0.001);
-        Assert.assertEquals(0.2885, productFactor02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
+        Assert.assertEquals(0.0769, productFactor02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
 
         Assert.assertEquals(0.0, measure01.getAsJsonPrimitive("value").getAsFloat(), 0.001);
         Assert.assertEquals(0.0, measure01.getAsJsonArray("thresholds").get(0).getAsFloat(), 0.001);
-        Assert.assertEquals(0.04, measure01.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
-        Assert.assertEquals(0.1, measure01.getAsJsonArray("thresholds").get(2).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.1, measure01.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
 
-        Assert.assertEquals(0.2884, measure02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
+        Assert.assertEquals(0.0769, measure02.getAsJsonPrimitive("value").getAsFloat(), 0.001);
         Assert.assertEquals(0.0, measure02.getAsJsonArray("thresholds").get(0).getAsFloat(), 0.001);
-        Assert.assertEquals(0.06, measure02.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
-        Assert.assertEquals(0.1, measure02.getAsJsonArray("thresholds").get(2).getAsFloat(), 0.0001);
+        Assert.assertEquals(0.1, measure02.getAsJsonArray("thresholds").get(1).getAsFloat(), 0.0001);
     }
 }
