@@ -1,7 +1,7 @@
 package pique.csharp;
 
 import pique.analysis.ITool;
-import pique.evaluation.LOCDiagnosticEvaluator;
+import pique.evaluation.DefaultDiagnosticEvaluator;
 import pique.model.Diagnostic;
 import pique.model.Finding;
 import pique.utility.FileUtility;
@@ -29,11 +29,11 @@ public class RoslynatorLoc extends RoslynatorTool implements ITool {
 
     /**
      * Constructor.
-     * Roslynator analsis needs the MSBuild.exe path
+     * Roslynator analysis needs the MSBuild.exe path
      * (e.g. "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin")
      *
      * @param toolRoot
-     *      *      Qatch-csharp tools directory location
+     *      pique-csharp tools directory location
      * @param msBuild
      *      Path to Bin folder containing MSBuild.exe
      */
@@ -141,12 +141,14 @@ public class RoslynatorLoc extends RoslynatorTool implements ITool {
 
         // create finding, diagnostic and return
         Map<String, Diagnostic> diagnostics = new HashMap<>();
-        Finding locFinding = new Finding(loc);
-        Diagnostic locDiagnostic = new Diagnostic("loc", "Normalizer diagnostic", getName(), new LOCDiagnosticEvaluator());
 
-        locDiagnostic.setFinding(locFinding);
+        // TODO: Set loc value by value instead of by severity (temporary hack)
+        Finding locFinding = new Finding("n/a", 0, 0, loc);
+        Diagnostic locDiagnostic = new Diagnostic("loc", "Lines of Code", getName(),
+                new DefaultDiagnosticEvaluator());
+        locDiagnostic.setChild(locFinding);
+
         diagnostics.put(locDiagnostic.getName(), locDiagnostic);
-
         return diagnostics;
     }
 }

@@ -1,6 +1,5 @@
 {
 	"name": "Test Roslynator Analysis",
-	"additionalData": {},
 	"factors": {
 		"tqi": {
 			"TQI": {
@@ -17,10 +16,16 @@
 		},
 		"product_factors": {
 			"ProductFactor 01": {
-				"description": "Sample description"
+				"description": "Sample description",
+				"children": {
+					"Measure 01": {}
+				}
 			},
 			"ProductFactor 02": {
-				"description": "Sample description"
+				"description": "Sample description",
+				"children": {
+					"Measure 02": {}
+				}
 			}
 		}
 	},
@@ -28,82 +33,66 @@
 		"Measure 01": {
 			"description": "Sample description",
 			"positive": false,
-			"parents": [
-				"ProductFactor 01"
-			],
-			"diagnostics": [
-				{
-					"name": "loc",
-					"description": "Normalizer diagnostic for measure 01",
-					"eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
-					"toolName": "RoslynatorLoc" 
-				},
-				{
-					"name": "RCS1018",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "RCS1163",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "RCS_fake_diagnostic",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				}
-			]
+			"children": {
+				"RCS1018": {},
+				"RCS1163": {},
+				"RCS_fake_diagnostic": {}
+			}
 		},
 		"Measure 02": {
 			"description": "Sample description",
 			"positive": false,
-			"parents": [
-				"ProductFactor 02"
-			],
-			"diagnostics": [
-				{
-					"name": "loc",
-					"description": "Normalizer diagnostic for measure 02",
-					"eval_strategy": "pique.evaluation.LOCDiagnosticEvaluator",
-					"toolName": "RoslynatorLoc" 
-				},
-				{
-					"name": "SCS0001",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS0002",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS0003",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS0004",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS0005",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS0006",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				},
-				{
-					"name": "SCS_fake_diagnostic",
-					"description": "Description for test diagnostic",
-					"toolName": "Roslynator"
-				}
-			]
+			"children": {
+				"SCS0001": {},
+				"SCS0002": {},
+				"SCS0003": {},
+				"SCS0004": {},
+				"SCS0005": {},
+				"SCS0006": {},
+				"SCS_fake_diagnostic": {}
+			}
+		}
+	},
+	"diagnostics": {
+		"RCS1018": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"RCS1163": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"RCS_fake_diagnostic": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS0001": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS0002": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS0003": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS0004": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		 "SCS0005": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS0006": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
+		},
+		"SCS_fake_diagnostic": {
+			"description": "Description for test diagnostic",
+			"toolName": "Roslynator"
 		}
 	}
 }

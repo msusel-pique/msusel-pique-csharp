@@ -4,6 +4,8 @@ import pique.analysis.ITool;
 import pique.csharp.RoslynatorLoc;
 import pique.csharp.RoslynatorAnalyzer;
 import pique.model.QualityModel;
+import pique.model.QualityModelExport;
+import pique.model.QualityModelImport;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,9 +27,9 @@ public class ModelDeriver {
 
     /**
      * Main method for deriving a C# quality model.
-     * Elicites weights using an AHP matrix and determines thresholds using a benchmark repository.
+     * Elicitates weights and determines thresholds using a benchmark repository.
      * This method's main purpose is to assist configuration and then just call the
-     * msusel-qatch QualityModelDriver.deriveModel() method.
+     * msusel-pique QualityModelDriver.deriveModel() method.
      *
      * @param args configuration array:
      *        0: path to config file. See the quality_model_deriver.properties file in src/test/resources/config for an example.
@@ -40,29 +42,23 @@ public class ModelDeriver {
         catch (IOException e) { e.printStackTrace(); }
 
         // Initialize inputs
-        QualityModel qmDescription = new QualityModel(Paths.get(properties.getProperty("qm.filepath")));
-
+        String projectRootFlag = properties.getProperty("target.flag");
+        Path qmFilePath = Paths.get(properties.getProperty("qm.filepath"));
+        Path benchmarkRepository = Paths.get(properties.getProperty("benchmark.repo"));
+        Path outputDirectory = Paths.get(properties.getProperty("results.directory"));
         ITool roslynatorLoc = new RoslynatorLoc(ROSLYN_RESOURCE_ROOT, Paths.get(properties.getProperty("msbuild.bin")));
         ITool roslynator = new RoslynatorAnalyzer(ROSLYN_RESOURCE_ROOT, Paths.get(properties.getProperty("msbuild.bin")));
         Set<ITool> tools = Stream.of(roslynatorLoc, roslynator).collect(Collectors.toSet());
 
-        Path benchmarkRepository = Paths.get(properties.getProperty("benchmark.repo"));
-        Path comparisonMatricesDirectory = Paths.get(properties.getProperty("comparison.matrices"));
-        Path benchmarkScanOutput = Paths.get(properties.getProperty("benchmarkscan.output"));
-        Path rThresholdsOutput = Paths.get(properties.getProperty("rthresholds.output"));
-        Path tempWeightsDirectory = Paths.get(properties.getProperty("rweights.output"));
-        Path outputDirectory = Paths.get(properties.getProperty("results.directory"));
-
-        String projectRootFlag = properties.getProperty("target.flag");
+        QualityModelImport qmImport = new QualityModelImport(qmFilePath);
+        QualityModel qmDescription = qmImport.importQualityModel();
 
         // Run derivation process
         QualityModel derivedQM = pique.runnable.QualityModelDeriver.deriveModel(
-                qmDescription, tools, benchmarkRepository, comparisonMatricesDirectory,
-                benchmarkScanOutput, rThresholdsOutput, tempWeightsDirectory, projectRootFlag
-        );
+                qmDescription, tools, benchmarkRepository,  projectRootFlag);
 
         // Output to file
-        Path jsonOutput = derivedQM.exportToJson(outputDirectory);
+        Path jsonOutput = new QualityModelExport(derivedQM).exportToJson(derivedQM.getName(), outputDirectory);
 
         System.out.println("Quality Model derivation finished. You can find the file at " + jsonOutput.toAbsolutePath().toString());
     }
