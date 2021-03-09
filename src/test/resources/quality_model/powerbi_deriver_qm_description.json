@@ -1,0 +1,98 @@
+{
+  "name": "ESMS Reports PowerBI",
+  "factors": {
+    "tqi": {
+      "TQI": {
+        "description": "Total software quality",
+        "children": {
+          "QualityAspect 01": {},
+          "QualityAspect 02": {},
+          "QualityAspect 03": {}
+        }
+      }
+    },
+    "quality_aspects": {
+      "QualityAspect 01": {
+        "description": "Portability",
+        "children": {
+          "ProductFactor 01": {},
+          "ProductFactor 02": {}
+        }
+      },
+      "QualityAspect 02": {
+        "description": "Maintainability",
+        "children": {
+          "ProductFactor 01": {},
+          "ProductFactor 02": {}
+        }
+      },
+      "QualityAspect 03": {
+        "description": "Security",
+        "children": {
+          "ProductFactor 01": {},
+          "ProductFactor 02": {}
+        }
+      }
+    },
+    "product_factors": {
+      "ProductFactor 01": {
+        "description": "Documentation",
+        "children": {
+          "Measure 01": {}
+        }
+      },
+      "ProductFactor 02": {
+        "description": "Encryption",
+        "children": {
+          "Measure 02": {}
+        }
+      }
+    }
+  },
+  "measures": {
+    "Measure 01": {
+      "description": "Documentation Smells",
+      "positive": false,
+      "children": {
+        "CS0649": {},
+        "RCS1036": {},
+        "RCS1163": {},
+        "RCS1213": {},
+        "VSTHRD200": {}
+      }
+    },
+    "Measure 02": {
+      "description": "Encryption Smells",
+      "positive": false,
+      "children": {
+        "SCS0004": {}
+      }
+    }
+  },
+  "diagnostics": {
+    "CS0649": {
+      "description": "Field is never assigned to, and will always have its default value",
+      "toolName": "Roslynator"
+    },
+    "RCS1036": {
+      "description": "Remove redundant empty line",
+      "toolName": "Roslynator"
+    },
+    "RCS1163": {
+      "description": "Unused parameter",
+      "toolName": "Roslynator"
+    },
+    "RCS1213": {
+      "description": "Remove unused member declaration",
+      "toolName": "Roslynator"
+    },
+    "SCS0004": {
+      "description": "Certificate Validation has been disabled",
+      "toolName": "Roslynator"
+    },
+    "VSTHRD200": {
+      "description": "Use &quot;Async&quot; suffix for async methods",
+      "toolName": "Roslynator"
+    }
+  }
+}

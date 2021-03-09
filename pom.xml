@@ -50,7 +50,7 @@
     <dependency>
       <groupId>msu.msusel</groupId>
       <artifactId>msusel-pique</artifactId>
-      <version>0.9.1</version>
+      <version>0.9.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
     <dependency>
