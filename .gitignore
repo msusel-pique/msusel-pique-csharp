@@ -554,10 +554,10 @@ $RECYCLE.BIN/
 #doc/reference.txt
 
 ### dev_harrison Specific ###
-/src/test/resources/projects/Contracts
-/src/test/resources/projects/contracts_benchmark_repository
-/src/test/resources/out/ESMS.Assessments
-/src/test/resources/out/ESMS.Reports
+/src/test/resources/projects/Contracts/
+/src/test/resources/projects/contracts_benchmark_repository/
+/src/test/resources/out/ESMS.Assessments/
+/src/test/resources/out/ESMS.Reports/
 /src/test/resources/out/TestNetFramework/ESMSReportsPowerBi.json
 /src/test/resources/quality_model/powerbi_deriver_qm_description.json
 
