@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * ITool implementation static analyasis tool class.
+ * ITool implementation static analysis tool class.
  *
  * Roslynator download: https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019
  * Roslynator repo: https://github.com/JosefPihrt/Roslynator
@@ -39,12 +39,12 @@ import java.util.Set;
 public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
 
     // Fields
-    private Path msBuild;
+    private final Path msBuild;
 
 
     /**
      * Constructor.
-     * Roslynator analsis needs the MSBuild.exe path
+     * Roslynator analysis needs the MSBuild.exe path
      * (e.g. "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin")
      *
      * @param toolRoot
@@ -102,15 +102,14 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
         String output = "--output=" + tempResults.toString();
         String target = path.toString();
 
-        if(System.getProperty("os.name").contains("Windows")){
-        } else {
+        if (!System.getProperty("os.name").contains("Windows")) {
             throw new RuntimeException("Roslynator C# analysis not supported on non-Windows machines.");
         }
 
         // Run the tool
         System.out.println("roslynator: beginning static analysis.\n\tTarget: " + path.toString());
 
-        Process p = null;
+        Process p;
         try {
             p = new ProcessBuilder(roslynator, command, assemblyDir, msBuild, output, target).start();
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -190,7 +189,7 @@ public class RoslynatorAnalyzer extends RoslynatorTool implements ITool {
                             break;
                     }
                 }
-                diagnostic.setFinding(finding);
+                diagnostic.setChild(finding);
 
                 // add parsed diagnostic with attached finding objects to collection
                 diagnostics.put(diagnosticId, diagnostic);

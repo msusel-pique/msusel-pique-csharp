@@ -6,7 +6,7 @@
 
   <groupId>msu.msusel</groupId>
   <artifactId>msusel-pique-csharp</artifactId>
-  <version>0.3.0</version>
+  <version>0.9.2</version>
   <name>msusel-pique-csharp</name>
   <url>https://msusel.github.io/</url>
 
@@ -44,13 +44,13 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>msu.msusel</groupId>
       <artifactId>msusel-pique</artifactId>
-      <version>0.3.0</version>
+      <version>0.9.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
     <dependency>
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
-      <version>3.9</version>
+      <version>3.17</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.jdom/jdom -->
     <dependency>
