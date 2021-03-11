@@ -44,7 +44,8 @@
       "ProductFactor 02": {
         "description": "Encryption",
         "children": {
-          "Measure 02": {}
+          "Measure 02": {},
+          "RCS_fake_diagnostic": {}
         }
       }
     }
@@ -92,6 +93,10 @@
     },
     "VSTHRD200": {
       "description": "Use &quot;Async&quot; suffix for async methods",
+      "toolName": "Roslynator"
+    },
+    "RCS_fake_diagnostic": {
+      "description": "Description for test diagnostic",
       "toolName": "Roslynator"
     }
   }

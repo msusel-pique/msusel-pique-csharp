@@ -18,11 +18,77 @@
             "value": 0.0,
             "description": "Sample description",
             "children": {
+              "SCS0003": {
+                "toolName": "Roslynator",
+                "name": "SCS0003",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
               "SCS0004": {
                 "toolName": "Roslynator",
                 "name": "SCS0004",
                 "value": 0.0,
-                "description": "Certificate Validation has been disabled",
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
+              "SCS0001": {
+                "toolName": "Roslynator",
+                "name": "SCS0001",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
+              "SCS0002": {
+                "toolName": "Roslynator",
+                "name": "SCS0002",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
+              "SCS0005": {
+                "toolName": "Roslynator",
+                "name": "SCS0005",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
+              "SCS0006": {
+                "toolName": "Roslynator",
+                "name": "SCS0006",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
+                "children": {},
+                "weights": {},
+                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                "normalizer": "pique.evaluation.DefaultNormalizer",
+                "utility_function": "pique.evaluation.DefaultUtility"
+              },
+              "SCS_fake_diagnostic": {
+                "toolName": "Roslynator",
+                "name": "SCS_fake_diagnostic",
+                "value": 0.0,
+                "description": "Description for test diagnostic",
                 "children": {},
                 "weights": {},
                 "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -31,8 +97,18 @@
               }
             },
             "weights": {
-              "SCS0004": 1.0
+              "SCS0003": 0.14285714285714285,
+              "SCS0004": 0.14285714285714285,
+              "SCS0001": 0.14285714285714285,
+              "SCS0002": 0.14285714285714285,
+              "SCS0005": 0.14285714285714285,
+              "SCS0006": 0.14285714285714285,
+              "SCS_fake_diagnostic": 0.14285714285714285
             },
+            "thresholds": [
+              0.0,
+              0.0
+            ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
             "utility_function": "pique.evaluation.DefaultUtility"
@@ -60,51 +136,29 @@
                 "toolName": "Roslynator",
                 "name": "RCS1163",
                 "value": 0.0,
-                "description": "Unused parameter",
+                "description": "Description for test diagnostic",
                 "children": {},
                 "weights": {},
                 "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
               },
-              "VSTHRD200": {
+              "RCS1018": {
                 "toolName": "Roslynator",
-                "name": "VSTHRD200",
+                "name": "RCS1018",
                 "value": 0.0,
-                "description": "Use &quot;Async&quot; suffix for async methods",
+                "description": "Description for test diagnostic",
                 "children": {},
                 "weights": {},
                 "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
               },
-              "CS0649": {
+              "RCS_fake_diagnostic": {
                 "toolName": "Roslynator",
-                "name": "CS0649",
+                "name": "RCS_fake_diagnostic",
                 "value": 0.0,
-                "description": "Field is never assigned to, and will always have its default value",
-                "children": {},
-                "weights": {},
-                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                "normalizer": "pique.evaluation.DefaultNormalizer",
-                "utility_function": "pique.evaluation.DefaultUtility"
-              },
-              "RCS1036": {
-                "toolName": "Roslynator",
-                "name": "RCS1036",
-                "value": 0.0,
-                "description": "Remove redundant empty line",
-                "children": {},
-                "weights": {},
-                "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                "normalizer": "pique.evaluation.DefaultNormalizer",
-                "utility_function": "pique.evaluation.DefaultUtility"
-              },
-              "RCS1213": {
-                "toolName": "Roslynator",
-                "name": "RCS1213",
-                "value": 0.0,
-                "description": "Remove unused member declaration",
+                "description": "Description for test diagnostic",
                 "children": {},
                 "weights": {},
                 "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -113,12 +167,14 @@
               }
             },
             "weights": {
-              "RCS1163": 0.2,
-              "VSTHRD200": 0.2,
-              "CS0649": 0.2,
-              "RCS1036": 0.2,
-              "RCS1213": 0.2
+              "RCS1163": 0.3333333333333333,
+              "RCS1018": 0.3333333333333333,
+              "RCS_fake_diagnostic": 0.3333333333333333
             },
+            "thresholds": [
+              0.07692307692307693,
+              0.3076923076923077
+            ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
             "utility_function": "pique.evaluation.DefaultUtility"
@@ -153,51 +209,29 @@
                     "toolName": "Roslynator",
                     "name": "RCS1163",
                     "value": 0.0,
-                    "description": "Unused parameter",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
                   },
-                  "VSTHRD200": {
+                  "RCS1018": {
                     "toolName": "Roslynator",
-                    "name": "VSTHRD200",
+                    "name": "RCS1018",
                     "value": 0.0,
-                    "description": "Use &quot;Async&quot; suffix for async methods",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
                   },
-                  "CS0649": {
+                  "RCS_fake_diagnostic": {
                     "toolName": "Roslynator",
-                    "name": "CS0649",
+                    "name": "RCS_fake_diagnostic",
                     "value": 0.0,
-                    "description": "Field is never assigned to, and will always have its default value",
-                    "children": {},
-                    "weights": {},
-                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                    "normalizer": "pique.evaluation.DefaultNormalizer",
-                    "utility_function": "pique.evaluation.DefaultUtility"
-                  },
-                  "RCS1036": {
-                    "toolName": "Roslynator",
-                    "name": "RCS1036",
-                    "value": 0.0,
-                    "description": "Remove redundant empty line",
-                    "children": {},
-                    "weights": {},
-                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                    "normalizer": "pique.evaluation.DefaultNormalizer",
-                    "utility_function": "pique.evaluation.DefaultUtility"
-                  },
-                  "RCS1213": {
-                    "toolName": "Roslynator",
-                    "name": "RCS1213",
-                    "value": 0.0,
-                    "description": "Remove unused member declaration",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -206,12 +240,14 @@
                   }
                 },
                 "weights": {
-                  "RCS1163": 0.2,
-                  "VSTHRD200": 0.2,
-                  "CS0649": 0.2,
-                  "RCS1036": 0.2,
-                  "RCS1213": 0.2
+                  "RCS1163": 0.3333333333333333,
+                  "RCS1018": 0.3333333333333333,
+                  "RCS_fake_diagnostic": 0.3333333333333333
                 },
+                "thresholds": [
+                  0.07692307692307693,
+                  0.3076923076923077
+                ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
@@ -235,11 +271,77 @@
                 "value": 0.0,
                 "description": "Sample description",
                 "children": {
+                  "SCS0003": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0003",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
                   "SCS0004": {
                     "toolName": "Roslynator",
                     "name": "SCS0004",
                     "value": 0.0,
-                    "description": "Certificate Validation has been disabled",
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0001": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0001",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0002": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0002",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0005": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0005",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0006": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0006",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS_fake_diagnostic": {
+                    "toolName": "Roslynator",
+                    "name": "SCS_fake_diagnostic",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -248,8 +350,18 @@
                   }
                 },
                 "weights": {
-                  "SCS0004": 1.0
+                  "SCS0003": 0.14285714285714285,
+                  "SCS0004": 0.14285714285714285,
+                  "SCS0001": 0.14285714285714285,
+                  "SCS0002": 0.14285714285714285,
+                  "SCS0005": 0.14285714285714285,
+                  "SCS0006": 0.14285714285714285,
+                  "SCS_fake_diagnostic": 0.14285714285714285
                 },
+                "thresholds": [
+                  0.0,
+                  0.0
+                ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
@@ -291,51 +403,29 @@
                     "toolName": "Roslynator",
                     "name": "RCS1163",
                     "value": 0.0,
-                    "description": "Unused parameter",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
                   },
-                  "VSTHRD200": {
+                  "RCS1018": {
                     "toolName": "Roslynator",
-                    "name": "VSTHRD200",
+                    "name": "RCS1018",
                     "value": 0.0,
-                    "description": "Use &quot;Async&quot; suffix for async methods",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
                   },
-                  "CS0649": {
+                  "RCS_fake_diagnostic": {
                     "toolName": "Roslynator",
-                    "name": "CS0649",
+                    "name": "RCS_fake_diagnostic",
                     "value": 0.0,
-                    "description": "Field is never assigned to, and will always have its default value",
-                    "children": {},
-                    "weights": {},
-                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                    "normalizer": "pique.evaluation.DefaultNormalizer",
-                    "utility_function": "pique.evaluation.DefaultUtility"
-                  },
-                  "RCS1036": {
-                    "toolName": "Roslynator",
-                    "name": "RCS1036",
-                    "value": 0.0,
-                    "description": "Remove redundant empty line",
-                    "children": {},
-                    "weights": {},
-                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                    "normalizer": "pique.evaluation.DefaultNormalizer",
-                    "utility_function": "pique.evaluation.DefaultUtility"
-                  },
-                  "RCS1213": {
-                    "toolName": "Roslynator",
-                    "name": "RCS1213",
-                    "value": 0.0,
-                    "description": "Remove unused member declaration",
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -344,12 +434,14 @@
                   }
                 },
                 "weights": {
-                  "RCS1163": 0.2,
-                  "VSTHRD200": 0.2,
-                  "CS0649": 0.2,
-                  "RCS1036": 0.2,
-                  "RCS1213": 0.2
+                  "RCS1163": 0.3333333333333333,
+                  "RCS1018": 0.3333333333333333,
+                  "RCS_fake_diagnostic": 0.3333333333333333
                 },
+                "thresholds": [
+                  0.07692307692307693,
+                  0.3076923076923077
+                ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
@@ -373,11 +465,77 @@
                 "value": 0.0,
                 "description": "Sample description",
                 "children": {
+                  "SCS0003": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0003",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
                   "SCS0004": {
                     "toolName": "Roslynator",
                     "name": "SCS0004",
                     "value": 0.0,
-                    "description": "Certificate Validation has been disabled",
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0001": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0001",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0002": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0002",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0005": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0005",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS0006": {
+                    "toolName": "Roslynator",
+                    "name": "SCS0006",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
+                    "children": {},
+                    "weights": {},
+                    "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                    "normalizer": "pique.evaluation.DefaultNormalizer",
+                    "utility_function": "pique.evaluation.DefaultUtility"
+                  },
+                  "SCS_fake_diagnostic": {
+                    "toolName": "Roslynator",
+                    "name": "SCS_fake_diagnostic",
+                    "value": 0.0,
+                    "description": "Description for test diagnostic",
                     "children": {},
                     "weights": {},
                     "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -386,8 +544,18 @@
                   }
                 },
                 "weights": {
-                  "SCS0004": 1.0
+                  "SCS0003": 0.14285714285714285,
+                  "SCS0004": 0.14285714285714285,
+                  "SCS0001": 0.14285714285714285,
+                  "SCS0002": 0.14285714285714285,
+                  "SCS0005": 0.14285714285714285,
+                  "SCS0006": 0.14285714285714285,
+                  "SCS_fake_diagnostic": 0.14285714285714285
                 },
+                "thresholds": [
+                  0.0,
+                  0.0
+                ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
                 "utility_function": "pique.evaluation.DefaultUtility"
@@ -436,51 +604,29 @@
                         "toolName": "Roslynator",
                         "name": "RCS1163",
                         "value": 0.0,
-                        "description": "Unused parameter",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "VSTHRD200": {
+                      "RCS1018": {
                         "toolName": "Roslynator",
-                        "name": "VSTHRD200",
+                        "name": "RCS1018",
                         "value": 0.0,
-                        "description": "Use &quot;Async&quot; suffix for async methods",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "CS0649": {
+                      "RCS_fake_diagnostic": {
                         "toolName": "Roslynator",
-                        "name": "CS0649",
+                        "name": "RCS_fake_diagnostic",
                         "value": 0.0,
-                        "description": "Field is never assigned to, and will always have its default value",
-                        "children": {},
-                        "weights": {},
-                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                        "normalizer": "pique.evaluation.DefaultNormalizer",
-                        "utility_function": "pique.evaluation.DefaultUtility"
-                      },
-                      "RCS1036": {
-                        "toolName": "Roslynator",
-                        "name": "RCS1036",
-                        "value": 0.0,
-                        "description": "Remove redundant empty line",
-                        "children": {},
-                        "weights": {},
-                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                        "normalizer": "pique.evaluation.DefaultNormalizer",
-                        "utility_function": "pique.evaluation.DefaultUtility"
-                      },
-                      "RCS1213": {
-                        "toolName": "Roslynator",
-                        "name": "RCS1213",
-                        "value": 0.0,
-                        "description": "Remove unused member declaration",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -489,12 +635,14 @@
                       }
                     },
                     "weights": {
-                      "RCS1163": 0.2,
-                      "VSTHRD200": 0.2,
-                      "CS0649": 0.2,
-                      "RCS1036": 0.2,
-                      "RCS1213": 0.2
+                      "RCS1163": 0.3333333333333333,
+                      "RCS1018": 0.3333333333333333,
+                      "RCS_fake_diagnostic": 0.3333333333333333
                     },
+                    "thresholds": [
+                      0.07692307692307693,
+                      0.3076923076923077
+                    ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
@@ -518,11 +666,77 @@
                     "value": 0.0,
                     "description": "Sample description",
                     "children": {
+                      "SCS0003": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0003",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
                       "SCS0004": {
                         "toolName": "Roslynator",
                         "name": "SCS0004",
                         "value": 0.0,
-                        "description": "Certificate Validation has been disabled",
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0001": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0001",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0002": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0002",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0005": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0005",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0006": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0006",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS_fake_diagnostic": {
+                        "toolName": "Roslynator",
+                        "name": "SCS_fake_diagnostic",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -531,8 +745,18 @@
                       }
                     },
                     "weights": {
-                      "SCS0004": 1.0
+                      "SCS0003": 0.14285714285714285,
+                      "SCS0004": 0.14285714285714285,
+                      "SCS0001": 0.14285714285714285,
+                      "SCS0002": 0.14285714285714285,
+                      "SCS0005": 0.14285714285714285,
+                      "SCS0006": 0.14285714285714285,
+                      "SCS_fake_diagnostic": 0.14285714285714285
                     },
+                    "thresholds": [
+                      0.0,
+                      0.0
+                    ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
@@ -574,51 +798,29 @@
                         "toolName": "Roslynator",
                         "name": "RCS1163",
                         "value": 0.0,
-                        "description": "Unused parameter",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "VSTHRD200": {
+                      "RCS1018": {
                         "toolName": "Roslynator",
-                        "name": "VSTHRD200",
+                        "name": "RCS1018",
                         "value": 0.0,
-                        "description": "Use &quot;Async&quot; suffix for async methods",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "CS0649": {
+                      "RCS_fake_diagnostic": {
                         "toolName": "Roslynator",
-                        "name": "CS0649",
+                        "name": "RCS_fake_diagnostic",
                         "value": 0.0,
-                        "description": "Field is never assigned to, and will always have its default value",
-                        "children": {},
-                        "weights": {},
-                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                        "normalizer": "pique.evaluation.DefaultNormalizer",
-                        "utility_function": "pique.evaluation.DefaultUtility"
-                      },
-                      "RCS1036": {
-                        "toolName": "Roslynator",
-                        "name": "RCS1036",
-                        "value": 0.0,
-                        "description": "Remove redundant empty line",
-                        "children": {},
-                        "weights": {},
-                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-                        "normalizer": "pique.evaluation.DefaultNormalizer",
-                        "utility_function": "pique.evaluation.DefaultUtility"
-                      },
-                      "RCS1213": {
-                        "toolName": "Roslynator",
-                        "name": "RCS1213",
-                        "value": 0.0,
-                        "description": "Remove unused member declaration",
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -627,12 +829,14 @@
                       }
                     },
                     "weights": {
-                      "RCS1163": 0.2,
-                      "VSTHRD200": 0.2,
-                      "CS0649": 0.2,
-                      "RCS1036": 0.2,
-                      "RCS1213": 0.2
+                      "RCS1163": 0.3333333333333333,
+                      "RCS1018": 0.3333333333333333,
+                      "RCS_fake_diagnostic": 0.3333333333333333
                     },
+                    "thresholds": [
+                      0.07692307692307693,
+                      0.3076923076923077
+                    ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
@@ -656,11 +860,77 @@
                     "value": 0.0,
                     "description": "Sample description",
                     "children": {
+                      "SCS0003": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0003",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
                       "SCS0004": {
                         "toolName": "Roslynator",
                         "name": "SCS0004",
                         "value": 0.0,
-                        "description": "Certificate Validation has been disabled",
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0001": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0001",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0002": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0002",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0005": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0005",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS0006": {
+                        "toolName": "Roslynator",
+                        "name": "SCS0006",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
+                        "children": {},
+                        "weights": {},
+                        "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+                        "normalizer": "pique.evaluation.DefaultNormalizer",
+                        "utility_function": "pique.evaluation.DefaultUtility"
+                      },
+                      "SCS_fake_diagnostic": {
+                        "toolName": "Roslynator",
+                        "name": "SCS_fake_diagnostic",
+                        "value": 0.0,
+                        "description": "Description for test diagnostic",
                         "children": {},
                         "weights": {},
                         "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -669,8 +939,18 @@
                       }
                     },
                     "weights": {
-                      "SCS0004": 1.0
+                      "SCS0003": 0.14285714285714285,
+                      "SCS0004": 0.14285714285714285,
+                      "SCS0001": 0.14285714285714285,
+                      "SCS0002": 0.14285714285714285,
+                      "SCS0005": 0.14285714285714285,
+                      "SCS0006": 0.14285714285714285,
+                      "SCS_fake_diagnostic": 0.14285714285714285
                     },
+                    "thresholds": [
+                      0.0,
+                      0.0
+                    ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
@@ -710,11 +990,77 @@
       "value": 0.0,
       "description": "Sample description",
       "children": {
+        "SCS0003": {
+          "toolName": "Roslynator",
+          "name": "SCS0003",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
         "SCS0004": {
           "toolName": "Roslynator",
           "name": "SCS0004",
           "value": 0.0,
-          "description": "Certificate Validation has been disabled",
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
+        "SCS0001": {
+          "toolName": "Roslynator",
+          "name": "SCS0001",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
+        "SCS0002": {
+          "toolName": "Roslynator",
+          "name": "SCS0002",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
+        "SCS0005": {
+          "toolName": "Roslynator",
+          "name": "SCS0005",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
+        "SCS0006": {
+          "toolName": "Roslynator",
+          "name": "SCS0006",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
+          "children": {},
+          "weights": {},
+          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+          "normalizer": "pique.evaluation.DefaultNormalizer",
+          "utility_function": "pique.evaluation.DefaultUtility"
+        },
+        "SCS_fake_diagnostic": {
+          "toolName": "Roslynator",
+          "name": "SCS_fake_diagnostic",
+          "value": 0.0,
+          "description": "Description for test diagnostic",
           "children": {},
           "weights": {},
           "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -723,8 +1069,18 @@
         }
       },
       "weights": {
-        "SCS0004": 1.0
+        "SCS0003": 0.14285714285714285,
+        "SCS0004": 0.14285714285714285,
+        "SCS0001": 0.14285714285714285,
+        "SCS0002": 0.14285714285714285,
+        "SCS0005": 0.14285714285714285,
+        "SCS0006": 0.14285714285714285,
+        "SCS_fake_diagnostic": 0.14285714285714285
       },
+      "thresholds": [
+        0.0,
+        0.0
+      ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
@@ -739,51 +1095,29 @@
           "toolName": "Roslynator",
           "name": "RCS1163",
           "value": 0.0,
-          "description": "Unused parameter",
+          "description": "Description for test diagnostic",
           "children": {},
           "weights": {},
           "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
           "normalizer": "pique.evaluation.DefaultNormalizer",
           "utility_function": "pique.evaluation.DefaultUtility"
         },
-        "VSTHRD200": {
+        "RCS1018": {
           "toolName": "Roslynator",
-          "name": "VSTHRD200",
+          "name": "RCS1018",
           "value": 0.0,
-          "description": "Use &quot;Async&quot; suffix for async methods",
+          "description": "Description for test diagnostic",
           "children": {},
           "weights": {},
           "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
           "normalizer": "pique.evaluation.DefaultNormalizer",
           "utility_function": "pique.evaluation.DefaultUtility"
         },
-        "CS0649": {
+        "RCS_fake_diagnostic": {
           "toolName": "Roslynator",
-          "name": "CS0649",
+          "name": "RCS_fake_diagnostic",
           "value": 0.0,
-          "description": "Field is never assigned to, and will always have its default value",
-          "children": {},
-          "weights": {},
-          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-          "normalizer": "pique.evaluation.DefaultNormalizer",
-          "utility_function": "pique.evaluation.DefaultUtility"
-        },
-        "RCS1036": {
-          "toolName": "Roslynator",
-          "name": "RCS1036",
-          "value": 0.0,
-          "description": "Remove redundant empty line",
-          "children": {},
-          "weights": {},
-          "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
-          "normalizer": "pique.evaluation.DefaultNormalizer",
-          "utility_function": "pique.evaluation.DefaultUtility"
-        },
-        "RCS1213": {
-          "toolName": "Roslynator",
-          "name": "RCS1213",
-          "value": 0.0,
-          "description": "Remove unused member declaration",
+          "description": "Description for test diagnostic",
           "children": {},
           "weights": {},
           "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -792,12 +1126,14 @@
         }
       },
       "weights": {
-        "RCS1163": 0.2,
-        "VSTHRD200": 0.2,
-        "CS0649": 0.2,
-        "RCS1036": 0.2,
-        "RCS1213": 0.2
+        "RCS1163": 0.3333333333333333,
+        "RCS1018": 0.3333333333333333,
+        "RCS_fake_diagnostic": 0.3333333333333333
       },
+      "thresholds": [
+        0.07692307692307693,
+        0.3076923076923077
+      ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
@@ -808,18 +1144,40 @@
       "toolName": "Roslynator",
       "name": "RCS1163",
       "value": 0.0,
-      "description": "Unused parameter",
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
     },
-    "VSTHRD200": {
+    "RCS1018": {
       "toolName": "Roslynator",
-      "name": "VSTHRD200",
+      "name": "RCS1018",
       "value": 0.0,
-      "description": "Use &quot;Async&quot; suffix for async methods",
+      "description": "Description for test diagnostic",
+      "children": {},
+      "weights": {},
+      "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "utility_function": "pique.evaluation.DefaultUtility"
+    },
+    "RCS_fake_diagnostic": {
+      "toolName": "Roslynator",
+      "name": "RCS_fake_diagnostic",
+      "value": 0.0,
+      "description": "Description for test diagnostic",
+      "children": {},
+      "weights": {},
+      "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "utility_function": "pique.evaluation.DefaultUtility"
+    },
+    "SCS0003": {
+      "toolName": "Roslynator",
+      "name": "SCS0003",
+      "value": 0.0,
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
@@ -830,40 +1188,62 @@
       "toolName": "Roslynator",
       "name": "SCS0004",
       "value": 0.0,
-      "description": "Certificate Validation has been disabled",
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
     },
-    "CS0649": {
+    "SCS0001": {
       "toolName": "Roslynator",
-      "name": "CS0649",
+      "name": "SCS0001",
       "value": 0.0,
-      "description": "Field is never assigned to, and will always have its default value",
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
     },
-    "RCS1036": {
+    "SCS0002": {
       "toolName": "Roslynator",
-      "name": "RCS1036",
+      "name": "SCS0002",
       "value": 0.0,
-      "description": "Remove redundant empty line",
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
       "utility_function": "pique.evaluation.DefaultUtility"
     },
-    "RCS1213": {
+    "SCS0005": {
       "toolName": "Roslynator",
-      "name": "RCS1213",
+      "name": "SCS0005",
       "value": 0.0,
-      "description": "Remove unused member declaration",
+      "description": "Description for test diagnostic",
+      "children": {},
+      "weights": {},
+      "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "utility_function": "pique.evaluation.DefaultUtility"
+    },
+    "SCS0006": {
+      "toolName": "Roslynator",
+      "name": "SCS0006",
+      "value": 0.0,
+      "description": "Description for test diagnostic",
+      "children": {},
+      "weights": {},
+      "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
+      "normalizer": "pique.evaluation.DefaultNormalizer",
+      "utility_function": "pique.evaluation.DefaultUtility"
+    },
+    "SCS_fake_diagnostic": {
+      "toolName": "Roslynator",
+      "name": "SCS_fake_diagnostic",
+      "value": 0.0,
+      "description": "Description for test diagnostic",
       "children": {},
       "weights": {},
       "eval_strategy": "pique.evaluation.DefaultDiagnosticEvaluator",
