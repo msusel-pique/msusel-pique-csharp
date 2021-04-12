@@ -106,8 +106,8 @@
               "SCS_fake_diagnostic": 0.14285714285714285
             },
             "thresholds": [
-              0.0,
-              0.0
+              0.07692307692307693,
+              0.07692307692307693
             ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -172,8 +172,8 @@
               "RCS_fake_diagnostic": 0.3333333333333333
             },
             "thresholds": [
-              0.07692307692307693,
-              0.3076923076923077
+              0.15384615384615385,
+              0.15384615384615385
             ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -245,8 +245,8 @@
                   "RCS_fake_diagnostic": 0.3333333333333333
                 },
                 "thresholds": [
-                  0.07692307692307693,
-                  0.3076923076923077
+                  0.15384615384615385,
+                  0.15384615384615385
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -359,8 +359,8 @@
                   "SCS_fake_diagnostic": 0.14285714285714285
                 },
                 "thresholds": [
-                  0.0,
-                  0.0
+                  0.07692307692307693,
+                  0.07692307692307693
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -439,8 +439,8 @@
                   "RCS_fake_diagnostic": 0.3333333333333333
                 },
                 "thresholds": [
-                  0.07692307692307693,
-                  0.3076923076923077
+                  0.15384615384615385,
+                  0.15384615384615385
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -553,8 +553,8 @@
                   "SCS_fake_diagnostic": 0.14285714285714285
                 },
                 "thresholds": [
-                  0.0,
-                  0.0
+                  0.07692307692307693,
+                  0.07692307692307693
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -640,8 +640,8 @@
                       "RCS_fake_diagnostic": 0.3333333333333333
                     },
                     "thresholds": [
-                      0.07692307692307693,
-                      0.3076923076923077
+                      0.15384615384615385,
+                      0.15384615384615385
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -754,8 +754,8 @@
                       "SCS_fake_diagnostic": 0.14285714285714285
                     },
                     "thresholds": [
-                      0.0,
-                      0.0
+                      0.07692307692307693,
+                      0.07692307692307693
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -834,8 +834,8 @@
                       "RCS_fake_diagnostic": 0.3333333333333333
                     },
                     "thresholds": [
-                      0.07692307692307693,
-                      0.3076923076923077
+                      0.15384615384615385,
+                      0.15384615384615385
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -948,8 +948,8 @@
                       "SCS_fake_diagnostic": 0.14285714285714285
                     },
                     "thresholds": [
-                      0.0,
-                      0.0
+                      0.07692307692307693,
+                      0.07692307692307693
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1078,8 +1078,8 @@
         "SCS_fake_diagnostic": 0.14285714285714285
       },
       "thresholds": [
-        0.0,
-        0.0
+        0.07692307692307693,
+        0.07692307692307693
       ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1131,8 +1131,8 @@
         "RCS_fake_diagnostic": 0.3333333333333333
       },
       "thresholds": [
-        0.07692307692307693,
-        0.3076923076923077
+        0.15384615384615385,
+        0.15384615384615385
       ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",

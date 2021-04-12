@@ -12,13 +12,13 @@
     "product_factors": {
       "ProductFactor 02": {
         "name": "ProductFactor 02",
-        "value": 0.0,
+        "value": 1.0,
         "description": "Sample description",
         "children": {
           "Measure 02": {
             "positive": false,
             "name": "Measure 02",
-            "value": 0.0,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "SCS0003": {
@@ -71,8 +71,8 @@
                 "value": 3.0,
                 "description": "Description for test diagnostic",
                 "children": {
-                  "2012426383": {
-                    "name": "2012426383",
+                  "977128639": {
+                    "name": "977128639",
                     "value": 3.0,
                     "description": "",
                     "children": {},
@@ -120,8 +120,8 @@
               "SCS_fake_diagnostic": 0.14285714285714285
             },
             "thresholds": [
-              0.0,
-              0.0
+              0.07692307692307693,
+              0.07692307692307693
             ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -137,13 +137,13 @@
       },
       "ProductFactor 01": {
         "name": "ProductFactor 01",
-        "value": 0.6666666666666667,
+        "value": 1.0,
         "description": "Sample description",
         "children": {
           "Measure 01": {
             "positive": false,
             "name": "Measure 01",
-            "value": 0.6666666666666667,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "RCS1163": {
@@ -152,8 +152,8 @@
                 "value": 2.0,
                 "description": "Description for test diagnostic",
                 "children": {
-                  "-457969759": {
-                    "name": "-457969759",
+                  "-1153239649": {
+                    "name": "-1153239649",
                     "value": 2.0,
                     "description": "",
                     "children": {},
@@ -174,8 +174,8 @@
                 "value": 4.0,
                 "description": "Description for test diagnostic",
                 "children": {
-                  "-1986991015": {
-                    "name": "-1986991015",
+                  "1293828612": {
+                    "name": "1293828612",
                     "value": 2.0,
                     "description": "",
                     "children": {},
@@ -184,8 +184,8 @@
                     "normalizer": "pique.evaluation.DefaultNormalizer",
                     "utility_function": "pique.evaluation.DefaultUtility"
                   },
-                  "-382475264": {
-                    "name": "-382475264",
+                  "838953039": {
+                    "name": "838953039",
                     "value": 2.0,
                     "description": "",
                     "children": {},
@@ -218,8 +218,8 @@
               "RCS_fake_diagnostic": 0.3333333333333333
             },
             "thresholds": [
-              0.07692307692307693,
-              0.3076923076923077
+              0.15384615384615385,
+              0.15384615384615385
             ],
             "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
             "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -237,18 +237,18 @@
     "quality_aspects": {
       "QualityAspect 01": {
         "name": "QualityAspect 01",
-        "value": 0.33333333333333337,
+        "value": 1.0,
         "description": "Sample description",
         "children": {
           "ProductFactor 01": {
             "name": "ProductFactor 01",
-            "value": 0.6666666666666667,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "Measure 01": {
                 "positive": false,
                 "name": "Measure 01",
-                "value": 0.6666666666666667,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "RCS1163": {
@@ -257,8 +257,8 @@
                     "value": 2.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "-457969759": {
-                        "name": "-457969759",
+                      "-1153239649": {
+                        "name": "-1153239649",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -279,8 +279,8 @@
                     "value": 4.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "-1986991015": {
-                        "name": "-1986991015",
+                      "1293828612": {
+                        "name": "1293828612",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -289,8 +289,8 @@
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "-382475264": {
-                        "name": "-382475264",
+                      "838953039": {
+                        "name": "838953039",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -323,8 +323,8 @@
                   "RCS_fake_diagnostic": 0.3333333333333333
                 },
                 "thresholds": [
-                  0.07692307692307693,
-                  0.3076923076923077
+                  0.15384615384615385,
+                  0.15384615384615385
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -340,13 +340,13 @@
           },
           "ProductFactor 02": {
             "name": "ProductFactor 02",
-            "value": 0.0,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "Measure 02": {
                 "positive": false,
                 "name": "Measure 02",
-                "value": 0.0,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "SCS0003": {
@@ -399,8 +399,8 @@
                     "value": 3.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "2012426383": {
-                        "name": "2012426383",
+                      "977128639": {
+                        "name": "977128639",
                         "value": 3.0,
                         "description": "",
                         "children": {},
@@ -448,8 +448,8 @@
                   "SCS_fake_diagnostic": 0.14285714285714285
                 },
                 "thresholds": [
-                  0.0,
-                  0.0
+                  0.07692307692307693,
+                  0.07692307692307693
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -474,18 +474,18 @@
       },
       "QualityAspect 02": {
         "name": "QualityAspect 02",
-        "value": 0.33333333333333337,
+        "value": 1.0,
         "description": "Sample description",
         "children": {
           "ProductFactor 01": {
             "name": "ProductFactor 01",
-            "value": 0.6666666666666667,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "Measure 01": {
                 "positive": false,
                 "name": "Measure 01",
-                "value": 0.6666666666666667,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "RCS1163": {
@@ -494,8 +494,8 @@
                     "value": 2.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "-457969759": {
-                        "name": "-457969759",
+                      "-1153239649": {
+                        "name": "-1153239649",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -516,8 +516,8 @@
                     "value": 4.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "-1986991015": {
-                        "name": "-1986991015",
+                      "1293828612": {
+                        "name": "1293828612",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -526,8 +526,8 @@
                         "normalizer": "pique.evaluation.DefaultNormalizer",
                         "utility_function": "pique.evaluation.DefaultUtility"
                       },
-                      "-382475264": {
-                        "name": "-382475264",
+                      "838953039": {
+                        "name": "838953039",
                         "value": 2.0,
                         "description": "",
                         "children": {},
@@ -560,8 +560,8 @@
                   "RCS_fake_diagnostic": 0.3333333333333333
                 },
                 "thresholds": [
-                  0.07692307692307693,
-                  0.3076923076923077
+                  0.15384615384615385,
+                  0.15384615384615385
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -577,13 +577,13 @@
           },
           "ProductFactor 02": {
             "name": "ProductFactor 02",
-            "value": 0.0,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "Measure 02": {
                 "positive": false,
                 "name": "Measure 02",
-                "value": 0.0,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "SCS0003": {
@@ -636,8 +636,8 @@
                     "value": 3.0,
                     "description": "Description for test diagnostic",
                     "children": {
-                      "2012426383": {
-                        "name": "2012426383",
+                      "977128639": {
+                        "name": "977128639",
                         "value": 3.0,
                         "description": "",
                         "children": {},
@@ -685,8 +685,8 @@
                   "SCS_fake_diagnostic": 0.14285714285714285
                 },
                 "thresholds": [
-                  0.0,
-                  0.0
+                  0.07692307692307693,
+                  0.07692307692307693
                 ],
                 "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                 "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -713,23 +713,23 @@
     "tqi": {
       "TQI": {
         "name": "TQI",
-        "value": 0.33333333333333337,
+        "value": 1.0,
         "description": "Sample description",
         "children": {
           "QualityAspect 01": {
             "name": "QualityAspect 01",
-            "value": 0.33333333333333337,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "ProductFactor 01": {
                 "name": "ProductFactor 01",
-                "value": 0.6666666666666667,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "Measure 01": {
                     "positive": false,
                     "name": "Measure 01",
-                    "value": 0.6666666666666667,
+                    "value": 1.0,
                     "description": "Sample description",
                     "children": {
                       "RCS1163": {
@@ -738,8 +738,8 @@
                         "value": 2.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "-457969759": {
-                            "name": "-457969759",
+                          "-1153239649": {
+                            "name": "-1153239649",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -760,8 +760,8 @@
                         "value": 4.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "-1986991015": {
-                            "name": "-1986991015",
+                          "1293828612": {
+                            "name": "1293828612",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -770,8 +770,8 @@
                             "normalizer": "pique.evaluation.DefaultNormalizer",
                             "utility_function": "pique.evaluation.DefaultUtility"
                           },
-                          "-382475264": {
-                            "name": "-382475264",
+                          "838953039": {
+                            "name": "838953039",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -804,8 +804,8 @@
                       "RCS_fake_diagnostic": 0.3333333333333333
                     },
                     "thresholds": [
-                      0.07692307692307693,
-                      0.3076923076923077
+                      0.15384615384615385,
+                      0.15384615384615385
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -821,13 +821,13 @@
               },
               "ProductFactor 02": {
                 "name": "ProductFactor 02",
-                "value": 0.0,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "Measure 02": {
                     "positive": false,
                     "name": "Measure 02",
-                    "value": 0.0,
+                    "value": 1.0,
                     "description": "Sample description",
                     "children": {
                       "SCS0003": {
@@ -880,8 +880,8 @@
                         "value": 3.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "2012426383": {
-                            "name": "2012426383",
+                          "977128639": {
+                            "name": "977128639",
                             "value": 3.0,
                             "description": "",
                             "children": {},
@@ -929,8 +929,8 @@
                       "SCS_fake_diagnostic": 0.14285714285714285
                     },
                     "thresholds": [
-                      0.0,
-                      0.0
+                      0.07692307692307693,
+                      0.07692307692307693
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -955,18 +955,18 @@
           },
           "QualityAspect 02": {
             "name": "QualityAspect 02",
-            "value": 0.33333333333333337,
+            "value": 1.0,
             "description": "Sample description",
             "children": {
               "ProductFactor 01": {
                 "name": "ProductFactor 01",
-                "value": 0.6666666666666667,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "Measure 01": {
                     "positive": false,
                     "name": "Measure 01",
-                    "value": 0.6666666666666667,
+                    "value": 1.0,
                     "description": "Sample description",
                     "children": {
                       "RCS1163": {
@@ -975,8 +975,8 @@
                         "value": 2.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "-457969759": {
-                            "name": "-457969759",
+                          "-1153239649": {
+                            "name": "-1153239649",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -997,8 +997,8 @@
                         "value": 4.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "-1986991015": {
-                            "name": "-1986991015",
+                          "1293828612": {
+                            "name": "1293828612",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -1007,8 +1007,8 @@
                             "normalizer": "pique.evaluation.DefaultNormalizer",
                             "utility_function": "pique.evaluation.DefaultUtility"
                           },
-                          "-382475264": {
-                            "name": "-382475264",
+                          "838953039": {
+                            "name": "838953039",
                             "value": 2.0,
                             "description": "",
                             "children": {},
@@ -1041,8 +1041,8 @@
                       "RCS_fake_diagnostic": 0.3333333333333333
                     },
                     "thresholds": [
-                      0.07692307692307693,
-                      0.3076923076923077
+                      0.15384615384615385,
+                      0.15384615384615385
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1058,13 +1058,13 @@
               },
               "ProductFactor 02": {
                 "name": "ProductFactor 02",
-                "value": 0.0,
+                "value": 1.0,
                 "description": "Sample description",
                 "children": {
                   "Measure 02": {
                     "positive": false,
                     "name": "Measure 02",
-                    "value": 0.0,
+                    "value": 1.0,
                     "description": "Sample description",
                     "children": {
                       "SCS0003": {
@@ -1117,8 +1117,8 @@
                         "value": 3.0,
                         "description": "Description for test diagnostic",
                         "children": {
-                          "2012426383": {
-                            "name": "2012426383",
+                          "977128639": {
+                            "name": "977128639",
                             "value": 3.0,
                             "description": "",
                             "children": {},
@@ -1166,8 +1166,8 @@
                       "SCS_fake_diagnostic": 0.14285714285714285
                     },
                     "thresholds": [
-                      0.0,
-                      0.0
+                      0.07692307692307693,
+                      0.07692307692307693
                     ],
                     "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
                     "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1205,7 +1205,7 @@
     "Measure 02": {
       "positive": false,
       "name": "Measure 02",
-      "value": 0.0,
+      "value": 1.0,
       "description": "Sample description",
       "children": {
         "SCS0003": {
@@ -1258,8 +1258,8 @@
           "value": 3.0,
           "description": "Description for test diagnostic",
           "children": {
-            "2012426383": {
-              "name": "2012426383",
+            "977128639": {
+              "name": "977128639",
               "value": 3.0,
               "description": "",
               "children": {},
@@ -1307,8 +1307,8 @@
         "SCS_fake_diagnostic": 0.14285714285714285
       },
       "thresholds": [
-        0.0,
-        0.0
+        0.07692307692307693,
+        0.07692307692307693
       ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1317,7 +1317,7 @@
     "Measure 01": {
       "positive": false,
       "name": "Measure 01",
-      "value": 0.6666666666666667,
+      "value": 1.0,
       "description": "Sample description",
       "children": {
         "RCS1163": {
@@ -1326,8 +1326,8 @@
           "value": 2.0,
           "description": "Description for test diagnostic",
           "children": {
-            "-457969759": {
-              "name": "-457969759",
+            "-1153239649": {
+              "name": "-1153239649",
               "value": 2.0,
               "description": "",
               "children": {},
@@ -1348,8 +1348,8 @@
           "value": 4.0,
           "description": "Description for test diagnostic",
           "children": {
-            "-1986991015": {
-              "name": "-1986991015",
+            "1293828612": {
+              "name": "1293828612",
               "value": 2.0,
               "description": "",
               "children": {},
@@ -1358,8 +1358,8 @@
               "normalizer": "pique.evaluation.DefaultNormalizer",
               "utility_function": "pique.evaluation.DefaultUtility"
             },
-            "-382475264": {
-              "name": "-382475264",
+            "838953039": {
+              "name": "838953039",
               "value": 2.0,
               "description": "",
               "children": {},
@@ -1392,8 +1392,8 @@
         "RCS_fake_diagnostic": 0.3333333333333333
       },
       "thresholds": [
-        0.07692307692307693,
-        0.3076923076923077
+        0.15384615384615385,
+        0.15384615384615385
       ],
       "eval_strategy": "pique.evaluation.DefaultMeasureEvaluator",
       "normalizer": "pique.evaluation.DefaultNormalizer",
@@ -1407,8 +1407,8 @@
       "value": 2.0,
       "description": "Description for test diagnostic",
       "children": {
-        "-457969759": {
-          "name": "-457969759",
+        "-1153239649": {
+          "name": "-1153239649",
           "value": 2.0,
           "description": "",
           "children": {},
@@ -1429,8 +1429,8 @@
       "value": 4.0,
       "description": "Description for test diagnostic",
       "children": {
-        "-1986991015": {
-          "name": "-1986991015",
+        "1293828612": {
+          "name": "1293828612",
           "value": 2.0,
           "description": "",
           "children": {},
@@ -1439,8 +1439,8 @@
           "normalizer": "pique.evaluation.DefaultNormalizer",
           "utility_function": "pique.evaluation.DefaultUtility"
         },
-        "-382475264": {
-          "name": "-382475264",
+        "838953039": {
+          "name": "838953039",
           "value": 2.0,
           "description": "",
           "children": {},
@@ -1516,8 +1516,8 @@
       "value": 3.0,
       "description": "Description for test diagnostic",
       "children": {
-        "2012426383": {
-          "name": "2012426383",
+        "977128639": {
+          "name": "977128639",
           "value": 3.0,
           "description": "",
           "children": {},

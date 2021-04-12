@@ -561,4 +561,7 @@ $RECYCLE.BIN/
 /src/test/resources/out/TestNetFramework/ESMSReportsPowerBi.json
 /src/test/resources/quality_model/powerbi_deriver_qm_description.json
 
+/src/test/resources/quality_model/tuning_powerbi_deriver_qm_description.json
+.gitignore
+
 !src/main/resources/Roslynator/bin
